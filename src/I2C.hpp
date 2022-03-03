@@ -10,7 +10,7 @@
 class I2C
 {
 public:
-   I2C(std::string dev);
+   I2C(std::string dev, uint16_t address);
    bool begin();
 
 private:
