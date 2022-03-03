@@ -1,11 +1,12 @@
 #pragma once
 #include <stdio.h>
 #include <string>
+#include <stdlib.h>
 #include <stdint.h>
 #include <sys/stat.h>
 #include <fcntl.h>
 #include <sys/ioctl.h>
-#include <unistd.h>
+
 //#include <i2c/smbus.h>
 //#include <linux/i2c-dev.h>
 
