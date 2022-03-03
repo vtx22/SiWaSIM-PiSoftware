@@ -2,6 +2,8 @@
 #include <stdio.h>
 #include <string>
 #include <stdint.h>
+#include <sys/stat.h>
+#include <fcntl.h>
 //#include <i2c/smbus.h>
 //#include <linux/i2c-dev.h>
 
