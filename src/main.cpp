@@ -5,6 +5,7 @@
 
 int main()
 {
-   I2C test = new I2C("/dev/i2c-1", 0x50);
+   std::string dev = "/dev/i2c-1";
+   I2C test = new I2C(dev, 0x50);
    test.begin();
 }
