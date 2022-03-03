@@ -1,4 +1,4 @@
-#include <I2C.hpp>
+#include "I2C.hpp"
 
 I2C::I2C(std::string dev, uint16_t address) : _dev(dev), _address(address)
 {
