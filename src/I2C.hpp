@@ -1,4 +1,5 @@
 #pragma once
+#include <stdio.h>
 #include <string>
 #include <stdint.h>
 //#include <i2c/smbus.h>
