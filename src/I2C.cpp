@@ -12,6 +12,6 @@ bool I2C::begin()
       printf("I2C ERROR: Cannot open device!");
       return false;
    }
-   ioctl(_file, I2C_RDWR, _address);
+   ioctl(_file, I2C_SLAVE, _address);
    return true;
 }
