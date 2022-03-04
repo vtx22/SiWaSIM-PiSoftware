@@ -7,6 +7,7 @@ UART::UART()
 
 UART::~UART()
 {
+   close(uart0);
 }
 
 bool UART::begin()
