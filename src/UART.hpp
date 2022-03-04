@@ -19,4 +19,5 @@ public:
 private:
    int uart0 = -1;
    std::string _dev;
+   const uint16_t _messageSizeRX = 10;
 };
