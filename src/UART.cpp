@@ -7,7 +7,10 @@ UART::UART(std::string dev) : _dev(_dev)
 
 UART::~UART()
 {
-   close(uart0);
+   if (uart0 > -1)
+   {
+      close(uart0);
+   }
 }
 
 bool UART::begin()
