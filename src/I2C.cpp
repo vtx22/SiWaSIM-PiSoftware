@@ -7,7 +7,7 @@ I2C::I2C(std::string dev, uint16_t address) : _dev(dev), _address(address)
 
 I2C::~I2C()
 {
-   close(i2c0);
+   //close(i2c0);
 }
 
 bool I2C::begin()
@@ -29,6 +29,6 @@ bool I2C::begin()
    return true;
 }
 
-bool I2C::writeData()
+bool I2C::writeData(uint16_t register, uint8_t *data)
 {
 }
