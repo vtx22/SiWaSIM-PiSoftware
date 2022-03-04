@@ -28,8 +28,8 @@ bool UART::begin()
    options.c_iflag &= ~(IGNBRK | BRKINT | PARMRK | ISTRIP | INLCR | IGNCR | ICRNL);
    options.c_oflag |= 0;
    options.c_lflag &= ~ICANON;
-   options.c_cc[VTIME] = 0;
-   options.c_cc[VMIN] = _messageSizeRX;
+   options.c_cc[VTIME] = 10;
+   //options.c_cc[VMIN] = _messageSizeRX;
    tcflush(uart0, TCIFLUSH);
    tcsetattr(uart0, TCSANOW, &options);
 

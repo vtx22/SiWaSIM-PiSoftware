@@ -16,13 +16,13 @@ bool I2C::begin()
 
    if (i2c0 < 0)
    {
-      printf("I2C ERROR: Cannot open device!");
+      printf("I2C ERROR: Cannot open device!\n");
       return false;
    }
 
    if (ioctl(i2c0, I2C_SLAVE, _address))
    {
-      printf("I2C ERROR: Device Error!");
+      printf("I2C ERROR: Device Error!\n");
       return false;
    }
 
