@@ -14,6 +14,7 @@ public:
    UART(std::string dev);
    ~UART();
    bool begin();
+   bool transmitMSG(uint8_t *msg);
 
 private:
    int uart0 = -1;
