@@ -24,13 +24,18 @@ bool UART::begin()
    //IGNPAR = Ignore characters with parity errors
    struct termios options;
    tcgetattr(uart0, &options);
-   options.c_cflag |= B115200 | CS8 | CLOCAL | CREAD;
-   options.c_cflag &= ~PARENB;
-   options.c_iflag &= ~(IGNBRK | BRKINT | PARMRK | ISTRIP | INLCR | IGNCR | ICRNL);
-   options.c_oflag |= 0;
-   options.c_lflag &= ~ICANON;
+
+   options.c_cflag = B115200 | CS8 | CLOCAL | CREAD | HUPCL;
+   options.c_iflag = 0;
+   options.c_oflag = 0;
+   options.c_lflag = 0;
+
+   options.c_ispeed = B115200;
+   options.c_ospeed = B115200;
+
    options.c_cc[VTIME] = 0;
    options.c_cc[VMIN] = _messageSizeRX;
+
    tcflush(uart0, TCIFLUSH);
    tcsetattr(uart0, TCSANOW, &options);
 
