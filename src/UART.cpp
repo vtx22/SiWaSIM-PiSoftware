@@ -19,9 +19,6 @@ bool UART::begin()
       return false;
    }
 
-   //CLOCAL - Ignore modem status lines
-   //CREAD - Enable receiver
-   //IGNPAR = Ignore characters with parity errors
    struct termios options;
    tcgetattr(uart0, &options);
 
