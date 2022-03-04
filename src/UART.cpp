@@ -1,6 +1,6 @@
 #include "UART.hpp"
 
-UART::UART()
+UART::UART(std::string dev) : _dev(_dev)
 {
    begin();
 }

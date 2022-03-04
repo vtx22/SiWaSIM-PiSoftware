@@ -11,7 +11,7 @@
 class UART
 {
 public:
-   UART();
+   UART(std::string dev);
    ~UART();
    bool begin();
 
