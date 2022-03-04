@@ -11,5 +11,5 @@ int main()
    //test.begin();
 
    uint8_t message[5] = {0xFF, 0xFF, 0xFF, 0xAA, 0xAB};
-   test2.transmitMSG(message, 5);
+   //test2.transmitMSG(message, 5);
 }
