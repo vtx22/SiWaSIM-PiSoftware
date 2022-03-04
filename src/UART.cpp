@@ -39,6 +39,11 @@ bool UART::begin()
 
 bool UART::transmitMSG(uint8_t *msg, uint16_t length)
 {
+   if (uart0 < 0)
+   {
+      printf("UART ERROR: Device not initialized!\n");
+      return false;
+   }
    if (write(uart0, msg, length) < 0)
    {
       printf("UART ERROR: Could not transmit message!\n");
