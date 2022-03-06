@@ -12,7 +12,6 @@ UART::~UART()
 
 bool UART::begin()
 {
-   return false;
    uart0 = open(_dev.c_str(), O_RDWR);
 
    if (uart0 < 0)
