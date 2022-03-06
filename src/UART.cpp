@@ -12,8 +12,9 @@ UART::~UART()
 
 bool UART::begin()
 {
-   uart0 = open(_dev.c_str(), O_RDWR);
    return false;
+   uart0 = open(_dev.c_str(), O_RDWR);
+
    if (uart0 < 0)
    {
       printf("UART ERROR: Unable to open port!\n");
