@@ -6,7 +6,7 @@
 #include <sstream>
 #include <termios.h>
 #include <unistd.h>
-#include <string.h>
+//#include <string.h>
 
 class UART
 {
