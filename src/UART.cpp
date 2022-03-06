@@ -1,6 +1,6 @@
 #include "UART.hpp"
 
-UART::UART(std::string dev) : _dev(_dev)
+UART::UART()
 {
    begin();
 }
@@ -12,7 +12,7 @@ UART::~UART()
 
 bool UART::begin()
 {
-   uart0 = open(_dev.c_str(), O_RDWR);
+   uart0 = open("/dev/ttyS0", O_RDWR);
 
    if (uart0 < 0)
    {

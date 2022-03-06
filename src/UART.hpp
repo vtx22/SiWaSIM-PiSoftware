@@ -11,13 +11,13 @@
 class UART
 {
 public:
-   UART(std::string dev);
+   UART();
    ~UART();
    bool begin();
    bool transmitMSG(uint8_t *msg, uint16_t length);
 
 private:
    int uart0 = -1;
-   std::string _dev;
+   //std::string _dev;
    const uint16_t _messageSizeRX = 10;
 };
