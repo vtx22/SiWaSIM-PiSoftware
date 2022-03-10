@@ -17,8 +17,11 @@ int main()
    //com.transmitMSG(message, 10);
    GPIO gpio;
    gpio.setPWM(13, 50, 1000);
-   while (true)
+
+   for (int i = 0; i < 10000; i++)
    {
-      time_sleep(1);
+      gpio.setPWM(13, 50, 10 + i);
+      time_sleep(0.01);
    }
+   gpio.setPWM(13, 0, 0);
 }
