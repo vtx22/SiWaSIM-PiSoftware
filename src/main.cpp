@@ -21,7 +21,7 @@ int main()
    for (int i = 0; i < 10000; i++)
    {
       gpio.setPWM(13, 50, 10 + i);
-      time_sleep(0.01);
+      time_sleep(0.02);
    }
    gpio.setPWM(13, 0, 0);
 }
