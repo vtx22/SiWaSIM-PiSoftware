@@ -2,6 +2,8 @@
 #include <string>
 #include <stdio.h>
 #include <stdlib.h>
+#include <signal.h>
+#include <pigpio.h>
 
 #include "I2C.hpp"
 #include "UART.hpp"
