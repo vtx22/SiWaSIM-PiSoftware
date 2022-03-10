@@ -16,5 +16,11 @@ int main()
    //uint8_t message[10] = {0xFF, 0xFF, 0xFF, 0xAA, 0xAB};
    //com.transmitMSG(message, 10);
    GPIO gpio;
-   gpio.setPWM(13, 50, 1001);
+
+   for (int i = 0; i < 100; i++)
+   {
+      gpio.setPWM(13, 50, 1000 + i);
+      printf("PWM FREQ: %d\n", i + 1000);
+      time_sleep(5);
+   }
 }
