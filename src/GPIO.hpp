@@ -1,6 +1,7 @@
 #pragma once
 #include <signal.h>
 #include <pigpio.h>
+#include <stdint.h>
 
 class GPIO
 {
