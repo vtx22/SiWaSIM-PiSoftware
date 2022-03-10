@@ -1,12 +1,11 @@
 #include <iostream>
 #include <string>
-#include <signal.h>
-#include <pigpio.h>
 #include <stdio.h>
 #include <stdlib.h>
 
 #include "I2C.hpp"
 #include "UART.hpp"
+#include "GPIO.hpp"
 
 int main()
 {
@@ -16,19 +15,10 @@ int main()
 
    //uint8_t message[10] = {0xFF, 0xFF, 0xFF, 0xAA, 0xAB};
    //com.transmitMSG(message, 10);
-
-   if (gpioInitialise() < 0)
-   {
-      printf("Error!!\n");
-      return 0;
-   }
-
+   GPIO io = GPIO();
+   io.setPWM(13, 50, 1000);
    while (true)
    {
-      if (gpioHardwarePWM(13, 5000, 100000) != 0)
-      {
-         printf("PWM Error\n");
-      }
       time_sleep(1);
    }
 }
