@@ -15,7 +15,7 @@ int main()
 
    //uint8_t message[10] = {0xFF, 0xFF, 0xFF, 0xAA, 0xAB};
    //com.transmitMSG(message, 10);
-   GPIO gpio = GPIO();
+   GPIO gpio;
    //gpio.setPWM(13, 50, 1000);
    while (true)
    {
