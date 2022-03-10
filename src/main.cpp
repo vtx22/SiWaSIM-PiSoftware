@@ -17,7 +17,11 @@ int main()
    //uint8_t message[10] = {0xFF, 0xFF, 0xFF, 0xAA, 0xAB};
    //com.transmitMSG(message, 10);
 
-   gpioInitialise(18);
+   if (gpioInitialise() < 0)
+   {
+      printf("Error!!\n");
+      return 0;
+   }
    while (true)
    {
       gpioHardwarePWM(18, 10000, 50);
