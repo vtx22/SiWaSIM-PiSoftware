@@ -25,7 +25,7 @@ int main()
 
    while (true)
    {
-      if (gpioHardwarePWM(13, 10000, 100000) != 0)
+      if (gpioHardwarePWM(13, 5000, 100000) != 0)
       {
          printf("PWM Error\n");
       }
