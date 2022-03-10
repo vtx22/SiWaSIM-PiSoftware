@@ -18,6 +18,9 @@ int main()
    //com.transmitMSG(message, 10);
 
    gpioInitialise();
-
-   gpioHardwarePWM(18, 10000, 50);
+   while (true)
+   {
+      gpioHardwarePWM(18, 10000, 50);
+      time_sleep(1);
+   }
 }
