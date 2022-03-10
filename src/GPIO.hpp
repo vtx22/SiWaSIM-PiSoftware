@@ -2,7 +2,7 @@
 #include <signal.h>
 #include <pigpio.h>
 #include <stdint.h>
-#include <cstdio.h>
+#include <cstdio>
 
 class GPIO
 {
