@@ -2,8 +2,6 @@
 #include <string>
 #include <stdio.h>
 #include <stdlib.h>
-#include <signal.h>
-#include <pigpio.h>
 
 #include "I2C.hpp"
 #include "UART.hpp"
@@ -18,7 +16,7 @@ int main()
    //uint8_t message[10] = {0xFF, 0xFF, 0xFF, 0xAA, 0xAB};
    //com.transmitMSG(message, 10);
    GPIO gpio = GPIO();
-   gpio.setPWM(13, 50, 1000);
+   //gpio.setPWM(13, 50, 1000);
    while (true)
    {
       time_sleep(1);
