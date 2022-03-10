@@ -24,7 +24,10 @@ int main()
    }
    while (true)
    {
-      gpioHardwarePWM(18, 10000, 50);
+      if (gpioHardwarePWM(18, 10000, 50) != 0)
+      {
+         printf("PWM Error\n");
+      }
       time_sleep(1);
    }
 }
