@@ -21,6 +21,6 @@ int main()
    {
       gpio.setPWM(13, 50, 1000 + i);
       printf("PWM FREQ: %d\n", i + 1000);
-      time_sleep(5);
+      time_sleep(0.1);
    }
 }
