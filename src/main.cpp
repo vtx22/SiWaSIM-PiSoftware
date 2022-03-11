@@ -19,7 +19,7 @@ int main()
    int scale = 40;
    for (int i = 0; i < scale; i++)
    {
-      int freq = 985 - scale / 2.f + i;
+      int freq = 985 + i;
       gpio.setPWM(13, 50, freq);
       printf("PWM FREQ: %d\n", freq);
       time_sleep(5);
