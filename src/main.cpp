@@ -17,11 +17,11 @@ int main()
    //com.transmitMSG(message, 10);
    GPIO gpio;
    int scale = 40;
-   for (int i = 0; i < scale; i++)
+   for (int i = 0; i < 11000; i++)
    {
-      int freq = 990 + i;
+      int freq = i;
       gpio.setPWM(13, 50, freq);
       printf("PWM FREQ: %d\n", freq);
-      time_sleep(5);
+      time_sleep(5 / (float)freq);
    }
 }
