@@ -20,7 +20,7 @@ int main()
    for (int i = 0; i < 11000; i++)
    {
       int freq = i;
-      gpio.setPWM(13, 50, freq);
+      gpio.setPWM(13, 50, 0.1);
       printf("PWM FREQ: %d\n", freq);
       time_sleep(5 / (float)freq);
    }
