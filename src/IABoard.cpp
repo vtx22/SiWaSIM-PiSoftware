@@ -50,7 +50,7 @@ uint16_t IABoard::readTransistions(uint8_t channel)
       return 0;
    }
 
-   _i2c->writeData(0x6A + 2 * (channel - 1);
+   _i2c->writeData(0x6A + 2 * (channel - 1));
    uint8_t data[2];
    _i2c->readData(data, 2);
 
