@@ -8,6 +8,8 @@ public:
    ~IABoard();
 
    void detectBoard();
+   uint8_t digitalRead();
+   bool digitalRead(uint8_t channel);
 
 private:
    I2C *_i2c;

@@ -7,6 +7,7 @@ IABoard::IABoard()
 
 IABoard::~IABoard()
 {
+   delete _i2c;
 }
 
 void IABoard::detectBoard()
@@ -19,4 +20,17 @@ void IABoard::detectBoard()
    }
 
    printf("IA-Board ERROR: No Board detected!\n");
+}
+
+uint8_t IABoard::digitalRead()
+{
+   _i2c->writeData(0x03);
+   return _i2c->readData();
+}
+
+bool IABoard::digitalRead(uint8_t channel)
+{
+   uint8_t data = digitalRead();
+
+   return (data & channel);
 }
