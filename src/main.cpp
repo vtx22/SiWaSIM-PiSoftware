@@ -14,13 +14,13 @@ int main()
 
    board.detectBoard();
    time_sleep(0.001);
-   board.setOpenDrainDOUT(1, 1);
+   board.setLED(1, 1);
    time_sleep(0.001);
-   board.setOpenDrainDOUT(2, 1);
+   board.setLED(2, 1);
    time_sleep(0.001);
-   board.setOpenDrainDOUT(3, 1);
+   board.setLED(3, 1);
    time_sleep(0.001);
-   board.setOpenDrainDOUT(4, 1);
+   board.setLED(4, 1);
 
    /*
    printf("Vol 1: %d\n", board.getOpenDrainDOUT(1));

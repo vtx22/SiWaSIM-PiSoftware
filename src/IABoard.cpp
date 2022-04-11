@@ -249,4 +249,18 @@ bool IABoard::getLED(uint8_t channel)
 
 void setLED(uint8_t channel, bool value)
 {
+   if (channel > 4 || channel < 1)
+   {
+      printf("IA-Board ERROR: Channel out of range! Allowed: 1 - 4\n");
+      return;
+   }
+
+   uint8_t cmd = 0x02;
+   if (value)
+   {
+      cmd = 0x01;
+   }
+   uint8_t data[2] = {cmd, channel + 0x04};
+
+   _i2c->writeData(data, 2);
 }
