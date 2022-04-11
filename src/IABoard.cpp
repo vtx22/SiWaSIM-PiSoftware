@@ -119,9 +119,80 @@ void IABoard::setAnalogVolOut(uint8_t channel, float voltage)
       return;
    }
 
+   // Cut off out of range values
+   constrainMinMax(voltage, 0, 10);
+
    uint16_t vol = voltage * 1000;
 
    uint8_t data[3] = {0x04 + 2 * (channel - 1), (vol & 0xFF), (vol >> 8)};
+
+   _i2c->writeData(data, 3);
+}
+
+float IABoard::getAnalogCurOut(uint8_t channel)
+{
+   if (channel > 4 || channel < 1)
+   {
+      printf("IA-Board ERROR: Channel out of range! Allowed: 1 - 4\n");
+      return 0;
+   }
+
+   _i2c->writeData(0x0C + 2 * (channel - 1));
+
+   uint8_t current[2];
+   _i2c->readData(current, 2);
+
+   return (float)(current[0] + (current[1] << 8)) / 1000.f;
+}
+
+void IABoard::setAnalogCurOut(uint8_t channel, float current)
+{
+   if (channel > 4 || channel < 1)
+   {
+      printf("IA-Board ERROR: Channel out of range! Allowed: 1 - 4\n");
+      return;
+   }
+
+   // Cut off out of range values
+   constrainMinMax(current, 4, 20);
+
+   uint16_t cur = current * 1000;
+
+   uint8_t data[3] = {0x04 + 2 * (channel - 1), (cur & 0xFF), (cur >> 8)};
+
+   _i2c->writeData(data, 3);
+}
+
+float getOpenDrainPWM(uint8_t channel)
+{
+   if (channel > 4 || channel < 1)
+   {
+      printf("IA-Board ERROR: Channel out of range! Allowed: 1 - 4\n");
+      return 0;
+   }
+
+   _i2c->writeData(0x14 + 2 * (channel - 1));
+
+   uint8_t duty[2];
+   _i2c->readData(duty, 2);
+
+   return (float)(duty[0] + (duty[1] << 8)) / 100.f;
+}
+
+void setOpenDrainPWM(uint8_t channel, float dutyCycle)
+{
+   if (channel > 4 || channel < 1)
+   {
+      printf("IA-Board ERROR: Channel out of range! Allowed: 1 - 4\n");
+      return 0;
+   }
+
+   // Cut off out of range values
+   constrainMinMax(dutyCycle, 0, 100);
+
+   uint16_t duty = dutyCycle * 100;
+
+   uint8_t data[3] = {0x14 + 2 * (channel - 1), (duty & 0xFF), (duty >> 8)};
 
    _i2c->writeData(data, 3);
 }

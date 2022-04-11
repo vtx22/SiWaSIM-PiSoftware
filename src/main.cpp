@@ -13,12 +13,12 @@ int main()
    IABoard board;
 
    board.detectBoard();
-   board.setAnalogVolOut(1, 4.22);
-   board.setAnalogVolOut(2, 4.87);
-   board.setAnalogVolOut(3, 4.99);
-   board.setAnalogVolOut(4, 8.22);
-   printf("Vol 1: %f\n", board.getAnalogVolOut(1));
-   printf("Vol 2: %f\n", board.getAnalogVolOut(2));
-   printf("Vol 3: %f\n", board.getAnalogVolOut(3));
-   printf("Vol 4: %f\n", board.getAnalogVolOut(4));
+   board.setOpenDrainPWM(1, 10);
+   board.setOpenDrainPWM(2, 20);
+   board.setOpenDrainPWM(3, 81.3);
+   board.setOpenDrainPWM(4, 99.1);
+   printf("Vol 1: %f\n", board.getOpenDrainPWM(1));
+   printf("Vol 2: %f\n", board.getOpenDrainPWM(2));
+   printf("Vol 3: %f\n", board.getOpenDrainPWM(3));
+   printf("Vol 4: %f\n", board.getOpenDrainPWM(4));
 }

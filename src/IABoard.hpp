@@ -1,5 +1,6 @@
 #pragma once
 #include "I2C.hpp"
+#include "utility.hpp"
 
 enum TRANSITION
 {
@@ -29,8 +30,20 @@ public:
    void setTransistionType(uint8_t channel, TRANSITION tran);
    void resetTransitions(uint8_t channel);
 
+   // Get the currently set analog output voltage
    float getAnalogVolOut(uint8_t channel);
+   // Set the analog output voltage from 0 - 10V, voltage in volts
    void setAnalogVolOut(uint8_t channel, float voltage);
+
+   // Get the currently set analog output current
+   float getAnalogCurOut(uint8_t channel);
+   // Set the analog output current from 4 - 20mA, current in mA
+   void setAnalogCurOut(uint8_t channel, float current);
+
+   // Get the PWM Duty Cycle for the Open Drain Output (if not used as digital out)
+   float getOpenDrainPWM(uint8_t channel);
+   // Set the PWM Duty Cycle (0 - 100%) for the Open Drain Output
+   void setOpenDrainPWM(uint8_t channel, float dutyCycle);
 
 private:
    I2C *_i2c;
