@@ -15,8 +15,11 @@ int main()
    board.detectBoard();
 
    board.setOpenDrainDOUT(1, 1);
+   board.detectBoard();
    board.setOpenDrainDOUT(2, 1);
+   board.detectBoard();
    board.setOpenDrainDOUT(3, 1);
+   board.detectBoard();
    board.setOpenDrainDOUT(4, 1);
 
    /*
