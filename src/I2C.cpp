@@ -35,8 +35,12 @@ bool I2C::writeData(uint16_t register, uint8_t data)
    return true;
 }
 
-bool I2C::writeData(uint16_t register, uint8_t *data)
+bool I2C::writeData(uint16_t register, uint8_t *data, uint8_t length)
 {
+   if (write(i2c0, data, length) != length)
+   {
+      printf("I2C ERROR: Could not transmit data!\n");
+   }
 
    return true;
 }

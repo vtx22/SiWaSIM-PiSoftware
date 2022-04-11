@@ -15,7 +15,7 @@ public:
    I2C(std::string dev, uint16_t address);
    ~I2C();
    bool begin();
-   bool writeData(uint16_t register, uint8_t *data);
+   bool writeData(uint16_t register, uint8_t *data, uint8_t length);
    bool writeData(uint16_t register, uint8_t data);
    bool readData();
 
