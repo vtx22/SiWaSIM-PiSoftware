@@ -47,7 +47,7 @@ bool I2C::writeData(uint8_t *data, uint8_t length)
 
 uint8_t I2C::readData()
 {
-   uint8_t *data[1] = {0x00};
+   uint8_t data[1] = {0x00};
    readData(data, 1);
 
    return data[0];
@@ -57,7 +57,7 @@ bool I2C::readData(uint8_t *data, uint8_t length)
 {
    if (read(i2c0, data, length) != length)
    {
-      printf("I2C ERROR: Could not read data!");
+      printf("I2C ERROR: Could not read data!\n");
       return false;
    }
 
