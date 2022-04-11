@@ -14,8 +14,8 @@ int main()
 
    board.detectBoard();
 
-   printf("Vol 1: %d\n", board.getLED(1));
-   printf("Vol 2: %d\n", board.getLED(2));
-   printf("Vol 3: %d\n", board.getLED(3));
-   printf("Vol 4: %d\n", board.getLED(4));
+   printf("Vol 1: %d\n", board.getOpenDrainDOUT(1));
+   printf("Vol 2: %d\n", board.getOpenDrainDOUT(2));
+   printf("Vol 3: %d\n", board.getOpenDrainDOUT(3));
+   printf("Vol 4: %d\n", board.getOpenDrainDOUT(4));
 }
