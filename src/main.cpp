@@ -14,6 +14,8 @@ int main()
 
    board.detectBoard();
 
+   board.setOpenDrainDOUT(1, 1);
+
    printf("Vol 1: %d\n", board.getOpenDrainDOUT(1));
    printf("Vol 2: %d\n", board.getOpenDrainDOUT(2));
    printf("Vol 3: %d\n", board.getOpenDrainDOUT(3));
