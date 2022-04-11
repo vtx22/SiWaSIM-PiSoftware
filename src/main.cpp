@@ -13,5 +13,4 @@ int main()
    IABoard board;
 
    board.detectBoard();
-   printf("Channel 1 is: %d", board.digitalRead(1));
 }
