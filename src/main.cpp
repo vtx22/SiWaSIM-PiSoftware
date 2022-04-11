@@ -19,8 +19,10 @@ int main()
    board.setOpenDrainDOUT(3, 1);
    board.setOpenDrainDOUT(4, 1);
 
+   /*
    printf("Vol 1: %d\n", board.getOpenDrainDOUT(1));
    printf("Vol 2: %d\n", board.getOpenDrainDOUT(2));
    printf("Vol 3: %d\n", board.getOpenDrainDOUT(3));
    printf("Vol 4: %d\n", board.getOpenDrainDOUT(4));
+   /*
 }
