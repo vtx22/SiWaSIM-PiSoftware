@@ -63,7 +63,7 @@ uint16_t IABoard::readTransistions(uint8_t channel)
    return (data[0] + (data[1] << 8));
 }
 
-uint16_t IABoard::readTransistions(uint8_t channel)
+uint16_t IABOard::readTransistions(uint8_t channel)
 {
    if (channel > 4 || channel < 1)
    {
