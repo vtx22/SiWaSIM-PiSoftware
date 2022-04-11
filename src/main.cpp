@@ -13,4 +13,5 @@ int main()
    IABoard board;
 
    board.detectBoard();
+   board.readTransistions(1);
 }
