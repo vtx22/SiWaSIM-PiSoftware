@@ -234,7 +234,7 @@ void IABoard::setOpenDrainDOUT(uint8_t channel, bool value)
    _i2c->writeData(data, 2);
 }
 
-bool getLED(uint8_t channel)
+bool IABoard::getLED(uint8_t channel)
 {
    if (channel > 4 || channel < 1)
    {
