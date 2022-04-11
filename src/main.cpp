@@ -32,6 +32,6 @@ int main()
       {
          duty = 0;
       }
-      delayMicroseconds(100000);
+      time_sleep(0.05);
    }
 }
