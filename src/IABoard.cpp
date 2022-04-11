@@ -99,7 +99,7 @@ float IABoard::getAnalogVolOut(uint8_t channel)
    if (channel > 4 || channel < 1)
    {
       printf("IA-Board ERROR: Channel out of range! Allowed: 1 - 4\n");
-      return;
+      return 0;
    }
 
    _i2c->writeData(0x04 + 2 * (channel - 1));
