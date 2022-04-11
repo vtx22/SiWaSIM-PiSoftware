@@ -20,6 +20,8 @@ bool I2C::begin()
       return false;
    }
 
+   printf("I2C0: %d, Address: %d", i2c0, _address);
+
    if (ioctl(i2c0, I2C_SLAVE, _address) < 0)
    {
       printf("I2C ERROR: Device Error!\n");
