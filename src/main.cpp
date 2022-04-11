@@ -6,10 +6,11 @@
 #include "I2C.hpp"
 #include "UART.hpp"
 #include "GPIO.hpp"
+#include "IABoard.hpp"
 
 int main()
 {
-   I2C test("/dev/i2c-1", 0x50);
-   uint8_t data[3] = {0x00, 0xFF, 0x35};
-   test.writeData(0, data, 3);
+   IABoard board;
+
+   board.detectBoard();
 }
