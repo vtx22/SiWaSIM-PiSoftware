@@ -9,7 +9,7 @@
 
 int main()
 {
-   I2C test("/dev/ttyAMA0", 0x50);
+   I2C test("/dev/i2c-1", 0x50);
 
    test.writeData(0x00, 0xFF);
 }
