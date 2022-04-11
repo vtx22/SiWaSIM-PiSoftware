@@ -118,4 +118,10 @@ void IABoard::setAnalogVolOut(uint8_t channel, float voltage)
       printf("IA-Board ERROR: Channel out of range! Allowed: 1 - 4\n");
       return;
    }
+
+   uint16_t vol = voltage * 1000;
+
+   uint8_t data[3] = {0x04 + 2 * (channel - 1), (vol & 0xFF), (vol >> 8)};
+
+   _i2c->writeData(data, 3);
 }
