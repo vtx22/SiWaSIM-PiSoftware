@@ -163,7 +163,7 @@ void IABoard::setAnalogCurOut(uint8_t channel, float current)
    _i2c->writeData(data, 3);
 }
 
-float getOpenDrainPWM(uint8_t channel)
+float IABoard::getOpenDrainPWM(uint8_t channel)
 {
    if (channel > 4 || channel < 1)
    {
@@ -179,7 +179,7 @@ float getOpenDrainPWM(uint8_t channel)
    return (float)(duty[0] + (duty[1] << 8)) / 100.f;
 }
 
-void setOpenDrainPWM(uint8_t channel, float dutyCycle)
+void IABOard::setOpenDrainPWM(uint8_t channel, float dutyCycle)
 {
    if (channel > 4 || channel < 1)
    {
