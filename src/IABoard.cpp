@@ -247,7 +247,7 @@ bool IABoard::getLED(uint8_t channel)
    return (data & (1 << (channel + 3)));
 }
 
-void setLED(uint8_t channel, bool value)
+void IABoard::setLED(uint8_t channel, bool value)
 {
    if (channel > 4 || channel < 1)
    {
