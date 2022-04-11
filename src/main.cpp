@@ -13,5 +13,5 @@ int main()
    IABoard board;
 
    board.detectBoard();
-   printf("Transistions: %d", board.readTransistions(1));
+   printf("Transistions: %f", board.getAnalogVolOut(1));
 }
