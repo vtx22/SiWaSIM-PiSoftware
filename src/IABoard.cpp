@@ -51,8 +51,8 @@ uint16_t IABoard::readTransistions(uint8_t channel)
    }
 
    _i2c->writeData(0x6A + 2 * (channel - 1));
-   uint8_t data[2];
+   uint8_t data[2] = {0x00, 0x00};
    _i2c->readData(data, 2);
 
-   return ((data[0] << 8) + data[1]);
+   uint16_t counts = data[0] + (data[1] << 8);
 }
