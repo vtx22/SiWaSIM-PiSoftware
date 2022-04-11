@@ -196,3 +196,57 @@ void IABoard::setOpenDrainPWM(uint8_t channel, float dutyCycle)
 
    _i2c->writeData(data, 3);
 }
+
+uint8_t IABoard::getOpenDrainDOUT()
+{
+   _i2c->writeData(0x00);
+   return _i2c->readData();
+}
+
+bool IABoard::getOpenDrainDOUT(uint8_t channel)
+{
+   if (channel > 4 || channel < 1)
+   {
+      printf("IA-Board ERROR: Channel out of range! Allowed: 1 - 4\n");
+      return 0;
+   }
+
+   uint8_t data = getOpenDrainDOUT();
+
+   return (data & (1 << (channel - 1)));
+}
+
+void IABoard::setOpenDrainDOUT(uint8_t channel, bool value)
+{
+   if (channel > 4 || channel < 1)
+   {
+      printf("IA-Board ERROR: Channel out of range! Allowed: 1 - 4\n");
+      return;
+   }
+
+   uint8_t cmd = 0x02;
+   if (value)
+   {
+      cmd = 0x01;
+   }
+   uint8_t data[2] = {cmd, channel};
+
+   _i2c->writeData(data, 2);
+}
+
+bool getLED(uint8_t channel)
+{
+   if (channel > 4 || channel < 1)
+   {
+      printf("IA-Board ERROR: Channel out of range! Allowed: 1 - 4\n");
+      return 0;
+   }
+
+   uint8_t data = getOpenDrainDOUT();
+
+   return (data & (1 << (channel + 3)));
+}
+
+void setLED(uint8_t channel, bool value)
+{
+}

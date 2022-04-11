@@ -45,6 +45,18 @@ public:
    // Set the PWM Duty Cycle (0 - 100%) for the Open Drain Output
    void setOpenDrainPWM(uint8_t channel, float dutyCycle);
 
+   // Read all digital open drain outputs
+   uint8_t getOpenDrainDOUT();
+   // Get the currently set open drain digital out value
+   bool getOpenDrainDOUT(uint8_t channel);
+   // Set the digital open drain output
+   void setOpenDrainDOUT(uint8_t channel, bool value);
+
+   // Gets the state of a certain LED
+   bool getLED(uint8_t channel);
+   // Sets a certain LED Low or High
+   void setLED(uint8_t channel, bool value);
+
 private:
    I2C *_i2c;
    const uint8_t _stack = 0;
