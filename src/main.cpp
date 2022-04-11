@@ -9,19 +9,7 @@
 
 int main()
 {
-   //I2C test("/dev/ttyAMA0", 0x50);
-   //UART com();
-   //test.begin();
+   I2C test("/dev/ttyAMA0", 0x50);
 
-   //uint8_t message[10] = {0xFF, 0xFF, 0xFF, 0xAA, 0xAB};
-   //com.transmitMSG(message, 10);
-   GPIO gpio;
-   int scale = 40;
-   for (int i = 0; i < 11000; i++)
-   {
-      int freq = i;
-      gpio.setPWM(13, 50, 0.1);
-      printf("PWM FREQ: %d\n", freq);
-      time_sleep(5 / (float)freq);
-   }
+   test.writeData(0x00, 0xFF);
 }

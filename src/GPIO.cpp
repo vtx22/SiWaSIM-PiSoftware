@@ -21,11 +21,11 @@ void GPIO::setPWM(int pin, float dutyCycle, float frequency)
       float highttime = period * dutyCycle / 100.f;
    }
 
-   if (frequency == 995)
+   if ((int)frequency == 995)
    {
       frequency--;
    }
-   if (frequency == 996)
+   if ((int)frequency == 996)
    {
       frequency++;
    }
