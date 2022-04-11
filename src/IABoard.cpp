@@ -63,7 +63,7 @@ uint16_t IABoard::readTransistions(uint8_t channel)
    return (data[0] + (data[1] << 8));
 }
 
-void IABoard::readTransistions(uint8_t channel)
+uint16_t IABoard::readTransistions(uint8_t channel)
 {
    if (channel > 4 || channel < 1)
    {
@@ -74,6 +74,7 @@ void IABoard::readTransistions(uint8_t channel)
    // First byte is command, second is the channel
    uint8_t command[2] = {0x69, channel};
    _i2c->writeData(command, 2);
+   return 0;
 }
 
 TRANSITION IABoard::getTransistionType(uint8_t channel)
