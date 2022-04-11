@@ -11,8 +11,8 @@ IABoard::~IABoard()
 
 void IABoard::detectBoard()
 {
-   _i2c.writeData(0x78);
-   if (_i2c.readData() == 0x01)
+   _i2c->writeData(0x78);
+   if (_i2c->readData() == 0x01)
    {
       printf("IA-Board: Board detected!\n");
       return;
