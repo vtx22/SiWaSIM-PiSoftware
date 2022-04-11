@@ -13,12 +13,9 @@ int main()
    IABoard board;
 
    board.detectBoard();
-   board.setOpenDrainPWM(1, 0);
-   board.setOpenDrainPWM(2, 0);
-   board.setOpenDrainPWM(3, 0);
-   board.setOpenDrainPWM(4, 0);
-   printf("Vol 1: %f\n", board.getOpenDrainPWM(1));
-   printf("Vol 2: %f\n", board.getOpenDrainPWM(2));
-   printf("Vol 3: %f\n", board.getOpenDrainPWM(3));
-   printf("Vol 4: %f\n", board.getOpenDrainPWM(4));
+
+   printf("Vol 1: %f\n", board.getLED(1));
+   printf("Vol 2: %f\n", board.getLED(2));
+   printf("Vol 3: %f\n", board.getLED(3));
+   printf("Vol 4: %f\n", board.getLED(4));
 }
