@@ -29,6 +29,12 @@ bool I2C::begin()
    return true;
 }
 
+bool I2C::writeData(uint16_t register, uint8_t data)
+{
+
+   return true;
+}
+
 bool I2C::writeData(uint16_t register, uint8_t *data)
 {
 
