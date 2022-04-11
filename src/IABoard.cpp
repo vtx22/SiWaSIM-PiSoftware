@@ -184,7 +184,7 @@ void IABoard::setOpenDrainPWM(uint8_t channel, float dutyCycle)
    if (channel > 4 || channel < 1)
    {
       printf("IA-Board ERROR: Channel out of range! Allowed: 1 - 4\n");
-      return 0;
+      return;
    }
 
    // Cut off out of range values
