@@ -32,7 +32,7 @@ bool I2C::begin()
 bool I2C::writeData(uint8_t data)
 {
    uint8_t value[1] = {data};
-   writeData(value, 1);
+   return writeData(value, 1);
 }
 
 bool I2C::writeData(uint8_t *data, uint8_t length)
@@ -40,6 +40,7 @@ bool I2C::writeData(uint8_t *data, uint8_t length)
    if (write(i2c0, data, length) != length)
    {
       printf("I2C ERROR: Could not transmit data!\n");
+      return false;
    }
 
    return true;
