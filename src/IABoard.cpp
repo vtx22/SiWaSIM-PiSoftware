@@ -179,7 +179,7 @@ float IABoard::getOpenDrainPWM(uint8_t channel)
    return (float)(duty[0] + (duty[1] << 8)) / 100.f;
 }
 
-void IABOard::setOpenDrainPWM(uint8_t channel, float dutyCycle)
+void IABoard::setOpenDrainPWM(uint8_t channel, float dutyCycle)
 {
    if (channel > 4 || channel < 1)
    {
