@@ -7,7 +7,6 @@ IABoard::IABoard()
 
 IABoard::~IABoard()
 {
-   delete _i2c;
 }
 
 void IABoard::detectBoard()
