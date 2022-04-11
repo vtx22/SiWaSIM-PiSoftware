@@ -21,4 +21,17 @@ int main()
    printf("Vol 2: %f\n", board.getOpenDrainPWM(2));
    printf("Vol 3: %f\n", board.getOpenDrainPWM(3));
    printf("Vol 4: %f\n", board.getOpenDrainPWM(4));
+
+   float duty = 0;
+   while (true)
+   {
+      board.setOpenDrainPWM(1, duty);
+      duty++;
+
+      if (duty >= 100)
+      {
+         duty = 0;
+      }
+      delayMicroseconds(100000);
+   }
 }
