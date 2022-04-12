@@ -2,6 +2,7 @@
 
 IABoard::IABoard()
 {
+   // Create I2C Object where 0x50 is the I2C address of the IA-Board
    _i2c = new I2C("/dev/i2c-1", 0x50);
 }
 
@@ -263,4 +264,47 @@ void IABoard::setLED(uint8_t channel, bool value)
    uint8_t data[2] = {cmd, channel + 0x04};
 
    _i2c->writeData(data, 2);
+}
+
+float IABoard::readAnalogVolIn(uint8_t channel)
+{
+   if (channel > 4 || channel < 1)
+   {
+      printf("IA-Board ERROR: Channel out of range! Allowed: 1 - 4\n");
+      return 0;
+   }
+
+   _i2c->writeData(0x1C + 2 * (channel - 1));
+
+   uint8_t vol[2];
+   _i2c->readData(vol, 2);
+
+   return (float)(vol[0] + (vol[1] << 8)) / 1000.f;
+}
+
+float IABoard::readAnalogVolInPM(uint8_t channel)
+{
+   if (channel > 4 || channel < 1)
+   {
+      printf("IA-Board ERROR: Channel out of range! Allowed: 1 - 4\n");
+      return 0;
+   }
+
+   _i2c->writeData(0x24 + 2 * (channel - 1));
+
+   uint8_t vol[2];
+   _i2c->readData(vol, 2);
+
+   return (float)(vol[0] + (vol[1] << 8)) / 1000.f - 10.f;
+}
+
+float IABoard::readAnalogCurIn(uint8_t channel)
+{
+   if (channel > 4 || channel < 1)
+   {
+      printf("IA-Board ERROR: Channel out of range! Allowed: 1 - 4\n");
+      return 0;
+   }
+
+   _i2c->writeData(0x2C + 2 * (channel - 1));
 }

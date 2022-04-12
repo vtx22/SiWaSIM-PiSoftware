@@ -57,6 +57,14 @@ public:
    // Sets a certain LED Low or High
    void setLED(uint8_t channel, bool value);
 
+   // Reads the analog input voltage of a certain channel (0-10V)
+   float readAnalogVolIn(uint8_t channel);
+   // Reads the analog input voltage of a certain channel (-10-10V, Jumper set)
+   float readAnalogVolInPM(uint8_t channel);
+
+   // Reads the analog input current of a certain channel (4-20mA)
+   float readAnalogCurIn(uint8_t channel);
+
 private:
    I2C *_i2c;
    const uint8_t _stack = 0;
