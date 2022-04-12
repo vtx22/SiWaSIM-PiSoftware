@@ -64,7 +64,7 @@ uint16_t IABoard::readTransistions(uint8_t channel)
    return (data[0] + (data[1] << 8));
 }
 
-void resetTransitions(uint8_t channel)
+void IABorad::resetTransitions(uint8_t channel)
 {
    if (channel > 4 || channel < 1)
    {
