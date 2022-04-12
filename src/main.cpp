@@ -10,5 +10,9 @@
 
 int main()
 {
-   UART uart();
+   UART uart;
+
+   uint8_t data[3] = {0xFF, 0xEE, 0xAD};
+
+   uart.transmitMSG(data, 3);
 }
