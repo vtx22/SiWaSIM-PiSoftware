@@ -10,14 +10,5 @@
 
 int main()
 {
-   IABoard board;
-
-   board.detectBoard();
-
-   printf("Cur 1: %f\n", board.readAnalogCurIn(1));
-   /*
-   printf("Vol 2: %d\n", board.getOpenDrainDOUT(2));
-   printf("Vol 3: %d\n", board.getOpenDrainDOUT(3));
-   printf("Vol 4: %d\n", board.getOpenDrainDOUT(4));
-   */
+   UART uart();
 }
