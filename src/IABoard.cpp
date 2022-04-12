@@ -3,7 +3,7 @@
 IABoard::IABoard()
 {
    // Create I2C Object where 0x50 is the I2C address of the IA-Board
-   _i2c = new I2C("/dev/i2c-1", 0x50);
+   _i2c = new I2C("/dev/i2c-1", I2C_ADDRESS);
 }
 
 IABoard::~IABoard()
@@ -63,21 +63,19 @@ uint16_t IABoard::readTransistions(uint8_t channel)
 
    return (data[0] + (data[1] << 8));
 }
-/*
-uint16_t IABoard::readTransistions(uint8_t channel)
+
+void resetTransitions(uint8_t channel)
 {
    if (channel > 4 || channel < 1)
    {
       printf("IA-Board ERROR: Channel out of range! Allowed: 1 - 4\n");
-      return 0;
+      return;
    }
 
-   // First byte is command, second is the channel
-   uint8_t command[2] = {0x69, channel};
-   _i2c->writeData(command, 2);
-   return 0;
+   uint8_t data[2] = {0x69, channel};
+   _i2c->writeData(data, 2);
 }
-*/
+
 TRANSITION IABoard::getTransistionType(uint8_t channel)
 {
    if (channel > 4 || channel < 1)

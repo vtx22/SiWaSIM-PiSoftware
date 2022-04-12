@@ -2,6 +2,8 @@
 #include "I2C.hpp"
 #include "utility.hpp"
 
+#define I2C_ADDRESS 0x50
+
 enum TRANSITION
 {
    DISABLE = 0x00,
@@ -25,9 +27,13 @@ public:
    // Read digital input of certain channel 1 - 4
    bool digitalRead(uint8_t channel);
 
+   // Reads the number of counted transitions (if enabled)
    uint16_t readTransistions(uint8_t channel);
+   // Reads th ecurrently set transition type
    TRANSITION getTransistionType(uint8_t channel);
+   // Sets the type of transistions that should be counted
    void setTransistionType(uint8_t channel, TRANSITION tran);
+   // Sets the transistion counter of a channel to 0
    void resetTransitions(uint8_t channel);
 
    // Get the currently set analog output voltage
@@ -67,5 +73,4 @@ public:
 
 private:
    I2C *_i2c;
-   const uint8_t _stack = 0;
 };

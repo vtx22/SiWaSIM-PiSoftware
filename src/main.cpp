@@ -14,7 +14,7 @@ int main()
 
    board.detectBoard();
 
-   printf("Vol 1: %f\n", board.readAnalogCurIn(1));
+   printf("Cur 1: %f\n", board.readAnalogCurIn(1));
    /*
    printf("Vol 2: %d\n", board.getOpenDrainDOUT(2));
    printf("Vol 3: %d\n", board.getOpenDrainDOUT(3));
