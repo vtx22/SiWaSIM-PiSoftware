@@ -307,4 +307,9 @@ float IABoard::readAnalogCurIn(uint8_t channel)
    }
 
    _i2c->writeData(0x2C + 2 * (channel - 1));
+
+   uint8_t cur[2];
+   _i2c->readData(cur, 2);
+
+   return (float)(cur[0] + (cur[1] << 8)) / 1000.f;
 }
