@@ -63,7 +63,7 @@ bool UART::transmitMSG(uint8_t *msg, uint16_t length)
 
 int UART::receiveMSG(uint8_t *msg)
 {
-   int received = read(uart0, msg, 10);
+   int received = read(uart0, &msg, 10);
    if (received < 0)
    {
       printf("UART ERROR: Could not receive message!\n");
