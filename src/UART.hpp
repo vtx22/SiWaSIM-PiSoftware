@@ -6,7 +6,7 @@
 #include <sstream>
 #include <termios.h>
 #include <unistd.h>
-//#include <string.h>
+#include <vector>
 
 class UART
 {
@@ -15,7 +15,7 @@ public:
    ~UART();
    bool begin();
    bool transmitMSG(uint8_t *msg, uint16_t length);
-   int receiveMSG(uint8_t *msg);
+   std::vector<uint8_t> receiveMSG();
 
 private:
    int uart0 = -1;

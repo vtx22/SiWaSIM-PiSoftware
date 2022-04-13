@@ -61,13 +61,21 @@ bool UART::transmitMSG(uint8_t *msg, uint16_t length)
    return true;
 }
 
-int UART::receiveMSG(uint8_t *msg)
+std::vector<uint8_t> UART::receiveMSG()
 {
-   int received = read(uart0, &msg, 10);
-   if (received < 0)
+   std::vector<uint8_t> rx;
+   uint8_t current_byte;
+   int status;
+
+   while (status = read(uart0, &current_byte, 1) > 0)
+   {
+      rx.push_back(current_byte);
+   }
+
+   if (status < 0)
    {
       printf("UART ERROR: Could not receive message!\n");
    }
 
-   return received;
+   return rx;
 }

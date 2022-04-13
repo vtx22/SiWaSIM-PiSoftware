@@ -2,6 +2,7 @@
 #include <string>
 #include <stdio.h>
 #include <stdlib.h>
+#include <vector>
 
 #include "I2C.hpp"
 #include "UART.hpp"
@@ -17,13 +18,13 @@ int main()
    uart.transmitMSG(data, 3);
 
    printf("Waiting for message...\n");
-   uint8_t rx[100];
-   int received = uart.receiveMSG(rx);
 
-   printf("RECEIVED %d BYTES!\n", received);
+   std::vector<uint8_t> received = uart.receiveMSG();
 
-   for (int i = 0; i < 3; i++)
+   printf("RECEIVED %d BYTES!\n", received.size());
+
+   for (int i = 0; i < received.size(); i++)
    {
-      printf(" %d ", rx[i]);
+      printf(" %d ", received[i]);
    }
 }
