@@ -27,6 +27,7 @@ bool UART::begin()
    options.c_iflag = 0;
    options.c_oflag = 0;
    options.c_lflag = 0;
+   options.c_iflag &= ~(IGNBRK | BRKINT | PARMRK | ISTRIP | INLCR | IGNCR | ICRNL);
 
    options.c_ispeed = B115200;
    options.c_ospeed = B115200;
