@@ -15,4 +15,15 @@ int main()
    uint8_t data[3] = {0xFF, 0xEE, 0xAD};
 
    uart.transmitMSG(data, 3);
+
+   printf("Waiting for message...\n");
+   uint8_t rx[100];
+   int received = uart.receiveMSG(rx);
+
+   printf("RECEIVED %d BYTES!\n", received);
+
+   for (int i = 0; i < received; i++)
+   {
+      printf(" %d ", rx[i]);
+   }
 }

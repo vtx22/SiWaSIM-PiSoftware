@@ -15,9 +15,11 @@ public:
    ~UART();
    bool begin();
    bool transmitMSG(uint8_t *msg, uint16_t length);
+   int receiveMSG(uint8_t *msg);
 
 private:
    int uart0 = -1;
-   //std::string _dev;
-   const uint16_t _messageSizeRX = 10;
+   // std::string _dev;
+   const uint8_t _messageSizeRX = 0;    // Number of bytes to wait for
+   const uint8_t _messageTimeoutRX = 1; // Read Timeout in 0.1s steps
 };

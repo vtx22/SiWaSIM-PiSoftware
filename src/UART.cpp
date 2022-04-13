@@ -31,11 +31,16 @@ bool UART::begin()
    options.c_ispeed = B115200;
    options.c_ospeed = B115200;
 
-   options.c_cc[VTIME] = 0;
+   options.c_cc[VTIME] = _messageTimeoutRX;
    options.c_cc[VMIN] = _messageSizeRX;
 
    tcflush(uart0, TCIFLUSH);
-   tcsetattr(uart0, TCSANOW, &options);
+
+   if (tcsetattr(uart0, TCSANOW, &options) != 0)
+   {
+      printf("UART ERROR: Unable to configure UART!\n");
+      return false;
+   }
 
    return true;
 }
@@ -54,4 +59,15 @@ bool UART::transmitMSG(uint8_t *msg, uint16_t length)
    }
 
    return true;
+}
+
+int UART::receiveMSG(uint8_t *msg)
+{
+   int received = read(uart0, msg, sizeof(msg));
+   if (received < 0)
+   {
+      printf("UART ERROR: Could not receive message!\n");
+   }
+
+   return received;
 }
