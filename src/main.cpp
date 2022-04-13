@@ -22,7 +22,7 @@ int main()
 
    printf("RECEIVED %d BYTES!\n", received);
 
-   for (int i = 0; i < received; i++)
+   for (int i = 0; i < 3; i++)
    {
       printf(" %d ", rx[i]);
    }
