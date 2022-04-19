@@ -13,6 +13,11 @@
 int main()
 {
    PCB pcb;
-
-   pcb.ledBusy(1);
+   bool state = false;
+   while (true)
+   {
+      pcb.ledBusy(state);
+      state = !state;
+      time_sleep(1);
+   }
 }
