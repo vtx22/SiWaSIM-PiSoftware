@@ -4,7 +4,6 @@ PCB::PCB()
 {
    _gpio = new GPIO();
 
-   gpioInitialise();
    // Set all Switch Pins as Output
    _gpio->setPinMode(PIN_LED_READY, PI_OUTPUT);
    _gpio->setPinMode(PIN_LED_BUSY, PI_OUTPUT);
