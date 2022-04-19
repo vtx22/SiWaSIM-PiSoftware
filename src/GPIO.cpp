@@ -32,6 +32,34 @@ void GPIO::setPWM(int pin, float dutyCycle, float frequency)
 
    if (gpioHardwarePWM(pin, frequency, 1e6 * dutyCycle / 100.f) < 0)
    {
-      printf("PWM Error\n");
+      printf("GPIO ERROR: PWM Error\n");
    }
+}
+
+void GPIO::setPinMode(uint8_t pin, uint8_t mode)
+{
+   if (gpioSetMode(pin, mode) != 0)
+   {
+      printf("GPIO ERROR: Error setting pin mode! PIN: %d\n", pin);
+   }
+}
+
+void GPIO::writePin(uint8_t pin, bool state)
+{
+   if (gpioWrite(pin, state) != 0)
+   {
+      printf("GPIO ERROR: Error writing to pin %d!\n", pin);
+   }
+}
+
+bool GPIO::readPin(uint8_t pin)
+{
+   int value = gpioRead(pin);
+   if (value != 0 && value != 1)
+   {
+      printf("GPIO ERROR: Error reading from pin %d!\n", pin);
+      return 0;
+   }
+
+   return value;
 }
