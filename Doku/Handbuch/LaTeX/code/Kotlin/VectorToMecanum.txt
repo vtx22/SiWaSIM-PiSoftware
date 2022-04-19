@@ -1,0 +1,3 @@
+float y 	//zwischen -1 und 1
+float x 	//zwischen -1 und 1
+float z		//zwischen -1 und 1

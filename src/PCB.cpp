@@ -3,6 +3,7 @@
 PCB::PCB()
 {
    _gpio = new GPIO();
+   _ia = new IABoard();
 
    // Set all Switch Pins as Output
    _gpio->setPinMode(PIN_LED_READY, PI_OUTPUT);
@@ -21,6 +22,8 @@ PCB::PCB()
 
 PCB::~PCB()
 {
+   delete _gpio;
+   delete _ia;
 }
 
 void PCB::ledReady(bool state)

@@ -1,0 +1,5 @@
+xDirection[4] = { 1, -1, 1, -1}
+yDirection[4] = { 1,  1, 1,  1}
+zRotation[4]  = {-1, -1, 1,  1}
+//Z.B. fuer Motor 1:
+ergebnis_0 = yDirection[0]*y + xDirection[0]*x + zRotation[0]*z

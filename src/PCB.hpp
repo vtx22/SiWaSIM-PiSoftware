@@ -1,5 +1,6 @@
 #pragma once
 #include "GPIO.hpp"
+#include "IABoard.hpp"
 
 // LED Pins
 #define PIN_LED_READY 23
@@ -45,4 +46,5 @@ public:
 
 private:
    GPIO *_gpio;
+   IABoard *_ia;
 };
