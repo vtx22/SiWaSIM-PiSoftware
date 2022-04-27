@@ -9,15 +9,9 @@
 #include "GPIO.hpp"
 #include "IABoard.hpp"
 #include "PCB.hpp"
+#include "Simulator.hpp"
 
 int main()
 {
-   PCB pcb;
-   bool state = false;
-   while (true)
-   {
-      pcb.ledBusy(state);
-      state = !state;
-      time_sleep(1);
-   }
+   Simulator sim;
 }
