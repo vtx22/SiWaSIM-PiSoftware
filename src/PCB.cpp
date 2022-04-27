@@ -81,11 +81,11 @@ void PCB::setPOWERSW2(bool state)
    _gpio->writePin(PIN_POWERSW2, state);
 }
 
-void PCB::setLoadcellVoltage(float voltage, float exc, LoadCellMode mode)
+void PCB::setLoadcellVoltage(float voltage)
 {
    float addvol = 0.f, subvol = 0.f;
 
-   switch (mode)
+   switch (_config->cellMode)
    {
    default:
    case NORMAL:

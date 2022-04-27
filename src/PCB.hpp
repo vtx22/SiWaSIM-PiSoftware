@@ -38,7 +38,7 @@ public:
    void setPOWERSW1(bool state);
    void setPOWERSW2(bool state);
 
-   void setLoadcellVoltage(float voltage, LoadCellMode mode);
+   void setLoadcellVoltage(float voltage);
    void setLoadcellDCVoltage(float voltage);
    void setSENVoltage(float voltage);
 

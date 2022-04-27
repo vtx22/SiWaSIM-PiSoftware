@@ -25,12 +25,8 @@ public:
 
    void loadConfiguration();
 
-   struct LOADCELL
-   {
-      LoadCellMode cellMode = NORMAL;
-      float exc_voltage = 10.f;
-
-   } typedef LOADCELL;
+   LoadCellMode cellMode = NORMAL;
+   float exc_voltage = 10.f;
 
 private:
    void parseJSON();
