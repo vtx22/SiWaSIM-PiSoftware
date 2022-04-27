@@ -1,7 +1,8 @@
 #pragma once
 #include "GPIO.hpp"
 #include "IABoard.hpp"
-#include "Simulator.hpp"
+//#include "Simulator.hpp"
+#include "Configuration.hpp"
 
 // LED Pins
 #define PIN_LED_READY 23
