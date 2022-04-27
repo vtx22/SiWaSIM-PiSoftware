@@ -80,3 +80,39 @@ void PCB::setPOWERSW2(bool state)
 {
    _gpio->writePin(PIN_POWERSW2, state);
 }
+
+void PCB::setLoadcellVoltage(float voltage, LoadCellMode mode)
+{
+   float addvol = 0, subvol = 0;
+
+   switch (mode)
+   {
+   default:
+   case NORMAL:
+      /* code */
+      break;
+   }
+
+   _ia->setAnalogVolOut(2, addvol);
+   _ia->setAnalogVolOut(3, subvol);
+}
+
+void PCB::setLoadcellDCVoltage(float voltage)
+{
+   _ia->setAnalogVolOut(1, voltage);
+}
+
+void PCB::setSENVoltage(float voltage)
+{
+   _ia->setAnalogVolOut(4, voltage);
+}
+
+float PCB::getEXCVoltage()
+{
+   return _ia->readAnalogVolIn(1);
+}
+
+float PCB::getSENVoltage()
+{
+   return _ia->readAnalogVolIn(2);
+}

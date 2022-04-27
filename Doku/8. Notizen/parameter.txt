@@ -1,0 +1,14 @@
+Zelle:
+   Charakteristik (1mV/V etc.)
+   Nennlast in kg
+   Gleichtaktspannung Jumper
+
+Digital IN:
+   DI1 Funktion
+   DI2 Funktion
+   DI3 Funktion
+   DI4 Funktion
+
+Geschwindigkeit:
+   Zweiten Punkt der Linearität
+

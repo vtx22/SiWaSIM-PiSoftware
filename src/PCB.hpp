@@ -1,6 +1,7 @@
 #pragma once
 #include "GPIO.hpp"
 #include "IABoard.hpp"
+#include "Simulator.hpp"
 
 // LED Pins
 #define PIN_LED_READY 23
@@ -19,13 +20,6 @@
 #define PIN_EXTRASW1 27
 #define PIN_EXTRASW2 22
 
-enum IMPEDANCE
-{
-   OPEN = 0x00,
-   NOMINAL = 0x01,
-   SHORT = 0x02,
-} typedef IMPEDANCE;
-
 class PCB
 {
 public:
@@ -43,6 +37,13 @@ public:
 
    void setPOWERSW1(bool state);
    void setPOWERSW2(bool state);
+
+   void setLoadcellVoltage(float voltage, LoadCellMode mode);
+   void setLoadcellDCVoltage(float voltage);
+   void setSENVoltage(float voltage);
+
+   float getEXCVoltage();
+   float getSENVoltage();
 
 private:
    GPIO *_gpio;

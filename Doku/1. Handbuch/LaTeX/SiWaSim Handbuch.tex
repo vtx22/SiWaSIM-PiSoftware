@@ -1,0 +1,69 @@
+\documentclass[12pt, a4paper]{report}
+
+\input{preamble}
+\renewcommand{\arraystretch}{1.5}
+\setlength{\tabcolsep}{20pt}
+%\input{environments}
+
+
+\begin{document}
+
+    \begin{figure}
+        \centering
+        %\includegraphics[width=0.9\linewidth]{img/strasse1}
+    \end{figure}
+    
+   \vspace*{1.2cm}
+   \begin{center}
+       {\huge SiWaSim - Handbuch}\\[0.8cm]
+       \large{Automatisierte Tests für SIWAREX-Module}\\[0.5cm]
+	
+   \end{center}
+   \vfill
+   \begin{flushleft}
+       \large{Autor: Fynn Raddatz}\\
+       \today
+       \thispagestyle{empty}
+   \end{flushleft}
+   \newpage
+   \tableofcontents
+   %
+   \clearpage
+   %
+   \pagestyle{fancy}
+   \fancypagestyle{plain}{%
+       \lhead{\textsc{SIWASIM}}
+       \rhead{Raddatz, Eismann, Buck, Hecker}
+       \cfoot{\empty}
+       \rfoot{\thepage}
+       %	\renewcommand{\headrulewidth}{0pt}%
+       %	\renewcommand{\footrulewidth}{0pt}%
+   }
+
+\chapter{Einleitung}
+\chapter{Funktionsumfang}
+\chapter{Inbetriebnahme}
+\section{Vor dem Start}
+\section{Erstellen und Laden von Konfigurationen}
+\section{Manuelle Steuerung}
+\chapter{Automatisierte Tests}
+\section{Einleitung}
+\section{Erzeugen von Abläufen}
+\chapter{Technische Daten}
+\begin{table}[]
+\centering
+\begin{tabular}{|c|c|}
+\hline
+\textbf{Planet}  & \textbf{$p$}      \\ \hline
+\textbf{Mercury} & \textbf{$1.20\%$} \\ \hline
+\textbf{Venus}   & \textbf{$0.64\%$} \\ \hline
+\textbf{Earth}   & \textbf{$0.47\%$} \\ \hline
+\textbf{Mars}    & \textbf{$0.31\%$} \\ \hline
+\textbf{Jupiter} & \textbf{$0.09\%$} \\ \hline
+\textbf{Saturn}  & \textbf{$0.05\%$} \\ \hline
+\textbf{Uranus}  & \textbf{$0.02\%$} \\ \hline
+\textbf{Neptune} & \textbf{$0.02\%$} \\ \hline
+\end{tabular}
+\end{table}
+
+\end{document}
