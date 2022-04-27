@@ -1,6 +1,6 @@
 #include "PCB.hpp"
 
-PCB::PCB()
+PCB::PCB(Configuration *config) : _config(config)
 {
    _gpio = new GPIO();
    _ia = new IABoard();
@@ -81,17 +81,20 @@ void PCB::setPOWERSW2(bool state)
    _gpio->writePin(PIN_POWERSW2, state);
 }
 
-void PCB::setLoadcellVoltage(float voltage, LoadCellMode mode)
+void PCB::setLoadcellVoltage(float voltage, float exc, LoadCellMode mode)
 {
-   float addvol = 0, subvol = 0;
+   float addvol = 0.f, subvol = 0.f;
 
    switch (mode)
    {
    default:
    case NORMAL:
-      /* code */
+
       break;
    }
+
+   // Correction because if EXC is lower than expected the differential voltage has to decrease
+   float correction = getEXCVoltage() / _config->exc_voltage;
 
    _ia->setAnalogVolOut(2, addvol);
    _ia->setAnalogVolOut(3, subvol);

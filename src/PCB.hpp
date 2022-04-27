@@ -1,7 +1,6 @@
 #pragma once
 #include "GPIO.hpp"
 #include "IABoard.hpp"
-//#include "Simulator.hpp"
 #include "Configuration.hpp"
 
 // LED Pins
@@ -24,7 +23,7 @@
 class PCB
 {
 public:
-   PCB();
+   PCB(Configuration config);
    ~PCB();
 
    void ledFault(bool state);
@@ -49,4 +48,5 @@ public:
 private:
    GPIO *_gpio;
    IABoard *_ia;
+   Configuration *_config;
 };

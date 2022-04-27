@@ -13,4 +13,5 @@ public:
 
 private:
    Configuration *_config;
+   PCB *_pcb;
 };
