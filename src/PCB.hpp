@@ -23,7 +23,7 @@
 class PCB
 {
 public:
-   PCB(Configuration config);
+   PCB(Configuration *config);
    ~PCB();
 
    void ledFault(bool state);
