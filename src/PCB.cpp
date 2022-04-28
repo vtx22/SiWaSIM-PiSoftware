@@ -93,7 +93,7 @@ void PCB::setLoadcellVoltage(float voltage)
    {
    default:
    case NORMAL:
-      addvol = voltage * _config->addvol_ratio / 1000.f;
+      addvol = voltage * 0.5 * _config->addvol_ratio / 1000.f;
       break;
    }
 
