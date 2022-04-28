@@ -26,7 +26,7 @@ void Simulator::setWeightPER(float percentage)
    }
 
    voltage *= percentage;
-
+   printf("Setting voltage to: %f\n", voltage);
    _pcb->setLoadcellVoltage(voltage);
 }
 
