@@ -83,21 +83,25 @@ void PCB::setPOWERSW2(bool state)
 
 void PCB::setLoadcellVoltage(float voltage)
 {
-   float addvol = 0.f, subvol = 0.f;
+   // Restrain voltage to the maximum voltage (limited by the PCB design)
+   constrainMax(voltage, _config->max_diff_voltage);
 
+   float addvol = 0.f;
+
+   // Calculate the IA-Board Analog Out Voltage so that the SIG+- output matches the wanted voltage
    switch (_config->cellMode)
    {
    default:
    case NORMAL:
-
+      addvol = voltage * _config->addvol_ratio / 1000.f;
       break;
    }
 
    // Correction because if EXC is lower than expected the differential voltage has to decrease
-   float correction = getEXCVoltage() / _config->exc_voltage;
+   addvol *= getEXCVoltage() / _config->exc_voltage;
 
    _ia->setAnalogVolOut(2, addvol);
-   _ia->setAnalogVolOut(3, subvol);
+   _ia->setAnalogVolOut(3, addvol);
 }
 
 void PCB::setLoadcellDCVoltage(float voltage)

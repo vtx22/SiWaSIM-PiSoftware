@@ -1,4 +1,5 @@
 #pragma once
+#include "utility.hpp"
 #include "GPIO.hpp"
 #include "IABoard.hpp"
 #include "Configuration.hpp"

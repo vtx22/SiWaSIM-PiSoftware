@@ -25,8 +25,14 @@ public:
 
    void loadConfiguration();
 
-   LoadCellMode cellMode = NORMAL;
-   float exc_voltage = 10.f;
+   // SETTING VARIABLES
+   LoadCellMode cellMode = NORMAL; // Loadcell mode to be simulated
+   float exc_voltage = 10.f;       // Nominal EXC voltage
+   float load_weight = 20.f;       // Nominal Load Weight of the cell in kg
+   float initial_weight = 10.f;    // Initial weight (for manual / non-auto mode)
+   float addvol_ratio = 500;       // Inverted OpAmp gain (e.g.: At 10V Aout the added / subtracted voltage is 20mV --> ratio = 10V / 20mV = 500)
+   float max_diff_voltage = 40;    // Maximum Differential Voltage of SIG+-
+   float cellCharecteristic = 4;   // Charecteristik in mV/V
 
 private:
    void parseJSON();
