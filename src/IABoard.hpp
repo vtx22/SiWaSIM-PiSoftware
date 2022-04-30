@@ -81,5 +81,5 @@ private:
 
    // Delay because the IA-Board can only handle commands every few ms
    std::chrono::microseconds _delayBetweenCommands = 5ms;
-   std::chrono::time_point _lastCommand;
+   auto _lastCommand;
 };
