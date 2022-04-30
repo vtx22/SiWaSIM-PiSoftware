@@ -1,0 +1,141 @@
+\hypertarget{class_p_c_b}{}\doxysection{PCB Class Reference}
+\label{class_p_c_b}\index{PCB@{PCB}}
+
+
+{\ttfamily \#include $<$PCB.\+hpp$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_p_c_b_a8a6aa23ce441ac0b10847833ad29a44c}{PCB}} (\mbox{\hyperlink{class_configuration}{Configuration}} $\ast$config)
+\item 
+\mbox{\hyperlink{class_p_c_b_adc19e4109ffe18dd113c8b300f2896d0}{$\sim$\+PCB}} ()
+\item 
+void \mbox{\hyperlink{class_p_c_b_a59629ef1c8a9f8828695201ff1901816}{led\+Fault}} (bool state)
+\item 
+void \mbox{\hyperlink{class_p_c_b_a5d5c1732cacd230eff67193d36cfbf25}{led\+Busy}} (bool state)
+\item 
+void \mbox{\hyperlink{class_p_c_b_ab6341a19176ab4ebb2f2e4c1283c4511}{led\+Ready}} (bool state)
+\item 
+void \mbox{\hyperlink{class_p_c_b_afcadde54a8841465a3d9d38a20abe1f3}{set\+Impedance}} (\mbox{\hyperlink{_configuration_8hpp_a8cdbfc5a2637c1334b36e71aaf4f960e}{IMPEDANCE}} impedance)
+\item 
+void \mbox{\hyperlink{class_p_c_b_a226c45273f845647ac957b136a30264a}{set\+EXTRASW1}} (bool state)
+\item 
+void \mbox{\hyperlink{class_p_c_b_ae89c13bcdb73a2aaa88a881b5f310d2d}{set\+EXTRASW2}} (bool state)
+\item 
+void \mbox{\hyperlink{class_p_c_b_a021788bd42e666c74047e65d945f300c}{set\+POWERSW1}} (bool state)
+\item 
+void \mbox{\hyperlink{class_p_c_b_ab28d6ca4640b7d89501b12eb60d4dd55}{set\+POWERSW2}} (bool state)
+\item 
+void \mbox{\hyperlink{class_p_c_b_aa3f8d806c21f0070b53ea91061e8d6c5}{set\+Loadcell\+Voltage}} (float voltage)
+\item 
+void \mbox{\hyperlink{class_p_c_b_a30b8ae3dda05c01c082af83741ce7937}{set\+Loadcell\+DCVoltage}} (float voltage)
+\item 
+void \mbox{\hyperlink{class_p_c_b_aaec2ddb24841ba5c510db0ca1ed32649}{set\+SENVoltage}} (float voltage)
+\item 
+float \mbox{\hyperlink{class_p_c_b_a21be5306353f7712e14c1583c0e24fce}{get\+EXCVoltage}} ()
+\item 
+float \mbox{\hyperlink{class_p_c_b_a038e1b1078d5e9757a25c94fdf09410b}{get\+SENVoltage}} ()
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_p_c_b_a8a6aa23ce441ac0b10847833ad29a44c}\label{class_p_c_b_a8a6aa23ce441ac0b10847833ad29a44c}} 
+\index{PCB@{PCB}!PCB@{PCB}}
+\index{PCB@{PCB}!PCB@{PCB}}
+\doxysubsubsection{\texorpdfstring{PCB()}{PCB()}}
+{\footnotesize\ttfamily PCB\+::\+PCB (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_configuration}{Configuration}} $\ast$}]{config }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_p_c_b_adc19e4109ffe18dd113c8b300f2896d0}\label{class_p_c_b_adc19e4109ffe18dd113c8b300f2896d0}} 
+\index{PCB@{PCB}!````~PCB@{$\sim$PCB}}
+\index{````~PCB@{$\sim$PCB}!PCB@{PCB}}
+\doxysubsubsection{\texorpdfstring{$\sim$PCB()}{~PCB()}}
+{\footnotesize\ttfamily PCB\+::$\sim$\+PCB (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_p_c_b_a21be5306353f7712e14c1583c0e24fce}\label{class_p_c_b_a21be5306353f7712e14c1583c0e24fce}} 
+\index{PCB@{PCB}!getEXCVoltage@{getEXCVoltage}}
+\index{getEXCVoltage@{getEXCVoltage}!PCB@{PCB}}
+\doxysubsubsection{\texorpdfstring{getEXCVoltage()}{getEXCVoltage()}}
+{\footnotesize\ttfamily float PCB\+::get\+EXCVoltage (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_p_c_b_a038e1b1078d5e9757a25c94fdf09410b}\label{class_p_c_b_a038e1b1078d5e9757a25c94fdf09410b}} 
+\index{PCB@{PCB}!getSENVoltage@{getSENVoltage}}
+\index{getSENVoltage@{getSENVoltage}!PCB@{PCB}}
+\doxysubsubsection{\texorpdfstring{getSENVoltage()}{getSENVoltage()}}
+{\footnotesize\ttfamily float PCB\+::get\+SENVoltage (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_p_c_b_a5d5c1732cacd230eff67193d36cfbf25}\label{class_p_c_b_a5d5c1732cacd230eff67193d36cfbf25}} 
+\index{PCB@{PCB}!ledBusy@{ledBusy}}
+\index{ledBusy@{ledBusy}!PCB@{PCB}}
+\doxysubsubsection{\texorpdfstring{ledBusy()}{ledBusy()}}
+{\footnotesize\ttfamily void PCB\+::led\+Busy (\begin{DoxyParamCaption}\item[{bool}]{state }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_p_c_b_a59629ef1c8a9f8828695201ff1901816}\label{class_p_c_b_a59629ef1c8a9f8828695201ff1901816}} 
+\index{PCB@{PCB}!ledFault@{ledFault}}
+\index{ledFault@{ledFault}!PCB@{PCB}}
+\doxysubsubsection{\texorpdfstring{ledFault()}{ledFault()}}
+{\footnotesize\ttfamily void PCB\+::led\+Fault (\begin{DoxyParamCaption}\item[{bool}]{state }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_p_c_b_ab6341a19176ab4ebb2f2e4c1283c4511}\label{class_p_c_b_ab6341a19176ab4ebb2f2e4c1283c4511}} 
+\index{PCB@{PCB}!ledReady@{ledReady}}
+\index{ledReady@{ledReady}!PCB@{PCB}}
+\doxysubsubsection{\texorpdfstring{ledReady()}{ledReady()}}
+{\footnotesize\ttfamily void PCB\+::led\+Ready (\begin{DoxyParamCaption}\item[{bool}]{state }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_p_c_b_a226c45273f845647ac957b136a30264a}\label{class_p_c_b_a226c45273f845647ac957b136a30264a}} 
+\index{PCB@{PCB}!setEXTRASW1@{setEXTRASW1}}
+\index{setEXTRASW1@{setEXTRASW1}!PCB@{PCB}}
+\doxysubsubsection{\texorpdfstring{setEXTRASW1()}{setEXTRASW1()}}
+{\footnotesize\ttfamily void PCB\+::set\+EXTRASW1 (\begin{DoxyParamCaption}\item[{bool}]{state }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_p_c_b_ae89c13bcdb73a2aaa88a881b5f310d2d}\label{class_p_c_b_ae89c13bcdb73a2aaa88a881b5f310d2d}} 
+\index{PCB@{PCB}!setEXTRASW2@{setEXTRASW2}}
+\index{setEXTRASW2@{setEXTRASW2}!PCB@{PCB}}
+\doxysubsubsection{\texorpdfstring{setEXTRASW2()}{setEXTRASW2()}}
+{\footnotesize\ttfamily void PCB\+::set\+EXTRASW2 (\begin{DoxyParamCaption}\item[{bool}]{state }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_p_c_b_afcadde54a8841465a3d9d38a20abe1f3}\label{class_p_c_b_afcadde54a8841465a3d9d38a20abe1f3}} 
+\index{PCB@{PCB}!setImpedance@{setImpedance}}
+\index{setImpedance@{setImpedance}!PCB@{PCB}}
+\doxysubsubsection{\texorpdfstring{setImpedance()}{setImpedance()}}
+{\footnotesize\ttfamily void PCB\+::set\+Impedance (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{_configuration_8hpp_a8cdbfc5a2637c1334b36e71aaf4f960e}{IMPEDANCE}}}]{impedance }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_p_c_b_a30b8ae3dda05c01c082af83741ce7937}\label{class_p_c_b_a30b8ae3dda05c01c082af83741ce7937}} 
+\index{PCB@{PCB}!setLoadcellDCVoltage@{setLoadcellDCVoltage}}
+\index{setLoadcellDCVoltage@{setLoadcellDCVoltage}!PCB@{PCB}}
+\doxysubsubsection{\texorpdfstring{setLoadcellDCVoltage()}{setLoadcellDCVoltage()}}
+{\footnotesize\ttfamily void PCB\+::set\+Loadcell\+DCVoltage (\begin{DoxyParamCaption}\item[{float}]{voltage }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_p_c_b_aa3f8d806c21f0070b53ea91061e8d6c5}\label{class_p_c_b_aa3f8d806c21f0070b53ea91061e8d6c5}} 
+\index{PCB@{PCB}!setLoadcellVoltage@{setLoadcellVoltage}}
+\index{setLoadcellVoltage@{setLoadcellVoltage}!PCB@{PCB}}
+\doxysubsubsection{\texorpdfstring{setLoadcellVoltage()}{setLoadcellVoltage()}}
+{\footnotesize\ttfamily void PCB\+::set\+Loadcell\+Voltage (\begin{DoxyParamCaption}\item[{float}]{voltage }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_p_c_b_a021788bd42e666c74047e65d945f300c}\label{class_p_c_b_a021788bd42e666c74047e65d945f300c}} 
+\index{PCB@{PCB}!setPOWERSW1@{setPOWERSW1}}
+\index{setPOWERSW1@{setPOWERSW1}!PCB@{PCB}}
+\doxysubsubsection{\texorpdfstring{setPOWERSW1()}{setPOWERSW1()}}
+{\footnotesize\ttfamily void PCB\+::set\+POWERSW1 (\begin{DoxyParamCaption}\item[{bool}]{state }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_p_c_b_ab28d6ca4640b7d89501b12eb60d4dd55}\label{class_p_c_b_ab28d6ca4640b7d89501b12eb60d4dd55}} 
+\index{PCB@{PCB}!setPOWERSW2@{setPOWERSW2}}
+\index{setPOWERSW2@{setPOWERSW2}!PCB@{PCB}}
+\doxysubsubsection{\texorpdfstring{setPOWERSW2()}{setPOWERSW2()}}
+{\footnotesize\ttfamily void PCB\+::set\+POWERSW2 (\begin{DoxyParamCaption}\item[{bool}]{state }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_p_c_b_aaec2ddb24841ba5c510db0ca1ed32649}\label{class_p_c_b_aaec2ddb24841ba5c510db0ca1ed32649}} 
+\index{PCB@{PCB}!setSENVoltage@{setSENVoltage}}
+\index{setSENVoltage@{setSENVoltage}!PCB@{PCB}}
+\doxysubsubsection{\texorpdfstring{setSENVoltage()}{setSENVoltage()}}
+{\footnotesize\ttfamily void PCB\+::set\+SENVoltage (\begin{DoxyParamCaption}\item[{float}]{voltage }\end{DoxyParamCaption})}
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+F\+:/\+GITHUB/\+Si\+Wa\+SIM-\/\+Pi\+Software/src/\mbox{\hyperlink{_p_c_b_8hpp}{PCB.\+hpp}}\item 
+F\+:/\+GITHUB/\+Si\+Wa\+SIM-\/\+Pi\+Software/src/\mbox{\hyperlink{_p_c_b_8cpp}{PCB.\+cpp}}\end{DoxyCompactItemize}

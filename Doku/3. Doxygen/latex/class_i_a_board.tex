@@ -1,0 +1,205 @@
+\hypertarget{class_i_a_board}{}\doxysection{IABoard Class Reference}
+\label{class_i_a_board}\index{IABoard@{IABoard}}
+
+
+{\ttfamily \#include $<$IABoard.\+hpp$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_i_a_board_af5ecdf4f26461d8710aad631340048a8}{IABoard}} ()
+\item 
+\mbox{\hyperlink{class_i_a_board_ab5e6b2a439fdf31c4a6f6223bc75c467}{$\sim$\+IABoard}} ()
+\item 
+bool \mbox{\hyperlink{class_i_a_board_a3e519ab5eb58ac3ca42cada690c04314}{detect\+Board}} ()
+\item 
+uint8\+\_\+t \mbox{\hyperlink{class_i_a_board_a90742c9628677c0e8ddf120c6f5d4247}{digital\+Read}} ()
+\item 
+bool \mbox{\hyperlink{class_i_a_board_aa3886850e0b394bcf7a7933ebc7dae13}{digital\+Read}} (uint8\+\_\+t channel)
+\item 
+uint16\+\_\+t \mbox{\hyperlink{class_i_a_board_a24cf40186ccefa1ef47e809b9de5faa9}{read\+Transistions}} (uint8\+\_\+t channel)
+\item 
+\mbox{\hyperlink{_i_a_board_8hpp_a031ceda83d144811bf209020a0cf69ff}{TRANSITION}} \mbox{\hyperlink{class_i_a_board_aa5d275c8809b6e6cea0d356f9c4a054a}{get\+Transistion\+Type}} (uint8\+\_\+t channel)
+\item 
+void \mbox{\hyperlink{class_i_a_board_a284128dc1191b936f6556a6b23f12b6a}{set\+Transistion\+Type}} (uint8\+\_\+t channel, \mbox{\hyperlink{_i_a_board_8hpp_a031ceda83d144811bf209020a0cf69ff}{TRANSITION}} tran)
+\item 
+void \mbox{\hyperlink{class_i_a_board_a3b6c0acad5e43bde0ef4fdf0c009fb42}{reset\+Transitions}} (uint8\+\_\+t channel)
+\item 
+float \mbox{\hyperlink{class_i_a_board_af1a192b8f71d1b9172a3d139c4d7d458}{get\+Analog\+Vol\+Out}} (uint8\+\_\+t channel)
+\item 
+void \mbox{\hyperlink{class_i_a_board_a853f927433f6ebb93284c5b53cd35a4a}{set\+Analog\+Vol\+Out}} (uint8\+\_\+t channel, float voltage)
+\item 
+float \mbox{\hyperlink{class_i_a_board_a4e90691e37bff8cb55036b568061f3c5}{get\+Analog\+Cur\+Out}} (uint8\+\_\+t channel)
+\item 
+void \mbox{\hyperlink{class_i_a_board_af5df93b4548d6a1012c56fb5fb290a1c}{set\+Analog\+Cur\+Out}} (uint8\+\_\+t channel, float current)
+\item 
+float \mbox{\hyperlink{class_i_a_board_aa290b60191f0e508db95be68dbeef116}{get\+Open\+Drain\+PWM}} (uint8\+\_\+t channel)
+\item 
+void \mbox{\hyperlink{class_i_a_board_a063c738b5d1f803551aa4e9be72f2ec7}{set\+Open\+Drain\+PWM}} (uint8\+\_\+t channel, float duty\+Cycle)
+\item 
+uint8\+\_\+t \mbox{\hyperlink{class_i_a_board_a724f4caaf3df8a66d85b68aea2061248}{get\+Open\+Drain\+DOUT}} ()
+\item 
+bool \mbox{\hyperlink{class_i_a_board_a0c65053b177fc0160a51f53b1a64e3e0}{get\+Open\+Drain\+DOUT}} (uint8\+\_\+t channel)
+\item 
+void \mbox{\hyperlink{class_i_a_board_aafb047566019d306e14eb10e8ae34825}{set\+Open\+Drain\+DOUT}} (uint8\+\_\+t channel, bool value)
+\item 
+bool \mbox{\hyperlink{class_i_a_board_ada67b4c599cb1c0b5e733e51f33deb2e}{get\+LED}} (uint8\+\_\+t channel)
+\item 
+void \mbox{\hyperlink{class_i_a_board_aa426d8571e07056b7ab8c1da6d3c1165}{set\+LED}} (uint8\+\_\+t channel, bool value)
+\item 
+float \mbox{\hyperlink{class_i_a_board_a300178bdb61a6a6b74427031b181a597}{read\+Analog\+Vol\+In}} (uint8\+\_\+t channel)
+\item 
+float \mbox{\hyperlink{class_i_a_board_a291abadcc858294866a7b2853e423a99}{read\+Analog\+Vol\+In\+PM}} (uint8\+\_\+t channel)
+\item 
+float \mbox{\hyperlink{class_i_a_board_af66593a8851468487bd904d61de67569}{read\+Analog\+Cur\+In}} (uint8\+\_\+t channel)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_i_a_board_af5ecdf4f26461d8710aad631340048a8}\label{class_i_a_board_af5ecdf4f26461d8710aad631340048a8}} 
+\index{IABoard@{IABoard}!IABoard@{IABoard}}
+\index{IABoard@{IABoard}!IABoard@{IABoard}}
+\doxysubsubsection{\texorpdfstring{IABoard()}{IABoard()}}
+{\footnotesize\ttfamily IABoard\+::\+IABoard (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_i_a_board_ab5e6b2a439fdf31c4a6f6223bc75c467}\label{class_i_a_board_ab5e6b2a439fdf31c4a6f6223bc75c467}} 
+\index{IABoard@{IABoard}!````~IABoard@{$\sim$IABoard}}
+\index{````~IABoard@{$\sim$IABoard}!IABoard@{IABoard}}
+\doxysubsubsection{\texorpdfstring{$\sim$IABoard()}{~IABoard()}}
+{\footnotesize\ttfamily IABoard\+::$\sim$\+IABoard (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_i_a_board_a3e519ab5eb58ac3ca42cada690c04314}\label{class_i_a_board_a3e519ab5eb58ac3ca42cada690c04314}} 
+\index{IABoard@{IABoard}!detectBoard@{detectBoard}}
+\index{detectBoard@{detectBoard}!IABoard@{IABoard}}
+\doxysubsubsection{\texorpdfstring{detectBoard()}{detectBoard()}}
+{\footnotesize\ttfamily bool IABoard\+::detect\+Board (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_i_a_board_a90742c9628677c0e8ddf120c6f5d4247}\label{class_i_a_board_a90742c9628677c0e8ddf120c6f5d4247}} 
+\index{IABoard@{IABoard}!digitalRead@{digitalRead}}
+\index{digitalRead@{digitalRead}!IABoard@{IABoard}}
+\doxysubsubsection{\texorpdfstring{digitalRead()}{digitalRead()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily uint8\+\_\+t IABoard\+::digital\+Read (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_i_a_board_aa3886850e0b394bcf7a7933ebc7dae13}\label{class_i_a_board_aa3886850e0b394bcf7a7933ebc7dae13}} 
+\index{IABoard@{IABoard}!digitalRead@{digitalRead}}
+\index{digitalRead@{digitalRead}!IABoard@{IABoard}}
+\doxysubsubsection{\texorpdfstring{digitalRead()}{digitalRead()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily bool IABoard\+::digital\+Read (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{channel }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_i_a_board_a4e90691e37bff8cb55036b568061f3c5}\label{class_i_a_board_a4e90691e37bff8cb55036b568061f3c5}} 
+\index{IABoard@{IABoard}!getAnalogCurOut@{getAnalogCurOut}}
+\index{getAnalogCurOut@{getAnalogCurOut}!IABoard@{IABoard}}
+\doxysubsubsection{\texorpdfstring{getAnalogCurOut()}{getAnalogCurOut()}}
+{\footnotesize\ttfamily float IABoard\+::get\+Analog\+Cur\+Out (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{channel }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_i_a_board_af1a192b8f71d1b9172a3d139c4d7d458}\label{class_i_a_board_af1a192b8f71d1b9172a3d139c4d7d458}} 
+\index{IABoard@{IABoard}!getAnalogVolOut@{getAnalogVolOut}}
+\index{getAnalogVolOut@{getAnalogVolOut}!IABoard@{IABoard}}
+\doxysubsubsection{\texorpdfstring{getAnalogVolOut()}{getAnalogVolOut()}}
+{\footnotesize\ttfamily float IABoard\+::get\+Analog\+Vol\+Out (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{channel }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_i_a_board_ada67b4c599cb1c0b5e733e51f33deb2e}\label{class_i_a_board_ada67b4c599cb1c0b5e733e51f33deb2e}} 
+\index{IABoard@{IABoard}!getLED@{getLED}}
+\index{getLED@{getLED}!IABoard@{IABoard}}
+\doxysubsubsection{\texorpdfstring{getLED()}{getLED()}}
+{\footnotesize\ttfamily bool IABoard\+::get\+LED (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{channel }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_i_a_board_a724f4caaf3df8a66d85b68aea2061248}\label{class_i_a_board_a724f4caaf3df8a66d85b68aea2061248}} 
+\index{IABoard@{IABoard}!getOpenDrainDOUT@{getOpenDrainDOUT}}
+\index{getOpenDrainDOUT@{getOpenDrainDOUT}!IABoard@{IABoard}}
+\doxysubsubsection{\texorpdfstring{getOpenDrainDOUT()}{getOpenDrainDOUT()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily uint8\+\_\+t IABoard\+::get\+Open\+Drain\+DOUT (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_i_a_board_a0c65053b177fc0160a51f53b1a64e3e0}\label{class_i_a_board_a0c65053b177fc0160a51f53b1a64e3e0}} 
+\index{IABoard@{IABoard}!getOpenDrainDOUT@{getOpenDrainDOUT}}
+\index{getOpenDrainDOUT@{getOpenDrainDOUT}!IABoard@{IABoard}}
+\doxysubsubsection{\texorpdfstring{getOpenDrainDOUT()}{getOpenDrainDOUT()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily bool IABoard\+::get\+Open\+Drain\+DOUT (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{channel }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_i_a_board_aa290b60191f0e508db95be68dbeef116}\label{class_i_a_board_aa290b60191f0e508db95be68dbeef116}} 
+\index{IABoard@{IABoard}!getOpenDrainPWM@{getOpenDrainPWM}}
+\index{getOpenDrainPWM@{getOpenDrainPWM}!IABoard@{IABoard}}
+\doxysubsubsection{\texorpdfstring{getOpenDrainPWM()}{getOpenDrainPWM()}}
+{\footnotesize\ttfamily float IABoard\+::get\+Open\+Drain\+PWM (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{channel }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_i_a_board_aa5d275c8809b6e6cea0d356f9c4a054a}\label{class_i_a_board_aa5d275c8809b6e6cea0d356f9c4a054a}} 
+\index{IABoard@{IABoard}!getTransistionType@{getTransistionType}}
+\index{getTransistionType@{getTransistionType}!IABoard@{IABoard}}
+\doxysubsubsection{\texorpdfstring{getTransistionType()}{getTransistionType()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_i_a_board_8hpp_a031ceda83d144811bf209020a0cf69ff}{TRANSITION}} IABoard\+::get\+Transistion\+Type (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{channel }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_i_a_board_af66593a8851468487bd904d61de67569}\label{class_i_a_board_af66593a8851468487bd904d61de67569}} 
+\index{IABoard@{IABoard}!readAnalogCurIn@{readAnalogCurIn}}
+\index{readAnalogCurIn@{readAnalogCurIn}!IABoard@{IABoard}}
+\doxysubsubsection{\texorpdfstring{readAnalogCurIn()}{readAnalogCurIn()}}
+{\footnotesize\ttfamily float IABoard\+::read\+Analog\+Cur\+In (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{channel }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_i_a_board_a300178bdb61a6a6b74427031b181a597}\label{class_i_a_board_a300178bdb61a6a6b74427031b181a597}} 
+\index{IABoard@{IABoard}!readAnalogVolIn@{readAnalogVolIn}}
+\index{readAnalogVolIn@{readAnalogVolIn}!IABoard@{IABoard}}
+\doxysubsubsection{\texorpdfstring{readAnalogVolIn()}{readAnalogVolIn()}}
+{\footnotesize\ttfamily float IABoard\+::read\+Analog\+Vol\+In (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{channel }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_i_a_board_a291abadcc858294866a7b2853e423a99}\label{class_i_a_board_a291abadcc858294866a7b2853e423a99}} 
+\index{IABoard@{IABoard}!readAnalogVolInPM@{readAnalogVolInPM}}
+\index{readAnalogVolInPM@{readAnalogVolInPM}!IABoard@{IABoard}}
+\doxysubsubsection{\texorpdfstring{readAnalogVolInPM()}{readAnalogVolInPM()}}
+{\footnotesize\ttfamily float IABoard\+::read\+Analog\+Vol\+In\+PM (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{channel }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_i_a_board_a24cf40186ccefa1ef47e809b9de5faa9}\label{class_i_a_board_a24cf40186ccefa1ef47e809b9de5faa9}} 
+\index{IABoard@{IABoard}!readTransistions@{readTransistions}}
+\index{readTransistions@{readTransistions}!IABoard@{IABoard}}
+\doxysubsubsection{\texorpdfstring{readTransistions()}{readTransistions()}}
+{\footnotesize\ttfamily uint16\+\_\+t IABoard\+::read\+Transistions (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{channel }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_i_a_board_a3b6c0acad5e43bde0ef4fdf0c009fb42}\label{class_i_a_board_a3b6c0acad5e43bde0ef4fdf0c009fb42}} 
+\index{IABoard@{IABoard}!resetTransitions@{resetTransitions}}
+\index{resetTransitions@{resetTransitions}!IABoard@{IABoard}}
+\doxysubsubsection{\texorpdfstring{resetTransitions()}{resetTransitions()}}
+{\footnotesize\ttfamily void IABoard\+::reset\+Transitions (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{channel }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_i_a_board_af5df93b4548d6a1012c56fb5fb290a1c}\label{class_i_a_board_af5df93b4548d6a1012c56fb5fb290a1c}} 
+\index{IABoard@{IABoard}!setAnalogCurOut@{setAnalogCurOut}}
+\index{setAnalogCurOut@{setAnalogCurOut}!IABoard@{IABoard}}
+\doxysubsubsection{\texorpdfstring{setAnalogCurOut()}{setAnalogCurOut()}}
+{\footnotesize\ttfamily void IABoard\+::set\+Analog\+Cur\+Out (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{channel,  }\item[{float}]{current }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_i_a_board_a853f927433f6ebb93284c5b53cd35a4a}\label{class_i_a_board_a853f927433f6ebb93284c5b53cd35a4a}} 
+\index{IABoard@{IABoard}!setAnalogVolOut@{setAnalogVolOut}}
+\index{setAnalogVolOut@{setAnalogVolOut}!IABoard@{IABoard}}
+\doxysubsubsection{\texorpdfstring{setAnalogVolOut()}{setAnalogVolOut()}}
+{\footnotesize\ttfamily void IABoard\+::set\+Analog\+Vol\+Out (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{channel,  }\item[{float}]{voltage }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_i_a_board_aa426d8571e07056b7ab8c1da6d3c1165}\label{class_i_a_board_aa426d8571e07056b7ab8c1da6d3c1165}} 
+\index{IABoard@{IABoard}!setLED@{setLED}}
+\index{setLED@{setLED}!IABoard@{IABoard}}
+\doxysubsubsection{\texorpdfstring{setLED()}{setLED()}}
+{\footnotesize\ttfamily void IABoard\+::set\+LED (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{channel,  }\item[{bool}]{value }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_i_a_board_aafb047566019d306e14eb10e8ae34825}\label{class_i_a_board_aafb047566019d306e14eb10e8ae34825}} 
+\index{IABoard@{IABoard}!setOpenDrainDOUT@{setOpenDrainDOUT}}
+\index{setOpenDrainDOUT@{setOpenDrainDOUT}!IABoard@{IABoard}}
+\doxysubsubsection{\texorpdfstring{setOpenDrainDOUT()}{setOpenDrainDOUT()}}
+{\footnotesize\ttfamily void IABoard\+::set\+Open\+Drain\+DOUT (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{channel,  }\item[{bool}]{value }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_i_a_board_a063c738b5d1f803551aa4e9be72f2ec7}\label{class_i_a_board_a063c738b5d1f803551aa4e9be72f2ec7}} 
+\index{IABoard@{IABoard}!setOpenDrainPWM@{setOpenDrainPWM}}
+\index{setOpenDrainPWM@{setOpenDrainPWM}!IABoard@{IABoard}}
+\doxysubsubsection{\texorpdfstring{setOpenDrainPWM()}{setOpenDrainPWM()}}
+{\footnotesize\ttfamily void IABoard\+::set\+Open\+Drain\+PWM (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{channel,  }\item[{float}]{duty\+Cycle }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_i_a_board_a284128dc1191b936f6556a6b23f12b6a}\label{class_i_a_board_a284128dc1191b936f6556a6b23f12b6a}} 
+\index{IABoard@{IABoard}!setTransistionType@{setTransistionType}}
+\index{setTransistionType@{setTransistionType}!IABoard@{IABoard}}
+\doxysubsubsection{\texorpdfstring{setTransistionType()}{setTransistionType()}}
+{\footnotesize\ttfamily void IABoard\+::set\+Transistion\+Type (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{channel,  }\item[{\mbox{\hyperlink{_i_a_board_8hpp_a031ceda83d144811bf209020a0cf69ff}{TRANSITION}}}]{tran }\end{DoxyParamCaption})}
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+F\+:/\+GITHUB/\+Si\+Wa\+SIM-\/\+Pi\+Software/src/\mbox{\hyperlink{_i_a_board_8hpp}{IABoard.\+hpp}}\item 
+F\+:/\+GITHUB/\+Si\+Wa\+SIM-\/\+Pi\+Software/src/\mbox{\hyperlink{_i_a_board_8cpp}{IABoard.\+cpp}}\end{DoxyCompactItemize}

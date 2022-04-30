@@ -1,0 +1,62 @@
+\hypertarget{_p_c_b_8hpp_source}{}\doxysection{PCB.\+hpp}
+\label{_p_c_b_8hpp_source}\index{F:/GITHUB/SiWaSIM-\/PiSoftware/src/PCB.hpp@{F:/GITHUB/SiWaSIM-\/PiSoftware/src/PCB.hpp}}
+\mbox{\hyperlink{_p_c_b_8hpp}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{preprocessor}{\#pragma once}}
+\DoxyCodeLine{2 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{utility_8hpp}{utility.hpp}}"{}}}
+\DoxyCodeLine{3 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{_g_p_i_o_8hpp}{GPIO.hpp}}"{}}}
+\DoxyCodeLine{4 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{_i_a_board_8hpp}{IABoard.hpp}}"{}}}
+\DoxyCodeLine{5 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{_configuration_8hpp}{Configuration.hpp}}"{}}}
+\DoxyCodeLine{6 }
+\DoxyCodeLine{7 \textcolor{comment}{// LED Pins}}
+\DoxyCodeLine{8 \textcolor{preprocessor}{\#define PIN\_LED\_READY 23}}
+\DoxyCodeLine{9 \textcolor{preprocessor}{\#define PIN\_LED\_BUSY 24}}
+\DoxyCodeLine{10 \textcolor{preprocessor}{\#define PIN\_LED\_FAULT 25}}
+\DoxyCodeLine{11 }
+\DoxyCodeLine{12 \textcolor{comment}{// 24V Power Switch Pins}}
+\DoxyCodeLine{13 \textcolor{preprocessor}{\#define PIN\_POWERSW1 4}}
+\DoxyCodeLine{14 \textcolor{preprocessor}{\#define PIN\_POWERSW2 26}}
+\DoxyCodeLine{15 }
+\DoxyCodeLine{16 \textcolor{comment}{// Pins for Impedance switching}}
+\DoxyCodeLine{17 \textcolor{preprocessor}{\#define PIN\_IMPEDANCE1 5}}
+\DoxyCodeLine{18 \textcolor{preprocessor}{\#define PIN\_IMPEDANCE2 6}}
+\DoxyCodeLine{19 }
+\DoxyCodeLine{20 \textcolor{comment}{// Pins for extra switches (e.g. WebServer, WriteProtect)}}
+\DoxyCodeLine{21 \textcolor{preprocessor}{\#define PIN\_EXTRASW1 27}}
+\DoxyCodeLine{22 \textcolor{preprocessor}{\#define PIN\_EXTRASW2 22}}
+\DoxyCodeLine{23 }
+\DoxyCodeLine{24 \textcolor{preprocessor}{\#define ADDVOL\_CHANNEL 2}}
+\DoxyCodeLine{25 \textcolor{preprocessor}{\#define SUBVOL\_CHANNEL 3}}
+\DoxyCodeLine{26 }
+\DoxyCodeLine{27 \textcolor{keyword}{class }\mbox{\hyperlink{class_p_c_b}{PCB}}}
+\DoxyCodeLine{28 \{}
+\DoxyCodeLine{29 \textcolor{keyword}{public}:}
+\DoxyCodeLine{30    \mbox{\hyperlink{class_p_c_b_a8a6aa23ce441ac0b10847833ad29a44c}{PCB}}(\mbox{\hyperlink{class_configuration}{Configuration}} *config);}
+\DoxyCodeLine{31    \mbox{\hyperlink{class_p_c_b_adc19e4109ffe18dd113c8b300f2896d0}{\string~PCB}}();}
+\DoxyCodeLine{32 }
+\DoxyCodeLine{33    \textcolor{keywordtype}{void} \mbox{\hyperlink{class_p_c_b_a59629ef1c8a9f8828695201ff1901816}{ledFault}}(\textcolor{keywordtype}{bool} state);}
+\DoxyCodeLine{34    \textcolor{keywordtype}{void} \mbox{\hyperlink{class_p_c_b_a5d5c1732cacd230eff67193d36cfbf25}{ledBusy}}(\textcolor{keywordtype}{bool} state);}
+\DoxyCodeLine{35    \textcolor{keywordtype}{void} \mbox{\hyperlink{class_p_c_b_ab6341a19176ab4ebb2f2e4c1283c4511}{ledReady}}(\textcolor{keywordtype}{bool} state);}
+\DoxyCodeLine{36 }
+\DoxyCodeLine{37    \textcolor{keywordtype}{void} \mbox{\hyperlink{class_p_c_b_afcadde54a8841465a3d9d38a20abe1f3}{setImpedance}}(\mbox{\hyperlink{_configuration_8hpp_a8cdbfc5a2637c1334b36e71aaf4f960e}{IMPEDANCE}} impedance);}
+\DoxyCodeLine{38 }
+\DoxyCodeLine{39    \textcolor{keywordtype}{void} \mbox{\hyperlink{class_p_c_b_a226c45273f845647ac957b136a30264a}{setEXTRASW1}}(\textcolor{keywordtype}{bool} state);}
+\DoxyCodeLine{40    \textcolor{keywordtype}{void} \mbox{\hyperlink{class_p_c_b_ae89c13bcdb73a2aaa88a881b5f310d2d}{setEXTRASW2}}(\textcolor{keywordtype}{bool} state);}
+\DoxyCodeLine{41 }
+\DoxyCodeLine{42    \textcolor{keywordtype}{void} \mbox{\hyperlink{class_p_c_b_a021788bd42e666c74047e65d945f300c}{setPOWERSW1}}(\textcolor{keywordtype}{bool} state);}
+\DoxyCodeLine{43    \textcolor{keywordtype}{void} \mbox{\hyperlink{class_p_c_b_ab28d6ca4640b7d89501b12eb60d4dd55}{setPOWERSW2}}(\textcolor{keywordtype}{bool} state);}
+\DoxyCodeLine{44 }
+\DoxyCodeLine{45    \textcolor{keywordtype}{void} \mbox{\hyperlink{class_p_c_b_aa3f8d806c21f0070b53ea91061e8d6c5}{setLoadcellVoltage}}(\textcolor{keywordtype}{float} voltage);}
+\DoxyCodeLine{46    \textcolor{keywordtype}{void} \mbox{\hyperlink{class_p_c_b_a30b8ae3dda05c01c082af83741ce7937}{setLoadcellDCVoltage}}(\textcolor{keywordtype}{float} voltage);}
+\DoxyCodeLine{47    \textcolor{keywordtype}{void} \mbox{\hyperlink{class_p_c_b_aaec2ddb24841ba5c510db0ca1ed32649}{setSENVoltage}}(\textcolor{keywordtype}{float} voltage);}
+\DoxyCodeLine{48 }
+\DoxyCodeLine{49    \textcolor{keywordtype}{float} \mbox{\hyperlink{class_p_c_b_a21be5306353f7712e14c1583c0e24fce}{getEXCVoltage}}();}
+\DoxyCodeLine{50    \textcolor{keywordtype}{float} \mbox{\hyperlink{class_p_c_b_a038e1b1078d5e9757a25c94fdf09410b}{getSENVoltage}}();}
+\DoxyCodeLine{51 }
+\DoxyCodeLine{52 \textcolor{keyword}{private}:}
+\DoxyCodeLine{53    \mbox{\hyperlink{class_g_p_i_o}{GPIO}} *\_gpio;}
+\DoxyCodeLine{54    \mbox{\hyperlink{class_i_a_board}{IABoard}} *\_ia;}
+\DoxyCodeLine{55    \mbox{\hyperlink{class_configuration}{Configuration}} *\_config;}
+\DoxyCodeLine{56 \};}
+
+\end{DoxyCode}

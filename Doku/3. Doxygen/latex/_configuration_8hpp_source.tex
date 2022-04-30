@@ -1,0 +1,45 @@
+\hypertarget{_configuration_8hpp_source}{}\doxysection{Configuration.\+hpp}
+\label{_configuration_8hpp_source}\index{F:/GITHUB/SiWaSIM-\/PiSoftware/src/Configuration.hpp@{F:/GITHUB/SiWaSIM-\/PiSoftware/src/Configuration.hpp}}
+\mbox{\hyperlink{_configuration_8hpp}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{preprocessor}{\#pragma once}}
+\DoxyCodeLine{2 \textcolor{preprocessor}{\#include <string>}}
+\DoxyCodeLine{3 }
+\DoxyCodeLine{4 \textcolor{keyword}{enum} \mbox{\hyperlink{_configuration_8hpp_a79dd9036c94e58a35b6e18d61a36fb66}{LoadCellMode}}}
+\DoxyCodeLine{5 \{}
+\DoxyCodeLine{6    \mbox{\hyperlink{_configuration_8hpp_a79dd9036c94e58a35b6e18d61a36fb66a50d1448013c6f17125caee18aa418af7}{NORMAL}} = 0x00,   \textcolor{comment}{// Positive differential voltage from 0 -\/ 100\% nominal load}}
+\DoxyCodeLine{7    \mbox{\hyperlink{_configuration_8hpp_a79dd9036c94e58a35b6e18d61a36fb66a9b41216983c608e48415373ca015b3a9}{OVERLOAD}} = 0x01, \textcolor{comment}{// Positive differential voltage from 0 -\/ 120\% nominal load}}
+\DoxyCodeLine{8    \mbox{\hyperlink{_configuration_8hpp_a79dd9036c94e58a35b6e18d61a36fb66a1e172b06bae2f97e733787d76106800e}{INVERTED}} = 0x02, \textcolor{comment}{// Negative differential voltage from 0 -\/ 100\% nominal load}}
+\DoxyCodeLine{9 }
+\DoxyCodeLine{10 \} \textcolor{keyword}{typedef} \mbox{\hyperlink{_configuration_8hpp_a79dd9036c94e58a35b6e18d61a36fb66}{LoadCellMode}};}
+\DoxyCodeLine{11 }
+\DoxyCodeLine{12 \textcolor{keyword}{enum} \mbox{\hyperlink{_configuration_8hpp_a8cdbfc5a2637c1334b36e71aaf4f960e}{IMPEDANCE}}}
+\DoxyCodeLine{13 \{}
+\DoxyCodeLine{14    \mbox{\hyperlink{_configuration_8hpp_a8cdbfc5a2637c1334b36e71aaf4f960ea0e0143636c29971736eab47415868eae}{OPEN}} = 0x00,}
+\DoxyCodeLine{15    \mbox{\hyperlink{_configuration_8hpp_a8cdbfc5a2637c1334b36e71aaf4f960eae2bd7b57b3f0bb02e66e42dbacc5c7fc}{NOMINAL}} = 0x01,}
+\DoxyCodeLine{16    \mbox{\hyperlink{_configuration_8hpp_a8cdbfc5a2637c1334b36e71aaf4f960ea7a1fe3ba88f0c16cb494922948a9597d}{SHORT}} = 0x02,}
+\DoxyCodeLine{17 }
+\DoxyCodeLine{18 \} \textcolor{keyword}{typedef} \mbox{\hyperlink{_configuration_8hpp_a8cdbfc5a2637c1334b36e71aaf4f960e}{IMPEDANCE}};}
+\DoxyCodeLine{19 }
+\DoxyCodeLine{20 \textcolor{keyword}{class }\mbox{\hyperlink{class_configuration}{Configuration}}}
+\DoxyCodeLine{21 \{}
+\DoxyCodeLine{22 \textcolor{keyword}{public}:}
+\DoxyCodeLine{23    \mbox{\hyperlink{class_configuration_a911965960877c2f2ba1be3a5cf397f31}{Configuration}}(std::string path);}
+\DoxyCodeLine{24    \mbox{\hyperlink{class_configuration_a0dd0fa189e239f4c9a036303f641441e}{\string~Configuration}}();}
+\DoxyCodeLine{25 }
+\DoxyCodeLine{26    \textcolor{keywordtype}{void} \mbox{\hyperlink{class_configuration_a5c4ffeed7ac7333e9bcb8fd63232c60f}{loadConfiguration}}();}
+\DoxyCodeLine{27 }
+\DoxyCodeLine{28    \textcolor{comment}{// SETTING VARIABLES}}
+\DoxyCodeLine{29    \mbox{\hyperlink{_configuration_8hpp_a79dd9036c94e58a35b6e18d61a36fb66}{LoadCellMode}} \mbox{\hyperlink{class_configuration_a94120b68ed6b6175c152c2799baa4cc7}{cellMode}} = \mbox{\hyperlink{_configuration_8hpp_a79dd9036c94e58a35b6e18d61a36fb66a50d1448013c6f17125caee18aa418af7}{NORMAL}}; \textcolor{comment}{// Loadcell mode to be simulated}}
+\DoxyCodeLine{30    \textcolor{keywordtype}{float} \mbox{\hyperlink{class_configuration_ae8d60d92e248f2beb56ab65b3675021b}{exc\_voltage}} = 10.f;       \textcolor{comment}{// Nominal EXC voltage}}
+\DoxyCodeLine{31    \textcolor{keywordtype}{float} \mbox{\hyperlink{class_configuration_ae5fb01ebff9c19f346cac9158b16b3a2}{load\_weight}} = 20.f;       \textcolor{comment}{// Nominal Load Weight of the cell in kg}}
+\DoxyCodeLine{32    \textcolor{keywordtype}{float} \mbox{\hyperlink{class_configuration_a1ef2ca5eb6c96f604912b00073d7c5a4}{initial\_weight}} = 10.f;    \textcolor{comment}{// Initial weight (for manual / non-\/auto mode)}}
+\DoxyCodeLine{33    \textcolor{keywordtype}{float} \mbox{\hyperlink{class_configuration_adbdf6f1d3a1d29d9a65fe1e93ffa00aa}{addvol\_ratio}} = 500;       \textcolor{comment}{// Inverted OpAmp gain (e.g.: At 10V Aout the added / subtracted voltage is 20mV -\/-\/> ratio = 10V / 20mV = 500)}}
+\DoxyCodeLine{34    \textcolor{keywordtype}{float} \mbox{\hyperlink{class_configuration_aa64f51fe43c020c59d15e95828e56af1}{max\_diff\_voltage}} = 40;    \textcolor{comment}{// Maximum Differential Voltage of SIG+-\/}}
+\DoxyCodeLine{35    \textcolor{keywordtype}{float} \mbox{\hyperlink{class_configuration_a4464bbfe8da8d5f4d8a3d98c340905a0}{cellCharecteristic}} = 4;   \textcolor{comment}{// Charecteristik in mV/V}}
+\DoxyCodeLine{36 }
+\DoxyCodeLine{37 \textcolor{keyword}{private}:}
+\DoxyCodeLine{38    \textcolor{keywordtype}{void} parseJSON();}
+\DoxyCodeLine{39 \};}
+
+\end{DoxyCode}

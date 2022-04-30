@@ -1,0 +1,26 @@
+\hypertarget{_g_p_i_o_8hpp_source}{}\doxysection{GPIO.\+hpp}
+\label{_g_p_i_o_8hpp_source}\index{F:/GITHUB/SiWaSIM-\/PiSoftware/src/GPIO.hpp@{F:/GITHUB/SiWaSIM-\/PiSoftware/src/GPIO.hpp}}
+\mbox{\hyperlink{_g_p_i_o_8hpp}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{preprocessor}{\#pragma once}}
+\DoxyCodeLine{2 \textcolor{preprocessor}{\#include <signal.h>}}
+\DoxyCodeLine{3 \textcolor{preprocessor}{\#include <pigpio.h>}}
+\DoxyCodeLine{4 \textcolor{preprocessor}{\#include <stdint.h>}}
+\DoxyCodeLine{5 \textcolor{preprocessor}{\#include <cstdio>}}
+\DoxyCodeLine{6 }
+\DoxyCodeLine{7 \textcolor{keyword}{class }\mbox{\hyperlink{class_g_p_i_o}{GPIO}}}
+\DoxyCodeLine{8 \{}
+\DoxyCodeLine{9 \textcolor{keyword}{public}:}
+\DoxyCodeLine{10    \mbox{\hyperlink{class_g_p_i_o_ab443a641cef81b1a9ec0211c5aa9c1ac}{GPIO}}();}
+\DoxyCodeLine{11    \mbox{\hyperlink{class_g_p_i_o_ae8205f95f108a15a612485b6358031a1}{\string~GPIO}}();}
+\DoxyCodeLine{12    \textcolor{keywordtype}{void} \mbox{\hyperlink{class_g_p_i_o_a6a45758f73567268de7bc39ed0f0e51b}{setPWM}}(\textcolor{keywordtype}{int} pin, \textcolor{keywordtype}{float} dutyCycle, \textcolor{keywordtype}{float} frequency);}
+\DoxyCodeLine{13 }
+\DoxyCodeLine{14    \textcolor{keywordtype}{void} \mbox{\hyperlink{class_g_p_i_o_adab4e2328a68eaf7f58dfcdef76c256c}{setPinMode}}(uint8\_t pin, uint8\_t mode);}
+\DoxyCodeLine{15 }
+\DoxyCodeLine{16    \textcolor{keywordtype}{void} \mbox{\hyperlink{class_g_p_i_o_a097223790e9407d6cce3ee87c9e9578a}{writePin}}(uint8\_t pin, \textcolor{keywordtype}{bool} state);}
+\DoxyCodeLine{17    \textcolor{keywordtype}{bool} \mbox{\hyperlink{class_g_p_i_o_a810be24e2af5c2cb2632f8174fe0319b}{readPin}}(uint8\_t pin);}
+\DoxyCodeLine{18 }
+\DoxyCodeLine{19 \textcolor{keyword}{private}:}
+\DoxyCodeLine{20 \};}
+
+\end{DoxyCode}

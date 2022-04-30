@@ -1,0 +1,82 @@
+\hypertarget{_i_a_board_8hpp_source}{}\doxysection{IABoard.\+hpp}
+\label{_i_a_board_8hpp_source}\index{F:/GITHUB/SiWaSIM-\/PiSoftware/src/IABoard.hpp@{F:/GITHUB/SiWaSIM-\/PiSoftware/src/IABoard.hpp}}
+\mbox{\hyperlink{_i_a_board_8hpp}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{preprocessor}{\#pragma once}}
+\DoxyCodeLine{2 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{_i2_c_8hpp}{I2C.hpp}}"{}}}
+\DoxyCodeLine{3 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{utility_8hpp}{utility.hpp}}"{}}}
+\DoxyCodeLine{4 }
+\DoxyCodeLine{5 \textcolor{preprocessor}{\#define I2C\_ADDRESS 0x50}}
+\DoxyCodeLine{6 }
+\DoxyCodeLine{7 \textcolor{keyword}{enum} \mbox{\hyperlink{_i_a_board_8hpp_a031ceda83d144811bf209020a0cf69ff}{TRANSITION}}}
+\DoxyCodeLine{8 \{}
+\DoxyCodeLine{9    \mbox{\hyperlink{_i_a_board_8hpp_a031ceda83d144811bf209020a0cf69ffad3a9df141be0ccf10389b640f492b26d}{DISABLE}} = 0x00,}
+\DoxyCodeLine{10    \mbox{\hyperlink{_i_a_board_8hpp_a031ceda83d144811bf209020a0cf69ffad93abe7aced82e9a4fcac4127a36ece3}{RISING}} = 0x01,}
+\DoxyCodeLine{11    \mbox{\hyperlink{_i_a_board_8hpp_a031ceda83d144811bf209020a0cf69ffad24712a6a30c1d431b927d1ba2f84b66}{FALLING}} = 0x02,}
+\DoxyCodeLine{12    \mbox{\hyperlink{_i_a_board_8hpp_a031ceda83d144811bf209020a0cf69ffa627abe5a430420baf29ebe1940a7f2fb}{BOTH}} = 0x03,}
+\DoxyCodeLine{13    \mbox{\hyperlink{_i_a_board_8hpp_a031ceda83d144811bf209020a0cf69ffa605159e8a4c32319fd69b5d151369d93}{UNDEFINED}} = 0x04}
+\DoxyCodeLine{14 \} \textcolor{keyword}{typedef} \mbox{\hyperlink{_i_a_board_8hpp_a031ceda83d144811bf209020a0cf69ff}{TRANSITION}};}
+\DoxyCodeLine{15 }
+\DoxyCodeLine{16 \textcolor{keyword}{class }\mbox{\hyperlink{class_i_a_board}{IABoard}}}
+\DoxyCodeLine{17 \{}
+\DoxyCodeLine{18 \textcolor{keyword}{public}:}
+\DoxyCodeLine{19    \mbox{\hyperlink{class_i_a_board_af5ecdf4f26461d8710aad631340048a8}{IABoard}}();}
+\DoxyCodeLine{20    \mbox{\hyperlink{class_i_a_board_ab5e6b2a439fdf31c4a6f6223bc75c467}{\string~IABoard}}();}
+\DoxyCodeLine{21 }
+\DoxyCodeLine{22    \textcolor{comment}{// Check if the board is responding}}
+\DoxyCodeLine{23    \textcolor{keywordtype}{bool} \mbox{\hyperlink{class_i_a_board_a3e519ab5eb58ac3ca42cada690c04314}{detectBoard}}();}
+\DoxyCodeLine{24 }
+\DoxyCodeLine{25    \textcolor{comment}{// Read all digital inputs}}
+\DoxyCodeLine{26    uint8\_t \mbox{\hyperlink{class_i_a_board_a90742c9628677c0e8ddf120c6f5d4247}{digitalRead}}();}
+\DoxyCodeLine{27    \textcolor{comment}{// Read digital input of certain channel 1 -\/ 4}}
+\DoxyCodeLine{28    \textcolor{keywordtype}{bool} \mbox{\hyperlink{class_i_a_board_a90742c9628677c0e8ddf120c6f5d4247}{digitalRead}}(uint8\_t channel);}
+\DoxyCodeLine{29 }
+\DoxyCodeLine{30    \textcolor{comment}{// Reads the number of counted transitions (if enabled)}}
+\DoxyCodeLine{31    uint16\_t \mbox{\hyperlink{class_i_a_board_a24cf40186ccefa1ef47e809b9de5faa9}{readTransistions}}(uint8\_t channel);}
+\DoxyCodeLine{32    \textcolor{comment}{// Reads th ecurrently set transition type}}
+\DoxyCodeLine{33    \mbox{\hyperlink{_i_a_board_8hpp_a031ceda83d144811bf209020a0cf69ff}{TRANSITION}} \mbox{\hyperlink{class_i_a_board_aa5d275c8809b6e6cea0d356f9c4a054a}{getTransistionType}}(uint8\_t channel);}
+\DoxyCodeLine{34    \textcolor{comment}{// Sets the type of transistions that should be counted}}
+\DoxyCodeLine{35    \textcolor{keywordtype}{void} \mbox{\hyperlink{class_i_a_board_a284128dc1191b936f6556a6b23f12b6a}{setTransistionType}}(uint8\_t channel, \mbox{\hyperlink{_i_a_board_8hpp_a031ceda83d144811bf209020a0cf69ff}{TRANSITION}} tran);}
+\DoxyCodeLine{36    \textcolor{comment}{// Sets the transistion counter of a channel to 0}}
+\DoxyCodeLine{37    \textcolor{keywordtype}{void} \mbox{\hyperlink{class_i_a_board_a3b6c0acad5e43bde0ef4fdf0c009fb42}{resetTransitions}}(uint8\_t channel);}
+\DoxyCodeLine{38 }
+\DoxyCodeLine{39    \textcolor{comment}{// Get the currently set analog output voltage}}
+\DoxyCodeLine{40    \textcolor{keywordtype}{float} \mbox{\hyperlink{class_i_a_board_af1a192b8f71d1b9172a3d139c4d7d458}{getAnalogVolOut}}(uint8\_t channel);}
+\DoxyCodeLine{41    \textcolor{comment}{// Set the analog output voltage from 0 -\/ 10V, voltage in volts}}
+\DoxyCodeLine{42    \textcolor{keywordtype}{void} \mbox{\hyperlink{class_i_a_board_a853f927433f6ebb93284c5b53cd35a4a}{setAnalogVolOut}}(uint8\_t channel, \textcolor{keywordtype}{float} voltage);}
+\DoxyCodeLine{43 }
+\DoxyCodeLine{44    \textcolor{comment}{// Get the currently set analog output current}}
+\DoxyCodeLine{45    \textcolor{keywordtype}{float} \mbox{\hyperlink{class_i_a_board_a4e90691e37bff8cb55036b568061f3c5}{getAnalogCurOut}}(uint8\_t channel);}
+\DoxyCodeLine{46    \textcolor{comment}{// Set the analog output current from 4 -\/ 20mA, current in mA}}
+\DoxyCodeLine{47    \textcolor{keywordtype}{void} \mbox{\hyperlink{class_i_a_board_af5df93b4548d6a1012c56fb5fb290a1c}{setAnalogCurOut}}(uint8\_t channel, \textcolor{keywordtype}{float} current);}
+\DoxyCodeLine{48 }
+\DoxyCodeLine{49    \textcolor{comment}{// Get the PWM Duty Cycle for the Open Drain Output (if not used as digital out)}}
+\DoxyCodeLine{50    \textcolor{keywordtype}{float} \mbox{\hyperlink{class_i_a_board_aa290b60191f0e508db95be68dbeef116}{getOpenDrainPWM}}(uint8\_t channel);}
+\DoxyCodeLine{51    \textcolor{comment}{// Set the PWM Duty Cycle (0 -\/ 100\%) for the Open Drain Output}}
+\DoxyCodeLine{52    \textcolor{keywordtype}{void} \mbox{\hyperlink{class_i_a_board_a063c738b5d1f803551aa4e9be72f2ec7}{setOpenDrainPWM}}(uint8\_t channel, \textcolor{keywordtype}{float} dutyCycle);}
+\DoxyCodeLine{53 }
+\DoxyCodeLine{54    \textcolor{comment}{// Read all digital open drain outputs}}
+\DoxyCodeLine{55    uint8\_t \mbox{\hyperlink{class_i_a_board_a724f4caaf3df8a66d85b68aea2061248}{getOpenDrainDOUT}}();}
+\DoxyCodeLine{56    \textcolor{comment}{// Get the currently set open drain digital out value}}
+\DoxyCodeLine{57    \textcolor{keywordtype}{bool} \mbox{\hyperlink{class_i_a_board_a724f4caaf3df8a66d85b68aea2061248}{getOpenDrainDOUT}}(uint8\_t channel);}
+\DoxyCodeLine{58    \textcolor{comment}{// Set the digital open drain output}}
+\DoxyCodeLine{59    \textcolor{keywordtype}{void} \mbox{\hyperlink{class_i_a_board_aafb047566019d306e14eb10e8ae34825}{setOpenDrainDOUT}}(uint8\_t channel, \textcolor{keywordtype}{bool} value);}
+\DoxyCodeLine{60 }
+\DoxyCodeLine{61    \textcolor{comment}{// Gets the state of a certain LED}}
+\DoxyCodeLine{62    \textcolor{keywordtype}{bool} \mbox{\hyperlink{class_i_a_board_ada67b4c599cb1c0b5e733e51f33deb2e}{getLED}}(uint8\_t channel);}
+\DoxyCodeLine{63    \textcolor{comment}{// Sets a certain LED Low or High}}
+\DoxyCodeLine{64    \textcolor{keywordtype}{void} \mbox{\hyperlink{class_i_a_board_aa426d8571e07056b7ab8c1da6d3c1165}{setLED}}(uint8\_t channel, \textcolor{keywordtype}{bool} value);}
+\DoxyCodeLine{65 }
+\DoxyCodeLine{66    \textcolor{comment}{// Reads the analog input voltage of a certain channel (0-\/10V)}}
+\DoxyCodeLine{67    \textcolor{keywordtype}{float} \mbox{\hyperlink{class_i_a_board_a300178bdb61a6a6b74427031b181a597}{readAnalogVolIn}}(uint8\_t channel);}
+\DoxyCodeLine{68    \textcolor{comment}{// Reads the analog input voltage of a certain channel (-\/10-\/10V, Jumper set)}}
+\DoxyCodeLine{69    \textcolor{keywordtype}{float} \mbox{\hyperlink{class_i_a_board_a291abadcc858294866a7b2853e423a99}{readAnalogVolInPM}}(uint8\_t channel);}
+\DoxyCodeLine{70 }
+\DoxyCodeLine{71    \textcolor{comment}{// Reads the analog input current of a certain channel (4-\/20mA)}}
+\DoxyCodeLine{72    \textcolor{keywordtype}{float} \mbox{\hyperlink{class_i_a_board_af66593a8851468487bd904d61de67569}{readAnalogCurIn}}(uint8\_t channel);}
+\DoxyCodeLine{73 }
+\DoxyCodeLine{74 \textcolor{keyword}{private}:}
+\DoxyCodeLine{75    \mbox{\hyperlink{class_i2_c}{I2C}} *\_i2c;}
+\DoxyCodeLine{76 \};}
+
+\end{DoxyCode}

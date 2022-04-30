@@ -36,4 +36,5 @@ public:
 
 private:
    void parseJSON();
+   std::string _path = "";
 };

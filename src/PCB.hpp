@@ -21,6 +21,9 @@
 #define PIN_EXTRASW1 27
 #define PIN_EXTRASW2 22
 
+#define ADDVOL_CHANNEL 2
+#define SUBVOL_CHANNEL 3
+
 class PCB
 {
 public:

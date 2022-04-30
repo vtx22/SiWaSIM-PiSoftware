@@ -1,0 +1,77 @@
+\hypertarget{class_i2_c}{}\doxysection{I2C Class Reference}
+\label{class_i2_c}\index{I2C@{I2C}}
+
+
+{\ttfamily \#include $<$I2\+C.\+hpp$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_i2_c_af775ef1cb12d83022fcf38e449fc8766}{I2C}} (std\+::string dev, uint16\+\_\+t address)
+\item 
+\mbox{\hyperlink{class_i2_c_afaad09fa9bdd23623bddbdcd7585a9fe}{$\sim$\+I2C}} ()
+\item 
+bool \mbox{\hyperlink{class_i2_c_aaafb586ee518b69ac8cd40038447a440}{begin}} ()
+\item 
+bool \mbox{\hyperlink{class_i2_c_a07939419231c52f367a4b444a91fa3c7}{write\+Data}} (uint8\+\_\+t data)
+\item 
+bool \mbox{\hyperlink{class_i2_c_acb42853d2407bd8cfe741938ea588bac}{write\+Data}} (uint8\+\_\+t $\ast$data, uint8\+\_\+t length)
+\item 
+bool \mbox{\hyperlink{class_i2_c_a2c6323a657e7dfb275bc3209cf7fd1d3}{read\+Data}} (uint8\+\_\+t $\ast$data, uint8\+\_\+t length)
+\item 
+uint8\+\_\+t \mbox{\hyperlink{class_i2_c_aeb7386884b74f5322d9627b7bfedbec3}{read\+Data}} ()
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_i2_c_af775ef1cb12d83022fcf38e449fc8766}\label{class_i2_c_af775ef1cb12d83022fcf38e449fc8766}} 
+\index{I2C@{I2C}!I2C@{I2C}}
+\index{I2C@{I2C}!I2C@{I2C}}
+\doxysubsubsection{\texorpdfstring{I2C()}{I2C()}}
+{\footnotesize\ttfamily I2\+C\+::\+I2C (\begin{DoxyParamCaption}\item[{std\+::string}]{dev,  }\item[{uint16\+\_\+t}]{address }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_i2_c_afaad09fa9bdd23623bddbdcd7585a9fe}\label{class_i2_c_afaad09fa9bdd23623bddbdcd7585a9fe}} 
+\index{I2C@{I2C}!````~I2C@{$\sim$I2C}}
+\index{````~I2C@{$\sim$I2C}!I2C@{I2C}}
+\doxysubsubsection{\texorpdfstring{$\sim$I2C()}{~I2C()}}
+{\footnotesize\ttfamily I2\+C\+::$\sim$\+I2C (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_i2_c_aaafb586ee518b69ac8cd40038447a440}\label{class_i2_c_aaafb586ee518b69ac8cd40038447a440}} 
+\index{I2C@{I2C}!begin@{begin}}
+\index{begin@{begin}!I2C@{I2C}}
+\doxysubsubsection{\texorpdfstring{begin()}{begin()}}
+{\footnotesize\ttfamily bool I2\+C\+::begin (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_i2_c_aeb7386884b74f5322d9627b7bfedbec3}\label{class_i2_c_aeb7386884b74f5322d9627b7bfedbec3}} 
+\index{I2C@{I2C}!readData@{readData}}
+\index{readData@{readData}!I2C@{I2C}}
+\doxysubsubsection{\texorpdfstring{readData()}{readData()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily uint8\+\_\+t I2\+C\+::read\+Data (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_i2_c_a2c6323a657e7dfb275bc3209cf7fd1d3}\label{class_i2_c_a2c6323a657e7dfb275bc3209cf7fd1d3}} 
+\index{I2C@{I2C}!readData@{readData}}
+\index{readData@{readData}!I2C@{I2C}}
+\doxysubsubsection{\texorpdfstring{readData()}{readData()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily bool I2\+C\+::read\+Data (\begin{DoxyParamCaption}\item[{uint8\+\_\+t $\ast$}]{data,  }\item[{uint8\+\_\+t}]{length }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_i2_c_acb42853d2407bd8cfe741938ea588bac}\label{class_i2_c_acb42853d2407bd8cfe741938ea588bac}} 
+\index{I2C@{I2C}!writeData@{writeData}}
+\index{writeData@{writeData}!I2C@{I2C}}
+\doxysubsubsection{\texorpdfstring{writeData()}{writeData()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily bool I2\+C\+::write\+Data (\begin{DoxyParamCaption}\item[{uint8\+\_\+t $\ast$}]{data,  }\item[{uint8\+\_\+t}]{length }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_i2_c_a07939419231c52f367a4b444a91fa3c7}\label{class_i2_c_a07939419231c52f367a4b444a91fa3c7}} 
+\index{I2C@{I2C}!writeData@{writeData}}
+\index{writeData@{writeData}!I2C@{I2C}}
+\doxysubsubsection{\texorpdfstring{writeData()}{writeData()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily bool I2\+C\+::write\+Data (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{data }\end{DoxyParamCaption})}
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+F\+:/\+GITHUB/\+Si\+Wa\+SIM-\/\+Pi\+Software/src/\mbox{\hyperlink{_i2_c_8hpp}{I2\+C.\+hpp}}\item 
+F\+:/\+GITHUB/\+Si\+Wa\+SIM-\/\+Pi\+Software/src/\mbox{\hyperlink{_i2_c_8cpp}{I2\+C.\+cpp}}\end{DoxyCompactItemize}

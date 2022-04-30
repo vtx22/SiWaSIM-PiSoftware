@@ -1,6 +1,6 @@
 #include "Configuration.hpp"
 
-Configuration::Configuration(std::string path)
+Configuration::Configuration(std::string path) : _path(path)
 {
 }
 

@@ -1,0 +1,377 @@
+\begin{theindex}
+
+  \item {$\sim$Configuration}
+    \subitem {Configuration}, \hyperpage{5}
+  \item {$\sim$GPIO}
+    \subitem {GPIO}, \hyperpage{7}
+  \item {$\sim$I2C}
+    \subitem {I2C}, \hyperpage{9}
+  \item {$\sim$IABoard}
+    \subitem {IABoard}, \hyperpage{10}
+  \item {$\sim$PCB}
+    \subitem {PCB}, \hyperpage{15}
+  \item {$\sim$Simulator}
+    \subitem {Simulator}, \hyperpage{17}
+  \item {$\sim$UART}
+    \subitem {UART}, \hyperpage{18}
+
+  \indexspace
+
+  \item {ADDVOL\_CHANNEL}
+    \subitem {PCB.hpp}, \hyperpage{28}
+  \item {addvol\_ratio}
+    \subitem {Configuration}, \hyperpage{6}
+
+  \indexspace
+
+  \item {begin}
+    \subitem {I2C}, \hyperpage{9}
+    \subitem {UART}, \hyperpage{18}
+  \item {BOTH}
+    \subitem {IABoard.hpp}, \hyperpage{25}
+
+  \indexspace
+
+  \item {cellCharecteristic}
+    \subitem {Configuration}, \hyperpage{6}
+  \item {cellMode}
+    \subitem {Configuration}, \hyperpage{6}
+  \item {Configuration}, \hyperpage{5}
+    \subitem {$\sim$Configuration}, \hyperpage{5}
+    \subitem {addvol\_ratio}, \hyperpage{6}
+    \subitem {cellCharecteristic}, \hyperpage{6}
+    \subitem {cellMode}, \hyperpage{6}
+    \subitem {Configuration}, \hyperpage{5}
+    \subitem {exc\_voltage}, \hyperpage{6}
+    \subitem {initial\_weight}, \hyperpage{6}
+    \subitem {load\_weight}, \hyperpage{6}
+    \subitem {loadConfiguration}, \hyperpage{6}
+    \subitem {max\_diff\_voltage}, \hyperpage{7}
+  \item {Configuration.hpp}
+    \subitem {IMPEDANCE}, \hyperpage{21}
+    \subitem {INVERTED}, \hyperpage{22}
+    \subitem {LoadCellMode}, \hyperpage{22}
+    \subitem {NOMINAL}, \hyperpage{22}
+    \subitem {NORMAL}, \hyperpage{22}
+    \subitem {OPEN}, \hyperpage{22}
+    \subitem {OVERLOAD}, \hyperpage{22}
+    \subitem {SHORT}, \hyperpage{22}
+  \item {constrainMax}
+    \subitem {utility.cpp}, \hyperpage{31}
+    \subitem {utility.hpp}, \hyperpage{32}
+  \item {constrainMin}
+    \subitem {utility.cpp}, \hyperpage{32}
+    \subitem {utility.hpp}, \hyperpage{32}
+  \item {constrainMinMax}
+    \subitem {utility.cpp}, \hyperpage{32}
+    \subitem {utility.hpp}, \hyperpage{33}
+
+  \indexspace
+
+  \item {detectBoard}
+    \subitem {IABoard}, \hyperpage{11}
+  \item {digitalRead}
+    \subitem {IABoard}, \hyperpage{11}
+  \item {DISABLE}
+    \subitem {IABoard.hpp}, \hyperpage{25}
+
+  \indexspace
+
+  \item {exc\_voltage}
+    \subitem {Configuration}, \hyperpage{6}
+
+  \indexspace
+
+  \item {F:/GITHUB/SiWaSIM-\/PiSoftware/src/Configuration.cpp}, 
+		\hyperpage{21}
+  \item {F:/GITHUB/SiWaSIM-\/PiSoftware/src/Configuration.hpp}, 
+		\hyperpage{21, 22}
+  \item {F:/GITHUB/SiWaSIM-\/PiSoftware/src/GPIO.cpp}, \hyperpage{23}
+  \item {F:/GITHUB/SiWaSIM-\/PiSoftware/src/GPIO.hpp}, \hyperpage{23}
+  \item {F:/GITHUB/SiWaSIM-\/PiSoftware/src/I2C.cpp}, \hyperpage{23}
+  \item {F:/GITHUB/SiWaSIM-\/PiSoftware/src/I2C.hpp}, 
+		\hyperpage{23, 24}
+  \item {F:/GITHUB/SiWaSIM-\/PiSoftware/src/IABoard.cpp}, 
+		\hyperpage{24}
+  \item {F:/GITHUB/SiWaSIM-\/PiSoftware/src/IABoard.hpp}, 
+		\hyperpage{24, 25}
+  \item {F:/GITHUB/SiWaSIM-\/PiSoftware/src/main.cpp}, \hyperpage{26}
+  \item {F:/GITHUB/SiWaSIM-\/PiSoftware/src/PCB.cpp}, \hyperpage{27}
+  \item {F:/GITHUB/SiWaSIM-\/PiSoftware/src/PCB.hpp}, \hyperpage{27}, 
+		\hyperpage{29}
+  \item {F:/GITHUB/SiWaSIM-\/PiSoftware/src/Simulator.cpp}, 
+		\hyperpage{30}
+  \item {F:/GITHUB/SiWaSIM-\/PiSoftware/src/Simulator.hpp}, 
+		\hyperpage{30}
+  \item {F:/GITHUB/SiWaSIM-\/PiSoftware/src/UART.cpp}, \hyperpage{30}
+  \item {F:/GITHUB/SiWaSIM-\/PiSoftware/src/UART.hpp}, \hyperpage{31}
+  \item {F:/GITHUB/SiWaSIM-\/PiSoftware/src/utility.cpp}, 
+		\hyperpage{31}
+  \item {F:/GITHUB/SiWaSIM-\/PiSoftware/src/utility.hpp}, 
+		\hyperpage{32, 33}
+  \item {FALLING}
+    \subitem {IABoard.hpp}, \hyperpage{25}
+
+  \indexspace
+
+  \item {getAnalogCurOut}
+    \subitem {IABoard}, \hyperpage{11}
+  \item {getAnalogVolOut}
+    \subitem {IABoard}, \hyperpage{11}
+  \item {getEXCVoltage}
+    \subitem {PCB}, \hyperpage{15}
+  \item {getLED}
+    \subitem {IABoard}, \hyperpage{11}
+  \item {getOpenDrainDOUT}
+    \subitem {IABoard}, \hyperpage{11, 12}
+  \item {getOpenDrainPWM}
+    \subitem {IABoard}, \hyperpage{12}
+  \item {getSENVoltage}
+    \subitem {PCB}, \hyperpage{15}
+  \item {getTransistionType}
+    \subitem {IABoard}, \hyperpage{12}
+  \item {GPIO}, \hyperpage{7}
+    \subitem {$\sim$GPIO}, \hyperpage{7}
+    \subitem {GPIO}, \hyperpage{7}
+    \subitem {readPin}, \hyperpage{7}
+    \subitem {setPinMode}, \hyperpage{8}
+    \subitem {setPWM}, \hyperpage{8}
+    \subitem {writePin}, \hyperpage{8}
+
+  \indexspace
+
+  \item {I2C}, \hyperpage{8}
+    \subitem {$\sim$I2C}, \hyperpage{9}
+    \subitem {begin}, \hyperpage{9}
+    \subitem {I2C}, \hyperpage{9}
+    \subitem {readData}, \hyperpage{9}
+    \subitem {writeData}, \hyperpage{9}
+  \item {I2C\_ADDRESS}
+    \subitem {IABoard.hpp}, \hyperpage{25}
+  \item {IABoard}, \hyperpage{10}
+    \subitem {$\sim$IABoard}, \hyperpage{10}
+    \subitem {detectBoard}, \hyperpage{11}
+    \subitem {digitalRead}, \hyperpage{11}
+    \subitem {getAnalogCurOut}, \hyperpage{11}
+    \subitem {getAnalogVolOut}, \hyperpage{11}
+    \subitem {getLED}, \hyperpage{11}
+    \subitem {getOpenDrainDOUT}, \hyperpage{11, 12}
+    \subitem {getOpenDrainPWM}, \hyperpage{12}
+    \subitem {getTransistionType}, \hyperpage{12}
+    \subitem {IABoard}, \hyperpage{10}
+    \subitem {readAnalogCurIn}, \hyperpage{12}
+    \subitem {readAnalogVolIn}, \hyperpage{12}
+    \subitem {readAnalogVolInPM}, \hyperpage{12}
+    \subitem {readTransistions}, \hyperpage{12}
+    \subitem {resetTransitions}, \hyperpage{13}
+    \subitem {setAnalogCurOut}, \hyperpage{13}
+    \subitem {setAnalogVolOut}, \hyperpage{13}
+    \subitem {setLED}, \hyperpage{13}
+    \subitem {setOpenDrainDOUT}, \hyperpage{13}
+    \subitem {setOpenDrainPWM}, \hyperpage{13}
+    \subitem {setTransistionType}, \hyperpage{14}
+  \item {IABoard.hpp}
+    \subitem {BOTH}, \hyperpage{25}
+    \subitem {DISABLE}, \hyperpage{25}
+    \subitem {FALLING}, \hyperpage{25}
+    \subitem {I2C\_ADDRESS}, \hyperpage{25}
+    \subitem {RISING}, \hyperpage{25}
+    \subitem {TRANSITION}, \hyperpage{25}
+    \subitem {UNDEFINED}, \hyperpage{25}
+  \item {IMPEDANCE}
+    \subitem {Configuration.hpp}, \hyperpage{21}
+  \item {initial\_weight}
+    \subitem {Configuration}, \hyperpage{6}
+  \item {INVERTED}
+    \subitem {Configuration.hpp}, \hyperpage{22}
+
+  \indexspace
+
+  \item {ledBusy}
+    \subitem {PCB}, \hyperpage{15}
+  \item {ledFault}
+    \subitem {PCB}, \hyperpage{15}
+  \item {ledReady}
+    \subitem {PCB}, \hyperpage{15}
+  \item {load\_weight}
+    \subitem {Configuration}, \hyperpage{6}
+  \item {LoadCellMode}
+    \subitem {Configuration.hpp}, \hyperpage{22}
+  \item {loadConfiguration}
+    \subitem {Configuration}, \hyperpage{6}
+
+  \indexspace
+
+  \item {main}
+    \subitem {main.cpp}, \hyperpage{27}
+  \item {main.cpp}
+    \subitem {main}, \hyperpage{27}
+  \item {max\_diff\_voltage}
+    \subitem {Configuration}, \hyperpage{7}
+
+  \indexspace
+
+  \item {NOMINAL}
+    \subitem {Configuration.hpp}, \hyperpage{22}
+  \item {NORMAL}
+    \subitem {Configuration.hpp}, \hyperpage{22}
+
+  \indexspace
+
+  \item {OPEN}
+    \subitem {Configuration.hpp}, \hyperpage{22}
+  \item {OVERLOAD}
+    \subitem {Configuration.hpp}, \hyperpage{22}
+
+  \indexspace
+
+  \item {PCB}, \hyperpage{14}
+    \subitem {$\sim$PCB}, \hyperpage{15}
+    \subitem {getEXCVoltage}, \hyperpage{15}
+    \subitem {getSENVoltage}, \hyperpage{15}
+    \subitem {ledBusy}, \hyperpage{15}
+    \subitem {ledFault}, \hyperpage{15}
+    \subitem {ledReady}, \hyperpage{15}
+    \subitem {PCB}, \hyperpage{14}
+    \subitem {setEXTRASW1}, \hyperpage{15}
+    \subitem {setEXTRASW2}, \hyperpage{16}
+    \subitem {setImpedance}, \hyperpage{16}
+    \subitem {setLoadcellDCVoltage}, \hyperpage{16}
+    \subitem {setLoadcellVoltage}, \hyperpage{16}
+    \subitem {setPOWERSW1}, \hyperpage{16}
+    \subitem {setPOWERSW2}, \hyperpage{16}
+    \subitem {setSENVoltage}, \hyperpage{16}
+  \item {PCB.hpp}
+    \subitem {ADDVOL\_CHANNEL}, \hyperpage{28}
+    \subitem {PIN\_EXTRASW1}, \hyperpage{28}
+    \subitem {PIN\_EXTRASW2}, \hyperpage{28}
+    \subitem {PIN\_IMPEDANCE1}, \hyperpage{28}
+    \subitem {PIN\_IMPEDANCE2}, \hyperpage{28}
+    \subitem {PIN\_LED\_BUSY}, \hyperpage{28}
+    \subitem {PIN\_LED\_FAULT}, \hyperpage{28}
+    \subitem {PIN\_LED\_READY}, \hyperpage{28}
+    \subitem {PIN\_POWERSW1}, \hyperpage{29}
+    \subitem {PIN\_POWERSW2}, \hyperpage{29}
+    \subitem {SUBVOL\_CHANNEL}, \hyperpage{29}
+  \item {PIN\_EXTRASW1}
+    \subitem {PCB.hpp}, \hyperpage{28}
+  \item {PIN\_EXTRASW2}
+    \subitem {PCB.hpp}, \hyperpage{28}
+  \item {PIN\_IMPEDANCE1}
+    \subitem {PCB.hpp}, \hyperpage{28}
+  \item {PIN\_IMPEDANCE2}
+    \subitem {PCB.hpp}, \hyperpage{28}
+  \item {PIN\_LED\_BUSY}
+    \subitem {PCB.hpp}, \hyperpage{28}
+  \item {PIN\_LED\_FAULT}
+    \subitem {PCB.hpp}, \hyperpage{28}
+  \item {PIN\_LED\_READY}
+    \subitem {PCB.hpp}, \hyperpage{28}
+  \item {PIN\_POWERSW1}
+    \subitem {PCB.hpp}, \hyperpage{29}
+  \item {PIN\_POWERSW2}
+    \subitem {PCB.hpp}, \hyperpage{29}
+
+  \indexspace
+
+  \item {readAnalogCurIn}
+    \subitem {IABoard}, \hyperpage{12}
+  \item {readAnalogVolIn}
+    \subitem {IABoard}, \hyperpage{12}
+  \item {readAnalogVolInPM}
+    \subitem {IABoard}, \hyperpage{12}
+  \item {readData}
+    \subitem {I2C}, \hyperpage{9}
+  \item {readPin}
+    \subitem {GPIO}, \hyperpage{7}
+  \item {readTransistions}
+    \subitem {IABoard}, \hyperpage{12}
+  \item {receiveMSG}
+    \subitem {UART}, \hyperpage{18}
+  \item {resetTransitions}
+    \subitem {IABoard}, \hyperpage{13}
+  \item {RISING}
+    \subitem {IABoard.hpp}, \hyperpage{25}
+
+  \indexspace
+
+  \item {setAnalogCurOut}
+    \subitem {IABoard}, \hyperpage{13}
+  \item {setAnalogVolOut}
+    \subitem {IABoard}, \hyperpage{13}
+  \item {setEXTRASW1}
+    \subitem {PCB}, \hyperpage{15}
+  \item {setEXTRASW2}
+    \subitem {PCB}, \hyperpage{16}
+  \item {setImpedance}
+    \subitem {PCB}, \hyperpage{16}
+  \item {setLED}
+    \subitem {IABoard}, \hyperpage{13}
+  \item {setLoadcellDCVoltage}
+    \subitem {PCB}, \hyperpage{16}
+  \item {setLoadcellVoltage}
+    \subitem {PCB}, \hyperpage{16}
+  \item {setOpenDrainDOUT}
+    \subitem {IABoard}, \hyperpage{13}
+  \item {setOpenDrainPWM}
+    \subitem {IABoard}, \hyperpage{13}
+  \item {setPinMode}
+    \subitem {GPIO}, \hyperpage{8}
+  \item {setPOWERSW1}
+    \subitem {PCB}, \hyperpage{16}
+  \item {setPOWERSW2}
+    \subitem {PCB}, \hyperpage{16}
+  \item {setPWM}
+    \subitem {GPIO}, \hyperpage{8}
+  \item {setSENVoltage}
+    \subitem {PCB}, \hyperpage{16}
+  \item {setTransistionType}
+    \subitem {IABoard}, \hyperpage{14}
+  \item {setWeightKG}
+    \subitem {Simulator}, \hyperpage{17}
+  \item {setWeightPER}
+    \subitem {Simulator}, \hyperpage{17}
+  \item {SHORT}
+    \subitem {Configuration.hpp}, \hyperpage{22}
+  \item {Simulator}, \hyperpage{17}
+    \subitem {$\sim$Simulator}, \hyperpage{17}
+    \subitem {setWeightKG}, \hyperpage{17}
+    \subitem {setWeightPER}, \hyperpage{17}
+    \subitem {Simulator}, \hyperpage{17}
+  \item {SUBVOL\_CHANNEL}
+    \subitem {PCB.hpp}, \hyperpage{29}
+
+  \indexspace
+
+  \item {TRANSITION}
+    \subitem {IABoard.hpp}, \hyperpage{25}
+  \item {transmitMSG}
+    \subitem {UART}, \hyperpage{19}
+
+  \indexspace
+
+  \item {UART}, \hyperpage{18}
+    \subitem {$\sim$UART}, \hyperpage{18}
+    \subitem {begin}, \hyperpage{18}
+    \subitem {receiveMSG}, \hyperpage{18}
+    \subitem {transmitMSG}, \hyperpage{19}
+    \subitem {UART}, \hyperpage{18}
+  \item {UNDEFINED}
+    \subitem {IABoard.hpp}, \hyperpage{25}
+  \item {utility.cpp}
+    \subitem {constrainMax}, \hyperpage{31}
+    \subitem {constrainMin}, \hyperpage{32}
+    \subitem {constrainMinMax}, \hyperpage{32}
+  \item {utility.hpp}
+    \subitem {constrainMax}, \hyperpage{32}
+    \subitem {constrainMin}, \hyperpage{32}
+    \subitem {constrainMinMax}, \hyperpage{33}
+
+  \indexspace
+
+  \item {writeData}
+    \subitem {I2C}, \hyperpage{9}
+  \item {writePin}
+    \subitem {GPIO}, \hyperpage{8}
+
+\end{theindex}

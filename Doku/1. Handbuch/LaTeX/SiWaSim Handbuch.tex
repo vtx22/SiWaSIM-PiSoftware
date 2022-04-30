@@ -1,11 +1,12 @@
 \documentclass[12pt, a4paper]{report}
 
 \input{preamble}
+
 \renewcommand{\arraystretch}{1.5}
 \setlength{\tabcolsep}{20pt}
 %\input{environments}
 
-
+ \renewcommand{\familydefault}{\sfdefault}
 \begin{document}
 
     \begin{figure}
@@ -33,15 +34,49 @@
    \pagestyle{fancy}
    \fancypagestyle{plain}{%
        \lhead{\textsc{SIWASIM}}
-       \rhead{Raddatz, Eismann, Buck, Hecker}
+       \rhead{\empty}
        \cfoot{\empty}
        \rfoot{\thepage}
-       %	\renewcommand{\headrulewidth}{0pt}%
-       %	\renewcommand{\footrulewidth}{0pt}%
+       \lfoot{Fynn Raddatz}
+       \renewcommand{\headrulewidth}{1pt}%
+       \renewcommand{\footrulewidth}{1pt}%
    }
 
 \chapter{Einleitung}
+\section{Begleitende Dokumente}
+Begleitend zu diesem Handbuch stehen weitere Dokumente zur Verfügung. Diese befinden sich standardmäßig in der Ordnerstruktur des vollständigen Projekts. Alle Dokumente und ihr Inhalt sind im Folgenden aufgeführt.
+\begin{itemize}
+\item SiWaSim - Handbuch: Handbuch mit Features, Bedienung- und Sicherheitshinweisen für den Endbenutzer
+\item Design Referenz: Dokument mit Beschreibung des Aufbaus und der Funktionsweise des Sourcecodes und der Hardware, zur Einarbeitung bei Weiterentwicklung des Simulators
+\item Doxygen: Durch Doxygen generierte HTML- und \LaTeX -Dokumente zur Dokumentation der im Code enthaltenen Klassen und Funktionen
+\item Feature-Spec: Dokument mit Zielsetzungen und Funktionsumfang des Simulators vor Entwicklungsbeginn
+\item IA-Board: Ordner mit Dokumentationen zum verwendeten IA-Board der Firma Sequent Microsystems vom Hersteller
+\item PCB: Enthält die Schaltpläne und das EDA-Projekt für das angefertigte PCB
+\item Bilder: Enthält Bilder vom Simulator und der Platine
+\item Alte Referenzen: Enthält alte Dokumente die teilweise als Vorlage oder als Einarbeitung verwendet wurden
+\end{itemize}
+\section{Beschreibung}
+Bei dem Produkt „SiWaSim“ (SIWAREX Simulator) handelt es sich um ein Gerät auf RaspberryPi-Basis, welches die Eigenschaften einer Wägezelle und weitere anlagenspezifische Eigenschaften simuliert. Hiermit kann ein Aufbau mit einem SIWAREX-Modul, optional in Kombination mit anderen Komponenten (SPS, HMI, etc.), im Laborumfeld auf die richtige Funktionsweise automatisiert geprüft werden. Dazu gehören u.a. Gewichtssimulationen, Steuern von Digitalausgängen, Bandgeschwindigkeitssimulation und die damit verbundenen Überwachungen, Überprüfung auf Plausibilität und das Logging der Messwerte.
+\section{Aufbau}
+Der Simulator besteht aus einem RaspberryPi 4B 4GB. Auf diesem läuft die gesamte Simulationssoftware. Er ist für die Ansteuerung aller Hardwarekomponenten sowie für die optionale Kommunikation nach Außen mit einem PC zuständig. Auf dem RaspberryPi befindet sich ein Industrial Automation Board (IA-Board) der Firma Sequent Microsystems, welches über einen I2C-Bus angesteuert wird. Das Board verfügt über diverse digitale sowie analoge Ein- und Ausgänge. Zusätzlich lässt sich hierüber das RS485 Interface des SIWAREX-Moduls ansteuern, wodurch alle verfügbaren MODBUS-Kommandos verwendet werden können. Als dritte Hauptkomponente wurde ein eigenes PCB angefertigt, das das IA-Board mit den Anforderungen der SIWAREX-Module kompatibel macht. Außerdem wird auf diesem PCB die Simulation der Wägezelle hardwareseitig umgesetzt.
 \chapter{Funktionsumfang}
+\section{Wägezellen-Simulation}
+Der Simulator verfügt über einen DSUB-9 Stecker auf der obersten Platine. Dieser ist kompatibel mit dem im Labor standardmäßig genutzten Adapterkabel, welches an die Klemmen des SIWAREX-Moduls angeschlossen werden kann. Die folgenden Eigenschaften einer Wägezelle können simuliert werden.
+\subsection{Wägezellen-Charakteristik}
+Es können Wägezellen von $1\mathrm{mV/V}$ bis $4\mathrm{mV/V}$ simuliert werden. Hierzu gehören auch Wägezellen von $-1\mathrm{mV/V}$ bis $-4\mathrm{mV/V}$.
+\subsection{Wägezellen-Impedanz}
+Es lässt sich die Impedanz der Wägezelle, also die Impedanz zwischen den Leitungen EXC+ und EXC- simulieren. Hierbei sind drei Zustände möglich:
+\begin{itemize}
+\item Open-Circuit, zum Beispiel durch Kabelbruch
+\item Nominal, standardmäßige Impedanz von etwa 350$\Omega$
+\item Short-Circuit, Kurzschluss der EXC-Spannung
+\end{itemize}
+\subsection{Überlast}
+Durch Hardwarejumper kann der maximale Bereich der Ausgangsspannung leicht erhöht werden. Somit kann ein Übergewicht von etwa 10\% simuliert werden.
+\subsection{EXC-Spannung}
+Der Simulator ist kompatibel mit EXC-Spannungen bis 10V. Eine geringere Spannung verringert die Auflösung der simulierten Zellspannung. Außerdem wird die Wägezellenspannung verringert, wenn die EXC-Spannung sinkt. 
+\subsection{SEN-Spannung}
+Standardmäßig sind SEN+ und EXC+ auf dem PCB verbunden, sodass ein Sechsleiterbetrieb möglich ist. Hier wird die Sense-Spannung, wie in einer normalen Anlage, an der Impedanz der Zelle abgegriffen. Es kann aber auch eine Sense-Spannung, unabhängig von der EXC-Spannung, simuliert werden. Hier kann eine Spannung zwischen 0V und 10V ausgegeben werden.
 \chapter{Inbetriebnahme}
 \section{Vor dem Start}
 \section{Erstellen und Laden von Konfigurationen}
@@ -50,20 +85,5 @@
 \section{Einleitung}
 \section{Erzeugen von Abläufen}
 \chapter{Technische Daten}
-\begin{table}[]
-\centering
-\begin{tabular}{|c|c|}
-\hline
-\textbf{Planet}  & \textbf{$p$}      \\ \hline
-\textbf{Mercury} & \textbf{$1.20\%$} \\ \hline
-\textbf{Venus}   & \textbf{$0.64\%$} \\ \hline
-\textbf{Earth}   & \textbf{$0.47\%$} \\ \hline
-\textbf{Mars}    & \textbf{$0.31\%$} \\ \hline
-\textbf{Jupiter} & \textbf{$0.09\%$} \\ \hline
-\textbf{Saturn}  & \textbf{$0.05\%$} \\ \hline
-\textbf{Uranus}  & \textbf{$0.02\%$} \\ \hline
-\textbf{Neptune} & \textbf{$0.02\%$} \\ \hline
-\end{tabular}
-\end{table}
 
 \end{document}

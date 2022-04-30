@@ -1,0 +1,30 @@
+\hypertarget{_u_a_r_t_8hpp_source}{}\doxysection{UART.\+hpp}
+\label{_u_a_r_t_8hpp_source}\index{F:/GITHUB/SiWaSIM-\/PiSoftware/src/UART.hpp@{F:/GITHUB/SiWaSIM-\/PiSoftware/src/UART.hpp}}
+\mbox{\hyperlink{_u_a_r_t_8hpp}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{preprocessor}{\#pragma once}}
+\DoxyCodeLine{2 \textcolor{preprocessor}{\#include <stdint.h>}}
+\DoxyCodeLine{3 \textcolor{preprocessor}{\#include <fcntl.h>}}
+\DoxyCodeLine{4 \textcolor{preprocessor}{\#include <iostream>}}
+\DoxyCodeLine{5 \textcolor{preprocessor}{\#include <sstream>}}
+\DoxyCodeLine{6 \textcolor{preprocessor}{\#include <termios.h>}}
+\DoxyCodeLine{7 \textcolor{preprocessor}{\#include <unistd.h>}}
+\DoxyCodeLine{8 \textcolor{preprocessor}{\#include <vector>}}
+\DoxyCodeLine{9 }
+\DoxyCodeLine{10 \textcolor{keyword}{class }\mbox{\hyperlink{class_u_a_r_t}{UART}}}
+\DoxyCodeLine{11 \{}
+\DoxyCodeLine{12 \textcolor{keyword}{public}:}
+\DoxyCodeLine{13    \mbox{\hyperlink{class_u_a_r_t_a68e7e88d2a13f5da85f0fde1ef98515f}{UART}}();}
+\DoxyCodeLine{14    \mbox{\hyperlink{class_u_a_r_t_a79aea29bd989d2e2ce9692042375b83e}{\string~UART}}();}
+\DoxyCodeLine{15    \textcolor{keywordtype}{bool} \mbox{\hyperlink{class_u_a_r_t_a4cf691a683628ed764e042065efff58e}{begin}}();}
+\DoxyCodeLine{16    \textcolor{keywordtype}{bool} \mbox{\hyperlink{class_u_a_r_t_a2423feaa8d0ea431418a2d789a7cbeb5}{transmitMSG}}(uint8\_t *msg, uint16\_t length);}
+\DoxyCodeLine{17    std::vector<uint8\_t> \mbox{\hyperlink{class_u_a_r_t_a8a9423105732fdc49a5e69a02631fa93}{receiveMSG}}();}
+\DoxyCodeLine{18 }
+\DoxyCodeLine{19 \textcolor{keyword}{private}:}
+\DoxyCodeLine{20    \textcolor{keywordtype}{int} uart0 = -\/1;}
+\DoxyCodeLine{21    \textcolor{comment}{// std::string \_dev;}}
+\DoxyCodeLine{22    \textcolor{keyword}{const} uint8\_t \_messageSizeRX = 0;     \textcolor{comment}{// Number of bytes to wait for}}
+\DoxyCodeLine{23    \textcolor{keyword}{const} uint8\_t \_messageTimeoutRX = 50; \textcolor{comment}{// Read Timeout in 0.1s steps}}
+\DoxyCodeLine{24 \};}
+
+\end{DoxyCode}

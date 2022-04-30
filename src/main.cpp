@@ -14,6 +14,5 @@
 int main()
 {
    Simulator sim;
-
-   sim.setWeightPER(0.5);
+   sim.bootupAnimation();
 }

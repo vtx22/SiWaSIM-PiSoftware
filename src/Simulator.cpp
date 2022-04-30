@@ -4,6 +4,7 @@ Simulator::Simulator()
 {
    _config = new Configuration("./config.json");
    _pcb = new PCB(_config);
+   _ia = new IABoard();
 }
 
 Simulator::~Simulator()
@@ -18,7 +19,9 @@ void Simulator::setWeightPER(float percentage)
    {
    default:
    case NORMAL:
+      // Max differential voltage (e.g. 4mV/V * 10V = 40mV)
       voltage = _config->cellCharecteristic * _config->exc_voltage;
+      // Do not allow overload
       constrainMax(percentage, 1);
       break;
    case OVERLOAD:
@@ -26,11 +29,28 @@ void Simulator::setWeightPER(float percentage)
    }
 
    voltage *= percentage;
-   printf("Setting voltage to: %f\n", voltage);
+
    _pcb->setLoadcellVoltage(voltage);
 }
 
 void Simulator::setWeightKG(float kg)
 {
    setWeightPER(kg / _config->load_weight);
+}
+
+void Simulator::bootupAnimation()
+{
+   _ia->setLED(1, 0);
+   _ia->setLED(2, 0);
+   _ia->setLED(3, 0);
+   _ia->setLED(4, 0);
+   std::this_thread::sleep_for(500 std::chrono::ms);
+   _ia->setLED(1, 1);
+   std::this_thread::sleep_for(100 std::chrono::ms);
+   _ia->setLED(2, 1);
+   std::this_thread::sleep_for(100 std::chrono::ms);
+   _ia->setLED(3, 1);
+   std::this_thread::sleep_for(100 std::chrono::ms);
+   _ia->setLED(4, 1);
+   std::this_thread::sleep_for(100 std::chrono::ms);
 }

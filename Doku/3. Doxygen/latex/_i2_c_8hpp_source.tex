@@ -1,0 +1,33 @@
+\hypertarget{_i2_c_8hpp_source}{}\doxysection{I2\+C.\+hpp}
+\label{_i2_c_8hpp_source}\index{F:/GITHUB/SiWaSIM-\/PiSoftware/src/I2C.hpp@{F:/GITHUB/SiWaSIM-\/PiSoftware/src/I2C.hpp}}
+\mbox{\hyperlink{_i2_c_8hpp}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{preprocessor}{\#pragma once}}
+\DoxyCodeLine{2 \textcolor{preprocessor}{\#include <stdio.h>}}
+\DoxyCodeLine{3 \textcolor{preprocessor}{\#include <unistd.h>}}
+\DoxyCodeLine{4 \textcolor{preprocessor}{\#include <string>}}
+\DoxyCodeLine{5 \textcolor{preprocessor}{\#include <stdint.h>}}
+\DoxyCodeLine{6 \textcolor{preprocessor}{\#include <sys/stat.h>}}
+\DoxyCodeLine{7 \textcolor{preprocessor}{\#include <fcntl.h>}}
+\DoxyCodeLine{8 \textcolor{preprocessor}{\#include <sys/ioctl.h>}}
+\DoxyCodeLine{9 \textcolor{preprocessor}{\#include <linux/i2c.h>}}
+\DoxyCodeLine{10 \textcolor{preprocessor}{\#include <linux/i2c-\/dev.h>}}
+\DoxyCodeLine{11 }
+\DoxyCodeLine{12 \textcolor{keyword}{class }\mbox{\hyperlink{class_i2_c}{I2C}}}
+\DoxyCodeLine{13 \{}
+\DoxyCodeLine{14 \textcolor{keyword}{public}:}
+\DoxyCodeLine{15    \mbox{\hyperlink{class_i2_c_af775ef1cb12d83022fcf38e449fc8766}{I2C}}(std::string dev, uint16\_t address);}
+\DoxyCodeLine{16    \mbox{\hyperlink{class_i2_c_afaad09fa9bdd23623bddbdcd7585a9fe}{\string~I2C}}();}
+\DoxyCodeLine{17    \textcolor{keywordtype}{bool} \mbox{\hyperlink{class_i2_c_aaafb586ee518b69ac8cd40038447a440}{begin}}();}
+\DoxyCodeLine{18    \textcolor{keywordtype}{bool} \mbox{\hyperlink{class_i2_c_a07939419231c52f367a4b444a91fa3c7}{writeData}}(uint8\_t data);}
+\DoxyCodeLine{19    \textcolor{keywordtype}{bool} \mbox{\hyperlink{class_i2_c_a07939419231c52f367a4b444a91fa3c7}{writeData}}(uint8\_t *data, uint8\_t length);}
+\DoxyCodeLine{20    \textcolor{keywordtype}{bool} \mbox{\hyperlink{class_i2_c_aeb7386884b74f5322d9627b7bfedbec3}{readData}}(uint8\_t *data, uint8\_t length);}
+\DoxyCodeLine{21    uint8\_t \mbox{\hyperlink{class_i2_c_aeb7386884b74f5322d9627b7bfedbec3}{readData}}();}
+\DoxyCodeLine{22 }
+\DoxyCodeLine{23 \textcolor{keyword}{private}:}
+\DoxyCodeLine{24    std::string \_dev;}
+\DoxyCodeLine{25    uint16\_t \_address;}
+\DoxyCodeLine{26    \textcolor{keywordtype}{int} i2c0 = -\/1;}
+\DoxyCodeLine{27 \};}
+
+\end{DoxyCode}
