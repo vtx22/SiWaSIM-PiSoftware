@@ -1,6 +1,9 @@
 #pragma once
 #include "I2C.hpp"
 #include "utility.hpp"
+#include <chrono>
+#include <thread>
+using namespace std::chrono_literals;
 
 #define I2C_ADDRESS 0x50
 
@@ -70,6 +73,8 @@ public:
 
    // Reads the analog input current of a certain channel (4-20mA)
    float readAnalogCurIn(uint8_t channel);
+
+   void setAllOFF();
 
 private:
    I2C *_i2c;

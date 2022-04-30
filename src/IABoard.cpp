@@ -8,6 +8,7 @@ IABoard::IABoard()
 
 IABoard::~IABoard()
 {
+   setAllOFF();
    delete _i2c;
 }
 
@@ -253,7 +254,7 @@ void IABoard::setLED(uint8_t channel, bool value)
       printf("IA-Board ERROR: Channel out of range! Allowed: 1 - 4\n");
       return;
    }
-
+   std::this_thread::sleep_for(100us);
    uint8_t cmd = 0x02;
    if (value)
    {
@@ -310,4 +311,8 @@ float IABoard::readAnalogCurIn(uint8_t channel)
    _i2c->readData(cur, 2);
 
    return (float)(cur[0] + (cur[1] << 8)) / 1000.f;
+}
+
+void IABoard::setAllOFF()
+{
 }
