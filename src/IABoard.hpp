@@ -66,6 +66,8 @@ public:
    bool getLED(uint8_t channel);
    // Sets a certain LED Low or High
    void setLED(uint8_t channel, bool value);
+   // Sets all LEDs ON or OFF
+   void setAllLED(bool value);
 
    // Reads the analog input voltage of a certain channel (0-10V)
    float readAnalogVolIn(uint8_t channel);
@@ -75,7 +77,11 @@ public:
    // Reads the analog input current of a certain channel (4-20mA)
    float readAnalogCurIn(uint8_t channel);
 
+   // Turn all digital and analog outputs off
    void setAllOFF();
+
+   // Wait till the minimum time between commands has elapsed
+   void waitForIA();
 
 private:
    I2C *_i2c;

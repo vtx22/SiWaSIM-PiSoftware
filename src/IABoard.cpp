@@ -257,12 +257,7 @@ void IABoard::setLED(uint8_t channel, bool value)
       return;
    }
 
-   std::chrono::duration diff = std::chrono::duration_cast<std::chrono::milliseconds>(std::chrono::system_clock::now() - _lastCommand).count();
-
-   if (diff < _delayBetweenCommands.count())
-   {
-      std::this_thread::sleep_for(diff.count());
-   }
+   waitForIA();
 
    uint8_t cmd = 0x02;
    if (value)
@@ -272,6 +267,14 @@ void IABoard::setLED(uint8_t channel, bool value)
    uint8_t data[2] = {cmd, channel + 0x04};
 
    _i2c->writeData(data, 2);
+}
+
+void IABoard::setAllLED(bool value)
+{
+   setLED(1, value);
+   setLED(2, value);
+   setLED(3, value);
+   setLED(4, value);
 }
 
 float IABoard::readAnalogVolIn(uint8_t channel)
@@ -324,4 +327,14 @@ float IABoard::readAnalogCurIn(uint8_t channel)
 
 void IABoard::setAllOFF()
 {
+}
+
+void IABoard::waitForIA()
+{
+   auto diff = std::chrono::duration_cast<std::chrono::milliseconds>(std::chrono::system_clock::now() - _lastCommand).count();
+
+   if (diff < _delayBetweenCommands.count())
+   {
+      std::this_thread::sleep_for(diff);
+   }
 }
