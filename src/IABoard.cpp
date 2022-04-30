@@ -259,7 +259,7 @@ void IABoard::setLED(uint8_t channel, bool value)
 
    auto diff = std::chrono::duration_cast<std::chrono::milliseconds>(std::chrono::system_clock::now() - _lastCommand).count();
 
-   if (diff < _delayBetweenCommands)
+   if (diff < _delayBetweenCommands.count())
    {
       std::this_thread::sleep_for(diff);
    }
