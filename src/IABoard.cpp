@@ -2,6 +2,8 @@
 
 IABoard::IABoard()
 {
+   // Save current time to calculate time between commands
+   _lastCommand = std::chrono::system_clock::now();
    // Create I2C Object where 0x50 is the I2C address of the IA-Board
    _i2c = new I2C("/dev/i2c-1", I2C_ADDRESS);
 }
@@ -254,7 +256,11 @@ void IABoard::setLED(uint8_t channel, bool value)
       printf("IA-Board ERROR: Channel out of range! Allowed: 1 - 4\n");
       return;
    }
-   std::this_thread::sleep_for(5ms);
+
+   auto diff = std::chrono::duration_cast<std::chrono::microseconds>(std::chrono::system_clock::now() - _lastCommand).count();
+
+   std::cout << "Time Diff" << diff << std::endl;
+
    uint8_t cmd = 0x02;
    if (value)
    {
