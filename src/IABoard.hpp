@@ -3,6 +3,7 @@
 #include "utility.hpp"
 #include <chrono>
 #include <thread>
+#include <iostream>
 using namespace std::chrono_literals;
 
 #define I2C_ADDRESS 0x50
