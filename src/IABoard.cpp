@@ -254,7 +254,7 @@ void IABoard::setLED(uint8_t channel, bool value)
       printf("IA-Board ERROR: Channel out of range! Allowed: 1 - 4\n");
       return;
    }
-   std::this_thread::sleep_for(100us);
+   std::this_thread::sleep_for(1ms);
    uint8_t cmd = 0x02;
    if (value)
    {
