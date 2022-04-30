@@ -44,13 +44,13 @@ void Simulator::bootupAnimation()
    _ia->setLED(2, 0);
    _ia->setLED(3, 0);
    _ia->setLED(4, 0);
-   std::this_thread::sleep_for(500 std::chrono::ms);
+   std::this_thread::sleep_for(500ms);
    _ia->setLED(1, 1);
-   std::this_thread::sleep_for(100 std::chrono::ms);
+   std::this_thread::sleep_for(100ms);
    _ia->setLED(2, 1);
-   std::this_thread::sleep_for(100 std::chrono::ms);
+   std::this_thread::sleep_for(100ms);
    _ia->setLED(3, 1);
-   std::this_thread::sleep_for(100 std::chrono::ms);
+   std::this_thread::sleep_for(100ms);
    _ia->setLED(4, 1);
-   std::this_thread::sleep_for(100 std::chrono::ms);
+   std::this_thread::sleep_for(100ms);
 }
