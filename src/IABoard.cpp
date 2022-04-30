@@ -335,6 +335,6 @@ void IABoard::waitForIA()
 
    if (diff < _delayBetweenCommands.count())
    {
-      std::this_thread::sleep_for(diff ms);
+      std::this_thread::sleep_for(std::chrono::milliseconds(diff));
    }
 }
