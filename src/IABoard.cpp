@@ -257,7 +257,7 @@ void IABoard::setLED(uint8_t channel, bool value)
       return;
    }
 
-   auto diff = std::chrono::duration_cast<std::chrono::microseconds>(std::chrono::system_clock::now() - _lastCommand).count();
+   auto diff = std::chrono::duration_cast<std::chrono::milliseconds>(std::chrono::system_clock::now() - _lastCommand).count();
 
    std::cout << "Time Diff" << diff << std::endl;
 

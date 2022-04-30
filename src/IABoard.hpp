@@ -80,6 +80,6 @@ private:
    I2C *_i2c;
 
    // Delay because the IA-Board can only handle commands every few ms
-   std::chrono::microseconds _delayBetweenCommands = 5ms;
-   auto _lastCommand;
+   std::chrono::milliseconds _delayBetweenCommands = 5ms;
+   std::chrono::time_point<std::chrono::system_clock, std::chrono::duration<double>> _lastCommand;
 };
