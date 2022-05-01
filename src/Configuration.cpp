@@ -25,7 +25,7 @@ void Configuration::loadConfiguration()
 
    // Load values line by line (should be simplified in the future)
 
-   load_weight = std::stod(jsonFile.at(1).at("Wert"));
+   auto test = jsonFile.at(1).at("Wert");
 
    printf("The load weight is %f kg\n", load_weight);
 }
