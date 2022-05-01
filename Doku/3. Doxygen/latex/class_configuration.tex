@@ -17,19 +17,19 @@ void \mbox{\hyperlink{class_configuration_a5c4ffeed7ac7333e9bcb8fd63232c60f}{loa
 \begin{DoxyCompactItemize}
 \item 
 \mbox{\hyperlink{_configuration_8hpp_a79dd9036c94e58a35b6e18d61a36fb66}{Load\+Cell\+Mode}} \mbox{\hyperlink{class_configuration_a94120b68ed6b6175c152c2799baa4cc7}{cell\+Mode}} = \mbox{\hyperlink{_configuration_8hpp_a79dd9036c94e58a35b6e18d61a36fb66a50d1448013c6f17125caee18aa418af7}{NORMAL}}
-\item 
+\begin{DoxyCompactList}\small\item\em Loadcell mode to be simulated. \end{DoxyCompactList}\item 
 float \mbox{\hyperlink{class_configuration_ae8d60d92e248f2beb56ab65b3675021b}{exc\+\_\+voltage}} = 10.f
-\item 
+\begin{DoxyCompactList}\small\item\em Nominal EXC voltage ouputted by the SIWAREX module. \end{DoxyCompactList}\item 
 float \mbox{\hyperlink{class_configuration_ae5fb01ebff9c19f346cac9158b16b3a2}{load\+\_\+weight}} = 20.f
-\item 
+\begin{DoxyCompactList}\small\item\em Nominal Load Weight of the cell in kg. \end{DoxyCompactList}\item 
 float \mbox{\hyperlink{class_configuration_a1ef2ca5eb6c96f604912b00073d7c5a4}{initial\+\_\+weight}} = 10.f
-\item 
+\begin{DoxyCompactList}\small\item\em Initial weight (for manual / non-\/auto mode) \end{DoxyCompactList}\item 
 float \mbox{\hyperlink{class_configuration_adbdf6f1d3a1d29d9a65fe1e93ffa00aa}{addvol\+\_\+ratio}} = 500
-\item 
+\begin{DoxyCompactList}\small\item\em Inverted Op\+Amp gain (e.\+g.\+: At 10V Aout the added / subtracted voltage is 20mV -\/-\/\texorpdfstring{$>$}{>} ratio = 10V / 20mV = 500) \end{DoxyCompactList}\item 
 float \mbox{\hyperlink{class_configuration_aa64f51fe43c020c59d15e95828e56af1}{max\+\_\+diff\+\_\+voltage}} = 40
-\item 
+\begin{DoxyCompactList}\small\item\em Maximum Differential Voltage of SIG+-\/. \end{DoxyCompactList}\item 
 float \mbox{\hyperlink{class_configuration_a4464bbfe8da8d5f4d8a3d98c340905a0}{cell\+Charecteristic}} = 4
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Characteristic in m\+V/V. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \doxysubsection{Constructor \& Destructor Documentation}
@@ -39,6 +39,11 @@ float \mbox{\hyperlink{class_configuration_a4464bbfe8da8d5f4d8a3d98c340905a0}{ce
 \doxysubsubsection{\texorpdfstring{Configuration()}{Configuration()}}
 {\footnotesize\ttfamily Configuration\+::\+Configuration (\begin{DoxyParamCaption}\item[{std\+::string}]{path }\end{DoxyParamCaption})}
 
+Creates a new configuration that stores all configuration settings needed for the \mbox{\hyperlink{class_simulator}{Simulator}}. IMPORTANT\+: Should only be created once, since there is only one valid configuration for the simulator! 
+\begin{DoxyParams}{Parameters}
+{\em path} & The path to the configuration file on the filesystem \\
+\hline
+\end{DoxyParams}
 \mbox{\Hypertarget{class_configuration_a0dd0fa189e239f4c9a036303f641441e}\label{class_configuration_a0dd0fa189e239f4c9a036303f641441e}} 
 \index{Configuration@{Configuration}!````~Configuration@{$\sim$Configuration}}
 \index{````~Configuration@{$\sim$Configuration}!Configuration@{Configuration}}
@@ -54,7 +59,7 @@ float \mbox{\hyperlink{class_configuration_a4464bbfe8da8d5f4d8a3d98c340905a0}{ce
 \doxysubsubsection{\texorpdfstring{loadConfiguration()}{loadConfiguration()}}
 {\footnotesize\ttfamily void Configuration\+::load\+Configuration (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
-
+Loads a configuration file from the file system (specified by path in \mbox{\hyperlink{class_configuration_a911965960877c2f2ba1be3a5cf397f31}{Configuration(std\+::string path)}}) and parses all settings to their respective variables 
 
 \doxysubsection{Member Data Documentation}
 \mbox{\Hypertarget{class_configuration_adbdf6f1d3a1d29d9a65fe1e93ffa00aa}\label{class_configuration_adbdf6f1d3a1d29d9a65fe1e93ffa00aa}} 
@@ -63,11 +68,19 @@ float \mbox{\hyperlink{class_configuration_a4464bbfe8da8d5f4d8a3d98c340905a0}{ce
 \doxysubsubsection{\texorpdfstring{addvol\_ratio}{addvol\_ratio}}
 {\footnotesize\ttfamily float Configuration\+::addvol\+\_\+ratio = 500}
 
+
+
+Inverted Op\+Amp gain (e.\+g.\+: At 10V Aout the added / subtracted voltage is 20mV -\/-\/\texorpdfstring{$>$}{>} ratio = 10V / 20mV = 500) 
+
 \mbox{\Hypertarget{class_configuration_a4464bbfe8da8d5f4d8a3d98c340905a0}\label{class_configuration_a4464bbfe8da8d5f4d8a3d98c340905a0}} 
 \index{Configuration@{Configuration}!cellCharecteristic@{cellCharecteristic}}
 \index{cellCharecteristic@{cellCharecteristic}!Configuration@{Configuration}}
 \doxysubsubsection{\texorpdfstring{cellCharecteristic}{cellCharecteristic}}
 {\footnotesize\ttfamily float Configuration\+::cell\+Charecteristic = 4}
+
+
+
+Characteristic in m\+V/V. 
 
 \mbox{\Hypertarget{class_configuration_a94120b68ed6b6175c152c2799baa4cc7}\label{class_configuration_a94120b68ed6b6175c152c2799baa4cc7}} 
 \index{Configuration@{Configuration}!cellMode@{cellMode}}
@@ -75,11 +88,19 @@ float \mbox{\hyperlink{class_configuration_a4464bbfe8da8d5f4d8a3d98c340905a0}{ce
 \doxysubsubsection{\texorpdfstring{cellMode}{cellMode}}
 {\footnotesize\ttfamily \mbox{\hyperlink{_configuration_8hpp_a79dd9036c94e58a35b6e18d61a36fb66}{Load\+Cell\+Mode}} Configuration\+::cell\+Mode = \mbox{\hyperlink{_configuration_8hpp_a79dd9036c94e58a35b6e18d61a36fb66a50d1448013c6f17125caee18aa418af7}{NORMAL}}}
 
+
+
+Loadcell mode to be simulated. 
+
 \mbox{\Hypertarget{class_configuration_ae8d60d92e248f2beb56ab65b3675021b}\label{class_configuration_ae8d60d92e248f2beb56ab65b3675021b}} 
 \index{Configuration@{Configuration}!exc\_voltage@{exc\_voltage}}
 \index{exc\_voltage@{exc\_voltage}!Configuration@{Configuration}}
 \doxysubsubsection{\texorpdfstring{exc\_voltage}{exc\_voltage}}
 {\footnotesize\ttfamily float Configuration\+::exc\+\_\+voltage = 10.f}
+
+
+
+Nominal EXC voltage ouputted by the SIWAREX module. 
 
 \mbox{\Hypertarget{class_configuration_a1ef2ca5eb6c96f604912b00073d7c5a4}\label{class_configuration_a1ef2ca5eb6c96f604912b00073d7c5a4}} 
 \index{Configuration@{Configuration}!initial\_weight@{initial\_weight}}
@@ -87,17 +108,29 @@ float \mbox{\hyperlink{class_configuration_a4464bbfe8da8d5f4d8a3d98c340905a0}{ce
 \doxysubsubsection{\texorpdfstring{initial\_weight}{initial\_weight}}
 {\footnotesize\ttfamily float Configuration\+::initial\+\_\+weight = 10.f}
 
+
+
+Initial weight (for manual / non-\/auto mode) 
+
 \mbox{\Hypertarget{class_configuration_ae5fb01ebff9c19f346cac9158b16b3a2}\label{class_configuration_ae5fb01ebff9c19f346cac9158b16b3a2}} 
 \index{Configuration@{Configuration}!load\_weight@{load\_weight}}
 \index{load\_weight@{load\_weight}!Configuration@{Configuration}}
 \doxysubsubsection{\texorpdfstring{load\_weight}{load\_weight}}
 {\footnotesize\ttfamily float Configuration\+::load\+\_\+weight = 20.f}
 
+
+
+Nominal Load Weight of the cell in kg. 
+
 \mbox{\Hypertarget{class_configuration_aa64f51fe43c020c59d15e95828e56af1}\label{class_configuration_aa64f51fe43c020c59d15e95828e56af1}} 
 \index{Configuration@{Configuration}!max\_diff\_voltage@{max\_diff\_voltage}}
 \index{max\_diff\_voltage@{max\_diff\_voltage}!Configuration@{Configuration}}
 \doxysubsubsection{\texorpdfstring{max\_diff\_voltage}{max\_diff\_voltage}}
 {\footnotesize\ttfamily float Configuration\+::max\+\_\+diff\+\_\+voltage = 40}
+
+
+
+Maximum Differential Voltage of SIG+-\/. 
 
 
 

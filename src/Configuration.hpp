@@ -1,5 +1,8 @@
 #pragma once
 #include <string>
+#include "json.hpp"
+
+using json = nlohmann::json;
 
 enum LoadCellMode
 {
@@ -26,15 +29,22 @@ public:
    void loadConfiguration();
 
    // SETTING VARIABLES
-   LoadCellMode cellMode = NORMAL; // Loadcell mode to be simulated
-   float exc_voltage = 10.f;       // Nominal EXC voltage
-   float load_weight = 20.f;       // Nominal Load Weight of the cell in kg
-   float initial_weight = 10.f;    // Initial weight (for manual / non-auto mode)
-   float addvol_ratio = 500;       // Inverted OpAmp gain (e.g.: At 10V Aout the added / subtracted voltage is 20mV --> ratio = 10V / 20mV = 500)
-   float max_diff_voltage = 40;    // Maximum Differential Voltage of SIG+-
-   float cellCharecteristic = 4;   // Charecteristik in mV/V
+   //! Loadcell mode to be simulated
+   LoadCellMode cellMode = NORMAL;
+   //! Nominal EXC voltage ouputted by the SIWAREX module
+   float exc_voltage = 10.f;
+   //! Nominal Load Weight of the cell in kg
+   float load_weight = 20.f;
+   //! Initial weight (for manual / non-auto mode)
+   float initial_weight = 10.f;
+   //! Inverted OpAmp gain (e.g.: At 10V Aout the added / subtracted voltage is 20mV --> ratio = 10V / 20mV = 500)
+   float addvol_ratio = 500;
+   //! Maximum Differential Voltage of SIG+-
+   float max_diff_voltage = 40;
+   //! Characteristic in mV/V
+   float cellCharecteristic = 4;
 
 private:
    void parseJSON();
-   std::string _path = "";
+   std::string _path;
 };
