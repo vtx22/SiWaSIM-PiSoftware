@@ -5,19 +5,25 @@
 \DoxyCodeLine{1 \textcolor{preprocessor}{\#pragma once}}
 \DoxyCodeLine{2 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{_p_c_b_8hpp}{PCB.hpp}}"{}}}
 \DoxyCodeLine{3 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{_configuration_8hpp}{Configuration.hpp}}"{}}}
-\DoxyCodeLine{4 }
-\DoxyCodeLine{5 \textcolor{keyword}{class }\mbox{\hyperlink{class_simulator}{Simulator}}}
-\DoxyCodeLine{6 \{}
-\DoxyCodeLine{7 \textcolor{keyword}{public}:}
-\DoxyCodeLine{8    \mbox{\hyperlink{class_simulator_a031573bfcfe2e0f5c9539bcc1c7fc5d9}{Simulator}}();}
-\DoxyCodeLine{9    \mbox{\hyperlink{class_simulator_a0f49aa04f42060a785adf77346b9de9f}{\string~Simulator}}();}
-\DoxyCodeLine{10 }
-\DoxyCodeLine{11    \textcolor{keywordtype}{void} \mbox{\hyperlink{class_simulator_a8a47e848e6f9381d5243f230801e4498}{setWeightPER}}(\textcolor{keywordtype}{float} percentage); \textcolor{comment}{// Set the weight from 0 -\/ 100\% of nominal Load}}
-\DoxyCodeLine{12    \textcolor{keywordtype}{void} \mbox{\hyperlink{class_simulator_a44bd3ad4c4e3531d257126b7fa3de374}{setWeightKG}}(\textcolor{keywordtype}{float} kg);          \textcolor{comment}{// Set the weight in kg}}
-\DoxyCodeLine{13 }
-\DoxyCodeLine{14 \textcolor{keyword}{private}:}
-\DoxyCodeLine{15    \mbox{\hyperlink{class_configuration}{Configuration}} *\_config;}
-\DoxyCodeLine{16    \mbox{\hyperlink{class_p_c_b}{PCB}} *\_pcb;}
-\DoxyCodeLine{17 \};}
+\DoxyCodeLine{4 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{_i_a_board_8hpp}{IABoard.hpp}}"{}}}
+\DoxyCodeLine{5 \textcolor{preprocessor}{\#include <chrono>}}
+\DoxyCodeLine{6 \textcolor{preprocessor}{\#include <thread>}}
+\DoxyCodeLine{7 \textcolor{keyword}{using namespace }std::chrono\_literals;}
+\DoxyCodeLine{8 }
+\DoxyCodeLine{9 \textcolor{keyword}{class }\mbox{\hyperlink{class_simulator}{Simulator}}}
+\DoxyCodeLine{10 \{}
+\DoxyCodeLine{11 \textcolor{keyword}{public}:}
+\DoxyCodeLine{12    \mbox{\hyperlink{class_simulator_a031573bfcfe2e0f5c9539bcc1c7fc5d9}{Simulator}}();}
+\DoxyCodeLine{13    \mbox{\hyperlink{class_simulator_a0f49aa04f42060a785adf77346b9de9f}{\string~Simulator}}();}
+\DoxyCodeLine{14 }
+\DoxyCodeLine{15    \textcolor{keywordtype}{void} \mbox{\hyperlink{class_simulator_a8a47e848e6f9381d5243f230801e4498}{setWeightPER}}(\textcolor{keywordtype}{float} percentage); \textcolor{comment}{// Set the weight from 0 -\/ 100\% of nominal Load}}
+\DoxyCodeLine{16    \textcolor{keywordtype}{void} \mbox{\hyperlink{class_simulator_a44bd3ad4c4e3531d257126b7fa3de374}{setWeightKG}}(\textcolor{keywordtype}{float} kg);          \textcolor{comment}{// Set the weight in kg}}
+\DoxyCodeLine{17    \textcolor{keywordtype}{void} \mbox{\hyperlink{class_simulator_abe9678f710894b6548da5b9a89391981}{bootupAnimation}}();}
+\DoxyCodeLine{18 }
+\DoxyCodeLine{19 \textcolor{keyword}{private}:}
+\DoxyCodeLine{20    \mbox{\hyperlink{class_configuration}{Configuration}} *\_config;}
+\DoxyCodeLine{21    \mbox{\hyperlink{class_p_c_b}{PCB}} *\_pcb;}
+\DoxyCodeLine{22    \mbox{\hyperlink{class_i_a_board}{IABoard}} *\_ia;}
+\DoxyCodeLine{23 \};}
 
 \end{DoxyCode}

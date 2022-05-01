@@ -47,11 +47,15 @@ bool \mbox{\hyperlink{class_i_a_board_ada67b4c599cb1c0b5e733e51f33deb2e}{get\+LE
 \item 
 void \mbox{\hyperlink{class_i_a_board_aa426d8571e07056b7ab8c1da6d3c1165}{set\+LED}} (uint8\+\_\+t channel, bool value)
 \item 
+void \mbox{\hyperlink{class_i_a_board_a8b9b6ac3867a0b930685b8dcbab2ae09}{set\+All\+LED}} (bool value)
+\item 
 float \mbox{\hyperlink{class_i_a_board_a300178bdb61a6a6b74427031b181a597}{read\+Analog\+Vol\+In}} (uint8\+\_\+t channel)
 \item 
 float \mbox{\hyperlink{class_i_a_board_a291abadcc858294866a7b2853e423a99}{read\+Analog\+Vol\+In\+PM}} (uint8\+\_\+t channel)
 \item 
 float \mbox{\hyperlink{class_i_a_board_af66593a8851468487bd904d61de67569}{read\+Analog\+Cur\+In}} (uint8\+\_\+t channel)
+\item 
+void \mbox{\hyperlink{class_i_a_board_a6136315b8cf22149ed58dbd907192616}{set\+All\+OFF}} ()
 \end{DoxyCompactItemize}
 
 
@@ -161,7 +165,19 @@ float \mbox{\hyperlink{class_i_a_board_af66593a8851468487bd904d61de67569}{read\+
 \doxysubsubsection{\texorpdfstring{resetTransitions()}{resetTransitions()}}
 {\footnotesize\ttfamily void IABoard\+::reset\+Transitions (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{channel }\end{DoxyParamCaption})}
 
-\mbox{\Hypertarget{class_i_a_board_af5df93b4548d6a1012c56fb5fb290a1c}\label{class_i_a_board_af5df93b4548d6a1012c56fb5fb290a1c}} 
+\mbox{\Hypertarget{class_i_a_board_a8b9b6ac3867a0b930685b8dcbab2ae09}\label{class_i_a_board_a8b9b6ac3867a0b930685b8dcbab2ae09}} 
+\index{IABoard@{IABoard}!setAllLED@{setAllLED}}
+\index{setAllLED@{setAllLED}!IABoard@{IABoard}}
+\doxysubsubsection{\texorpdfstring{setAllLED()}{setAllLED()}}
+{\footnotesize\ttfamily void IABoard\+::set\+All\+LED (\begin{DoxyParamCaption}\item[{bool}]{value }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_i_a_board_a6136315b8cf22149ed58dbd907192616}\label{class_i_a_board_a6136315b8cf22149ed58dbd907192616}} 
+\index{IABoard@{IABoard}!setAllOFF@{setAllOFF}}
+\index{setAllOFF@{setAllOFF}!IABoard@{IABoard}}
+\doxysubsubsection{\texorpdfstring{setAllOFF()}{setAllOFF()}}
+{\footnotesize\ttfamily void IABoard\+::set\+All\+OFF (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Sets all digital and analog outputs to off / 0V \mbox{\Hypertarget{class_i_a_board_af5df93b4548d6a1012c56fb5fb290a1c}\label{class_i_a_board_af5df93b4548d6a1012c56fb5fb290a1c}} 
 \index{IABoard@{IABoard}!setAnalogCurOut@{setAnalogCurOut}}
 \index{setAnalogCurOut@{setAnalogCurOut}!IABoard@{IABoard}}
 \doxysubsubsection{\texorpdfstring{setAnalogCurOut()}{setAnalogCurOut()}}

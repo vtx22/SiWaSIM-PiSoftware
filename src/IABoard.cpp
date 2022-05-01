@@ -16,6 +16,7 @@ IABoard::~IABoard()
 
 bool IABoard::detectBoard()
 {
+   waitForIA();
    _i2c->writeData(0x78);
    if (_i2c->readData() == 0x01)
    {
@@ -29,6 +30,7 @@ bool IABoard::detectBoard()
 
 uint8_t IABoard::digitalRead()
 {
+   waitForIA();
    // Send command to read all 4 digital Inputs
    _i2c->writeData(0x03);
    // Returns one byte, the lowest 4 bits represent the digital value of the channel 1 - 4
@@ -57,6 +59,8 @@ uint16_t IABoard::readTransistions(uint8_t channel)
       return 0;
    }
 
+   waitForIA();
+
    // Send command based on channel, 1=0x6A, 2=0x6C, 3=0x6E, 4=0x70
    _i2c->writeData(0x6A + 2 * (channel - 1));
 
@@ -74,6 +78,8 @@ void IABoard::resetTransitions(uint8_t channel)
       printf("IA-Board ERROR: Channel out of range! Allowed: 1 - 4\n");
       return;
    }
+
+   waitForIA();
 
    uint8_t data[2] = {0x69, channel};
    _i2c->writeData(data, 2);
@@ -105,6 +111,8 @@ float IABoard::getAnalogVolOut(uint8_t channel)
       return 0;
    }
 
+   waitForIA();
+
    _i2c->writeData(0x04 + 2 * (channel - 1));
 
    uint8_t voltage[2];
@@ -120,6 +128,8 @@ void IABoard::setAnalogVolOut(uint8_t channel, float voltage)
       printf("IA-Board ERROR: Channel out of range! Allowed: 1 - 4\n");
       return;
    }
+
+   waitForIA();
 
    // Cut off out of range values
    constrainMinMax(voltage, 0, 10);
@@ -139,6 +149,8 @@ float IABoard::getAnalogCurOut(uint8_t channel)
       return 0;
    }
 
+   waitForIA();
+
    _i2c->writeData(0x0C + 2 * (channel - 1));
 
    uint8_t current[2];
@@ -154,6 +166,8 @@ void IABoard::setAnalogCurOut(uint8_t channel, float current)
       printf("IA-Board ERROR: Channel out of range! Allowed: 1 - 4\n");
       return;
    }
+
+   waitForIA();
 
    // Cut off out of range values
    constrainMinMax(current, 4, 20);
@@ -173,6 +187,8 @@ float IABoard::getOpenDrainPWM(uint8_t channel)
       return 0;
    }
 
+   waitForIA();
+
    _i2c->writeData(0x14 + 2 * (channel - 1));
 
    uint8_t duty[2];
@@ -189,6 +205,8 @@ void IABoard::setOpenDrainPWM(uint8_t channel, float dutyCycle)
       return;
    }
 
+   waitForIA();
+
    // Cut off out of range values
    constrainMinMax(dutyCycle, 0, 100);
 
@@ -201,6 +219,7 @@ void IABoard::setOpenDrainPWM(uint8_t channel, float dutyCycle)
 
 uint8_t IABoard::getOpenDrainDOUT()
 {
+   waitForIA();
    _i2c->writeData(0x00);
    return _i2c->readData();
 }
@@ -212,6 +231,8 @@ bool IABoard::getOpenDrainDOUT(uint8_t channel)
       printf("IA-Board ERROR: Channel out of range! Allowed: 1 - 4\n");
       return 0;
    }
+
+   waitForIA();
 
    uint8_t data = getOpenDrainDOUT();
 
@@ -225,6 +246,8 @@ void IABoard::setOpenDrainDOUT(uint8_t channel, bool value)
       printf("IA-Board ERROR: Channel out of range! Allowed: 1 - 4\n");
       return;
    }
+
+   waitForIA();
 
    uint8_t cmd = 0x02;
    if (value)
@@ -243,6 +266,8 @@ bool IABoard::getLED(uint8_t channel)
       printf("IA-Board ERROR: Channel out of range! Allowed: 1 - 4\n");
       return 0;
    }
+
+   waitForIA();
 
    uint8_t data = getOpenDrainDOUT();
 
@@ -285,6 +310,8 @@ float IABoard::readAnalogVolIn(uint8_t channel)
       return 0;
    }
 
+   waitForIA();
+
    _i2c->writeData(0x1C + 2 * (channel - 1));
 
    uint8_t vol[2];
@@ -300,6 +327,8 @@ float IABoard::readAnalogVolInPM(uint8_t channel)
       printf("IA-Board ERROR: Channel out of range! Allowed: 1 - 4\n");
       return 0;
    }
+
+   waitForIA();
 
    _i2c->writeData(0x24 + 2 * (channel - 1));
 
@@ -317,6 +346,8 @@ float IABoard::readAnalogCurIn(uint8_t channel)
       return 0;
    }
 
+   waitForIA();
+
    _i2c->writeData(0x2C + 2 * (channel - 1));
 
    uint8_t cur[2];
@@ -325,18 +356,47 @@ float IABoard::readAnalogCurIn(uint8_t channel)
    return (float)(cur[0] + (cur[1] << 8)) / 1000.f;
 }
 
+/*!
+Sets all digital and analog outputs to off / 0V
+*/
 void IABoard::setAllOFF()
 {
+   setLED(1, 0);
+   setLED(2, 0);
+   setLED(3, 0);
+   setLED(4, 0);
+
+   setAnalogCurOut(1, 0);
+   setAnalogCurOut(2, 0);
+   setAnalogCurOut(3, 0);
+   setAnalogCurOut(4, 0);
+
+   setAnalogVolOut(1, 0);
+   setAnalogVolOut(2, 0);
+   setAnalogVolOut(3, 0);
+   setAnalogVolOut(4, 0);
+
+   setOpenDrainDOUT(1, 0);
+   setOpenDrainDOUT(2, 0);
+   setOpenDrainDOUT(3, 0);
+   setOpenDrainDOUT(4, 0);
 }
 
+/*!
+Calculates the time since the last command was send to the IA-Board via I2C and waits till the minimum time (defined as 8ms) has elapsed.
+That is needed because the IABoard is not fast enough to react on fast consecutive commands. The minimum time for the delay was found through experimentation.
+*/
 void IABoard::waitForIA()
 {
+   // Calculate the time elapsed since the last time a command was executed (in ms)
    auto diff = std::chrono::duration_cast<std::chrono::milliseconds>(std::chrono::system_clock::now() - _lastCommand).count();
 
+   // If the last commands was just a few ms ago, calculate the difference to the minimum time gap between commands and wait for the remaining time
    if (diff < _delayBetweenCommands.count())
    {
       std::this_thread::sleep_for(std::chrono::milliseconds(_delayBetweenCommands.count() - diff));
    }
 
+   // Save the time the current command was executed for next calculation
    _lastCommand = std::chrono::system_clock::now();
 }

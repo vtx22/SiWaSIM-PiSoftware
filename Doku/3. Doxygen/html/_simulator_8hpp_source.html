@@ -23,6 +23,7 @@
   <td id="projectalign">
    <div id="projectname">SiWaSim<span id="projectnumber">&#160;V1.0</span>
    </div>
+   <div id="projectbrief">SIWAREX Simulator</div>
   </td>
  </tr>
  </tbody>
@@ -72,29 +73,38 @@ $(function() {
 <a href="_simulator_8hpp.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="preprocessor">#pragma once</span></div>
 <div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="preprocessor">#include &quot;<a class="code" href="_p_c_b_8hpp.html">PCB.hpp</a>&quot;</span></div>
 <div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="preprocessor">#include &quot;<a class="code" href="_configuration_8hpp.html">Configuration.hpp</a>&quot;</span></div>
-<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span> </div>
-<div class="line"><a id="l00005" name="l00005"></a><span class="lineno"><a class="line" href="class_simulator.html">    5</a></span><span class="keyword">class </span><a class="code hl_class" href="class_simulator.html">Simulator</a></div>
-<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span>{</div>
-<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="keyword">public</span>:</div>
-<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span>   <a class="code hl_function" href="class_simulator.html#a031573bfcfe2e0f5c9539bcc1c7fc5d9">Simulator</a>();</div>
-<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span>   <a class="code hl_function" href="class_simulator.html#a0f49aa04f42060a785adf77346b9de9f">~Simulator</a>();</div>
-<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span> </div>
-<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span>   <span class="keywordtype">void</span> <a class="code hl_function" href="class_simulator.html#a8a47e848e6f9381d5243f230801e4498">setWeightPER</a>(<span class="keywordtype">float</span> percentage); <span class="comment">// Set the weight from 0 - 100% of nominal Load</span></div>
-<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span>   <span class="keywordtype">void</span> <a class="code hl_function" href="class_simulator.html#a44bd3ad4c4e3531d257126b7fa3de374">setWeightKG</a>(<span class="keywordtype">float</span> kg);          <span class="comment">// Set the weight in kg</span></div>
-<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span> </div>
-<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span><span class="keyword">private</span>:</div>
-<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span>   <a class="code hl_class" href="class_configuration.html">Configuration</a> *_config;</div>
-<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span>   <a class="code hl_class" href="class_p_c_b.html">PCB</a> *_pcb;</div>
-<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span>};</div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="preprocessor">#include &quot;<a class="code" href="_i_a_board_8hpp.html">IABoard.hpp</a>&quot;</span></div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="preprocessor">#include &lt;chrono&gt;</span></div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="preprocessor">#include &lt;thread&gt;</span></div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="keyword">using namespace </span>std::chrono_literals;</div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span> </div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno"><a class="line" href="class_simulator.html">    9</a></span><span class="keyword">class </span><a class="code hl_class" href="class_simulator.html">Simulator</a></div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span>{</div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="keyword">public</span>:</div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span>   <a class="code hl_function" href="class_simulator.html#a031573bfcfe2e0f5c9539bcc1c7fc5d9">Simulator</a>();</div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span>   <a class="code hl_function" href="class_simulator.html#a0f49aa04f42060a785adf77346b9de9f">~Simulator</a>();</div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span> </div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span>   <span class="keywordtype">void</span> <a class="code hl_function" href="class_simulator.html#a8a47e848e6f9381d5243f230801e4498">setWeightPER</a>(<span class="keywordtype">float</span> percentage); <span class="comment">// Set the weight from 0 - 100% of nominal Load</span></div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span>   <span class="keywordtype">void</span> <a class="code hl_function" href="class_simulator.html#a44bd3ad4c4e3531d257126b7fa3de374">setWeightKG</a>(<span class="keywordtype">float</span> kg);          <span class="comment">// Set the weight in kg</span></div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span>   <span class="keywordtype">void</span> <a class="code hl_function" href="class_simulator.html#abe9678f710894b6548da5b9a89391981">bootupAnimation</a>();</div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span> </div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span><span class="keyword">private</span>:</div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>   <a class="code hl_class" href="class_configuration.html">Configuration</a> *_config;</div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>   <a class="code hl_class" href="class_p_c_b.html">PCB</a> *_pcb;</div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>   <a class="code hl_class" href="class_i_a_board.html">IABoard</a> *_ia;</div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>};</div>
 <div class="ttc" id="a_configuration_8hpp_html"><div class="ttname"><a href="_configuration_8hpp.html">Configuration.hpp</a></div></div>
+<div class="ttc" id="a_i_a_board_8hpp_html"><div class="ttname"><a href="_i_a_board_8hpp.html">IABoard.hpp</a></div></div>
 <div class="ttc" id="a_p_c_b_8hpp_html"><div class="ttname"><a href="_p_c_b_8hpp.html">PCB.hpp</a></div></div>
 <div class="ttc" id="aclass_configuration_html"><div class="ttname"><a href="class_configuration.html">Configuration</a></div><div class="ttdef"><b>Definition:</b> Configuration.hpp:21</div></div>
+<div class="ttc" id="aclass_i_a_board_html"><div class="ttname"><a href="class_i_a_board.html">IABoard</a></div><div class="ttdef"><b>Definition:</b> IABoard.hpp:21</div></div>
 <div class="ttc" id="aclass_p_c_b_html"><div class="ttname"><a href="class_p_c_b.html">PCB</a></div><div class="ttdef"><b>Definition:</b> PCB.hpp:28</div></div>
-<div class="ttc" id="aclass_simulator_html"><div class="ttname"><a href="class_simulator.html">Simulator</a></div><div class="ttdef"><b>Definition:</b> Simulator.hpp:6</div></div>
+<div class="ttc" id="aclass_simulator_html"><div class="ttname"><a href="class_simulator.html">Simulator</a></div><div class="ttdef"><b>Definition:</b> Simulator.hpp:10</div></div>
 <div class="ttc" id="aclass_simulator_html_a031573bfcfe2e0f5c9539bcc1c7fc5d9"><div class="ttname"><a href="class_simulator.html#a031573bfcfe2e0f5c9539bcc1c7fc5d9">Simulator::Simulator</a></div><div class="ttdeci">Simulator()</div><div class="ttdef"><b>Definition:</b> Simulator.cpp:3</div></div>
-<div class="ttc" id="aclass_simulator_html_a0f49aa04f42060a785adf77346b9de9f"><div class="ttname"><a href="class_simulator.html#a0f49aa04f42060a785adf77346b9de9f">Simulator::~Simulator</a></div><div class="ttdeci">~Simulator()</div><div class="ttdef"><b>Definition:</b> Simulator.cpp:9</div></div>
-<div class="ttc" id="aclass_simulator_html_a44bd3ad4c4e3531d257126b7fa3de374"><div class="ttname"><a href="class_simulator.html#a44bd3ad4c4e3531d257126b7fa3de374">Simulator::setWeightKG</a></div><div class="ttdeci">void setWeightKG(float kg)</div><div class="ttdef"><b>Definition:</b> Simulator.cpp:35</div></div>
-<div class="ttc" id="aclass_simulator_html_a8a47e848e6f9381d5243f230801e4498"><div class="ttname"><a href="class_simulator.html#a8a47e848e6f9381d5243f230801e4498">Simulator::setWeightPER</a></div><div class="ttdeci">void setWeightPER(float percentage)</div><div class="ttdef"><b>Definition:</b> Simulator.cpp:13</div></div>
+<div class="ttc" id="aclass_simulator_html_a0f49aa04f42060a785adf77346b9de9f"><div class="ttname"><a href="class_simulator.html#a0f49aa04f42060a785adf77346b9de9f">Simulator::~Simulator</a></div><div class="ttdeci">~Simulator()</div><div class="ttdef"><b>Definition:</b> Simulator.cpp:10</div></div>
+<div class="ttc" id="aclass_simulator_html_a44bd3ad4c4e3531d257126b7fa3de374"><div class="ttname"><a href="class_simulator.html#a44bd3ad4c4e3531d257126b7fa3de374">Simulator::setWeightKG</a></div><div class="ttdeci">void setWeightKG(float kg)</div><div class="ttdef"><b>Definition:</b> Simulator.cpp:36</div></div>
+<div class="ttc" id="aclass_simulator_html_a8a47e848e6f9381d5243f230801e4498"><div class="ttname"><a href="class_simulator.html#a8a47e848e6f9381d5243f230801e4498">Simulator::setWeightPER</a></div><div class="ttdeci">void setWeightPER(float percentage)</div><div class="ttdef"><b>Definition:</b> Simulator.cpp:14</div></div>
+<div class="ttc" id="aclass_simulator_html_abe9678f710894b6548da5b9a89391981"><div class="ttname"><a href="class_simulator.html#abe9678f710894b6548da5b9a89391981">Simulator::bootupAnimation</a></div><div class="ttdeci">void bootupAnimation()</div><div class="ttdef"><b>Definition:</b> Simulator.cpp:41</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
