@@ -9,6 +9,9 @@ Simulator::Simulator()
 
 Simulator::~Simulator()
 {
+   delete _config;
+   delete _pcb;
+   delete _ia;
 }
 
 void Simulator::setWeightPER(float percentage)
