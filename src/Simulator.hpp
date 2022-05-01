@@ -15,6 +15,7 @@ public:
    void setWeightPER(float percentage); // Set the weight from 0 - 100% of nominal Load
    void setWeightKG(float kg);          // Set the weight in kg
    void bootupAnimation();
+   void loadConfig();
 
 private:
    Configuration *_config;

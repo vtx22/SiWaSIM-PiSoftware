@@ -57,3 +57,8 @@ void Simulator::bootupAnimation()
    _ia->setLED(4, 1);
    std::this_thread::sleep_for(100ms);
 }
+
+void Simulator::loadConfig()
+{
+   _config->loadConfiguration();
+}
