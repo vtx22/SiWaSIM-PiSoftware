@@ -2,7 +2,7 @@
 
 Simulator::Simulator()
 {
-   _config = new Configuration("./config.json");
+   _config = new Configuration("/home/siwasim/SiWaSIM-PiSoftware/Konfiguration/config.json");
    _pcb = new PCB(_config);
    _ia = new IABoard();
 
