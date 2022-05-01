@@ -23,5 +23,5 @@ void Configuration::loadConfiguration()
    json jsonFile;
    i >> jsonFile;
 
-   std::cout << jsonFile.dump(1);
+   std::cout << jsonFile.at(1);
 }
