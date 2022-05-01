@@ -77,8 +77,52 @@ Durch Hardwarejumper kann der maximale Bereich der Ausgangsspannung leicht erhö
 Der Simulator ist kompatibel mit EXC-Spannungen bis 10V. Eine geringere Spannung verringert die Auflösung der simulierten Zellspannung. Außerdem wird die Wägezellenspannung verringert, wenn die EXC-Spannung sinkt. 
 \subsection{SEN-Spannung}
 Standardmäßig sind SEN+ und EXC+ auf dem PCB verbunden, sodass ein Sechsleiterbetrieb möglich ist. Hier wird die Sense-Spannung, wie in einer normalen Anlage, an der Impedanz der Zelle abgegriffen. Es kann aber auch eine Sense-Spannung, unabhängig von der EXC-Spannung, simuliert werden. Hier kann eine Spannung zwischen 0V und 10V ausgegeben werden.
-\chapter{Inbetriebnahme}
+\chapter{Benötigte Software}
+Zur Bedienung des Simulators ist die Installation einiger Anwendungen nötig. Im Folgenden werden Anwendungen genannt, dessen korrekte Funktion mit dem Simulator durch eigene Nutzung überprüft wurde. Andere alternative Lösungen sind natürlich auch möglich, sind aber ungetestet. Benötigt wird:
+\begin{itemize}
+\item PuTTY: Zur SSH Verbindung mit dem RaspberryPi zur Verwendung der Konsole
+\item WinSCP: Zum Laden von Dateien auf den RaspberryPi via FTP
+\item SiWaSim PC-Software: Zur komfortablen Konfiguration und Überwachung
+\item Excel: Zur Konfiguration, sofern die eigene Windows-Software nicht verwendet wird
+\item Ein Texteditor zum Erstellen von Python-Skripten für automatisierte Tests
+\end{itemize}
+\chapter{Inbetriebnahme ohne SiWaSim PC-Software}
+Im folgenden Kapitel wird erläutert, wie der Simulator eingeschaltet und konfiguriert werden kann, sodass erste Grundfunktionen nutzbar werden. Dieses Kapitel bezieht sich auf die Inbetriebnahme ohne die eigene SiWaSim PC-Software. Es wird empfohlen, diese Software zur komfortablen Konfiguration zu nutzen.
 \section{Vor dem Start}
+\subsection{Hardwarekonfiguration}
+Bevor der Simulator in Betrieb genommen wird, müssen einige Hardwarejumper basierend auf der gewünschten Simulation gesetzt werden. 
+Auf der obersten Platine befinden sich vier dieser Jumper. Diese sind mit V1, V2, V3 sowie SEN beschriftet. Die Jumper müssen basierend auf den folgenden Fragen gesetzt werden.\\\\
+Soll (1.) die Sense-Spannung (SEN) direkt mit der Versorgungsspannung EXC verbunden werden, oder soll (2.) die Sense-Spannung unabhängig von EXC über einen Analogausgang eingestellt werden?
+\begin{itemize}
+\item[(1.)] SEN Jumper auf EXC (untere zwei Pins) 
+\item[(2.)] SEN Jumper auf SIM (obere zwei Pins) 
+\end{itemize}
+Soll eine negative Zellcharakteristik (z.B. -4mV/V) simuliert werden?
+\begin{itemize}
+\item[Ja:] V1 und V2 nach rechts setzen (jeweils die beiden rechten Pins verbinden)
+\item[Nein:] V1 und V2 nach links setzen (jeweils die beiden linken Pins verbinden)
+\end{itemize}
+Soll die Gleichtaktspannung der SEN-Leitungen auf (1.) EXC/2 gesetzt werden oder soll (2.) die Gleichtaktspannung manuell über einen Analogausgang gesetzt werden?
+
+\begin{itemize}
+\item[(1.)] V3 nach links setzen (jeweils die beiden linken Pins verbinden)
+\item[(2.)] V3 nach rechts setzen (jeweils die beiden rechten Pins verbinden) 
+\end{itemize}
+Die dritte Frage ist nur relevant, wenn bei der zweiten Frage NEIN gewählt wurde.
+\subsection{Verdrahtung}
+Folgende Verdrahtungen sind vorzunehmen:
+\begin{itemize}
+\item Versorgungsspannung (24V) anschließen (unten rechts auf dem PCB)
+\item Wägezellenkabel an den DSUB-9 Stecker anschließen und mit SIWAREX-Modul verbinden
+\item Digitalausgänge des SIWAREX-Moduls an Digitaleingänge der Platine anschließen 
+\item Optional: Digitaleingänge des SIWAREX-Moduls an Digitalausgänge der Platine anschließen 
+\item Optional: Für Funktionen wie WebServer oder WriteProtect SW1 und SW2 verbinden (unten rechts)
+\item Optional: Für schaltbare Stromversorgung (z.B. für Power-Cycle) POWER SW verbinden
+\item Optional: Für Bandwaage Geschwindigkeitsausgang (PWM Out) an CNT-Eingang des SIWAREX-Moduls
+\item Optional: Analog-Strom-Ausgang an Analog-Strom-Eingang des SIWAREX-Moduls (Klemmen auf zweiter Ebene) 
+\item Optional: Analog-Strom-Eingang an Analog-Strom-Ausgang des SIWAREX-Moduls (Klemmen auf zweiter Ebene)
+\item Optional: Für RS485 MODBUS Signalleitungen verbinden (Klemmen auf zweiter Ebene) 
+\end{itemize}
 \section{Erstellen und Laden von Konfigurationen}
 \section{Manuelle Steuerung}
 \chapter{Automatisierte Tests}

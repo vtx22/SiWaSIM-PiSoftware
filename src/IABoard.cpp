@@ -361,10 +361,7 @@ Sets all digital and analog outputs to off / 0V
 */
 void IABoard::setAllOFF()
 {
-   setLED(1, 0);
-   setLED(2, 0);
-   setLED(3, 0);
-   setLED(4, 0);
+   setAllLED(0);
 
    setAnalogCurOut(1, 0);
    setAnalogCurOut(2, 0);

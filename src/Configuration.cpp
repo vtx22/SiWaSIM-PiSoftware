@@ -24,8 +24,7 @@ void Configuration::loadConfiguration()
    i >> jsonFile;
 
    // Load values line by line (should be simplified in the future)
-
+   cellCharecteristic = jsonFile.at(0).at("Wert");
    load_weight = jsonFile.at(1).at("Wert");
-
-   printf("The load weight is %f kg\n", load_weight);
+   exc_voltage = jsonFile.at(2).at("Wert");
 }

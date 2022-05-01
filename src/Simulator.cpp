@@ -45,17 +45,21 @@ void Simulator::setWeightKG(float kg)
 
 void Simulator::bootupAnimation()
 {
-   _ia->setLED(1, 0);
-   _ia->setLED(2, 0);
-   _ia->setLED(3, 0);
-   _ia->setLED(4, 0);
+   _ia->setAllLED(0);
    std::this_thread::sleep_for(2s);
-   _ia->setLED(1, 1);
-   std::this_thread::sleep_for(100ms);
-   _ia->setLED(2, 1);
-   std::this_thread::sleep_for(100ms);
-   _ia->setLED(3, 1);
-   std::this_thread::sleep_for(100ms);
-   _ia->setLED(4, 1);
-   std::this_thread::sleep_for(100ms);
+   uint8_t cnt = 0;
+   while (cnt < 3)
+   {
+      _ia->setLED(1, 1);
+      std::this_thread::sleep_for(100ms);
+      _ia->setLED(2, 1);
+      std::this_thread::sleep_for(100ms);
+      _ia->setLED(3, 1);
+      std::this_thread::sleep_for(100ms);
+      _ia->setLED(4, 1);
+      std::this_thread::sleep_for(100ms);
+      _ia->setAllLED(0);
+      std::this_thread::sleep_for(100ms);
+      cnt++;
+   }
 }
