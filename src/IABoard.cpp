@@ -336,10 +336,10 @@ void IABoard::waitForIA()
    std::cout << std::endl
              << "The Difference is: " << diff << std::endl;
 
-   if (diff < _delayBetweenCommands.count(std::chrono::duration_cast<std::chrono::milliseconds>(_delayBetweenCommands - diff).count()))
+   if (diff < _delayBetweenCommands.count())
    {
       std::cout << "Difference too small....waiting....\n";
-      std::this_thread::sleep_for();
+      std::this_thread::sleep_for(std::chrono::milliseconds(std::chrono::duration_cast<std::chrono::milliseconds>(_delayBetweenCommands - diff).count()));
    }
 
    _lastCommand = std::chrono::system_clock::now();
