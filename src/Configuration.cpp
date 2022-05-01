@@ -27,5 +27,5 @@ void Configuration::loadConfiguration()
    auto test = jsonFile.at(1).at("Wert");
 
    load_weight = test;
-   // printf("The load weight is %f kg\n", load_weight);
+   printf("The load weight is %f kg\n", load_weight);
 }
