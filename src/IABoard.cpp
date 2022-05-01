@@ -333,7 +333,7 @@ void IABoard::waitForIA()
 {
    auto diff = std::chrono::duration_cast<std::chrono::milliseconds>(std::chrono::system_clock::now() - _lastCommand).count();
 
-   std::cout << endl
+   std::cout << std::endl
              << "The Difference is: " << diff << std::endl;
 
    if (diff < _delayBetweenCommands.count())
