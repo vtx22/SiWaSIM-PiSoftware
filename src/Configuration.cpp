@@ -20,6 +20,8 @@ void Configuration::loadConfiguration()
 {
    // Load JSON file from disc
    std::ifstream i(_path.c_str());
-   json j;
-   i >> j;
+   json jsonFile;
+   i >> jsonFile;
+
+   std::cout << jsonFile.dump(1);
 }
