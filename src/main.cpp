@@ -15,4 +15,5 @@ int main()
 {
    Simulator sim;
    sim.bootupAnimation();
+   delete sim;
 }
