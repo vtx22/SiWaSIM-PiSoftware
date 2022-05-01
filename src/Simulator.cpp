@@ -51,15 +51,15 @@ void Simulator::bootupAnimation()
    while (cnt < 3)
    {
       _ia->setLED(1, 1);
-      std::this_thread::sleep_for(200ms);
+      std::this_thread::sleep_for(500ms);
       _ia->setLED(2, 1);
-      std::this_thread::sleep_for(200ms);
+      std::this_thread::sleep_for(500ms);
       _ia->setLED(3, 1);
-      std::this_thread::sleep_for(200ms);
+      std::this_thread::sleep_for(500ms);
       _ia->setLED(4, 1);
-      std::this_thread::sleep_for(200ms);
+      std::this_thread::sleep_for(500ms);
       _ia->setAllLED(0);
-      std::this_thread::sleep_for(200ms);
+      std::this_thread::sleep_for(500ms);
       cnt++;
    }
 }
