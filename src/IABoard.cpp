@@ -337,4 +337,6 @@ void IABoard::waitForIA()
    {
       std::this_thread::sleep_for(std::chrono::milliseconds(diff));
    }
+
+   _lastCommand = std::chrono::system_clock::now();
 }
