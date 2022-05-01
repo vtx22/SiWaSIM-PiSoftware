@@ -4,7 +4,7 @@
 #include "IABoard.hpp"
 #include <chrono>
 #include <thread>
-#include <typeinfo>
+
 using namespace std::chrono_literals;
 
 class Simulator
