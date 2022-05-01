@@ -1,20 +1,20 @@
 [
-  {
-    "ID": 1,
-    "Name": "Zellcharakteristik",
-    "Wert": 4,
-    "Beschreibung": "Charakteristik in mV/V"
-  },
-  {
-    "ID": 2,
-    "Name": "Nennlast",
-    "Wert": 10,
-    "Beschreibung": "Nennlast in kg"
-  },
-  {
-    "ID": 3,
-    "Name": "EXC-Spannung",
-    "Wert": 10,
-    "Beschreibung": "EXC Spannung des SIWAREX-Moduls in Volt"
-  }
+   {
+      "ID": 1,
+      "Name": "Zellcharakteristik",
+      "Wert": 4,
+      "Beschreibung": "Charakteristik in mV/V"
+   },
+   {
+      "ID": 2,
+      "Name": "Nennlast",
+      "Wert": 10,
+      "Beschreibung": "Nennlast in kg"
+   },
+   {
+      "ID": 3,
+      "Name": "EXC-Spannung",
+      "Wert": 10,
+      "Beschreibung": "EXC Spannung des SIWAREX-Moduls in Volt"
+   }
 ]
