@@ -18,13 +18,8 @@ Loads a configuration file from the file system (specified by path in Configurat
 */
 void Configuration::loadConfiguration()
 {
-   std::ifstream i("output.json");
+   // Load JSON file from disc
+   std::ifstream i(_path.c_str());
    json j;
    i >> j;
-   std::ofstream o("pretty.json");
-   o << std::setw(4) << j << std::endl;
-}
-
-void Configuration::parseJSON()
-{
 }
