@@ -91,7 +91,7 @@ Sets the simulated belt velocity from 0 - 100% of the maximal speed
 void Simulator::setVelocityPER(float percentage)
 {
    constrainMinMax(percentage, 0, 1);
-   setVelocityFRQ(_config->freqAt100 * percentage)
+   setVelocityFRQ(_config->freqAt100 * percentage);
 }
 
 /*!
