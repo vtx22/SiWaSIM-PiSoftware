@@ -23,7 +23,7 @@ public:
    void setVelocityFRQ(float frequency);
 
    void bootupAnimation();
-   void loadConfig();
+   void reloadConfig();
 
 private:
    Configuration *_config;
