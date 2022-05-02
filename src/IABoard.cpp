@@ -239,6 +239,12 @@ bool IABoard::getOpenDrainDOUT(uint8_t channel)
    return (data & (1 << (channel - 1)));
 }
 
+/*!
+Sets on of the four digital outputs
+
+@param channel The Open Drain Pin to be toggled (1 - 4)
+@param value The wanted state of the channel
+*/
 void IABoard::setOpenDrainDOUT(uint8_t channel, bool value)
 {
    if (channel > 4 || channel < 1)
@@ -259,6 +265,12 @@ void IABoard::setOpenDrainDOUT(uint8_t channel, bool value)
    _i2c->writeData(data, 2);
 }
 
+/*!
+Gets the current state of one of the on board LEDs
+
+@param channel The LED to be read (1 - 4)
+@return Returns the state of the LED (0 = OFF, 1 = ON)
+*/
 bool IABoard::getLED(uint8_t channel)
 {
    if (channel > 4 || channel < 1)
@@ -274,6 +286,12 @@ bool IABoard::getLED(uint8_t channel)
    return (data & (1 << (channel + 3)));
 }
 
+/*!
+Sets on of the four on board LEDs to a certain state
+
+@param channel The LED to be toggled (1 - 4)
+@param value The wanted state of the LED (0 = OFF, 1 = ON)
+*/
 void IABoard::setLED(uint8_t channel, bool value)
 {
    if (channel > 4 || channel < 1)
@@ -294,6 +312,11 @@ void IABoard::setLED(uint8_t channel, bool value)
    _i2c->writeData(data, 2);
 }
 
+/*!
+Sets all IABoard-LEDs to the same state
+
+@param value The wanted state of all the LEDs (0 = OFF, 1 = ON)
+*/
 void IABoard::setAllLED(bool value)
 {
    setLED(1, value);
@@ -302,6 +325,12 @@ void IABoard::setAllLED(bool value)
    setLED(4, value);
 }
 
+/*!
+Reads the Analog Input Voltage of a channel if the jumper is not set
+
+@param channel The channel as marked on the IABoard-PCB (1 - 4)
+@return Returns the measured voltage in Volts from 0V to 10V
+*/
 float IABoard::readAnalogVolIn(uint8_t channel)
 {
    if (channel > 4 || channel < 1)
@@ -320,6 +349,12 @@ float IABoard::readAnalogVolIn(uint8_t channel)
    return (float)(vol[0] + (vol[1] << 8)) / 1000.f;
 }
 
+/*!
+Reads the Analog Input Voltage of a channel if the jumper is set to measure negative voltages
+
+@param channel The channel as marked on the IABoard-PCB (1 - 4)
+@return Returns the measured voltage in Volts from -10V to 10V
+*/
 float IABoard::readAnalogVolInPM(uint8_t channel)
 {
    if (channel > 4 || channel < 1)
@@ -338,6 +373,12 @@ float IABoard::readAnalogVolInPM(uint8_t channel)
    return (float)(vol[0] + (vol[1] << 8)) / 1000.f - 10.f;
 }
 
+/*!
+Reads the Analog Input Current of a channel
+
+@param channel The channel as marked on the IABoard-PCB (1 - 4)
+@return Returns the measured current in mA
+*/
 float IABoard::readAnalogCurIn(uint8_t channel)
 {
    if (channel > 4 || channel < 1)
@@ -357,7 +398,7 @@ float IABoard::readAnalogCurIn(uint8_t channel)
 }
 
 /*!
-Sets all digital and analog outputs to off / 0V
+Sets all digital and analog outputs to OFF / 0V
 */
 void IABoard::setAllOFF()
 {
@@ -380,7 +421,7 @@ void IABoard::setAllOFF()
 }
 
 /*!
-Calculates the time since the last command was send to the IA-Board via I2C and waits till the minimum time (defined as 8ms) has elapsed.
+Calculates the time since the last command was send to the IA-Board via I2C and waits till the minimum time (defined as 9ms) has elapsed.
 That is needed because the IABoard is not fast enough to react on fast consecutive commands. The minimum time for the delay was found through experimentation.
 */
 void IABoard::waitForIA()

@@ -111,6 +111,16 @@ void \mbox{\hyperlink{class_i_a_board_a6136315b8cf22149ed58dbd907192616}{set\+Al
 \doxysubsubsection{\texorpdfstring{getLED()}{getLED()}}
 {\footnotesize\ttfamily bool IABoard\+::get\+LED (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{channel }\end{DoxyParamCaption})}
 
+Gets the current state of one of the on board LEDs
+
+
+\begin{DoxyParams}{Parameters}
+{\em channel} & The LED to be read (1 -\/ 4) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Returns the state of the LED (0 = OFF, 1 = ON) 
+\end{DoxyReturn}
 \mbox{\Hypertarget{class_i_a_board_a724f4caaf3df8a66d85b68aea2061248}\label{class_i_a_board_a724f4caaf3df8a66d85b68aea2061248}} 
 \index{IABoard@{IABoard}!getOpenDrainDOUT@{getOpenDrainDOUT}}
 \index{getOpenDrainDOUT@{getOpenDrainDOUT}!IABoard@{IABoard}}
@@ -141,18 +151,48 @@ void \mbox{\hyperlink{class_i_a_board_a6136315b8cf22149ed58dbd907192616}{set\+Al
 \doxysubsubsection{\texorpdfstring{readAnalogCurIn()}{readAnalogCurIn()}}
 {\footnotesize\ttfamily float IABoard\+::read\+Analog\+Cur\+In (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{channel }\end{DoxyParamCaption})}
 
+Reads the Analog Input Current of a channel
+
+
+\begin{DoxyParams}{Parameters}
+{\em channel} & The channel as marked on the IABoard-\/\+PCB (1 -\/ 4) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Returns the measured current in mA 
+\end{DoxyReturn}
 \mbox{\Hypertarget{class_i_a_board_a300178bdb61a6a6b74427031b181a597}\label{class_i_a_board_a300178bdb61a6a6b74427031b181a597}} 
 \index{IABoard@{IABoard}!readAnalogVolIn@{readAnalogVolIn}}
 \index{readAnalogVolIn@{readAnalogVolIn}!IABoard@{IABoard}}
 \doxysubsubsection{\texorpdfstring{readAnalogVolIn()}{readAnalogVolIn()}}
 {\footnotesize\ttfamily float IABoard\+::read\+Analog\+Vol\+In (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{channel }\end{DoxyParamCaption})}
 
+Reads the Analog Input Voltage of a channel if the jumper is not set
+
+
+\begin{DoxyParams}{Parameters}
+{\em channel} & The channel as marked on the IABoard-\/\+PCB (1 -\/ 4) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Returns the measured voltage in Volts from 0V to 10V 
+\end{DoxyReturn}
 \mbox{\Hypertarget{class_i_a_board_a291abadcc858294866a7b2853e423a99}\label{class_i_a_board_a291abadcc858294866a7b2853e423a99}} 
 \index{IABoard@{IABoard}!readAnalogVolInPM@{readAnalogVolInPM}}
 \index{readAnalogVolInPM@{readAnalogVolInPM}!IABoard@{IABoard}}
 \doxysubsubsection{\texorpdfstring{readAnalogVolInPM()}{readAnalogVolInPM()}}
 {\footnotesize\ttfamily float IABoard\+::read\+Analog\+Vol\+In\+PM (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{channel }\end{DoxyParamCaption})}
 
+Reads the Analog Input Voltage of a channel if the jumper is set to measure negative voltages
+
+
+\begin{DoxyParams}{Parameters}
+{\em channel} & The channel as marked on the IABoard-\/\+PCB (1 -\/ 4) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Returns the measured voltage in Volts from -\/10V to 10V 
+\end{DoxyReturn}
 \mbox{\Hypertarget{class_i_a_board_a24cf40186ccefa1ef47e809b9de5faa9}\label{class_i_a_board_a24cf40186ccefa1ef47e809b9de5faa9}} 
 \index{IABoard@{IABoard}!readTransistions@{readTransistions}}
 \index{readTransistions@{readTransistions}!IABoard@{IABoard}}
@@ -171,13 +211,20 @@ void \mbox{\hyperlink{class_i_a_board_a6136315b8cf22149ed58dbd907192616}{set\+Al
 \doxysubsubsection{\texorpdfstring{setAllLED()}{setAllLED()}}
 {\footnotesize\ttfamily void IABoard\+::set\+All\+LED (\begin{DoxyParamCaption}\item[{bool}]{value }\end{DoxyParamCaption})}
 
+Sets all IABoard-\/\+LEDs to the same state
+
+
+\begin{DoxyParams}{Parameters}
+{\em value} & The wanted state of all the LEDs (0 = OFF, 1 = ON) \\
+\hline
+\end{DoxyParams}
 \mbox{\Hypertarget{class_i_a_board_a6136315b8cf22149ed58dbd907192616}\label{class_i_a_board_a6136315b8cf22149ed58dbd907192616}} 
 \index{IABoard@{IABoard}!setAllOFF@{setAllOFF}}
 \index{setAllOFF@{setAllOFF}!IABoard@{IABoard}}
 \doxysubsubsection{\texorpdfstring{setAllOFF()}{setAllOFF()}}
 {\footnotesize\ttfamily void IABoard\+::set\+All\+OFF (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
-Sets all digital and analog outputs to off / 0V \mbox{\Hypertarget{class_i_a_board_af5df93b4548d6a1012c56fb5fb290a1c}\label{class_i_a_board_af5df93b4548d6a1012c56fb5fb290a1c}} 
+Sets all digital and analog outputs to OFF / 0V \mbox{\Hypertarget{class_i_a_board_af5df93b4548d6a1012c56fb5fb290a1c}\label{class_i_a_board_af5df93b4548d6a1012c56fb5fb290a1c}} 
 \index{IABoard@{IABoard}!setAnalogCurOut@{setAnalogCurOut}}
 \index{setAnalogCurOut@{setAnalogCurOut}!IABoard@{IABoard}}
 \doxysubsubsection{\texorpdfstring{setAnalogCurOut()}{setAnalogCurOut()}}
@@ -195,12 +242,30 @@ Sets all digital and analog outputs to off / 0V \mbox{\Hypertarget{class_i_a_boa
 \doxysubsubsection{\texorpdfstring{setLED()}{setLED()}}
 {\footnotesize\ttfamily void IABoard\+::set\+LED (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{channel,  }\item[{bool}]{value }\end{DoxyParamCaption})}
 
+Sets on of the four on board LEDs to a certain state
+
+
+\begin{DoxyParams}{Parameters}
+{\em channel} & The LED to be toggled (1 -\/ 4) \\
+\hline
+{\em value} & The wanted state of the LED (0 = OFF, 1 = ON) \\
+\hline
+\end{DoxyParams}
 \mbox{\Hypertarget{class_i_a_board_aafb047566019d306e14eb10e8ae34825}\label{class_i_a_board_aafb047566019d306e14eb10e8ae34825}} 
 \index{IABoard@{IABoard}!setOpenDrainDOUT@{setOpenDrainDOUT}}
 \index{setOpenDrainDOUT@{setOpenDrainDOUT}!IABoard@{IABoard}}
 \doxysubsubsection{\texorpdfstring{setOpenDrainDOUT()}{setOpenDrainDOUT()}}
 {\footnotesize\ttfamily void IABoard\+::set\+Open\+Drain\+DOUT (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{channel,  }\item[{bool}]{value }\end{DoxyParamCaption})}
 
+Sets on of the four digital outputs
+
+
+\begin{DoxyParams}{Parameters}
+{\em channel} & The Open Drain Pin to be toggled (1 -\/ 4) \\
+\hline
+{\em value} & The wanted state of the channel \\
+\hline
+\end{DoxyParams}
 \mbox{\Hypertarget{class_i_a_board_a063c738b5d1f803551aa4e9be72f2ec7}\label{class_i_a_board_a063c738b5d1f803551aa4e9be72f2ec7}} 
 \index{IABoard@{IABoard}!setOpenDrainPWM@{setOpenDrainPWM}}
 \index{setOpenDrainPWM@{setOpenDrainPWM}!IABoard@{IABoard}}

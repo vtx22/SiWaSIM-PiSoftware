@@ -1,6 +1,10 @@
 var searchData=
 [
-  ['main_0',['main',['../main_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4',1,'main.cpp']]],
-  ['main_2ecpp_1',['main.cpp',['../main_8cpp.html',1,'']]],
-  ['max_5fdiff_5fvoltage_2',['max_diff_voltage',['../class_configuration.html#aa64f51fe43c020c59d15e95828e56af1',1,'Configuration']]]
+  ['ledbusy_0',['ledBusy',['../class_p_c_b.html#a5d5c1732cacd230eff67193d36cfbf25',1,'PCB']]],
+  ['ledfault_1',['ledFault',['../class_p_c_b.html#a59629ef1c8a9f8828695201ff1901816',1,'PCB']]],
+  ['ledready_2',['ledReady',['../class_p_c_b.html#ab6341a19176ab4ebb2f2e4c1283c4511',1,'PCB']]],
+  ['load_5fweight_3',['load_weight',['../class_configuration.html#ae5fb01ebff9c19f346cac9158b16b3a2',1,'Configuration']]],
+  ['loadcellmode_4',['LoadCellMode',['../_configuration_8hpp.html#a79dd9036c94e58a35b6e18d61a36fb66',1,'Configuration.hpp']]],
+  ['loadconfig_5',['loadConfig',['../class_simulator.html#a02dce5814f4cf0c17dbbfbc606032945',1,'Simulator']]],
+  ['loadconfiguration_6',['loadConfiguration',['../class_configuration.html#a5c4ffeed7ac7333e9bcb8fd63232c60f',1,'Configuration']]]
 ];

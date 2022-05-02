@@ -2,11 +2,11 @@
 
 Simulator::Simulator()
 {
-   _config = new Configuration("/home/siwasim/SiWaSIM-PiSoftware/Konfiguration/config.json");
+   _config = new Configuration(CONFIG_PATH);
    _pcb = new PCB(_config);
    _ia = new IABoard();
 
-   _config->loadConfiguration();
+   reloadConfig();
 }
 
 Simulator::~Simulator()
@@ -16,6 +16,10 @@ Simulator::~Simulator()
    delete _ia;
 }
 
+/*!
+Set the output weight as a percentage of the nominal load
+@param percentage Percentage from 0 - 1 where 1 represents the nominal load as specified
+*/
 void Simulator::setWeightPER(float percentage)
 {
    float voltage = 0.f;
@@ -38,11 +42,18 @@ void Simulator::setWeightPER(float percentage)
    _pcb->setLoadcellVoltage(voltage);
 }
 
+/*!
+Set the output weight of the simulated load cell in kg
+@param kg Output weight in kilograms
+*/
 void Simulator::setWeightKG(float kg)
 {
    setWeightPER(kg / _config->load_weight);
 }
 
+/*!
+Starts an animation with the on board LEDs
+*/
 void Simulator::bootupAnimation()
 {
    _ia->setAllLED(0);
@@ -62,4 +73,45 @@ void Simulator::bootupAnimation()
       std::this_thread::sleep_for(500ms);
       cnt++;
    }
+}
+
+/*!
+Sets the simulated belt velocity in meters per second
+@param meterspersecond Velocity in meters / second
+*/
+void Simulator::setVelocity(float meterspersecond)
+{
+   setVelocityPER(meterspersecond / _config->speedAt100);
+}
+
+/*!
+Sets the simulated belt velocity from 0 - 100% of the maximal speed
+@param percentage Percentage of the maximal speed from 0 to 1
+*/
+void Simulator::setVelocityPER(float percentage)
+{
+   constrainMinMax(percentage, 0, 1);
+   setVelocityFRQ(_config->freqAt100 * percentage)
+}
+
+/*!
+Sets the PWM output to a certain frequency to represent belt movement
+@param frequency The frequency of the PWM signal
+*/
+void Simulator::setVelocityFRQ(float frequency)
+{
+   // Allow PWM outputs only for belt scale systems
+   if (_config->systemType != BELT_SCALE)
+   {
+      frequency = 0;
+   }
+   _pcb->setPWM(frequency, 0.5);
+}
+
+/*!
+Reloads the configuration from the disk an stores the settings
+*/
+void Simulator::reloadConfig()
+{
+   _config->loadConfiguration();
 }

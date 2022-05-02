@@ -15,7 +15,15 @@ void \mbox{\hyperlink{class_simulator_a8a47e848e6f9381d5243f230801e4498}{set\+We
 \item 
 void \mbox{\hyperlink{class_simulator_a44bd3ad4c4e3531d257126b7fa3de374}{set\+Weight\+KG}} (float kg)
 \item 
+void \mbox{\hyperlink{class_simulator_a667aa60bb9e7956adaf58ec0a068510b}{set\+Velocity}} (float meterspersecond)
+\item 
+void \mbox{\hyperlink{class_simulator_a8585f658197dbaba1905ef9654b8de80}{set\+Velocity\+PER}} (float percentage)
+\item 
+void \mbox{\hyperlink{class_simulator_a279633984034631853a4ecf16d478be1}{set\+Velocity\+FRQ}} (float frequency)
+\item 
 void \mbox{\hyperlink{class_simulator_abe9678f710894b6548da5b9a89391981}{bootup\+Animation}} ()
+\item 
+void \mbox{\hyperlink{class_simulator_a02dce5814f4cf0c17dbbfbc606032945}{load\+Config}} ()
 \end{DoxyCompactItemize}
 
 
@@ -41,18 +49,67 @@ void \mbox{\hyperlink{class_simulator_abe9678f710894b6548da5b9a89391981}{bootup\
 \doxysubsubsection{\texorpdfstring{bootupAnimation()}{bootupAnimation()}}
 {\footnotesize\ttfamily void Simulator\+::bootup\+Animation (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
+Starts an animation with the on board LEDs \mbox{\Hypertarget{class_simulator_a02dce5814f4cf0c17dbbfbc606032945}\label{class_simulator_a02dce5814f4cf0c17dbbfbc606032945}} 
+\index{Simulator@{Simulator}!loadConfig@{loadConfig}}
+\index{loadConfig@{loadConfig}!Simulator@{Simulator}}
+\doxysubsubsection{\texorpdfstring{loadConfig()}{loadConfig()}}
+{\footnotesize\ttfamily void Simulator\+::load\+Config (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_simulator_a667aa60bb9e7956adaf58ec0a068510b}\label{class_simulator_a667aa60bb9e7956adaf58ec0a068510b}} 
+\index{Simulator@{Simulator}!setVelocity@{setVelocity}}
+\index{setVelocity@{setVelocity}!Simulator@{Simulator}}
+\doxysubsubsection{\texorpdfstring{setVelocity()}{setVelocity()}}
+{\footnotesize\ttfamily void Simulator\+::set\+Velocity (\begin{DoxyParamCaption}\item[{float}]{meterspersecond }\end{DoxyParamCaption})}
+
+Sets the simulated belt velocity in meters per second 
+\begin{DoxyParams}{Parameters}
+{\em meterspersecond} & Velocity in meters / second \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_simulator_a279633984034631853a4ecf16d478be1}\label{class_simulator_a279633984034631853a4ecf16d478be1}} 
+\index{Simulator@{Simulator}!setVelocityFRQ@{setVelocityFRQ}}
+\index{setVelocityFRQ@{setVelocityFRQ}!Simulator@{Simulator}}
+\doxysubsubsection{\texorpdfstring{setVelocityFRQ()}{setVelocityFRQ()}}
+{\footnotesize\ttfamily void Simulator\+::set\+Velocity\+FRQ (\begin{DoxyParamCaption}\item[{float}]{frequency }\end{DoxyParamCaption})}
+
+Sets the PWM output to a certain frequency to represent belt movement 
+\begin{DoxyParams}{Parameters}
+{\em frequency} & The frequency of the PWM signal \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_simulator_a8585f658197dbaba1905ef9654b8de80}\label{class_simulator_a8585f658197dbaba1905ef9654b8de80}} 
+\index{Simulator@{Simulator}!setVelocityPER@{setVelocityPER}}
+\index{setVelocityPER@{setVelocityPER}!Simulator@{Simulator}}
+\doxysubsubsection{\texorpdfstring{setVelocityPER()}{setVelocityPER()}}
+{\footnotesize\ttfamily void Simulator\+::set\+Velocity\+PER (\begin{DoxyParamCaption}\item[{float}]{percentage }\end{DoxyParamCaption})}
+
+Sets the simulated belt velocity from 0 -\/ 100\% of the maximal speed 
+\begin{DoxyParams}{Parameters}
+{\em percentage} & Percentage of the maximal speed from 0 to 1 \\
+\hline
+\end{DoxyParams}
 \mbox{\Hypertarget{class_simulator_a44bd3ad4c4e3531d257126b7fa3de374}\label{class_simulator_a44bd3ad4c4e3531d257126b7fa3de374}} 
 \index{Simulator@{Simulator}!setWeightKG@{setWeightKG}}
 \index{setWeightKG@{setWeightKG}!Simulator@{Simulator}}
 \doxysubsubsection{\texorpdfstring{setWeightKG()}{setWeightKG()}}
 {\footnotesize\ttfamily void Simulator\+::set\+Weight\+KG (\begin{DoxyParamCaption}\item[{float}]{kg }\end{DoxyParamCaption})}
 
+Set the output weight of the simulated load cell in kg 
+\begin{DoxyParams}{Parameters}
+{\em kg} & Output weight in kilograms \\
+\hline
+\end{DoxyParams}
 \mbox{\Hypertarget{class_simulator_a8a47e848e6f9381d5243f230801e4498}\label{class_simulator_a8a47e848e6f9381d5243f230801e4498}} 
 \index{Simulator@{Simulator}!setWeightPER@{setWeightPER}}
 \index{setWeightPER@{setWeightPER}!Simulator@{Simulator}}
 \doxysubsubsection{\texorpdfstring{setWeightPER()}{setWeightPER()}}
 {\footnotesize\ttfamily void Simulator\+::set\+Weight\+PER (\begin{DoxyParamCaption}\item[{float}]{percentage }\end{DoxyParamCaption})}
 
+Set the output weight as a percentage of the nominal load 
+\begin{DoxyParams}{Parameters}
+{\em percentage} & Percentage from 0 -\/ 1 where 1 represents the nominal load as specified \\
+\hline
+\end{DoxyParams}
 
 
 The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}

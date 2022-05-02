@@ -97,8 +97,8 @@ void PCB::setLoadcellVoltage(float voltage)
       break;
    }
 
-   // Correction because if EXC is lower than expected the differential voltage has to decrease
-   // addvol *= getEXCVoltage() / _config->exc_voltage;
+   // Correction because if EXC is lower than expected the differential voltage has to decrease for example
+   addvol *= getEXCVoltage() / _config->exc_voltage;
 
    _ia->setAnalogVolOut(ADDVOL_CHANNEL, addvol);
    _ia->setAnalogVolOut(SUBVOL_CHANNEL, addvol);
@@ -106,20 +106,25 @@ void PCB::setLoadcellVoltage(float voltage)
 
 void PCB::setLoadcellDCVoltage(float voltage)
 {
-   _ia->setAnalogVolOut(1, voltage);
+   _ia->setAnalogVolOut(CELL_DC, voltage);
 }
 
 void PCB::setSENVoltage(float voltage)
 {
-   _ia->setAnalogVolOut(4, voltage);
+   _ia->setAnalogVolOut(SEN_OUT, voltage);
 }
 
 float PCB::getEXCVoltage()
 {
-   return _ia->readAnalogVolIn(1);
+   return _ia->readAnalogVolIn(EXC_IN);
 }
 
 float PCB::getSENVoltage()
 {
-   return _ia->readAnalogVolIn(2);
+   return _ia->readAnalogVolIn(SEN_IN);
+}
+
+void PCB::setPWM(float frequency, float dutyCycle)
+{
+   _gpio->setPWM(PWM_PIN, dutyCycle, frequency);
 }

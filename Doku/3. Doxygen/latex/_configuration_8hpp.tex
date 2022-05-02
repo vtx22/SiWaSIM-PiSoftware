@@ -1,10 +1,18 @@
 \hypertarget{_configuration_8hpp}{}\doxysection{F\+:/\+GITHUB/\+Si\+Wa\+SIM-\/\+Pi\+Software/src/\+Configuration.hpp File Reference}
 \label{_configuration_8hpp}\index{F:/GITHUB/SiWaSIM-\/PiSoftware/src/Configuration.hpp@{F:/GITHUB/SiWaSIM-\/PiSoftware/src/Configuration.hpp}}
 {\ttfamily \#include $<$string$>$}\newline
+{\ttfamily \#include $<$iostream$>$}\newline
+{\ttfamily \#include $<$fstream$>$}\newline
+{\ttfamily \#include \char`\"{}nlohmann/json.\+hpp\char`\"{}}\newline
 \doxysubsection*{Classes}
 \begin{DoxyCompactItemize}
 \item 
 class \mbox{\hyperlink{class_configuration}{Configuration}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+using \mbox{\hyperlink{_configuration_8hpp_ab701e3ac61a85b337ec5c1abaad6742d}{json}} = nlohmann\+::json
 \end{DoxyCompactItemize}
 \doxysubsection*{Enumerations}
 \begin{DoxyCompactItemize}
@@ -18,7 +26,20 @@ enum \mbox{\hyperlink{_configuration_8hpp_a8cdbfc5a2637c1334b36e71aaf4f960e}{IMP
 , \mbox{\hyperlink{_configuration_8hpp_a8cdbfc5a2637c1334b36e71aaf4f960eae2bd7b57b3f0bb02e66e42dbacc5c7fc}{NOMINAL}} = 0x01
 , \mbox{\hyperlink{_configuration_8hpp_a8cdbfc5a2637c1334b36e71aaf4f960ea7a1fe3ba88f0c16cb494922948a9597d}{SHORT}} = 0x02
  \}
+\item 
+enum \mbox{\hyperlink{_configuration_8hpp_ad1b1a6023bad2f6ca0db2b313854a671}{SYSTEM\+\_\+\+TYPE}} \{ \mbox{\hyperlink{_configuration_8hpp_ad1b1a6023bad2f6ca0db2b313854a671a84bfc2ea4b24a3d1df91832df23330ab}{DOSING\+\_\+\+SCALE}} = 0x01
+, \mbox{\hyperlink{_configuration_8hpp_ad1b1a6023bad2f6ca0db2b313854a671ad2dddc63d8fae358d6c7eac5eb9190ee}{BELT\+\_\+\+SCALE}} = 0x02
+ \}
 \end{DoxyCompactItemize}
+
+
+\doxysubsection{Typedef Documentation}
+\mbox{\Hypertarget{_configuration_8hpp_ab701e3ac61a85b337ec5c1abaad6742d}\label{_configuration_8hpp_ab701e3ac61a85b337ec5c1abaad6742d}} 
+\index{Configuration.hpp@{Configuration.hpp}!json@{json}}
+\index{json@{json}!Configuration.hpp@{Configuration.hpp}}
+\doxysubsubsection{\texorpdfstring{json}{json}}
+{\footnotesize\ttfamily using \mbox{\hyperlink{_configuration_8hpp_ab701e3ac61a85b337ec5c1abaad6742d}{json}} =  nlohmann\+::json}
+
 
 
 \doxysubsection{Enumeration Type Documentation}
@@ -28,17 +49,17 @@ enum \mbox{\hyperlink{_configuration_8hpp_a8cdbfc5a2637c1334b36e71aaf4f960e}{IMP
 \doxysubsubsection{\texorpdfstring{IMPEDANCE}{IMPEDANCE}}
 {\footnotesize\ttfamily enum \mbox{\hyperlink{_configuration_8hpp_a8cdbfc5a2637c1334b36e71aaf4f960e}{IMPEDANCE}}}
 
-\begin{DoxyEnumFields}{Enumerator}
+Types of impedances of the load cell that can be simulated. Is equivilant with the impedance between EXC+ and EXC-\/ \begin{DoxyEnumFields}{Enumerator}
 \raisebox{\heightof{T}}[0pt][0pt]{\index{OPEN@{OPEN}!Configuration.hpp@{Configuration.hpp}}\index{Configuration.hpp@{Configuration.hpp}!OPEN@{OPEN}}}\mbox{\Hypertarget{_configuration_8hpp_a8cdbfc5a2637c1334b36e71aaf4f960ea0e0143636c29971736eab47415868eae}\label{_configuration_8hpp_a8cdbfc5a2637c1334b36e71aaf4f960ea0e0143636c29971736eab47415868eae}} 
-OPEN&\\
+OPEN&Open circuit, high impedance. \\
 \hline
 
 \raisebox{\heightof{T}}[0pt][0pt]{\index{NOMINAL@{NOMINAL}!Configuration.hpp@{Configuration.hpp}}\index{Configuration.hpp@{Configuration.hpp}!NOMINAL@{NOMINAL}}}\mbox{\Hypertarget{_configuration_8hpp_a8cdbfc5a2637c1334b36e71aaf4f960eae2bd7b57b3f0bb02e66e42dbacc5c7fc}\label{_configuration_8hpp_a8cdbfc5a2637c1334b36e71aaf4f960eae2bd7b57b3f0bb02e66e42dbacc5c7fc}} 
-NOMINAL&\\
+NOMINAL&Nominal impedance of approx. 350 ohms. \\
 \hline
 
 \raisebox{\heightof{T}}[0pt][0pt]{\index{SHORT@{SHORT}!Configuration.hpp@{Configuration.hpp}}\index{Configuration.hpp@{Configuration.hpp}!SHORT@{SHORT}}}\mbox{\Hypertarget{_configuration_8hpp_a8cdbfc5a2637c1334b36e71aaf4f960ea7a1fe3ba88f0c16cb494922948a9597d}\label{_configuration_8hpp_a8cdbfc5a2637c1334b36e71aaf4f960ea7a1fe3ba88f0c16cb494922948a9597d}} 
-SHORT&\\
+SHORT&Short circuit, approx. zero impedance. \\
 \hline
 
 \end{DoxyEnumFields}
@@ -50,15 +71,31 @@ SHORT&\\
 
 \begin{DoxyEnumFields}{Enumerator}
 \raisebox{\heightof{T}}[0pt][0pt]{\index{NORMAL@{NORMAL}!Configuration.hpp@{Configuration.hpp}}\index{Configuration.hpp@{Configuration.hpp}!NORMAL@{NORMAL}}}\mbox{\Hypertarget{_configuration_8hpp_a79dd9036c94e58a35b6e18d61a36fb66a50d1448013c6f17125caee18aa418af7}\label{_configuration_8hpp_a79dd9036c94e58a35b6e18d61a36fb66a50d1448013c6f17125caee18aa418af7}} 
-NORMAL&\\
+NORMAL&Positive differential voltage from 0 -\/ 100\% nominal load. \\
 \hline
 
 \raisebox{\heightof{T}}[0pt][0pt]{\index{OVERLOAD@{OVERLOAD}!Configuration.hpp@{Configuration.hpp}}\index{Configuration.hpp@{Configuration.hpp}!OVERLOAD@{OVERLOAD}}}\mbox{\Hypertarget{_configuration_8hpp_a79dd9036c94e58a35b6e18d61a36fb66a9b41216983c608e48415373ca015b3a9}\label{_configuration_8hpp_a79dd9036c94e58a35b6e18d61a36fb66a9b41216983c608e48415373ca015b3a9}} 
-OVERLOAD&\\
+OVERLOAD&Positive differential voltage from 0 -\/ 120\% nominal load. \\
 \hline
 
 \raisebox{\heightof{T}}[0pt][0pt]{\index{INVERTED@{INVERTED}!Configuration.hpp@{Configuration.hpp}}\index{Configuration.hpp@{Configuration.hpp}!INVERTED@{INVERTED}}}\mbox{\Hypertarget{_configuration_8hpp_a79dd9036c94e58a35b6e18d61a36fb66a1e172b06bae2f97e733787d76106800e}\label{_configuration_8hpp_a79dd9036c94e58a35b6e18d61a36fb66a1e172b06bae2f97e733787d76106800e}} 
-INVERTED&\\
+INVERTED&Negative differential voltage from 0 -\/ 100\% nominal load. \\
+\hline
+
+\end{DoxyEnumFields}
+\mbox{\Hypertarget{_configuration_8hpp_ad1b1a6023bad2f6ca0db2b313854a671}\label{_configuration_8hpp_ad1b1a6023bad2f6ca0db2b313854a671}} 
+\index{Configuration.hpp@{Configuration.hpp}!SYSTEM\_TYPE@{SYSTEM\_TYPE}}
+\index{SYSTEM\_TYPE@{SYSTEM\_TYPE}!Configuration.hpp@{Configuration.hpp}}
+\doxysubsubsection{\texorpdfstring{SYSTEM\_TYPE}{SYSTEM\_TYPE}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{_configuration_8hpp_ad1b1a6023bad2f6ca0db2b313854a671}{SYSTEM\+\_\+\+TYPE}}}
+
+Type of the system represented by the simulator \begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{DOSING\_SCALE@{DOSING\_SCALE}!Configuration.hpp@{Configuration.hpp}}\index{Configuration.hpp@{Configuration.hpp}!DOSING\_SCALE@{DOSING\_SCALE}}}\mbox{\Hypertarget{_configuration_8hpp_ad1b1a6023bad2f6ca0db2b313854a671a84bfc2ea4b24a3d1df91832df23330ab}\label{_configuration_8hpp_ad1b1a6023bad2f6ca0db2b313854a671a84bfc2ea4b24a3d1df91832df23330ab}} 
+DOSING\+\_\+\+SCALE&Dosing Scale. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{BELT\_SCALE@{BELT\_SCALE}!Configuration.hpp@{Configuration.hpp}}\index{Configuration.hpp@{Configuration.hpp}!BELT\_SCALE@{BELT\_SCALE}}}\mbox{\Hypertarget{_configuration_8hpp_ad1b1a6023bad2f6ca0db2b313854a671ad2dddc63d8fae358d6c7eac5eb9190ee}\label{_configuration_8hpp_ad1b1a6023bad2f6ca0db2b313854a671ad2dddc63d8fae358d6c7eac5eb9190ee}} 
+BELT\+\_\+\+SCALE&Belt Scale. \\
 \hline
 
 \end{DoxyEnumFields}

@@ -8,19 +8,40 @@ using json = nlohmann::json;
 
 enum LoadCellMode
 {
-   NORMAL = 0x00,   // Positive differential voltage from 0 - 100% nominal load
-   OVERLOAD = 0x01, // Positive differential voltage from 0 - 120% nominal load
-   INVERTED = 0x02, // Negative differential voltage from 0 - 100% nominal load
+   //! Positive differential voltage from 0 - 100% nominal load
+   NORMAL = 0x00,
+   //! Positive differential voltage from 0 - 120% nominal load
+   OVERLOAD = 0x01,
+   //! Negative differential voltage from 0 - 100% nominal load
+   INVERTED = 0x02,
 
 } typedef LoadCellMode;
 
+/*!
+Types of impedances of the load cell that can be simulated.
+Is equivilant with the impedance between EXC+ and EXC-
+*/
 enum IMPEDANCE
 {
+   //! Open circuit, high impedance
    OPEN = 0x00,
+   //! Nominal impedance of approx. 350 ohms
    NOMINAL = 0x01,
+   //! Short circuit, approx. zero impedance
    SHORT = 0x02,
 
 } typedef IMPEDANCE;
+
+/*!
+Type of the system represented by the simulator
+*/
+enum SYSTEM_TYPE
+{
+   //! Dosing Scale
+   DOSING_SCALE = 0x01,
+   //! Belt Scale
+   BELT_SCALE = 0x02,
+} typedef SYSTEM_TYPE;
 
 class Configuration
 {
@@ -32,7 +53,9 @@ public:
 
    // SETTING VARIABLES
    //! Loadcell mode to be simulated
-   LoadCellMode cellMode = NORMAL;
+   LoadCellMode cellMode = LoadCellMode::NORMAL;
+   //! System type to be simulated
+   SYSTEM_TYPE systemType = SYSTEM_TYPE::DOSING_SCALE;
    //! Nominal EXC voltage ouputted by the SIWAREX module
    float exc_voltage = 10.f;
    //! Nominal Load Weight of the cell in kg
@@ -45,6 +68,10 @@ public:
    float max_diff_voltage = 40;
    //! Characteristic in mV/V
    float cellCharecteristic = 4;
+   //! Belt velocity in m/s at 100% speed
+   float speedAt100 = 5;
+   //! Belt encoder frequency at 100% speed
+   float freqAt100 = 10000;
 
 private:
    void parseJSON();

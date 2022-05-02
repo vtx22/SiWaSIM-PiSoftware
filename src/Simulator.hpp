@@ -7,6 +7,8 @@
 
 using namespace std::chrono_literals;
 
+#define CONFIG_PATH "/home/siwasim/SiWaSIM-PiSoftware/Konfiguration/config.json"
+
 class Simulator
 {
 public:
@@ -15,6 +17,11 @@ public:
 
    void setWeightPER(float percentage); // Set the weight from 0 - 100% of nominal Load
    void setWeightKG(float kg);          // Set the weight in kg
+
+   void setVelocity(float meterspersecond);
+   void setVelocityPER(float percentage);
+   void setVelocityFRQ(float frequency);
+
    void bootupAnimation();
    void loadConfig();
 

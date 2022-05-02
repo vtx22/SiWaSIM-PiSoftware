@@ -82,8 +82,16 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a8a47e848e6f9381d5243f230801e4498"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a44bd3ad4c4e3531d257126b7fa3de374"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_simulator.html#a44bd3ad4c4e3531d257126b7fa3de374">setWeightKG</a> (float kg)</td></tr>
 <tr class="separator:a44bd3ad4c4e3531d257126b7fa3de374"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a667aa60bb9e7956adaf58ec0a068510b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_simulator.html#a667aa60bb9e7956adaf58ec0a068510b">setVelocity</a> (float meterspersecond)</td></tr>
+<tr class="separator:a667aa60bb9e7956adaf58ec0a068510b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8585f658197dbaba1905ef9654b8de80"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_simulator.html#a8585f658197dbaba1905ef9654b8de80">setVelocityPER</a> (float percentage)</td></tr>
+<tr class="separator:a8585f658197dbaba1905ef9654b8de80"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a279633984034631853a4ecf16d478be1"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_simulator.html#a279633984034631853a4ecf16d478be1">setVelocityFRQ</a> (float frequency)</td></tr>
+<tr class="separator:a279633984034631853a4ecf16d478be1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:abe9678f710894b6548da5b9a89391981"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_simulator.html#abe9678f710894b6548da5b9a89391981">bootupAnimation</a> ()</td></tr>
 <tr class="separator:abe9678f710894b6548da5b9a89391981"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a02dce5814f4cf0c17dbbfbc606032945"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_simulator.html#a02dce5814f4cf0c17dbbfbc606032945">loadConfig</a> ()</td></tr>
+<tr class="separator:a02dce5814f4cf0c17dbbfbc606032945"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="a031573bfcfe2e0f5c9539bcc1c7fc5d9" name="a031573bfcfe2e0f5c9539bcc1c7fc5d9"></a>
@@ -135,6 +143,96 @@ Public Member Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p >Starts an animation with the on board LEDs </p>
+
+</div>
+</div>
+<a id="a02dce5814f4cf0c17dbbfbc606032945" name="a02dce5814f4cf0c17dbbfbc606032945"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a02dce5814f4cf0c17dbbfbc606032945">&#9670;&nbsp;</a></span>loadConfig()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Simulator::loadConfig </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a667aa60bb9e7956adaf58ec0a068510b" name="a667aa60bb9e7956adaf58ec0a068510b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a667aa60bb9e7956adaf58ec0a068510b">&#9670;&nbsp;</a></span>setVelocity()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Simulator::setVelocity </td>
+          <td>(</td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>meterspersecond</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p >Sets the simulated belt velocity in meters per second </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">meterspersecond</td><td>Velocity in meters / second </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a279633984034631853a4ecf16d478be1" name="a279633984034631853a4ecf16d478be1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a279633984034631853a4ecf16d478be1">&#9670;&nbsp;</a></span>setVelocityFRQ()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Simulator::setVelocityFRQ </td>
+          <td>(</td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>frequency</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p >Sets the PWM output to a certain frequency to represent belt movement </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">frequency</td><td>The frequency of the PWM signal </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a8585f658197dbaba1905ef9654b8de80" name="a8585f658197dbaba1905ef9654b8de80"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8585f658197dbaba1905ef9654b8de80">&#9670;&nbsp;</a></span>setVelocityPER()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Simulator::setVelocityPER </td>
+          <td>(</td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>percentage</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p >Sets the simulated belt velocity from 0 - 100% of the maximal speed </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">percentage</td><td>Percentage of the maximal speed from 0 to 1 </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
@@ -153,6 +251,12 @@ Public Member Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p >Set the output weight of the simulated load cell in kg </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">kg</td><td>Output weight in kilograms </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
@@ -171,6 +275,12 @@ Public Member Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p >Set the output weight as a percentage of the nominal load </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">percentage</td><td>Percentage from 0 - 1 where 1 represents the nominal load as specified </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>

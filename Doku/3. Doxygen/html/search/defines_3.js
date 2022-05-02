@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['subvol_5fchannel_0',['SUBVOL_CHANNEL',['../_p_c_b_8hpp.html#a96e067272d5341413b5994fc6ef3e9b2',1,'PCB.hpp']]]
+  ['i2c_5faddress_0',['I2C_ADDRESS',['../_i_a_board_8hpp.html#a770f0c15acd838afca500d56b792c6b5',1,'IABoard.hpp']]]
 ];

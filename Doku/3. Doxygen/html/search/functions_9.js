@@ -15,10 +15,13 @@ var searchData=
   ['setpinmode_12',['setPinMode',['../class_g_p_i_o.html#adab4e2328a68eaf7f58dfcdef76c256c',1,'GPIO']]],
   ['setpowersw1_13',['setPOWERSW1',['../class_p_c_b.html#a021788bd42e666c74047e65d945f300c',1,'PCB']]],
   ['setpowersw2_14',['setPOWERSW2',['../class_p_c_b.html#ab28d6ca4640b7d89501b12eb60d4dd55',1,'PCB']]],
-  ['setpwm_15',['setPWM',['../class_g_p_i_o.html#a6a45758f73567268de7bc39ed0f0e51b',1,'GPIO']]],
+  ['setpwm_15',['setPWM',['../class_g_p_i_o.html#a6a45758f73567268de7bc39ed0f0e51b',1,'GPIO::setPWM()'],['../class_p_c_b.html#a95054df269cc0140fe3f4d838540df42',1,'PCB::setPWM(float frequency, float dutyCycle)']]],
   ['setsenvoltage_16',['setSENVoltage',['../class_p_c_b.html#aaec2ddb24841ba5c510db0ca1ed32649',1,'PCB']]],
   ['settransistiontype_17',['setTransistionType',['../class_i_a_board.html#a284128dc1191b936f6556a6b23f12b6a',1,'IABoard']]],
-  ['setweightkg_18',['setWeightKG',['../class_simulator.html#a44bd3ad4c4e3531d257126b7fa3de374',1,'Simulator']]],
-  ['setweightper_19',['setWeightPER',['../class_simulator.html#a8a47e848e6f9381d5243f230801e4498',1,'Simulator']]],
-  ['simulator_20',['Simulator',['../class_simulator.html#a031573bfcfe2e0f5c9539bcc1c7fc5d9',1,'Simulator']]]
+  ['setvelocity_18',['setVelocity',['../class_simulator.html#a667aa60bb9e7956adaf58ec0a068510b',1,'Simulator']]],
+  ['setvelocityfrq_19',['setVelocityFRQ',['../class_simulator.html#a279633984034631853a4ecf16d478be1',1,'Simulator']]],
+  ['setvelocityper_20',['setVelocityPER',['../class_simulator.html#a8585f658197dbaba1905ef9654b8de80',1,'Simulator']]],
+  ['setweightkg_21',['setWeightKG',['../class_simulator.html#a44bd3ad4c4e3531d257126b7fa3de374',1,'Simulator']]],
+  ['setweightper_22',['setWeightPER',['../class_simulator.html#a8a47e848e6f9381d5243f230801e4498',1,'Simulator']]],
+  ['simulator_23',['Simulator',['../class_simulator.html#a031573bfcfe2e0f5c9539bcc1c7fc5d9',1,'Simulator']]]
 ];

@@ -16,8 +16,10 @@ void \mbox{\hyperlink{class_configuration_a5c4ffeed7ac7333e9bcb8fd63232c60f}{loa
 \doxysubsection*{Public Attributes}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\hyperlink{_configuration_8hpp_a79dd9036c94e58a35b6e18d61a36fb66}{Load\+Cell\+Mode}} \mbox{\hyperlink{class_configuration_a94120b68ed6b6175c152c2799baa4cc7}{cell\+Mode}} = \mbox{\hyperlink{_configuration_8hpp_a79dd9036c94e58a35b6e18d61a36fb66a50d1448013c6f17125caee18aa418af7}{NORMAL}}
+\mbox{\hyperlink{_configuration_8hpp_a79dd9036c94e58a35b6e18d61a36fb66}{Load\+Cell\+Mode}} \mbox{\hyperlink{class_configuration_a94120b68ed6b6175c152c2799baa4cc7}{cell\+Mode}} = \mbox{\hyperlink{_configuration_8hpp_a79dd9036c94e58a35b6e18d61a36fb66a50d1448013c6f17125caee18aa418af7}{Load\+Cell\+Mode\+::\+NORMAL}}
 \begin{DoxyCompactList}\small\item\em Loadcell mode to be simulated. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{_configuration_8hpp_ad1b1a6023bad2f6ca0db2b313854a671}{SYSTEM\+\_\+\+TYPE}} \mbox{\hyperlink{class_configuration_a081b7708cde859dad986d1d538b4532a}{system\+Type}} = \mbox{\hyperlink{_configuration_8hpp_a79dd9036c94e58a35b6e18d61a36fb66a50d1448013c6f17125caee18aa418af7}{SYSTEM\+\_\+\+TYPE\+::\+NORMAL}}
+\begin{DoxyCompactList}\small\item\em System type to be simulated. \end{DoxyCompactList}\item 
 float \mbox{\hyperlink{class_configuration_ae8d60d92e248f2beb56ab65b3675021b}{exc\+\_\+voltage}} = 10.f
 \begin{DoxyCompactList}\small\item\em Nominal EXC voltage ouputted by the SIWAREX module. \end{DoxyCompactList}\item 
 float \mbox{\hyperlink{class_configuration_ae5fb01ebff9c19f346cac9158b16b3a2}{load\+\_\+weight}} = 20.f
@@ -29,7 +31,11 @@ float \mbox{\hyperlink{class_configuration_adbdf6f1d3a1d29d9a65fe1e93ffa00aa}{ad
 float \mbox{\hyperlink{class_configuration_aa64f51fe43c020c59d15e95828e56af1}{max\+\_\+diff\+\_\+voltage}} = 40
 \begin{DoxyCompactList}\small\item\em Maximum Differential Voltage of SIG+-\/. \end{DoxyCompactList}\item 
 float \mbox{\hyperlink{class_configuration_a4464bbfe8da8d5f4d8a3d98c340905a0}{cell\+Charecteristic}} = 4
-\begin{DoxyCompactList}\small\item\em Characteristic in m\+V/V. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Characteristic in m\+V/V. \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{class_configuration_ae569342591db6be4b0e3e9aa68f9b957}{speed\+At100}} = 5
+\begin{DoxyCompactList}\small\item\em Belt velocity in m/s at 100\% speed. \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{class_configuration_a4248163a3f41503860502e63931cc3ed}{freq\+At100}} = 10000
+\begin{DoxyCompactList}\small\item\em Belt encoder frequency at 100\% speed. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \doxysubsection{Constructor \& Destructor Documentation}
@@ -86,7 +92,7 @@ Characteristic in m\+V/V.
 \index{Configuration@{Configuration}!cellMode@{cellMode}}
 \index{cellMode@{cellMode}!Configuration@{Configuration}}
 \doxysubsubsection{\texorpdfstring{cellMode}{cellMode}}
-{\footnotesize\ttfamily \mbox{\hyperlink{_configuration_8hpp_a79dd9036c94e58a35b6e18d61a36fb66}{Load\+Cell\+Mode}} Configuration\+::cell\+Mode = \mbox{\hyperlink{_configuration_8hpp_a79dd9036c94e58a35b6e18d61a36fb66a50d1448013c6f17125caee18aa418af7}{NORMAL}}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_configuration_8hpp_a79dd9036c94e58a35b6e18d61a36fb66}{Load\+Cell\+Mode}} Configuration\+::cell\+Mode = \mbox{\hyperlink{_configuration_8hpp_a79dd9036c94e58a35b6e18d61a36fb66a50d1448013c6f17125caee18aa418af7}{Load\+Cell\+Mode\+::\+NORMAL}}}
 
 
 
@@ -101,6 +107,16 @@ Loadcell mode to be simulated.
 
 
 Nominal EXC voltage ouputted by the SIWAREX module. 
+
+\mbox{\Hypertarget{class_configuration_a4248163a3f41503860502e63931cc3ed}\label{class_configuration_a4248163a3f41503860502e63931cc3ed}} 
+\index{Configuration@{Configuration}!freqAt100@{freqAt100}}
+\index{freqAt100@{freqAt100}!Configuration@{Configuration}}
+\doxysubsubsection{\texorpdfstring{freqAt100}{freqAt100}}
+{\footnotesize\ttfamily float Configuration\+::freq\+At100 = 10000}
+
+
+
+Belt encoder frequency at 100\% speed. 
 
 \mbox{\Hypertarget{class_configuration_a1ef2ca5eb6c96f604912b00073d7c5a4}\label{class_configuration_a1ef2ca5eb6c96f604912b00073d7c5a4}} 
 \index{Configuration@{Configuration}!initial\_weight@{initial\_weight}}
@@ -131,6 +147,26 @@ Nominal Load Weight of the cell in kg.
 
 
 Maximum Differential Voltage of SIG+-\/. 
+
+\mbox{\Hypertarget{class_configuration_ae569342591db6be4b0e3e9aa68f9b957}\label{class_configuration_ae569342591db6be4b0e3e9aa68f9b957}} 
+\index{Configuration@{Configuration}!speedAt100@{speedAt100}}
+\index{speedAt100@{speedAt100}!Configuration@{Configuration}}
+\doxysubsubsection{\texorpdfstring{speedAt100}{speedAt100}}
+{\footnotesize\ttfamily float Configuration\+::speed\+At100 = 5}
+
+
+
+Belt velocity in m/s at 100\% speed. 
+
+\mbox{\Hypertarget{class_configuration_a081b7708cde859dad986d1d538b4532a}\label{class_configuration_a081b7708cde859dad986d1d538b4532a}} 
+\index{Configuration@{Configuration}!systemType@{systemType}}
+\index{systemType@{systemType}!Configuration@{Configuration}}
+\doxysubsubsection{\texorpdfstring{systemType}{systemType}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_configuration_8hpp_ad1b1a6023bad2f6ca0db2b313854a671}{SYSTEM\+\_\+\+TYPE}} Configuration\+::system\+Type = \mbox{\hyperlink{_configuration_8hpp_a79dd9036c94e58a35b6e18d61a36fb66a50d1448013c6f17125caee18aa418af7}{SYSTEM\+\_\+\+TYPE\+::\+NORMAL}}}
+
+
+
+System type to be simulated. 
 
 
 

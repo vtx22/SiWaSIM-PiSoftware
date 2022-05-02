@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['max_5fdiff_5fvoltage_0',['max_diff_voltage',['../class_configuration.html#aa64f51fe43c020c59d15e95828e56af1',1,'Configuration']]]
+  ['load_5fweight_0',['load_weight',['../class_configuration.html#ae5fb01ebff9c19f346cac9158b16b3a2',1,'Configuration']]]
 ];

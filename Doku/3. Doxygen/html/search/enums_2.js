@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['transition_0',['TRANSITION',['../_i_a_board_8hpp.html#a031ceda83d144811bf209020a0cf69ff',1,'IABoard.hpp']]]
+  ['system_5ftype_0',['SYSTEM_TYPE',['../_configuration_8hpp.html#ad1b1a6023bad2f6ca0db2b313854a671',1,'Configuration.hpp']]]
 ];

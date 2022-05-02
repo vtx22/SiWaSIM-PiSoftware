@@ -264,6 +264,14 @@ Public Member Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p >Gets the current state of one of the on board LEDs</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">channel</td><td>The LED to be read (1 - 4) </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Returns the state of the LED (0 = OFF, 1 = ON) </dd></dl>
 
 </div>
 </div>
@@ -353,6 +361,14 @@ Public Member Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p >Reads the Analog Input Current of a channel</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">channel</td><td>The channel as marked on the IABoard-PCB (1 - 4) </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Returns the measured current in mA </dd></dl>
 
 </div>
 </div>
@@ -371,6 +387,14 @@ Public Member Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p >Reads the Analog Input Voltage of a channel if the jumper is not set</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">channel</td><td>The channel as marked on the IABoard-PCB (1 - 4) </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Returns the measured voltage in Volts from 0V to 10V </dd></dl>
 
 </div>
 </div>
@@ -389,6 +413,14 @@ Public Member Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p >Reads the Analog Input Voltage of a channel if the jumper is set to measure negative voltages</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">channel</td><td>The channel as marked on the IABoard-PCB (1 - 4) </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Returns the measured voltage in Volts from -10V to 10V </dd></dl>
 
 </div>
 </div>
@@ -443,6 +475,13 @@ Public Member Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p >Sets all IABoard-LEDs to the same state</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">value</td><td>The wanted state of all the LEDs (0 = OFF, 1 = ON) </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
@@ -460,7 +499,7 @@ Public Member Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p >Sets all digital and analog outputs to off / 0V </p>
+<p >Sets all digital and analog outputs to OFF / 0V </p>
 
 </div>
 </div>
@@ -545,6 +584,14 @@ Public Member Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p >Sets on of the four on board LEDs to a certain state</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">channel</td><td>The LED to be toggled (1 - 4) </td></tr>
+    <tr><td class="paramname">value</td><td>The wanted state of the LED (0 = OFF, 1 = ON) </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
@@ -573,6 +620,14 @@ Public Member Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p >Sets on of the four digital outputs</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">channel</td><td>The Open Drain Pin to be toggled (1 - 4) </td></tr>
+    <tr><td class="paramname">value</td><td>The wanted state of the channel </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>

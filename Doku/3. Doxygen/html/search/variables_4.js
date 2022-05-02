@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['load_5fweight_0',['load_weight',['../class_configuration.html#ae5fb01ebff9c19f346cac9158b16b3a2',1,'Configuration']]]
+  ['initial_5fweight_0',['initial_weight',['../class_configuration.html#a1ef2ca5eb6c96f604912b00073d7c5a4',1,'Configuration']]]
 ];

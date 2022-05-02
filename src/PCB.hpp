@@ -9,6 +9,9 @@
 #define PIN_LED_BUSY 24
 #define PIN_LED_FAULT 25
 
+// PWM Pin
+#define PWM_PIN 13
+
 // 24V Power Switch Pins
 #define PIN_POWERSW1 4
 #define PIN_POWERSW2 26
@@ -21,8 +24,13 @@
 #define PIN_EXTRASW1 27
 #define PIN_EXTRASW2 22
 
+// Analog Channels
 #define ADDVOL_CHANNEL 2
 #define SUBVOL_CHANNEL 3
+#define CELL_DC 1
+#define SEN_OUT 4
+#define EXC_IN 1
+#define SEN_IN 2
 
 class PCB
 {
@@ -48,6 +56,10 @@ public:
 
    float getEXCVoltage();
    float getSENVoltage();
+
+   void setPWM(float frequency, float dutyCycle);
+
+   void reloadConfig();
 
 private:
    GPIO *_gpio;

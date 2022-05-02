@@ -36,6 +36,10 @@ void \mbox{\hyperlink{class_p_c_b_aaec2ddb24841ba5c510db0ca1ed32649}{set\+SENVol
 float \mbox{\hyperlink{class_p_c_b_a21be5306353f7712e14c1583c0e24fce}{get\+EXCVoltage}} ()
 \item 
 float \mbox{\hyperlink{class_p_c_b_a038e1b1078d5e9757a25c94fdf09410b}{get\+SENVoltage}} ()
+\item 
+void \mbox{\hyperlink{class_p_c_b_a95054df269cc0140fe3f4d838540df42}{set\+PWM}} (float frequency, float duty\+Cycle)
+\item 
+void \mbox{\hyperlink{class_p_c_b_a28b6720568fbc83deed75f0dbd5c283a}{reload\+Config}} ()
 \end{DoxyCompactItemize}
 
 
@@ -85,6 +89,12 @@ float \mbox{\hyperlink{class_p_c_b_a038e1b1078d5e9757a25c94fdf09410b}{get\+SENVo
 \doxysubsubsection{\texorpdfstring{ledReady()}{ledReady()}}
 {\footnotesize\ttfamily void PCB\+::led\+Ready (\begin{DoxyParamCaption}\item[{bool}]{state }\end{DoxyParamCaption})}
 
+\mbox{\Hypertarget{class_p_c_b_a28b6720568fbc83deed75f0dbd5c283a}\label{class_p_c_b_a28b6720568fbc83deed75f0dbd5c283a}} 
+\index{PCB@{PCB}!reloadConfig@{reloadConfig}}
+\index{reloadConfig@{reloadConfig}!PCB@{PCB}}
+\doxysubsubsection{\texorpdfstring{reloadConfig()}{reloadConfig()}}
+{\footnotesize\ttfamily void PCB\+::reload\+Config (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
 \mbox{\Hypertarget{class_p_c_b_a226c45273f845647ac957b136a30264a}\label{class_p_c_b_a226c45273f845647ac957b136a30264a}} 
 \index{PCB@{PCB}!setEXTRASW1@{setEXTRASW1}}
 \index{setEXTRASW1@{setEXTRASW1}!PCB@{PCB}}
@@ -126,6 +136,12 @@ float \mbox{\hyperlink{class_p_c_b_a038e1b1078d5e9757a25c94fdf09410b}{get\+SENVo
 \index{setPOWERSW2@{setPOWERSW2}!PCB@{PCB}}
 \doxysubsubsection{\texorpdfstring{setPOWERSW2()}{setPOWERSW2()}}
 {\footnotesize\ttfamily void PCB\+::set\+POWERSW2 (\begin{DoxyParamCaption}\item[{bool}]{state }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_p_c_b_a95054df269cc0140fe3f4d838540df42}\label{class_p_c_b_a95054df269cc0140fe3f4d838540df42}} 
+\index{PCB@{PCB}!setPWM@{setPWM}}
+\index{setPWM@{setPWM}!PCB@{PCB}}
+\doxysubsubsection{\texorpdfstring{setPWM()}{setPWM()}}
+{\footnotesize\ttfamily void PCB\+::set\+PWM (\begin{DoxyParamCaption}\item[{float}]{frequency,  }\item[{float}]{duty\+Cycle }\end{DoxyParamCaption})}
 
 \mbox{\Hypertarget{class_p_c_b_aaec2ddb24841ba5c510db0ca1ed32649}\label{class_p_c_b_aaec2ddb24841ba5c510db0ca1ed32649}} 
 \index{PCB@{PCB}!setSENVoltage@{setSENVoltage}}
