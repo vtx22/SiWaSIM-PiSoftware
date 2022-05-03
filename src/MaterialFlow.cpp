@@ -19,7 +19,7 @@ void MaterialFlow::update(float *currentWeight)
    bool pinState = _ia->digitalRead(_channel);
    if (pinState)
    {
-      &currentWeight += 10;
+      *currentWeight += 10;
    }
 }
 
