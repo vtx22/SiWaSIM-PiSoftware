@@ -127,3 +127,10 @@ void Simulator::setImpedance(IMPEDANCE impedance)
 {
    _pcb->setImpedance(impedance);
 }
+
+void Simulator::run()
+{
+   static float weight = 0;
+   printf("Weight is: &f\n", weight);
+   _materialFlows[0]->update(&weight);
+}

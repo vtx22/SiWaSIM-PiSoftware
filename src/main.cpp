@@ -16,5 +16,11 @@ int main()
    Simulator sim;
    sim.bootupAnimation();
 
+   while (true)
+   {
+      sim.run();
+      std::this_thread::sleep_for(1s);
+   }
+
    return 0;
 }

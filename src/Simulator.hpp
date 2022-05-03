@@ -26,6 +26,8 @@ public:
    void bootupAnimation();
    void reloadConfig();
 
+   void run();
+
 private:
    Configuration *_config;
    PCB *_pcb;
