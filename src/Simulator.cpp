@@ -6,10 +6,10 @@ Simulator::Simulator()
    _pcb = new PCB(_config);
    _ia = new IABoard();
 
-   _materialFlows[0] = new MaterialFlow();
-   _materialFlows[1] = new MaterialFlow();
-   _materialFlows[2] = new MaterialFlow();
-   _materialFlows[3] = new MaterialFlow();
+   _materialFlows[0] = new MaterialFlow(1);
+   _materialFlows[1] = new MaterialFlow(2);
+   _materialFlows[2] = new MaterialFlow(3);
+   _materialFlows[3] = new MaterialFlow(4);
 
    reloadConfig();
 }

@@ -24,6 +24,7 @@ void MaterialFlow::update(float *currentWeight)
    }
 }
 
-void MaterialFlow::setFlowType(MATERIAL_FLOW flowType) : _flowType(flowType)
+void MaterialFlow::setFlowType(MATERIAL_FLOW flowType)
 {
+   _flowType = flowType;
 }

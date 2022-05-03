@@ -1,6 +1,8 @@
 #pragma once
+#include "Configuration.hpp"
 #include "I2C.hpp"
 #include "utility.hpp"
+
 #include <chrono>
 #include <thread>
 #include <iostream>
