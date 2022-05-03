@@ -17,10 +17,9 @@ MaterialFlow::~MaterialFlow()
 void MaterialFlow::update(float *currentWeight)
 {
    bool pinState = _ia->digitalRead(_channel);
-   printf("Pin State is: %d\n", pinState);
    if (pinState)
    {
-      currentWeight += 10;
+      &currentWeight += 10;
    }
 }
 
