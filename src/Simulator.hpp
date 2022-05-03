@@ -2,6 +2,7 @@
 #include "PCB.hpp"
 #include "Configuration.hpp"
 #include "IABoard.hpp"
+#include "MaterialFlow.hpp"
 #include <chrono>
 #include <thread>
 
@@ -20,6 +21,8 @@ public:
    void setVelocityPER(float percentage);
    void setVelocityFRQ(float frequency);
 
+   void setImpedance(IMPEDANCE impedance);
+
    void bootupAnimation();
    void reloadConfig();
 
@@ -27,4 +30,6 @@ private:
    Configuration *_config;
    PCB *_pcb;
    IABoard *_ia;
+
+   MaterialFlow *_materialFlows[4];
 };

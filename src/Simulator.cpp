@@ -6,6 +6,11 @@ Simulator::Simulator()
    _pcb = new PCB(_config);
    _ia = new IABoard();
 
+   _materialFlows[0] = new MaterialFlow();
+   _materialFlows[1] = new MaterialFlow();
+   _materialFlows[2] = new MaterialFlow();
+   _materialFlows[3] = new MaterialFlow();
+
    reloadConfig();
 }
 
@@ -14,6 +19,8 @@ Simulator::~Simulator()
    delete _config;
    delete _pcb;
    delete _ia;
+
+   delete[] _materialFlows;
 }
 
 /*!
@@ -27,13 +34,13 @@ void Simulator::setWeightPER(float percentage)
    switch (_config->cellMode)
    {
    default:
-   case NORMAL:
+   case LoadCellMode::NORMAL:
       // Max differential voltage (e.g. 4mV/V * 10V = 40mV)
       voltage = _config->cellCharecteristic * _config->exc_voltage;
       // Do not allow overload
       constrainMax(percentage, 1);
       break;
-   case OVERLOAD:
+   case LoadCellMode::OVERLOAD:
       break;
    }
 
@@ -114,4 +121,9 @@ Reloads the configuration from the disk an stores the settings
 void Simulator::reloadConfig()
 {
    _config->loadConfiguration();
+}
+
+void Simulator::setImpedance(IMPEDANCE impedance)
+{
+   _pcb->setImpedance(impedance);
 }

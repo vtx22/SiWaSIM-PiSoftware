@@ -76,6 +76,19 @@ enum SYSTEM_TYPE
    BELT_SCALE = 0x02,
 } typedef SYSTEM_TYPE;
 
+/*!
+Types of different material flows
+*/
+enum MATERIAL_FLOW
+{
+   NONE = 0x00,
+   EMPTY,
+   FINE,
+   COARSE,
+   XCOARSE,
+
+} typedef MATERIAL_FLOW;
+
 class Configuration
 {
 public:
@@ -105,6 +118,12 @@ public:
    float speedAt100 = 5;
    //! Belt encoder frequency at 100% speed
    float freqAt100 = 10000;
+
+   // Input channel assignment
+   MATERIAL_FLOW inputChannel1 = MATERIAL_FLOW::EMPTY;
+   MATERIAL_FLOW inputChannel2 = MATERIAL_FLOW::FINE;
+   MATERIAL_FLOW inputChannel3 = MATERIAL_FLOW::COARSE;
+   MATERIAL_FLOW inputChannel4 = MATERIAL_FLOW::XCOARSE;
 
 private:
    void parseJSON();

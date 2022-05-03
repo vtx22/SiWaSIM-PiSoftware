@@ -18,7 +18,7 @@ void GPIO::setPWM(int pin, float dutyCycle, float frequency)
    if (frequency < 1)
    {
       float period = 1 / frequency;
-      float highttime = period * dutyCycle / 100.f;
+      float highttime = period * dutyCycle;
    }
 
    if ((int)frequency == 995)
@@ -30,7 +30,7 @@ void GPIO::setPWM(int pin, float dutyCycle, float frequency)
       frequency++;
    }
 
-   if (gpioHardwarePWM(pin, frequency, 1e6 * dutyCycle / 100.f) < 0)
+   if (gpioHardwarePWM(pin, frequency, 1e6 * dutyCycle) < 0)
    {
       printf("GPIO ERROR: PWM Error\n");
    }
