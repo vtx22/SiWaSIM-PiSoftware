@@ -7,8 +7,6 @@
 
 using namespace std::chrono_literals;
 
-#define CONFIG_PATH "/home/siwasim/SiWaSIM-PiSoftware/Konfiguration/config.json"
-
 class Simulator
 {
 public:
