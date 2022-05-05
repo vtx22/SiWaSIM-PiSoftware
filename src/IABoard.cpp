@@ -25,8 +25,8 @@ bool IABoard::detectBoard()
    if (data[0] != 0x00)
    {
       printf("IA-Board: Board detected!\n");
-      _fwVersion[0] = data[0];
-      _fwVersion[1] = data[1];
+      //_fwVersion[0] = data[0];
+      //_fwVersion[1] = data[1];
       return true;
    }
 
