@@ -77,7 +77,7 @@ public:
    // Reads the analog input current of a certain channel (4-20mA)
    float readAnalogCurIn(uint8_t channel);
 
-   void getBoardData();
+   void getBoardStatus();
 
    // Turn all digital and analog outputs off
    void setAllOFF();
