@@ -89,6 +89,7 @@ private:
    uint8_t _boardTemperature = 0;
    float _24Vrail = 0.f;
    float _5Vrail = 0.f;
+
    // Delay because the IA-Board can only handle commands every few ms
    const std::chrono::milliseconds _delayBetweenCommands = 2ms;
    std::chrono::time_point<std::chrono::system_clock, std::chrono::duration<double>> _lastCommand;

@@ -12,6 +12,7 @@ IABoard::~IABoard()
 {
    setAllOFF();
    delete _i2c;
+   delete[] _fwVersion;
 }
 
 bool IABoard::detectBoard()
