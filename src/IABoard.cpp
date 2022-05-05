@@ -438,3 +438,15 @@ void IABoard::waitForIA()
    // Save the time the current command was executed for next calculation
    _lastCommand = std::chrono::system_clock::now();
 }
+
+void IABoard::getBoardData()
+{
+   uint8_t data[5];
+   _i2c->writeData(0x72);
+
+   _i2c->readData(data, 5);
+
+   _boardTemperature = data[0];
+   _24Vrail = (float)((data[2] << 8) + data[1]) / 1000.f;
+   _5Vrail = (float)((data[4] << 8) + data[3]) / 1000.f;
+}

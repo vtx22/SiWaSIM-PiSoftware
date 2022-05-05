@@ -80,8 +80,14 @@ public:
    // Turn all digital and analog outputs off
    void setAllOFF();
 
+   void getBoardData();
+
 private:
    I2C *_i2c;
+
+   uint8_t _boardTemperature = 0;
+   float _24Vrail = 0.f;
+   float _5Vrail = 0.f;
 
    // Delay because the IA-Board can only handle commands every few ms
    std::chrono::milliseconds _delayBetweenCommands = 1ms;
