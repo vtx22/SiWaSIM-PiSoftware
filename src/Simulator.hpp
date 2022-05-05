@@ -26,7 +26,7 @@ public:
    void bootupAnimation();
    void reloadConfig();
 
-   void run();
+   void run(float timestep);
 
 private:
    Configuration *_config;
