@@ -427,12 +427,12 @@ That is needed because the IABoard is not fast enough to react on fast consecuti
 void IABoard::waitForIA()
 {
    // Calculate the time elapsed since the last time a command was executed (in ms)
-   auto diff = std::chrono::duration_cast<std::chrono::microseconds>(std::chrono::system_clock::now() - _lastCommand).count();
+   auto diff = std::chrono::duration_cast<std::chrono::milliseconds>(std::chrono::system_clock::now() - _lastCommand).count();
 
    // If the last commands was just a few ms ago, calculate the difference to the minimum time gap between commands and wait for the remaining time
    if (diff < _delayBetweenCommands.count())
    {
-      std::this_thread::sleep_for(std::chrono::microseconds(_delayBetweenCommands.count() - diff));
+      std::this_thread::sleep_for(std::chrono::milliseconds(_delayBetweenCommands.count() - diff));
    }
 
    // Save the time the current command was executed for next calculation
