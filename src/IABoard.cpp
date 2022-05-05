@@ -425,7 +425,7 @@ void IABoard::setAllOFF()
    setOpenDrainDOUT(3, 0);
    setOpenDrainDOUT(4, 0);
 }
-
+/*
 void IABoard::getBoardData()
 {
 
@@ -440,7 +440,7 @@ void IABoard::getBoardData()
 
    printf("Temperature: %dC, 24V Rail: %f, 5V Rail: %f\n", _boardTemperature, _24Vrail, _5Vrail);
 }
-
+*/
 /*!
 Calculates the time since the last command was send to the IA-Board via I2C and waits till the minimum time (defined as 9ms) has elapsed.
 That is needed because the IABoard is not fast enough to react on fast consecutive commands. The minimum time for the delay was found through experimentation.

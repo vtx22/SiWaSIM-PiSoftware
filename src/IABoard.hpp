@@ -77,19 +77,19 @@ public:
    // Reads the analog input current of a certain channel (4-20mA)
    float readAnalogCurIn(uint8_t channel);
 
-   void getBoardData();
+   // void getBoardData();
 
    // Turn all digital and analog outputs off
    void setAllOFF();
 
 private:
    I2C *_i2c;
-
+   /*
    uint8_t _fwVersion[2] = {0x00, 0x00};
    uint8_t _boardTemperature = 0;
    float _24Vrail = 0.f;
    float _5Vrail = 0.f;
-
+   */
    // Delay because the IA-Board can only handle commands every few ms
    const std::chrono::milliseconds _delayBetweenCommands = 2ms;
    std::chrono::time_point<std::chrono::system_clock, std::chrono::duration<double>> _lastCommand;

@@ -30,7 +30,7 @@ public:
    float getSENVoltage();
 
    void setPWM(float frequency, float dutyCycle);
-   void getBoardStatus();
+   // void getBoardStatus();
 
    void reloadConfig();
 

@@ -63,7 +63,7 @@ Starts an animation with the on board LEDs
 */
 void Simulator::bootupAnimation()
 {
-   _pcb->getBoardStatus();
+   //_pcb->getBoardStatus();
 }
 
 /*!

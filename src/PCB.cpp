@@ -129,7 +129,9 @@ void PCB::setPWM(float frequency, float dutyCycle)
    _gpio->setPWM(PWM_PIN, dutyCycle, frequency);
 }
 
+/*
 void PCB::getBoardStatus()
 {
    _ia->getBoardData();
 }
+*/
