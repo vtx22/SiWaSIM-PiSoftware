@@ -8,9 +8,8 @@ using json = nlohmann::json;
 
 #define CONFIG_PATH "/home/siwasim/SiWaSIM-PiSoftware/Konfiguration/config.json"
 
-// I2C
+// I2C Address of the IA-Board
 #define I2C_ADDRESS 0x50
-#define I2C_DEVICE "/dev/i2c-1"
 
 // LED Pins
 #define PIN_LED_READY 23

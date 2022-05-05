@@ -5,7 +5,7 @@ IABoard::IABoard()
    // Save current time to calculate time between commands
    _lastCommand = std::chrono::system_clock::now();
    // Create I2C Object where 0x50 is the I2C address of the IA-Board
-   _i2c = new I2C(I2C_DEVICE, I2C_ADDRESS);
+   _i2c = new I2C("/dev/i2c-1", I2C_ADDRESS);
 }
 
 IABoard::~IABoard()
@@ -18,15 +18,9 @@ bool IABoard::detectBoard()
 {
    waitForIA();
    _i2c->writeData(0x78);
-
-   uint8_t data[2] = {0x00, 0x00};
-   _i2c->readData(data, 2);
-
-   if (data[0] != 0x00)
+   if (_i2c->readData() == 0x01)
    {
       printf("IA-Board: Board detected!\n");
-      //_fwVersion[0] = data[0];
-      //_fwVersion[1] = data[1];
       return true;
    }
 
@@ -425,22 +419,7 @@ void IABoard::setAllOFF()
    setOpenDrainDOUT(3, 0);
    setOpenDrainDOUT(4, 0);
 }
-/*
-void IABoard::getBoardData()
-{
 
-   _i2c->writeData(0x72);
-
-   uint8_t data[5] = {0, 0, 0, 0, 0};
-   _i2c->readData(data, 5);
-
-   _boardTemperature = data[0];
-   _24Vrail = (float)((data[2] << 8) + data[1]) / 1000.f;
-   _5Vrail = (float)((data[4] << 8) + data[3]) / 1000.f;
-
-   printf("Temperature: %dC, 24V Rail: %f, 5V Rail: %f\n", _boardTemperature, _24Vrail, _5Vrail);
-}
-*/
 /*!
 Calculates the time since the last command was send to the IA-Board via I2C and waits till the minimum time (defined as 9ms) has elapsed.
 That is needed because the IABoard is not fast enough to react on fast consecutive commands. The minimum time for the delay was found through experimentation.

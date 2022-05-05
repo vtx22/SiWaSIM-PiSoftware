@@ -63,7 +63,17 @@ Starts an animation with the on board LEDs
 */
 void Simulator::bootupAnimation()
 {
-   //_pcb->getBoardStatus();
+   _ia->setAllLED(0);
+   std::this_thread::sleep_for(1s);
+   uint8_t cnt = 0;
+   while (true)
+   {
+      _ia->setAllLED(1);
+      std::this_thread::sleep_for(1s);
+      _ia->setAllLED(0);
+      std::this_thread::sleep_for(1s);
+      cnt++;
+   }
 }
 
 /*!
