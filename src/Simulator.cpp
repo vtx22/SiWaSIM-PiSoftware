@@ -68,16 +68,10 @@ void Simulator::bootupAnimation()
    uint8_t cnt = 0;
    while (true)
    {
-      _ia->setLED(1, 1);
-      std::this_thread::sleep_for(10ms);
-      _ia->setLED(2, 1);
-      std::this_thread::sleep_for(10ms);
-      _ia->setLED(3, 1);
-      std::this_thread::sleep_for(10ms);
-      _ia->setLED(4, 1);
-      std::this_thread::sleep_for(10ms);
+      _ia->setAllLED(1);
+      std::this_thread::sleep_for(1s);
       _ia->setAllLED(0);
-      std::this_thread::sleep_for(10ms);
+      std::this_thread::sleep_for(1s);
       cnt++;
    }
 }
