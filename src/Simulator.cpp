@@ -128,3 +128,8 @@ void Simulator::run(float timestep)
    printf("Weight is: %f\n", weight);
    _materialFlows[0]->update(&weight, 0.1);
 }
+
+void Simulator::getBoardData()
+{
+   _ia->getBoardData();
+}

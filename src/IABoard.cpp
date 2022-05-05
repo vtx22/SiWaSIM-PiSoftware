@@ -18,9 +18,15 @@ bool IABoard::detectBoard()
 {
    waitForIA();
    _i2c->writeData(0x78);
-   if (_i2c->readData() == 0x01)
+
+   uint8_t data[2];
+   _i2c->readData(data, 2);
+
+   if (data[0] != 0x00)
    {
       printf("IA-Board: Board detected!\n");
+      _fwVersion[0] = data[0];
+      _fwVersion[1] = data[1];
       return true;
    }
 
@@ -418,6 +424,20 @@ void IABoard::setAllOFF()
    setOpenDrainDOUT(2, 0);
    setOpenDrainDOUT(3, 0);
    setOpenDrainDOUT(4, 0);
+}
+
+void IABoard::getBoardData()
+{
+   _i2c->writeData(0x72);
+
+   uint8_t data[5];
+   _i2c->readData(data, 5);
+
+   _boardTemperature = data[0];
+   _24Vrail = (float)((data[2] << 8) + data[1]) / 1000.f;
+   _5Vrail = (float)((data[4] << 8) + data[3]) / 1000.f;
+
+   printf("24V Rail: %f, 5V Rail: %f\n", _24Vrail, _5Vrail);
 }
 
 /*!

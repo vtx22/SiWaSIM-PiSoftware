@@ -25,6 +25,7 @@ public:
 
    void bootupAnimation();
    void reloadConfig();
+   void getBoardData();
 
    void run(float timestep);
 
