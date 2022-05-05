@@ -426,7 +426,7 @@ void IABoard::setAllOFF()
    setOpenDrainDOUT(4, 0);
 }
 
-void IABoard::getBoardStatus()
+void IABoard::getBoardData()
 {
    /*
    _i2c->writeData(0x72);

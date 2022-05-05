@@ -129,7 +129,7 @@ void Simulator::run(float timestep)
    _materialFlows[0]->update(&weight, 0.1);
 }
 
-void Simulator::getBoardData()
+void Simulator::getBoardStatus()
 {
    _ia->getBoardData();
 }
