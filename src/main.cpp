@@ -16,10 +16,5 @@ int main()
    Simulator sim;
    sim.bootupAnimation();
 
-   while (true)
-   {
-      // sim.run();
-   }
-
    return 0;
 }
