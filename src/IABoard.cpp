@@ -19,7 +19,7 @@ bool IABoard::detectBoard()
    waitForIA();
    _i2c->writeData(0x78);
 
-   uint8_t data[2];
+   uint8_t data[2] = {0x00, 0x00};
    _i2c->readData(data, 2);
 
    if (data[0] != 0x00)
