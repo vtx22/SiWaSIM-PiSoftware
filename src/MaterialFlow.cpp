@@ -27,7 +27,6 @@ void MaterialFlow::update(float *currentWeight, float dt)
    {
       if (!pinState)
       {
-         flowDirection = -1;
       }
 
       _lastPinState = pinState;

@@ -18,7 +18,7 @@ int main()
 
    while (true)
    {
-      sim.run();
+      // sim.run();
    }
 
    return 0;
