@@ -437,7 +437,7 @@ void IABoard::getBoardData()
    _24Vrail = (float)((data[2] << 8) + data[1]) / 1000.f;
    _5Vrail = (float)((data[4] << 8) + data[3]) / 1000.f;
 
-   printf("24V Rail: %f, 5V Rail: %f\n", _24Vrail, _5Vrail);
+   printf("Temperature: %dC, 24V Rail: %f, 5V Rail: %f\n", _boardTemperature, _24Vrail, _5Vrail);
 }
 
 /*!
