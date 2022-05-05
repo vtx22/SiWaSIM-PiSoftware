@@ -5,14 +5,13 @@ IABoard::IABoard()
    // Save current time to calculate time between commands
    _lastCommand = std::chrono::system_clock::now();
    // Create I2C Object where 0x50 is the I2C address of the IA-Board
-   _i2c = new I2C("/dev/i2c-1", I2C_ADDRESS);
+   _i2c = new I2C(I2C_DEVICE, I2C_ADDRESS);
 }
 
 IABoard::~IABoard()
 {
    setAllOFF();
    delete _i2c;
-   delete[] _fwVersion;
 }
 
 bool IABoard::detectBoard()
