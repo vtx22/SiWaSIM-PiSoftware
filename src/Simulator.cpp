@@ -132,5 +132,5 @@ void Simulator::run(float timestep)
 {
    static float weight = 0;
    printf("Weight is: %f\n", weight);
-   _materialFlows[0]->update(&weight);
+   _materialFlows[0]->update(&weight, 0.1);
 }
