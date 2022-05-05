@@ -16,7 +16,7 @@ int main()
    Simulator sim;
    // sim.bootupAnimation();
 
-   sim.getBoardStatus();
+   sim.bootupAnimation();
 
    return 0;
 }

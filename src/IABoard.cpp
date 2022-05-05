@@ -428,7 +428,7 @@ void IABoard::setAllOFF()
 
 void IABoard::getBoardData()
 {
-   /*
+
    _i2c->writeData(0x72);
 
    uint8_t data[5] = {0, 0, 0, 0, 0};
@@ -437,7 +437,7 @@ void IABoard::getBoardData()
    _boardTemperature = data[0];
    _24Vrail = (float)((data[2] << 8) + data[1]) / 1000.f;
    _5Vrail = (float)((data[4] << 8) + data[3]) / 1000.f;
-   */
+
    printf("Temperature: %dC, 24V Rail: %f, 5V Rail: %f\n", _boardTemperature, _24Vrail, _5Vrail);
 }
 

@@ -63,17 +63,7 @@ Starts an animation with the on board LEDs
 */
 void Simulator::bootupAnimation()
 {
-   _ia->setAllLED(0);
-   std::this_thread::sleep_for(1s);
-   uint8_t cnt = 0;
-   while (true)
-   {
-      _ia->setAllLED(1);
-      std::this_thread::sleep_for(1s);
-      _ia->setAllLED(0);
-      std::this_thread::sleep_for(1s);
-      cnt++;
-   }
+   _pcb->getBoardStatus();
 }
 
 /*!
@@ -127,9 +117,4 @@ void Simulator::run(float timestep)
    static float weight = 0;
    printf("Weight is: %f\n", weight);
    _materialFlows[0]->update(&weight, 0.1);
-}
-
-void Simulator::getBoardStatus()
-{
-   //_ia->getBoardData();
 }
