@@ -25,8 +25,8 @@ bool IABoard::detectBoard()
    if (data[0] != 0x00)
    {
       printf("IA-Board: Board detected!\n");
-      //_fwVersion[0] = data[0];
-      //_fwVersion[1] = data[1];
+      _fwVersion[0] = data[0];
+      _fwVersion[1] = data[1];
       return true;
    }
 
@@ -430,7 +430,7 @@ void IABoard::getBoardData()
 {
    _i2c->writeData(0x72);
 
-   uint8_t data[5];
+   uint8_t data[5] = {0, 0, 0, 0, 0};
    _i2c->readData(data, 5);
 
    _boardTemperature = data[0];
