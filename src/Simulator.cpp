@@ -131,5 +131,5 @@ void Simulator::run(float timestep)
 
 void Simulator::getBoardStatus()
 {
-   _ia->getBoardData();
+   //_ia->getBoardData();
 }
