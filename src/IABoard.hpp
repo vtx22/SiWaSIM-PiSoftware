@@ -85,7 +85,7 @@ public:
 private:
    I2C *_i2c;
 
-   uint8_t _fwVersion[2] = {0x00, 0x00};
+   // uint8_t _fwVersion[2] = {0x00, 0x00};
    uint8_t _boardTemperature = 0;
    float _24Vrail = 0.f;
    float _5Vrail = 0.f;
