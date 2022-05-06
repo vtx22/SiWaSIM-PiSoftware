@@ -12,6 +12,7 @@ MaterialFlow::MaterialFlow(uint8_t channel, MATERIAL_FLOW flowType) : _channel(c
 
 MaterialFlow::~MaterialFlow()
 {
+   delete _ia;
 }
 
 void MaterialFlow::update(float *currentWeight, float dt)

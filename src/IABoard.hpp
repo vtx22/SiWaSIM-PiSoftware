@@ -90,7 +90,7 @@ private:
    float _5Vrail = 0.f;
 
    // Delay because the IA-Board can only handle commands every few ms
-   std::chrono::milliseconds _delayBetweenCommands = 1ms;
+   std::chrono::milliseconds _delayBetweenCommands = 2ms;
    std::chrono::time_point<std::chrono::system_clock, std::chrono::duration<double>> _lastCommand;
 
    // Wait till the minimum time between commands has elapsed
