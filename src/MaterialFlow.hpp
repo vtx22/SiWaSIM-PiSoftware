@@ -12,7 +12,7 @@ struct CURVE
    //! Time it takes the flow to reach its maximum in seconds
    float riseTime = 1;
    //! Time it takes the flow to reach zero in seconds
-   float fallTime = 0;
+   float fallTime = 1;
    //! Maximal flow after rise time in kg/s
    float maxFlow = 1;
 } typedef CURVE;
