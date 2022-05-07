@@ -78,7 +78,7 @@ public:
    float readAnalogCurIn(uint8_t channel);
 
    void getBoardData();
-   void getBoardData(uint8_t *temp, float *rail24, float rail5);
+   void getBoardData(uint8_t *temp, float *rail24, float *rail5);
 
    // Turn all digital and analog outputs off
    void setAllOFF();
