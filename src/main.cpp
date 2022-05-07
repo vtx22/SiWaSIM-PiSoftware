@@ -11,13 +11,26 @@
 #include "PCB.hpp"
 #include "Simulator.hpp"
 
+#include "matplotlib/matplotlibcpp.h"
+namespace plt = matplotlibcpp;
+
 int main()
 {
    Simulator sim;
    // sim.bootupAnimation();
 
    sim.bootupAnimation();
-   sim.run(0.1);
+   std::vector<float> data, x;
+
+   for (uint8_t i = 0; i < 50; i++)
+   {
+      x.push_back(i);
+      data.push_back(sim.run(0.1));
+      std::this_thread::sleep_for(100ms);
+   }
+
+   plt::plot(x, data);
+   plt::show();
 
    return 0;
 }

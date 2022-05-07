@@ -3,12 +3,11 @@
 #include "Configuration.hpp"
 #include "IABoard.hpp"
 #include "MaterialFlow.hpp"
-#include "matplotlib/matplotlibcpp.h"
+
 #include <chrono>
 #include <thread>
 
 using namespace std::chrono_literals;
-namespace plt = matplotlibcpp;
 
 class Simulator
 {
@@ -28,7 +27,7 @@ public:
    void bootupAnimation();
    void reloadConfig();
 
-   void run(float timestep);
+   float run(float timestep);
 
 private:
    Configuration *_config;
