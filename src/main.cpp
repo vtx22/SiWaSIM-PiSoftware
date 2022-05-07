@@ -24,7 +24,7 @@ int main()
 
    for (uint8_t i = 0; i < 50; i++)
    {
-      x.push_back(i);
+      x.push_back(i / 10.f);
       data.push_back(sim.run(0.1));
       std::this_thread::sleep_for(100ms);
    }
