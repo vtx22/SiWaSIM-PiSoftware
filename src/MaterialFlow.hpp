@@ -1,4 +1,5 @@
 #pragma once
+#include <iostream>
 #include "Configuration.hpp"
 #include "IABoard.hpp"
 
