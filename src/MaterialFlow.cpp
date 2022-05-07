@@ -41,7 +41,7 @@ void MaterialFlow::update(float *currentWeight, float dt)
    }
    if (pinState == -1 && _lastPinStateTime < _curve.fallTime)
    {
-      *currentWeight += _curve.maxFlow / _curve.fallTime * _lastPinStateTime * dt;
+      *currentWeight += _curve.maxFlow / _curve.fallTime * (_curve.fallTime - _lastPinStateTime) * dt;
    }
 
    // If the pin is high and the rise time is over add the maximum flow

@@ -17,6 +17,7 @@ int main()
    // sim.bootupAnimation();
 
    sim.bootupAnimation();
+   sim.run(0.1);
 
    return 0;
 }

@@ -25,8 +25,8 @@ bool IABoard::detectBoard()
    if (data[0] != 0x00)
    {
       printf("IA-Board: Board detected!\n");
-      //_fwVersion[0] = data[0];
-      //_fwVersion[1] = data[1];
+      _fwVersion[0] = data[0];
+      _fwVersion[1] = data[1];
       return true;
    }
 
@@ -426,6 +426,9 @@ void IABoard::setAllOFF()
    setOpenDrainDOUT(4, 0);
 }
 
+/*!
+Receives the board data through the command. Board data includes temperature, 24V input rail voltage and 5V rail voltage
+*/
 void IABoard::getBoardData()
 {
 
@@ -437,8 +440,14 @@ void IABoard::getBoardData()
    _boardTemperature = data[0];
    _24Vrail = (float)((data[2] << 8) + data[1]) / 1000.f;
    _5Vrail = (float)((data[4] << 8) + data[3]) / 1000.f;
+}
 
-   printf("Temperature: %dC, 24V Rail: %f, 5V Rail: %f\n", _boardTemperature, _24Vrail, _5Vrail);
+void IABoard::getBoardData(uint8_t *temp, float *rail24, float rail5)
+{
+   getBoardData();
+   *temp = _boardTemperature;
+   *rail24 = _24Vrail;
+   *rail5 = _5Vrail;
 }
 
 /*!

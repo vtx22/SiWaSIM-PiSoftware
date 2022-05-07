@@ -3,10 +3,12 @@
 #include "Configuration.hpp"
 #include "IABoard.hpp"
 #include "MaterialFlow.hpp"
+#include "matplotlib/matplotlibcpp.h"
 #include <chrono>
 #include <thread>
 
 using namespace std::chrono_literals;
+namespace plt = matplotlibcpp;
 
 class Simulator
 {
