@@ -25,7 +25,7 @@ public:
 
    void setFlowCurve(CURVE curve);
    void setFlowType(MATERIAL_FLOW flowType);
-   void update(float *currentWeight, float dt);
+   float update(float *currentWeight, float dt);
 
 private:
    uint8_t _channel;
