@@ -115,9 +115,9 @@ void Simulator::setImpedance(IMPEDANCE impedance)
    _pcb->setImpedance(impedance);
 }
 
-float Simulator::run(float timestep)
+float Simulator::run(float timestep, float *weight)
 {
-   static float weight = 0;
+
    // printf("Weight is: %f\n", weight);
-   return _materialFlows[0]->update(&weight, 0.1);
+   return _materialFlows[0]->update(weight, 0.1);
 }
