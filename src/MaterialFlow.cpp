@@ -25,13 +25,8 @@ void MaterialFlow::update(float *currentWeight, float dt)
 
    if (pinState != _lastPinState)
    {
-      if (!pinState)
-      {
-      }
-
       _lastPinState = pinState;
       _lastPinStateTime = 0;
-      return;
    }
 
    // If the state has not changed, check if we are still in a rise / fall time

@@ -31,7 +31,7 @@ private:
    uint8_t _channel;
    MATERIAL_FLOW _flowType;
 
-   bool _lastPinState = false;
+   bool _lastPinState = 0;
    float _currentFlow = 0;
    float _lastPinStateTime = 0;
 
