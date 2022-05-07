@@ -442,7 +442,7 @@ void IABoard::getBoardData()
    _5Vrail = (float)((data[4] << 8) + data[3]) / 1000.f;
 }
 
-void IABoard::getBoardData(uint8_t *temp, float *rail24, float rail5)
+void IABoard::getBoardData(uint8_t *temp, float *rail24, float *rail5)
 {
    getBoardData();
    *temp = _boardTemperature;
