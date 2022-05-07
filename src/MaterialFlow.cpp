@@ -45,6 +45,7 @@ float MaterialFlow::update(float *currentWeight, float dt)
    {
       flow = _curve.maxFlow * dt;
    }
+   printf("FLOW is: %f", flow);
    *currentWeight += flow;
    _lastPinStateTime += dt;
 }

@@ -118,6 +118,6 @@ void Simulator::setImpedance(IMPEDANCE impedance)
 float Simulator::run(float timestep)
 {
    static float weight = 0;
-   printf("Weight is: %f\n", weight);
+   // printf("Weight is: %f\n", weight);
    return _materialFlows[0]->update(&weight, 0.1);
 }
