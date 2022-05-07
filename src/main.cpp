@@ -14,6 +14,8 @@
 int main()
 {
    Simulator sim;
+   // sim.bootupAnimation();
+
    sim.bootupAnimation();
 
    return 0;
