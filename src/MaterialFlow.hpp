@@ -10,7 +10,7 @@ struct CURVE
    //! Delay from input low to flow decrease start in seconds
    float stopDelay = 0;
    //! Time it takes the flow to reach its maximum in seconds
-   float riseTime = 0;
+   float riseTime = 1;
    //! Time it takes the flow to reach zero in seconds
    float fallTime = 0;
    //! Maximal flow after rise time in kg/s
