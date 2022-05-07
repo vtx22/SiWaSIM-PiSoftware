@@ -34,10 +34,11 @@ int main()
       std::this_thread::sleep_for(100ms);
    }
    plt::figure_size(1600, 900);
+
+   plt::named_plot("flow in kg/s", x, data);
+   plt::named_plot("weight in kg", x, weightData);
    plt::title("First flow to weight test");
    plt::legend();
-   plt::named_plot("flow in kg/s", x, data, {{"color", "blue"}});
-   plt::named_plot("weight in kg", x, weightData, {{"color", "red"}});
    plt::show();
 
    return 0;
