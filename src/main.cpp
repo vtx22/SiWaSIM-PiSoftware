@@ -21,8 +21,10 @@ int main()
 
    sim.bootupAnimation();
    std::vector<float> data, x;
+   data.push_back(0);
+   x.push_back(0);
 
-   for (uint8_t i = 0; i < 50; i++)
+   for (uint8_t i = 1; i < 51; i++)
    {
       x.push_back(i / 10.f);
 
