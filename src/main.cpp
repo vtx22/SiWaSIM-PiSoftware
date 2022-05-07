@@ -34,8 +34,8 @@ int main()
       std::this_thread::sleep_for(100ms);
    }
    plt::figure();
-   plt::plot(x, data, "b");
-   plt::plot(x, weightData, "r");
+   plt::plot(x, data, {{"label", "flow in kg/s"}, {"color", "blue"}});
+   plt::plot(x, weightData, {{"label", "weight in kg"}, {"color", "red"}});
    plt::show();
 
    return 0;
