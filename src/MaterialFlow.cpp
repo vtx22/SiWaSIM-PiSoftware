@@ -21,7 +21,13 @@ float MaterialFlow::update(float *currentWeight, float dt)
       return 0;
    }
 
-   bool pinState = 1; //_ia->digitalRead(_channel);
+   static bool pinState = 1; //_ia->digitalRead(_channel);
+
+   if (_lastPinStateTime > 1)
+   {
+      pinState = 0;
+   }
+
    float flow = 0;
    if (pinState != _lastPinState)
    {
