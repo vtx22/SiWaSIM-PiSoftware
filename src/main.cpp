@@ -35,9 +35,11 @@ int main()
    }
    plt::figure_size(1600, 900);
 
-   plt::named_plot("flow in kg/s", x, data);
-   plt::named_plot("weight in kg", x, weightData);
+   plt::plot(x, data, {{"color", "b"}, {"legend", "flow in kg/s"}});
+   plt::plot(x, weightData, {{"color", "r"}, {"legend", " weight in kg "}});
+
    plt::title("First flow to weight test");
+   plt::xlabel("Time in seconds");
    plt::legend();
    plt::show();
 
