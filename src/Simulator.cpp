@@ -20,7 +20,10 @@ Simulator::~Simulator()
    delete _pcb;
    delete _ia;
 
-   delete[] & _materialFlows;
+   delete _materialFlows[0];
+   delete _materialFlows[1];
+   delete _materialFlows[2];
+   delete _materialFlows[3];
 }
 
 /*!
