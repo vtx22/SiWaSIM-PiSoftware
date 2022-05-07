@@ -48,6 +48,8 @@ float MaterialFlow::update(float *currentWeight, float dt)
    std::cout << "FLOW is: " << flow << std::endl;
    *currentWeight += flow;
    _lastPinStateTime += dt;
+
+   return flow;
 }
 
 void MaterialFlow::setFlowType(MATERIAL_FLOW flowType)
