@@ -18,7 +18,7 @@ float MaterialFlow::update(float *currentWeight, float dt)
 {
    if (_flowType == MATERIAL_FLOW::NONE)
    {
-      return;
+      return 0;
    }
 
    bool pinState = 1; //_ia->digitalRead(_channel);
