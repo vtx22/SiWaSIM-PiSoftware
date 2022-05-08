@@ -1,0 +1,8 @@
+username: siwasim
+password: siwasim
+
+C++ build: g++ -Wall -w -pthread -o main *.cpp -lpigpio 
+C++ buil with matplot: g++ -Wall -w -pthread -o main *.cpp -I/usr/include/python3.9 -lpigpio -lpython3.9
+
+IP WW20: 192.168.2.125
+VNC Software: VNC Viewer  
