@@ -29,10 +29,10 @@ int main()
    {
       x.push_back(i / 10.f);
 
-      data.push_back(sim.run(RUN_MODE::PASSIVE, 0.1, &weight));
+      data.push_back(sim.run(RUN_MODE::PASSIVE, 0.01, &weight));
       weightData.push_back(weight);
 
-      std::this_thread::sleep_for(100ms);
+      std::this_thread::sleep_for(10ms);
    }
 
    plt::figure_size(1600, 900);
