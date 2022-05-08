@@ -43,9 +43,9 @@ uint8_t IABoard::digitalRead()
    uint8_t data = i2c->readData();
 
    _digitalRead[0] = (data & 1);
-   _digitalRead[1] = (data & (1 << 1);
-   _digitalRead[2] = (data & (1 << 2);
-   _digitalRead[4] = (data & (1 << 3);
+   _digitalRead[1] = (data & (1 << 1));
+   _digitalRead[2] = (data & (1 << 2));
+   _digitalRead[4] = (data & (1 << 3));
    // Returns one byte, the lowest 4 bits represent the digital value of the channel 1 - 4
    return data;
 }
