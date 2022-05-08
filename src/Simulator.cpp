@@ -134,7 +134,7 @@ float Simulator::runPassive(float timestep, float *weight)
    //_ia->digitalRead();
    static bool dig = 1;
    static int cnt = 0;
-   if (cnt > 20)
+   if (cnt > 200)
    {
       dig = 0;
    }
