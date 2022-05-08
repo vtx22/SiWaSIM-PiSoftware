@@ -29,7 +29,7 @@ int main()
    {
       x.push_back(i / 10.f);
 
-      data.push_back(sim.run(0.1, &weight));
+      data.push_back(sim.run(RUN_MODE::PASSIVE, 0.1, &weight));
       weightData.push_back(weight);
       std::this_thread::sleep_for(100ms);
    }

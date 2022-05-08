@@ -27,7 +27,8 @@ public:
    void bootupAnimation();
    void reloadConfig();
 
-   float run(float timestep, float *weight);
+   float run(RUN_MODE runMode, float timestep, float *weight);
+   float runPassive(float timestep, float *weight);
 
 private:
    Configuration *_config;

@@ -39,8 +39,15 @@ uint8_t IABoard::digitalRead()
    waitForIA();
    // Send command to read all 4 digital Inputs
    _i2c->writeData(0x03);
+
+   uint8_t data = i2c->readData();
+
+   _digitalRead[0] = (data & 1);
+   _digitalRead[1] = (data & (1 << 1);
+   _digitalRead[2] = (data & (1 << 2);
+   _digitalRead[4] = (data & (1 << 3);
    // Returns one byte, the lowest 4 bits represent the digital value of the channel 1 - 4
-   return _i2c->readData();
+   return data;
 }
 
 bool IABoard::digitalRead(uint8_t channel)
@@ -55,6 +62,16 @@ bool IABoard::digitalRead(uint8_t channel)
 
    // State of channel is the respective bit at position 0 - 3
    return (data & (1 << (channel - 1)));
+}
+
+bool IABoard::getDigitalRead(uint8_t channel)
+{
+   if (channel > 4 || channel < 1)
+   {
+      printf("IA-Board ERROR: Channel out of range! Allowed: 1 - 4\n");
+      return false;
+   }
+   return _digitalRead[channel - 1];
 }
 
 uint16_t IABoard::readTransistions(uint8_t channel)

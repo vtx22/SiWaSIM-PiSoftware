@@ -14,14 +14,14 @@ MaterialFlow::~MaterialFlow()
 {
 }
 
-float MaterialFlow::update(float *currentWeight, float dt)
+float MaterialFlow::update(float *currentWeight, float dt, bool pinState)
 {
    if (_flowType == MATERIAL_FLOW::NONE)
    {
       return 0;
    }
 
-   static bool pinState = 1; //_ia->digitalRead(_channel);
+   //_ia->digitalRead(_channel);
 
    if (_lastPinStateTime > 2)
    {
@@ -29,6 +29,8 @@ float MaterialFlow::update(float *currentWeight, float dt)
    }
 
    float flow = 0;
+
+   // If the pin changed reset the internal timer so that rise / fall times and delays are measures
    if (pinState != _lastPinState)
    {
       _lastPinState = pinState;

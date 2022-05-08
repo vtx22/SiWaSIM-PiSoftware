@@ -90,6 +90,16 @@ enum MATERIAL_FLOW
 
 } typedef MATERIAL_FLOW;
 
+enum RUN_MODE
+{
+   AUTO,
+   PASSIVE,
+   MANUAL,
+   IDLE,
+   OFF
+
+} typedef RUN_MODE;
+
 class Configuration
 {
 public:

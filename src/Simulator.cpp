@@ -115,9 +115,23 @@ void Simulator::setImpedance(IMPEDANCE impedance)
    _pcb->setImpedance(impedance);
 }
 
-float Simulator::run(float timestep, float *weight)
+float Simulator::run(RUN_MODE runMode, float timestep, float *weight)
 {
+   switch (runMode)
+   {
+   case PASSIVE:
+      return runPassive(timestep);
+      break;
 
-   // printf("Weight is: %f\n", weight);
-   return _materialFlows[0]->update(weight, 0.1);
+   default:
+      break;
+   }
+}
+
+float Simulator::runPassive(float timestep, float *weight)
+{
+   // Refresh Digital Input variables
+   _ia->digitalRead();
+
+   return _materialFlows[0]->update(weight, 0.1, _ia->getDigitalRead(1));
 }

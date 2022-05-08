@@ -30,6 +30,7 @@ public:
    uint8_t digitalRead();
    // Read digital input of certain channel 1 - 4
    bool digitalRead(uint8_t channel);
+   bool getDigitalRead(uint8_t channel);
 
    // Reads the number of counted transitions (if enabled)
    uint16_t readTransistions(uint8_t channel);
@@ -85,6 +86,8 @@ public:
 
 private:
    I2C *_i2c;
+
+   bool _digitalRead[4] = {0, 0, 0, 0};
 
    uint8_t _fwVersion[2] = {0x00, 0x00};
    uint8_t _boardTemperature = 0;

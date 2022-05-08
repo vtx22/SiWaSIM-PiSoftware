@@ -26,7 +26,7 @@ public:
 
    void setFlowCurve(CURVE curve);
    void setFlowType(MATERIAL_FLOW flowType);
-   float update(float *currentWeight, float dt);
+   float update(float *currentWeight, float dt, bool pinState);
 
 private:
    uint8_t _channel;
