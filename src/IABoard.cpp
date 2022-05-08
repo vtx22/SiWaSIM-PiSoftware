@@ -40,7 +40,7 @@ uint8_t IABoard::digitalRead()
    // Send command to read all 4 digital Inputs
    _i2c->writeData(0x03);
 
-   uint8_t data = i2c->readData();
+   uint8_t data = _i2c->readData();
 
    _digitalRead[0] = (data & 1);
    _digitalRead[1] = (data & (1 << 1));

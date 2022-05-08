@@ -43,7 +43,7 @@ int main()
          plt::xlabel("Time in seconds");
          plt::legend();
          plt::grid(true);
-         plt::show();
+         plt::pause(0.01);
       }
       std::this_thread::sleep_for(100ms);
    }
