@@ -139,5 +139,5 @@ float Simulator::runPassive(float timestep, float *weight)
       dig = 0;
    }
    cnt++;
-   return _materialFlows[0]->update(weight, 0.1, dig) //_ia->getDigitalRead(1));
+   return _materialFlows[0]->update(weight, 0.1, dig); //_ia->getDigitalRead(1));
 }
