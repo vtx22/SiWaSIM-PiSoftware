@@ -41,6 +41,7 @@ int main()
    plt::title("First flow test, step time 100ms");
    plt::xlabel("Time in seconds");
    plt::legend();
+   plt::grid();
    plt::show();
 
    return 0;
