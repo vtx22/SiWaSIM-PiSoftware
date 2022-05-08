@@ -25,9 +25,9 @@ int main()
    weightData.push_back(0);
    x.push_back(-0.1);
 
-   for (uint8_t i = 0; i < 50; i++)
+   for (uint8_t i = 0; i < 500; i++)
    {
-      x.push_back(i / 10.f);
+      x.push_back(i / 100.f);
 
       data.push_back(sim.run(RUN_MODE::PASSIVE, 0.01, &weight));
       weightData.push_back(weight);
@@ -40,7 +40,7 @@ int main()
    plt::plot(x, data, {{"color", "b"}, {"label", "flow in kg/s"}});
    plt::plot(x, weightData, {{"color", "r"}, {"label", "weight in kg"}});
 
-   plt::title("First flow test, step time 100ms");
+   plt::title("First flow test, step time 10ms");
    plt::xlabel("Time in seconds");
    plt::legend();
    plt::grid(true);
