@@ -25,7 +25,7 @@ int main()
    weightData.push_back(0);
    x.push_back(-0.1);
 
-   for (uint8_t i = 0; i < 500; i++)
+   for (int i = 0; i < 500; i++)
    {
       std::cout << i << std::endl;
       x.push_back(i / 100.f);
