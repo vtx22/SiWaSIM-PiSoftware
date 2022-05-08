@@ -25,6 +25,7 @@ int main()
    weightData.push_back(0);
    x.push_back(-0.1);
 
+   plt::figure_size(1600, 900);
    for (uint8_t i = 0; i < 50; i++)
    {
       x.push_back(i / 10.f);
@@ -34,7 +35,6 @@ int main()
       if (i % 10 == 0)
       {
          plt::clf();
-         plt::figure_size(1600, 900);
 
          plt::plot(x, data, {{"color", "b"}, {"label", "flow in kg/s"}});
          plt::plot(x, weightData, {{"color", "r"}, {"label", "weight in kg"}});
@@ -48,7 +48,6 @@ int main()
       std::this_thread::sleep_for(100ms);
    }
    plt::clf();
-   plt::figure_size(1600, 900);
 
    plt::plot(x, data, {{"color", "b"}, {"label", "flow in kg/s"}});
    plt::plot(x, weightData, {{"color", "r"}, {"label", "weight in kg"}});
