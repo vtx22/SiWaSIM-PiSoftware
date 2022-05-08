@@ -27,12 +27,16 @@ int main()
 
    for (int i = 0; i < 500; i++)
    {
-      std::cout << i << std::endl;
       x.push_back(i / 100.f);
 
       data.push_back(sim.run(RUN_MODE::PASSIVE, 0.01, &weight));
       weightData.push_back(weight);
 
+      std::cout << "=========" << std::endl;
+      std::cout << "i:      " << i << std::endl;
+      std::cout << "flow:   " << data.back() << std::endl;
+      std::cout << "weight: " << weightData.back() << std::endl;
+      std::cout << "=========" << std::endl;
       // std::this_thread::sleep_for(1ms);
    }
 
