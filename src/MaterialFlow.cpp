@@ -23,11 +23,6 @@ float MaterialFlow::update(float *currentWeight, float dt, bool pinState)
 
    //_ia->digitalRead(_channel);
 
-   if (_lastPinStateTime > 2)
-   {
-      pinState = 0;
-   }
-
    float flow = 0;
 
    // If the pin state has changed reset the internal timer so that rise / fall times and delays are measured
@@ -60,7 +55,7 @@ float MaterialFlow::update(float *currentWeight, float dt, bool pinState)
    {
       flow = _curve.maxFlow;
    }
-   std::cout << "FLOW is: " << flow << std::endl;
+
    *currentWeight += flow * dt;
    _lastPinStateTime += dt;
 
