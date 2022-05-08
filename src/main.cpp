@@ -38,7 +38,7 @@ int main()
    plt::plot(x, data, {{"color", "b"}, {"label", "flow in kg/s"}});
    plt::plot(x, weightData, {{"color", "r"}, {"label", "weight in kg"}});
 
-   plt::title("First flow to weight test");
+   plt::title("First flow test, step time 100ms");
    plt::xlabel("Time in seconds");
    plt::legend();
    plt::show();
