@@ -36,19 +36,19 @@ float MaterialFlow::update(float *currentWeight, float dt)
    }
 
    // If the state has not changed, check if we are still in a rise / fall time
-   if (pinState == 1 && _lastPinStateTime < _curve.startDelay)
+   if (pinState == 1 && _lastPinStateTime <= _curve.startDelay)
    {
       flow = 0;
    }
-   else if (pinState == 1 && _lastPinStateTime < _curve.riseTime)
+   else if (pinState == 1 && _lastPinStateTime <= _curve.riseTime)
    {
       flow = _curve.maxFlow / _curve.riseTime * _lastPinStateTime;
    }
-   else if (pinState == 0 && _lastPinState < _curve.stopDelay)
+   else if (pinState == 0 && _lastPinState <= _curve.stopDelay)
    {
       flow = _curve.maxFlow;
    }
-   else if (pinState == 0 && _lastPinStateTime < _curve.fallTime)
+   else if (pinState == 0 && _lastPinStateTime <= _curve.fallTime)
    {
       flow = _curve.maxFlow / _curve.fallTime * (_curve.fallTime - _lastPinStateTime);
    }
