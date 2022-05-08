@@ -32,7 +32,7 @@ int main()
       data.push_back(sim.run(RUN_MODE::PASSIVE, 0.01, &weight));
       weightData.push_back(weight);
 
-      std::this_thread::sleep_for(1ms);
+      // std::this_thread::sleep_for(1ms);
    }
 
    plt::figure_size(1600, 900);
