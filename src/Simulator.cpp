@@ -120,7 +120,7 @@ float Simulator::run(RUN_MODE runMode, float timestep, float *weight)
    switch (runMode)
    {
    case PASSIVE:
-      return runPassive(timestep);
+      return runPassive(timestep, weight);
       break;
 
    default:
