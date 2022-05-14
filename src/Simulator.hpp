@@ -27,6 +27,8 @@ public:
    void bootupAnimation();
    void reloadConfig();
 
+   void testFunction();
+
    float run(RUN_MODE runMode, float timestep, float *weight);
    float runPassive(float timestep, float *weight);
 

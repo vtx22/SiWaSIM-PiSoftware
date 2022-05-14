@@ -141,3 +141,19 @@ float Simulator::runPassive(float timestep, float *weight)
    cnt++;
    return _materialFlows[0]->update(weight, timestep, dig); //_ia->getDigitalRead(1));
 }
+
+void Simulator::testFunction()
+{
+   float voltage = 0;
+   while (true)
+   {
+      if (voltage > 40)
+      {
+         voltage = 0;
+      }
+      printf("Setting voltage to %f mV\n", voltage);
+      _pcb->setLoadcellVoltage(0);
+      voltage += 0.1;
+      std::this_thread::sleep_for(100ms);
+   }
+}

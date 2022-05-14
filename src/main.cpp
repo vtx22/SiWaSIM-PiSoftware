@@ -16,7 +16,11 @@ namespace plt = matplotlibcpp;
 
 int main()
 {
+
    Simulator sim;
+
+   /*
+
    // sim.bootupAnimation();
    float weight = 0;
    sim.bootupAnimation();
@@ -50,6 +54,9 @@ int main()
    plt::legend();
    plt::grid(true);
    plt::show();
+   */
+
+   sim.run();
 
    return 0;
 }
