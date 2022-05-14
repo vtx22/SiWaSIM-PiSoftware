@@ -100,6 +100,7 @@ void PCB::setLoadcellVoltage(float voltage)
    // Correction because if EXC is lower than expected the differential voltage has to decrease for example
    // addvol *= getEXCVoltage() / _config->exc_voltage;
 
+   printf("ADDVOL IS %f", addvol);
    _ia->setAnalogVolOut(ADDVOL_CHANNEL, addvol);
    _ia->setAnalogVolOut(SUBVOL_CHANNEL, addvol);
 }
