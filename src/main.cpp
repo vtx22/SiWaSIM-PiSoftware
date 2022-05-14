@@ -56,7 +56,7 @@ int main()
    plt::show();
    */
 
-   sim.run();
+   sim.testFunction();
 
    return 0;
 }
