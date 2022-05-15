@@ -152,5 +152,5 @@ void Simulator::testFunction()
 
    float voltage = 0;
    _pcb->setCellSubvol(0);
-   _pcb->setCellAddvol(1);
+   _pcb->setCellAddvol(3);
 }
