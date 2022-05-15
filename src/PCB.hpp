@@ -24,6 +24,9 @@ public:
 
    void setLoadcellVoltage(float voltage);
    void setLoadcellDCVoltage(float voltage);
+   void setCellAddvol(float voltage);
+   void setCellSubvol(float voltage);
+
    void setSENVoltage(float voltage);
 
    float getEXCVoltage();

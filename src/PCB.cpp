@@ -133,3 +133,13 @@ void PCB::getBoardStatus()
 {
    _ia->getBoardData();
 }
+
+void PCB::setCellAddvol(float voltage)
+{
+   _ia->setAnalogVolOut(ADDVOL_CHANNEL, voltage);
+}
+
+void PCB::setCellSubvol(float voltage)
+{
+   _ia->setAnalogVolOut(SUBVOL_CHANNEL, voltage);
+}
