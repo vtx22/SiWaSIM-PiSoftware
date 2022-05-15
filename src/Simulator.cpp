@@ -153,7 +153,7 @@ void Simulator::testFunction()
          voltage = 0;
       }
       printf("Setting voltage to %f mV\n", voltage);
-      _pcb->setLoadcellVoltage(voltage);
+      _pcb->setLoadcellVoltage(0);
       voltage += 0.1;
       std::this_thread::sleep_for(100ms);
    }
