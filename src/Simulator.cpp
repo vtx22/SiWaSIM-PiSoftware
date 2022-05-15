@@ -151,6 +151,6 @@ void Simulator::testFunction()
    _pcb->ledReady(1);
 
    float voltage = 0;
-   _pcb->setCellSubvol(0);
-   _pcb->setCellAddvol(3);
+   _pcb->setCellSubvol(10);
+   _pcb->setCellAddvol(10);
 }
