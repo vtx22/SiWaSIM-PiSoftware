@@ -145,6 +145,11 @@ float Simulator::runPassive(float timestep, float *weight)
 void Simulator::testFunction()
 {
    setImpedance(IMPEDANCE::NOMINAL);
+
+   _pcb->ledBusy(1);
+   _pcb->ledFault(1);
+   _pcb->ledReady(1);
+
    float voltage = 0;
    _pcb->setLoadcellDCVoltage(0);
    while (true)
