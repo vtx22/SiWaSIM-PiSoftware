@@ -146,6 +146,7 @@ void Simulator::testFunction()
 {
    setImpedance(IMPEDANCE::NOMINAL);
    float voltage = 0;
+   _pcb->setLoadcellDCVoltage(0);
    while (true)
    {
       if (voltage > 40)
