@@ -144,6 +144,7 @@ float Simulator::runPassive(float timestep, float *weight)
 
 void Simulator::testFunction()
 {
+   setImpedance(IMPEDANCE::NOMINAL);
    float voltage = 0;
    while (true)
    {
