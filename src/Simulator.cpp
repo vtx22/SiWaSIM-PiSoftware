@@ -152,15 +152,4 @@ void Simulator::testFunction()
 
    float voltage = 0;
    _pcb->setLoadcellDCVoltage(0);
-   while (true)
-   {
-      if (voltage > 40)
-      {
-         voltage = 0;
-      }
-      printf("Setting voltage to %f mV\n", voltage);
-      _pcb->setLoadcellVoltage(voltage);
-      voltage += 0.1;
-      std::this_thread::sleep_for(100ms);
-   }
 }
