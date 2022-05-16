@@ -180,10 +180,10 @@ void Simulator::calibrateLCVoltage()
    _ia->setAnalogVolOut(ADDVOL_CHANNEL, 0);
    _ia->setAnalogVolOut(SUBVOL_CHANNEL, 0);
 
-   float d0 = std::stof(d0_s);
-   float d10 = std::stof(d10_s);
+   float d0 = std::stof(d0_s) / 1000.f;
+   float d10 = std::stof(d10_s) / 1000.f;
 
-   float m = (d10 / 1000.f - d0 / 1000.f) / 10.f;
+   float m = (d10 - d0) / 10.f;
 
    // f(x) = mx + d0
 
