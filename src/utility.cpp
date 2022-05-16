@@ -121,6 +121,9 @@ void cubicRegression(std::vector<float> x, std::vector<float> y, float *a, float
    std::cout << "(XTX)-1 is: " << result.rows() << "  ::  " << result.cols() << "\n\n";
 
    result *= baseTrans;
+
+   std::cout << "(XTX)-1XT is: " << result.rows() << "  ::  " << result.cols() << "\n\n";
+
    result *= values;
 
    std::cout << result << std::endl;
