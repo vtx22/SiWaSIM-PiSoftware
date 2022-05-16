@@ -204,6 +204,6 @@ void Simulator::calibrateLCVoltage()
       _ia->setAnalogVolOut(SUBVOL_CHANNEL, voltage);
 
       voltage += 0.01;
-      std::this_thread::sleep_for(10ms);
+      std::this_thread::sleep_for(50ms);
    }
 }
