@@ -161,34 +161,28 @@ void Simulator::calibrateLCVoltage()
    std::cout << "OUTPUT VOLTAGE CALIBRATION\n";
    std::cout << "======================\n";
 
-   _ia->setAnalogVolOut(ADDVOL_CHANNEL, 0);
-   _ia->setAnalogVolOut(SUBVOL_CHANNEL, 0);
+   std::vector<float> xValues, yValues;
 
-   std::string d0_s, d10_s;
+   for (uint8_t i = 0; i < 11; i++)
+   {
+      _ia->setAnalogVolOut(ADDVOL_CHANNEL, i);
+      _ia->setAnalogVolOut(SUBVOL_CHANNEL, i);
 
-   std::cout << "Enter signed voltage between SIG+ and SIG- (in mV):\n";
+      std::cout << "Enter signed voltage between SIG+ and SIG- (in mV):\n";
 
-   std::getline(std::cin, d0_s);
+      std::string input = "";
+      std::getline(std::cin, input);
 
-   _ia->setAnalogVolOut(ADDVOL_CHANNEL, 10);
-   _ia->setAnalogVolOut(SUBVOL_CHANNEL, 10);
+      xValues.push_back(i);
+      yValues.push_back(std::stof(input) / 1000.f);
+   }
 
-   std::cout << "Enter signed voltage between SIG+ and SIG- (in mV):\n";
+   float b = 1, m = 1;
 
-   std::getline(std::cin, d10_s);
+   linearRegression(xValues, yValues, &m, &b);
 
-   _ia->setAnalogVolOut(ADDVOL_CHANNEL, 0);
-   _ia->setAnalogVolOut(SUBVOL_CHANNEL, 0);
-
-   float d0 = std::stof(d0_s) / 1000.f;
-   float d10 = std::stof(d10_s) / 1000.f;
-
-   float m = (d10 - d0) / 10.f;
-
-   // f(x) = mx + d0
-
-   float startVoltage = -d0 / m;
-   float endVoltage = (0.04 - d0) / m;
+   float startVoltage = -b / m;
+   float endVoltage = (0.04 - b) / m;
 
    _config->startVoltage = startVoltage;
    _config->endVoltage = endVoltage;
