@@ -103,32 +103,16 @@ void cubicRegression(std::vector<float> x, std::vector<float> y, float *a, float
        {1, 10, 100, 1000},
    };
 
-   std::cout << "X is: " << base.rows() << "  ::  " << base.cols() << "\n\n";
-
    VectorXd values{{y[0]}, {y[1]}, {y[2]}, {y[3]}, {y[4]}, {y[5]}, {y[6]}, {y[7]}, {y[8]}, {y[9]}, {y[10]}};
-
-   std::cout << "Y is: " << values.rows() << "  ::  " << values.cols() << "\n\n";
 
    MatrixXd baseTrans = base.transpose();
 
-   std::cout << "XT is: " << baseTrans.rows() << "  ::  " << baseTrans.cols() << "\n\n";
-
-   base *= baseTrans;
-
-   std::cout << "XTX is: " << base.rows() << "  ::  " << base.cols() << "\n\n";
+   base = baseTrans * base;
 
    MatrixXd result = base.inverse();
 
-   std::cout << "(XTX)-1 is: " << result.rows() << "  ::  " << result.cols() << "\n\n";
+   result = result * baseTrans;
+   result = result * values;
 
-   result *= baseTrans;
-
-   std::cout << "(XTX)-1XT is: " << result.rows() << "  ::  " << result.cols() << "\n\n";
-
-   if (result.cols() == values.rows())
-   {
-      std::cout << "EQUAL!!\n";
-   }
-
-   std::cout << "Left Side Cols: " << result.cols() << "  Right Side Rows: " << values.rows() << std::endl;
+   std::cout << result << "\n\n";
 }
