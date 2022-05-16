@@ -190,6 +190,8 @@ void Simulator::calibrateLCVoltage()
    float startVoltage = -d0 / m;
    float endVoltage = (0.04 - d0) / m;
 
+   std::cout << "START: " << startVoltage << " END: " << endVoltage << std::endl;
+
    float voltage = 0;
    while (true)
    {
