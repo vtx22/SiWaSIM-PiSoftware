@@ -130,6 +130,8 @@ void cubicRegression(std::vector<float> x, std::vector<float> y, float *a, float
       std::cout << "EQUAL!!\n";
    }
 
+   std::cout << "Left Side Cols: " << result.cols() << "  Right Side Rows: " << values.rows() << std::endl;
+
    MatrixXd newResult = result * values;
 
    std::cout << newResult << std::endl;
