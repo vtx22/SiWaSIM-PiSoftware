@@ -32,6 +32,8 @@ public:
    float run(RUN_MODE runMode, float timestep, float *weight);
    float runPassive(float timestep, float *weight);
 
+   void calibrateLCVoltage();
+
 private:
    Configuration *_config;
    PCB *_pcb;

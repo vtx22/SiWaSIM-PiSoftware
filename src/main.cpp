@@ -56,6 +56,7 @@ int main()
    plt::show();
    */
 
+   sim.calibrateLCVoltage();
    sim.testFunction();
 
    return 0;

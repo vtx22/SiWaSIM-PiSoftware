@@ -154,3 +154,49 @@ void Simulator::testFunction()
    _pcb->setCellSubvol(10);
    _pcb->setCellAddvol(10);
 }
+
+void Simulator::calibrateLCVoltage()
+{
+   std::cout << "\n======================\n";
+   std::cout << "OUTPUT VOLTAGE CALIBRATION\n";
+   std::cout << "======================\n";
+
+   _ia->setAnalogVolOut(ADDVOL_CHANNEL, 0);
+   _ia->setAnalogVolOut(SUBVOL_CHANNEL, 0);
+
+   std::string f_1_10, f_2_10, b_1, b_2;
+
+   std::cout << "Enter absolute voltage between SIG+ and EXC/2:\n";
+
+   std::getline(std::cin, b_1);
+
+   std::cout << "Enter absolute voltage between SIG- and EXC/2:\n";
+
+   std::getline(std::cin, b_2);
+
+   _ia->setAnalogVolOut(ADDVOL_CHANNEL, 10);
+   _ia->setAnalogVolOut(SUBVOL_CHANNEL, 10);
+
+   std::cout << "Enter absolute voltage between SIG+ and EXC/2:\n";
+
+   std::getline(std::cin, f_1_10);
+
+   std::cout << "Enter absolute voltage between SIG- and EXC/2:\n";
+
+   std::getline(std::cin, f_2_10);
+
+   _config->addvol_b = std::stof(b_1);
+   _config->subvol_b = std::stof(b_2);
+
+   _config->addvol_m = (std::stof(f_1_10) + std::stof(b_1)) / 10.f;
+   _config->subvol_m = (std::stof(f_2_10) - std::stof(b_2)) / 10.f;
+
+   _ia->setAnalogVolOut(ADDVOL_CHANNEL, 0);
+   _ia->setAnalogVolOut(SUBVOL_CHANNEL, 0);
+
+   printf("ADDVOL B: %f\n", _config->addvol_b);
+   printf("ADDVOL M: %f\n", _config->addvol_m);
+
+   printf("SUBVOL B: %f\n", _config->subvol_b);
+   printf("SUBVOL M: %f\n", _config->subvol_m);
+}
