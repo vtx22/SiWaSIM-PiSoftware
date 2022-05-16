@@ -104,7 +104,7 @@ void cubicRegression(std::vector<float> x, std::vector<float> y, float *a, float
 
    std::cout << "X is: " << base.rows() << "  ::  " << base.cols() << "\n\n";
 
-   VectorXd values{{y[0], y[1], y[2], y[3], y[4], y[5], y[6], y[7], y[8], y[9], y[10]}};
+   VectorXd values{{y[0]}, {y[1]}, {y[2]}, {y[3]}, {y[4]}, {y[5]}, {y[6]}, {y[7]}, {y[8]}, {y[9]}, {y[10]}};
 
    std::cout << "Y is: " << values.rows() << "  ::  " << values.cols() << "\n\n";
 
@@ -119,4 +119,9 @@ void cubicRegression(std::vector<float> x, std::vector<float> y, float *a, float
    MatrixXd result = base.inverse();
 
    std::cout << "(XTX)-1 is: " << result.rows() << "  ::  " << result.cols() << "\n\n";
+
+   result *= baseTrans;
+   result *= values;
+
+   std::cout << result << std::endl;
 }
