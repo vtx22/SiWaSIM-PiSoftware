@@ -164,39 +164,25 @@ void Simulator::calibrateLCVoltage()
    _ia->setAnalogVolOut(ADDVOL_CHANNEL, 0);
    _ia->setAnalogVolOut(SUBVOL_CHANNEL, 0);
 
-   std::string f_1_10, f_2_10, b_1, b_2;
+   std::string d1, d2;
 
-   std::cout << "Enter absolute voltage between SIG+ and EXC/2:\n";
+   std::cout << "Enter absolute voltage between SIG+ and SIG-:\n";
 
-   std::getline(std::cin, b_1);
-
-   std::cout << "Enter absolute voltage between SIG- and EXC/2:\n";
-
-   std::getline(std::cin, b_2);
+   std::getline(std::cin, d1);
 
    _ia->setAnalogVolOut(ADDVOL_CHANNEL, 10);
    _ia->setAnalogVolOut(SUBVOL_CHANNEL, 10);
 
-   std::cout << "Enter absolute voltage between SIG+ and EXC/2:\n";
+   std::cout << "Enter absolute voltage between SIG+ and SIG-:\n";
 
-   std::getline(std::cin, f_1_10);
-
-   std::cout << "Enter absolute voltage between SIG- and EXC/2:\n";
-
-   std::getline(std::cin, f_2_10);
-
-   _config->addvol_b = std::stof(b_1);
-   _config->subvol_b = std::stof(b_2);
-
-   _config->addvol_m = (std::stof(f_1_10) + std::stof(b_1)) / 10.f;
-   _config->subvol_m = (std::stof(f_2_10) - std::stof(b_2)) / 10.f;
+   std::getline(std::cin, d2);
 
    _ia->setAnalogVolOut(ADDVOL_CHANNEL, 0);
    _ia->setAnalogVolOut(SUBVOL_CHANNEL, 0);
 
-   printf("ADDVOL B: %f\n", _config->addvol_b);
-   printf("ADDVOL M: %f\n", _config->addvol_m);
+   float d1 = std::stof(d1);
+   float d2 = std::stof(d2);
 
-   printf("SUBVOL B: %f\n", _config->subvol_b);
-   printf("SUBVOL M: %f\n", _config->subvol_m);
+   printf("D1: %f\n", _config->addvol_b);
+   printf("D2: %f\n", _config->addvol_m);
 }
