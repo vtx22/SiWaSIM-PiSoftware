@@ -180,7 +180,7 @@ void Simulator::calibrateLCVoltage()
    float b = 1, m = 1;
 
    linearRegression(xValues, yValues, &m, &b);
-
+   std::cout << "M: " << m << " B: " << b << std::endl;
    float startVoltage = -b / m;
    float endVoltage = (0.04 - b) / m;
 
