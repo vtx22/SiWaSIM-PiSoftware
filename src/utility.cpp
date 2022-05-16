@@ -111,7 +111,7 @@ void cubicRegression(std::vector<float> x, std::vector<float> y, float *a, float
 
    std::cout << baseTrans << "\n\n";
 
-   base = baseTrans * base;
+   base *= baseTrans;
 
    std::cout << base << "\n\n";
 }
