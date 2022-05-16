@@ -113,5 +113,11 @@ void cubicRegression(std::vector<float> x, std::vector<float> y, float *a, float
 
    base *= baseTrans;
 
+   base.inverse();
+
+   baseTrans *= values;
+
+   base *= baseTrans;
+
    std::cout << base << "\n\n";
 }
