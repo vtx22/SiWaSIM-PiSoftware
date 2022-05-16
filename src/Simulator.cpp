@@ -164,25 +164,41 @@ void Simulator::calibrateLCVoltage()
    _ia->setAnalogVolOut(ADDVOL_CHANNEL, 0);
    _ia->setAnalogVolOut(SUBVOL_CHANNEL, 0);
 
-   std::string d1_s, d2_s;
+   std::string d0_s, d10_s;
 
-   std::cout << "Enter absolute voltage between SIG+ and SIG-:\n";
+   std::cout << "Enter signed voltage between SIG+ and SIG- (in mV):\n";
 
-   std::getline(std::cin, d1_s);
+   std::getline(std::cin, d0_s);
 
    _ia->setAnalogVolOut(ADDVOL_CHANNEL, 10);
    _ia->setAnalogVolOut(SUBVOL_CHANNEL, 10);
 
-   std::cout << "Enter absolute voltage between SIG+ and SIG-:\n";
+   std::cout << "Enter signed voltage between SIG+ and SIG- (in mV):\n";
 
-   std::getline(std::cin, d2_s);
+   std::getline(std::cin, d10_s);
 
    _ia->setAnalogVolOut(ADDVOL_CHANNEL, 0);
    _ia->setAnalogVolOut(SUBVOL_CHANNEL, 0);
 
-   float d1 = std::stof(d1_s);
-   float d2 = std::stof(d2_s);
+   float d0 = std::stof(d0_s);
+   float d10 = std::stof(d10_s);
 
-   printf("D1: %f\n", d1);
-   printf("D2: %f\n", d2);
+   float m = (d10 / 1000.f - d0 / 1000.f) / 10.f;
+
+   // f(x) = mx + d0
+
+   float startVoltage = -d0 / m;
+   float endVoltage = (0.04 - d0) / m;
+
+   float voltage = 0;
+   while (true)
+   {
+      if (voltage > endVoltage)
+      {
+         voltage = startVoltage;
+      }
+
+      voltage += 0.01;
+      std::this_thread::sleep_for(10ms);
+   }
 }
