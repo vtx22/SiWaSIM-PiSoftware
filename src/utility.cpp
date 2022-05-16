@@ -115,4 +115,36 @@ void cubicRegression(std::vector<float> x, std::vector<float> y, float *a, float
    result = result * values;
 
    std::cout << result << "\n\n";
+
+   *d = result(1, 1);
+   *c = result(2, 1);
+   *b = result(3, 1);
+   *a = result(4, 1);
+}
+
+float solveCubicForVoltage(float a, float b, float c, float d, float value)
+{
+   // ax^3+bx^2+cx+d
+   // Newton-Raphson Method for finding the x for the value
+
+   // Polynom needs the form ax^3+bx^2+cx+d = 0 as the methods finds roots
+   d -= value;
+
+   float root = 5; // Start for approximation is the middle between 0 - 10V
+   for (uint8_t iteration = 0; iteration < 10; iteration++)
+   {
+      root = root - (calculateCubic(a, b, c, d, root)) / (calculateCubicDeriv(a, b, c, d, root));
+   }
+
+   return root;
+}
+
+float calculateCubic(float a, float b, float c, float d, float x)
+{
+   return a * x * x * x + b * x * x + c * x + d;
+}
+
+float calculateCubicDeriv(float a, float b, float c, float d, float x)
+{
+   return 3 * a * x * x + 2 * b * x + c;
 }

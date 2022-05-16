@@ -100,7 +100,9 @@ void PCB::setLoadcellVoltage(float voltage)
    // Correction because if EXC is lower than expected the differential voltage has to decrease for example
    // addvol *= getEXCVoltage() / _config->exc_voltage;
 
-   addvol = _config->startVoltage + (_config->endVoltage - _config->startVoltage) * voltage / _config->max_diff_voltage;
+   addvol = solveCubicForVoltage(_config->a, _config->b, _config->c, _config->d, voltage / 1000.f);
+
+   std::cout << "Wanted voltage: " << voltage << " mV, Addvol: " << addvol << std::endl;
 
    _ia->setAnalogVolOut(ADDVOL_CHANNEL, addvol);
    _ia->setAnalogVolOut(SUBVOL_CHANNEL, addvol);

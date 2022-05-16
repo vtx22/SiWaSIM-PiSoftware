@@ -133,6 +133,8 @@ public:
    float startVoltage = 2;
    float endVoltage = 9;
 
+   float a, b, c, d;
+
    // Input channel assignment
    MATERIAL_FLOW inputChannel1 = MATERIAL_FLOW::EMPTY;
    MATERIAL_FLOW inputChannel2 = MATERIAL_FLOW::FINE;
