@@ -164,25 +164,25 @@ void Simulator::calibrateLCVoltage()
    _ia->setAnalogVolOut(ADDVOL_CHANNEL, 0);
    _ia->setAnalogVolOut(SUBVOL_CHANNEL, 0);
 
-   std::string d1, d2;
+   std::string d1_s, d2_s;
 
    std::cout << "Enter absolute voltage between SIG+ and SIG-:\n";
 
-   std::getline(std::cin, d1);
+   std::getline(std::cin, d1_s);
 
    _ia->setAnalogVolOut(ADDVOL_CHANNEL, 10);
    _ia->setAnalogVolOut(SUBVOL_CHANNEL, 10);
 
    std::cout << "Enter absolute voltage between SIG+ and SIG-:\n";
 
-   std::getline(std::cin, d2);
+   std::getline(std::cin, d2_s);
 
    _ia->setAnalogVolOut(ADDVOL_CHANNEL, 0);
    _ia->setAnalogVolOut(SUBVOL_CHANNEL, 0);
 
-   float d1 = std::stof(d1);
-   float d2 = std::stof(d2);
+   float d1 = std::stof(d1_s);
+   float d2 = std::stof(d2_s);
 
-   printf("D1: %f\n", _config->addvol_b);
-   printf("D2: %f\n", _config->addvol_m);
+   printf("D1: %f\n", d1);
+   printf("D2: %f\n", d2);
 }
