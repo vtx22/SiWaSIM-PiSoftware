@@ -130,10 +130,8 @@ public:
    //! Belt encoder frequency at 100% speed
    float freqAt100 = 10000;
 
-   float subvol_m = 1;
-   float subvol_b = 1;
-   float addvol_b = 1;
-   float addvol_m = 1;
+   float startVoltage = 2;
+   float endVoltage = 9;
 
    // Input channel assignment
    MATERIAL_FLOW inputChannel1 = MATERIAL_FLOW::EMPTY;

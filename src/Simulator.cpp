@@ -190,20 +190,21 @@ void Simulator::calibrateLCVoltage()
    float startVoltage = -d0 / m;
    float endVoltage = (0.04 - d0) / m;
 
+   _config->startVoltage = startVoltage;
+   _config->endVoltage = endVoltage;
+
    std::cout << "START: " << startVoltage << " END: " << endVoltage << std::endl;
 
    float voltage = 0;
    while (true)
    {
-      if (voltage > endVoltage)
+      if (voltage > 40)
       {
-         voltage = startVoltage;
+         voltage = 0;
       }
 
-      _ia->setAnalogVolOut(ADDVOL_CHANNEL, voltage);
-      _ia->setAnalogVolOut(SUBVOL_CHANNEL, voltage);
+      _pcb->setLoadcellVoltage(voltage);
 
-      voltage += 0.01;
-      std::this_thread::sleep_for(50ms);
+      std::this_thread::sleep_for(1s);
    }
 }
