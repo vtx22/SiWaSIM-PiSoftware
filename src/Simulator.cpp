@@ -204,7 +204,7 @@ void Simulator::calibrateLCVoltage()
       }
 
       _pcb->setLoadcellVoltage(voltage);
-
+      voltage += 1;
       std::this_thread::sleep_for(1s);
    }
 }
