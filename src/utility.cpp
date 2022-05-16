@@ -86,3 +86,29 @@ float calculateAverage(std::vector<float> values)
    }
    return average / values.size();
 }
+
+void cubicRegression(std::vector<float> x, std::vector<float> y, float *a, float *b, float *c, float *d)
+{
+   MatrixXd base{
+       {1, 0, 0, 0},
+       {1, 2, 4, 8},
+       {1, 3, 9, 27},
+       {1, 4, 16, 64},
+       {1, 5, 25, 125},
+       {1, 6, 36, 216},
+       {1, 7, 49, 343},
+       {1, 8, 64, 512},
+       {1, 9, 81, 729},
+       {1, 10, 100, 1000},
+       {1, 11, 121, 1331}};
+
+   VectorXd values{{y[0], y[1], y[2], y[3], y[4], y[5], y[6], y[7], y[8], y[9], y[10]}};
+
+   MatrixXd baseTrans = base.transpose();
+
+   base = baseTrans * base;
+   base.inverse();
+
+   base = base * baseTrans * values;
+   std::cout << base;
+}
