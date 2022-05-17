@@ -50,6 +50,7 @@ void linearRegression(std::vector<float> x, std::vector<float> y, float *m, floa
 {
    if (x.size() != y.size())
    {
+      std::cout << "ERROR: Regression is only possible if the number of x and y values is the same!\n";
       return;
    }
 
@@ -89,21 +90,32 @@ float calculateAverage(std::vector<float> values)
 
 void cubicRegression(std::vector<float> x, std::vector<float> y, float *a, float *b, float *c, float *d)
 {
-   MatrixXd base{
-       {1, 0, 0, 0},
-       {1, 1, 1, 1},
-       {1, 2, 4, 8},
-       {1, 3, 9, 27},
-       {1, 4, 16, 64},
-       {1, 5, 25, 125},
-       {1, 6, 36, 216},
-       {1, 7, 49, 343},
-       {1, 8, 64, 512},
-       {1, 9, 81, 729},
-       {1, 10, 100, 1000},
-   };
+   if (x.size() != y.size())
+   {
+      std::cout << "ERROR: Regression is only possible if the number of x and y values is the same!\n";
+      return;
+   }
 
-   VectorXd values{{y[0]}, {y[1]}, {y[2]}, {y[3]}, {y[4]}, {y[5]}, {y[6]}, {y[7]}, {y[8]}, {y[9]}, {y[10]}};
+   // Base matrix contains the x values as their powers from 0 - 3
+   MatrixXd base(x.size(), 4);
+
+   for (uint8_t row = 0; row < x.size(); row++)
+   {
+      for (uint8_t col = 0; col < 4; col++)
+      {
+         base(row, col) = pow(x[row], col);
+      }
+   }
+
+   // Values vector contains the corresponding y values
+   VectorXd values(y.size());
+
+   for (uint8_t element = 0; element < y.size(); element++)
+   {
+      values(element) = y[element];
+   }
+
+   // VectorXd values{{y[0]}, {y[1]}, {y[2]}, {y[3]}, {y[4]}, {y[5]}, {y[6]}, {y[7]}, {y[8]}, {y[9]}, {y[10]}};
 
    MatrixXd baseTrans = base.transpose();
 
@@ -113,8 +125,6 @@ void cubicRegression(std::vector<float> x, std::vector<float> y, float *a, float
 
    result = result * baseTrans;
    result = result * values;
-
-   std::cout << result << "\n\n";
 
    *d = result(0, 0);
    *c = result(1, 0);
