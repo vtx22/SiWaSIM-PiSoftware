@@ -116,10 +116,10 @@ void cubicRegression(std::vector<float> x, std::vector<float> y, float *a, float
 
    std::cout << result << "\n\n";
 
-   *d = result(1, 1);
-   *c = result(2, 1);
-   *b = result(3, 1);
-   *a = result(4, 1);
+   *d = result(0, 0);
+   *c = result(1, 0);
+   *b = result(2, 0);
+   *a = result(3, 0);
 }
 
 float solveCubicForVoltage(float a, float b, float c, float d, float value)
