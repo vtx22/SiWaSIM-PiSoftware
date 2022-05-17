@@ -163,7 +163,7 @@ void Simulator::calibrateLCVoltage()
 
    std::vector<float> xValues, yValues;
 
-   for (uint8_t i = 0; i < 11; i++)
+   for (uint8_t i = 2; i < 11; i++)
    {
       _ia->setAnalogVolOut(ADDVOL_CHANNEL, i);
       _ia->setAnalogVolOut(SUBVOL_CHANNEL, i);
