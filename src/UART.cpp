@@ -12,7 +12,7 @@ UART::~UART()
 
 bool UART::begin()
 {
-   uart0 = open("dev/ttyAMA0", O_RDWR);
+   uart0 = open("dev/serial0", O_RDWR);
 
    if (uart0 < 0)
    {
@@ -23,13 +23,13 @@ bool UART::begin()
    struct termios options;
    tcgetattr(uart0, &options);
 
-   options.c_cflag = B19200 | CS8 | CLOCAL | CREAD | HUPCL;
+   options.c_cflag = B115200 | CS8 | CLOCAL | CREAD | HUPCL;
    options.c_iflag = 0;
    options.c_oflag = 0;
    options.c_lflag = 0;
 
-   options.c_ispeed = B19200;
-   options.c_ospeed = B19200;
+   options.c_ispeed = B115200;
+   options.c_ospeed = B115200;
 
    options.c_cc[VTIME] = _messageTimeoutRX;
    options.c_cc[VMIN] = _messageSizeRX;
