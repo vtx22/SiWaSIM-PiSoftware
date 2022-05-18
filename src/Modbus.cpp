@@ -33,7 +33,7 @@ void Modbus::transmitRequest(uint16_t startRegister, uint16_t length)
    std::cout << "Generated message:\n";
    for (auto const &i : msg)
    {
-      printf(" %d ", i);
+      printf(" %#04x ", i);
    }
    std::cout << std::endl;
 
