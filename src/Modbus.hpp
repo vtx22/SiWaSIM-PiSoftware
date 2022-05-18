@@ -7,7 +7,7 @@
 class Modbus
 {
 public:
-   Modbus(UART *uart);
+   Modbus();
    ~Modbus();
 
    void transmitRequest(uint16_t startRegister, uint16_t length);

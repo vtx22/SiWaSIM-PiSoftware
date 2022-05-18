@@ -1,6 +1,6 @@
 #include "Modbus.hpp"
 
-Modbus::Modbus(UART *uart) : _uart(uart)
+Modbus::Modbus()
 {
    _uart = new UART();
 }

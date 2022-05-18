@@ -19,8 +19,7 @@ int main()
 {
 
    Simulator sim;
-   UART uart;
-   Modbus modbus(&uart);
+   Modbus modbus;
 
    modbus.transmitRequest(3044, 2);
    modbus.receiveResponse();
