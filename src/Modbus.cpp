@@ -38,7 +38,6 @@ void Modbus::transmitRequest(uint16_t startRegister, uint16_t length)
    std::cout << std::endl;
 
    _uart->transmitMSG(&msg[0], msg.size());
-   _uart->transmitMSG(message, 8);
 }
 
 void Modbus::receiveResponse()
