@@ -37,7 +37,10 @@ void Modbus::transmitRequest(uint16_t startRegister, uint16_t length)
    }
    std::cout << std::endl;
 
-   _uart->transmitMSG(&msg[0], msg.size());
+   uint8_t message[8] = {0x20, 0x03, 0x0b, 0xe4, 0x00, 0x02, 0xce, 0xe7};
+
+   //_uart->transmitMSG(&msg[0], msg.size());
+   _uart->transmitMSG(message, 8);
 }
 
 void Modbus::receiveResponse()
