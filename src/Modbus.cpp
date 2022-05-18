@@ -6,6 +6,7 @@ Modbus::Modbus(UART *uart) : _uart(uart)
 
 Modbus::~Modbus()
 {
+   delete _uart;
 }
 
 void Modbus::transmitRequest(uint16_t startRegister, uint16_t length)
