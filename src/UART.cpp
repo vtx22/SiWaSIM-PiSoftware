@@ -23,7 +23,7 @@ bool UART::begin()
    struct termios options;
    tcgetattr(uart0, &options);
 
-   options.c_cflag = B19200 | CS8 | CLOCAL | CREAD | HUPCL | PARENB;
+   options.c_cflag = B19200 | CS8 | CLOCAL | CREAD | HUPCL;
    options.c_iflag = 0;
    options.c_oflag = 0;
    options.c_lflag = 0;
