@@ -14,7 +14,7 @@ public:
    void receiveResponse();
 
 private:
-   uint16_t calculateCRC(std::vector<uint8_t> data);
+   uint16_t calculateCRC(uint8_t *data, int length);
 
    UART *_uart;
    const uint8_t _address = 20;
