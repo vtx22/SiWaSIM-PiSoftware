@@ -8,7 +8,7 @@ Modbus::~Modbus()
 {
 }
 
-void Modbus::transmitRequest(uint16_t register, uint16_t length)
+void Modbus::transmitRequest(uint16_t startRegister, uint16_t length)
 {
    std::vector<uint8_t> msg;
 
@@ -16,8 +16,8 @@ void Modbus::transmitRequest(uint16_t register, uint16_t length)
    // Function code "Read Holding Registers"
    msg.push_back(0x03);
    // High Byte and Low Byte of start register
-   msg.push_back((register >> 8));
-   msg.push_back((register & 0xFF));
+   msg.push_back((startRegister >> 8));
+   msg.push_back((startRegister & 0xFF));
    // High Byte and Low Byte of number of registers
    msg.push_back((length >> 8));
    msg.push_back((length & 0xFF));
