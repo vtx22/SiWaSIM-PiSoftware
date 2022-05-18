@@ -18,8 +18,9 @@ void Modbus::transmitRequest(uint16_t startRegister, uint16_t length)
    // Function code "Read Holding Registers"
    msg.push_back(0x03);
    // High Byte and Low Byte of start register
-   msg.push_back((startRegister >> 8));
    msg.push_back((startRegister & 0xFF));
+   msg.push_back((startRegister >> 8));
+
    // High Byte and Low Byte of number of registers
    msg.push_back((length >> 8));
    msg.push_back((length & 0xFF));
@@ -29,13 +30,6 @@ void Modbus::transmitRequest(uint16_t startRegister, uint16_t length)
 
    msg.push_back((checksum & 0xFF));
    msg.push_back((checksum >> 8));
-
-   std::cout << "Generated message:\n";
-   for (auto const &i : msg)
-   {
-      printf(" %#04x ", i);
-   }
-   std::cout << std::endl;
 
    _uart->transmitMSG(&msg[0], msg.size());
 }
@@ -347,12 +341,10 @@ uint16_t Modbus::calculateCRC(uint8_t *data, int length)
 
        };
 
-   unsigned crc = 0xFFFF;
+   uint16_t crc = 0xFFFF;
 
    while (--length >= 0)
-
    {
-
       crc = crc >> 8 ^ crc_tab[(uint8_t)(crc ^ *data++)];
    }
 
