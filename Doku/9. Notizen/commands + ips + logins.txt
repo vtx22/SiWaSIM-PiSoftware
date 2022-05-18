@@ -11,3 +11,5 @@ VNC Software: VNC Viewer
 sudo systemctl disable hciuart //Uart für modem ausmachen
 
 dtoverlay=disable-bt in /boot/config.txt eintragen
+
+megaind 0 rs485wr 0 19200 1 1 1 //RS485 freigeben

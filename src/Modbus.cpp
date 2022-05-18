@@ -27,8 +27,8 @@ void Modbus::transmitRequest(uint16_t startRegister, uint16_t length)
    // Append Checksum
    uint16_t checksum = 0xE7CE; // calculateCRC(msg);
 
-   msg.push_back((checksum & 0xFF));
    msg.push_back((checksum >> 8));
+   msg.push_back((checksum & 0xFF));
 
    std::cout << "Generated message:\n";
    for (auto const &i : msg)
