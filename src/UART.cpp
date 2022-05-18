@@ -12,7 +12,7 @@ UART::~UART()
 
 bool UART::begin()
 {
-   uart0 = open("/dev/ttyS0", O_RDWR);
+   uart0 = open("/dev/ttyAMA0", O_RDWR);
 
    if (uart0 < 0)
    {
@@ -25,7 +25,7 @@ bool UART::begin()
    cfmakeraw(&options);
    options.c_cflag = B19200 | CS8 | CLOCAL | CREAD | HUPCL; // | INPCK;
    // options.c_cflag |= PARENB;
-   options.c_cflag |= PARENB;
+   // options.c_cflag |= PARENB;
    options.c_iflag = 0;
    options.c_oflag = 0;
    options.c_lflag = 0;
