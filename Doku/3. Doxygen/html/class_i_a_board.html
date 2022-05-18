@@ -84,6 +84,8 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a90742c9628677c0e8ddf120c6f5d4247"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa3886850e0b394bcf7a7933ebc7dae13"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_a_board.html#aa3886850e0b394bcf7a7933ebc7dae13">digitalRead</a> (uint8_t channel)</td></tr>
 <tr class="separator:aa3886850e0b394bcf7a7933ebc7dae13"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0a06189477e17f6ada1b45508e9636cc"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_a_board.html#a0a06189477e17f6ada1b45508e9636cc">getDigitalRead</a> (uint8_t channel)</td></tr>
+<tr class="separator:a0a06189477e17f6ada1b45508e9636cc"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a24cf40186ccefa1ef47e809b9de5faa9"><td class="memItemLeft" align="right" valign="top">uint16_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_a_board.html#a24cf40186ccefa1ef47e809b9de5faa9">readTransistions</a> (uint8_t channel)</td></tr>
 <tr class="separator:a24cf40186ccefa1ef47e809b9de5faa9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa5d275c8809b6e6cea0d356f9c4a054a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="_i_a_board_8hpp.html#a031ceda83d144811bf209020a0cf69ff">TRANSITION</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_a_board.html#aa5d275c8809b6e6cea0d356f9c4a054a">getTransistionType</a> (uint8_t channel)</td></tr>
@@ -122,6 +124,10 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a291abadcc858294866a7b2853e423a99"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af66593a8851468487bd904d61de67569"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_a_board.html#af66593a8851468487bd904d61de67569">readAnalogCurIn</a> (uint8_t channel)</td></tr>
 <tr class="separator:af66593a8851468487bd904d61de67569"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6f9c24770610896281be7d6f22d1a397"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_a_board.html#a6f9c24770610896281be7d6f22d1a397">getBoardData</a> ()</td></tr>
+<tr class="separator:a6f9c24770610896281be7d6f22d1a397"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3d8e2e8c8381db8369120199d492a534"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_a_board.html#a3d8e2e8c8381db8369120199d492a534">getBoardData</a> (uint8_t *temp, float *rail24, float *rail5)</td></tr>
+<tr class="separator:a3d8e2e8c8381db8369120199d492a534"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6136315b8cf22149ed58dbd907192616"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_a_board.html#a6136315b8cf22149ed58dbd907192616">setAllOFF</a> ()</td></tr>
 <tr class="separator:a6136315b8cf22149ed58dbd907192616"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
@@ -239,6 +245,76 @@ Public Member Functions</h2></td></tr>
       <table class="memname">
         <tr>
           <td class="memname">float IABoard::getAnalogVolOut </td>
+          <td>(</td>
+          <td class="paramtype">uint8_t&#160;</td>
+          <td class="paramname"><em>channel</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a6f9c24770610896281be7d6f22d1a397" name="a6f9c24770610896281be7d6f22d1a397"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6f9c24770610896281be7d6f22d1a397">&#9670;&nbsp;</a></span>getBoardData() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void IABoard::getBoardData </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p >Receives the board data through the command. Board data includes temperature, 24V input rail voltage and 5V rail voltage </p>
+
+</div>
+</div>
+<a id="a3d8e2e8c8381db8369120199d492a534" name="a3d8e2e8c8381db8369120199d492a534"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3d8e2e8c8381db8369120199d492a534">&#9670;&nbsp;</a></span>getBoardData() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void IABoard::getBoardData </td>
+          <td>(</td>
+          <td class="paramtype">uint8_t *&#160;</td>
+          <td class="paramname"><em>temp</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float *&#160;</td>
+          <td class="paramname"><em>rail24</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float *&#160;</td>
+          <td class="paramname"><em>rail5</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a0a06189477e17f6ada1b45508e9636cc" name="a0a06189477e17f6ada1b45508e9636cc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0a06189477e17f6ada1b45508e9636cc">&#9670;&nbsp;</a></span>getDigitalRead()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool IABoard::getDigitalRead </td>
           <td>(</td>
           <td class="paramtype">uint8_t&#160;</td>
           <td class="paramname"><em>channel</em></td><td>)</td>

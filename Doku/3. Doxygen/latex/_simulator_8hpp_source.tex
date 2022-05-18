@@ -6,12 +6,12 @@
 \DoxyCodeLine{2 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{_p_c_b_8hpp}{PCB.hpp}}"{}}}
 \DoxyCodeLine{3 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{_configuration_8hpp}{Configuration.hpp}}"{}}}
 \DoxyCodeLine{4 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{_i_a_board_8hpp}{IABoard.hpp}}"{}}}
-\DoxyCodeLine{5 \textcolor{preprocessor}{\#include <chrono>}}
-\DoxyCodeLine{6 \textcolor{preprocessor}{\#include <thread>}}
-\DoxyCodeLine{7 }
-\DoxyCodeLine{8 \textcolor{keyword}{using namespace }std::chrono\_literals;}
+\DoxyCodeLine{5 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{_material_flow_8hpp}{MaterialFlow.hpp}}"{}}}
+\DoxyCodeLine{6 }
+\DoxyCodeLine{7 \textcolor{preprocessor}{\#include <chrono>}}
+\DoxyCodeLine{8 \textcolor{preprocessor}{\#include <thread>}}
 \DoxyCodeLine{9 }
-\DoxyCodeLine{10 \textcolor{preprocessor}{\#define CONFIG\_PATH "{}/home/siwasim/SiWaSIM-\/PiSoftware/Konfiguration/config.json"{}}}
+\DoxyCodeLine{10 \textcolor{keyword}{using namespace }std::chrono\_literals;}
 \DoxyCodeLine{11 }
 \DoxyCodeLine{12 \textcolor{keyword}{class }\mbox{\hyperlink{class_simulator}{Simulator}}}
 \DoxyCodeLine{13 \{}
@@ -26,13 +26,24 @@
 \DoxyCodeLine{22    \textcolor{keywordtype}{void} \mbox{\hyperlink{class_simulator_a8585f658197dbaba1905ef9654b8de80}{setVelocityPER}}(\textcolor{keywordtype}{float} percentage);}
 \DoxyCodeLine{23    \textcolor{keywordtype}{void} \mbox{\hyperlink{class_simulator_a279633984034631853a4ecf16d478be1}{setVelocityFRQ}}(\textcolor{keywordtype}{float} frequency);}
 \DoxyCodeLine{24 }
-\DoxyCodeLine{25    \textcolor{keywordtype}{void} \mbox{\hyperlink{class_simulator_abe9678f710894b6548da5b9a89391981}{bootupAnimation}}();}
-\DoxyCodeLine{26    \textcolor{keywordtype}{void} \mbox{\hyperlink{class_simulator_a02dce5814f4cf0c17dbbfbc606032945}{loadConfig}}();}
-\DoxyCodeLine{27 }
-\DoxyCodeLine{28 \textcolor{keyword}{private}:}
-\DoxyCodeLine{29    \mbox{\hyperlink{class_configuration}{Configuration}} *\_config;}
-\DoxyCodeLine{30    \mbox{\hyperlink{class_p_c_b}{PCB}} *\_pcb;}
-\DoxyCodeLine{31    \mbox{\hyperlink{class_i_a_board}{IABoard}} *\_ia;}
-\DoxyCodeLine{32 \};}
+\DoxyCodeLine{25    \textcolor{keywordtype}{void} \mbox{\hyperlink{class_simulator_a3a09a331888d2087f6afbb53e1860195}{setImpedance}}(\mbox{\hyperlink{_configuration_8hpp_a8cdbfc5a2637c1334b36e71aaf4f960e}{IMPEDANCE}} impedance);}
+\DoxyCodeLine{26 }
+\DoxyCodeLine{27    \textcolor{keywordtype}{void} \mbox{\hyperlink{class_simulator_abe9678f710894b6548da5b9a89391981}{bootupAnimation}}();}
+\DoxyCodeLine{28    \textcolor{keywordtype}{void} \mbox{\hyperlink{class_simulator_a008cd4b74753e0452e732c93476f1f39}{reloadConfig}}();}
+\DoxyCodeLine{29 }
+\DoxyCodeLine{30    \textcolor{keywordtype}{void} \mbox{\hyperlink{class_simulator_a6582f4d0fe9ce549dc4769111e497aba}{testFunction}}();}
+\DoxyCodeLine{31 }
+\DoxyCodeLine{32    \textcolor{keywordtype}{float} \mbox{\hyperlink{class_simulator_ad2658f679abc1321cb387ea635514369}{run}}(\mbox{\hyperlink{_configuration_8hpp_a8c551c1eb58ae69a51730eb254b93c91}{RUN\_MODE}} runMode, \textcolor{keywordtype}{float} timestep, \textcolor{keywordtype}{float} *weight);}
+\DoxyCodeLine{33    \textcolor{keywordtype}{float} \mbox{\hyperlink{class_simulator_a037bd4438dc54efd65663e76b1651062}{runPassive}}(\textcolor{keywordtype}{float} timestep, \textcolor{keywordtype}{float} *weight);}
+\DoxyCodeLine{34 }
+\DoxyCodeLine{35    \textcolor{keywordtype}{void} \mbox{\hyperlink{class_simulator_a5a7b96a490946d1eb5ba025c7be178ef}{calibrateLCVoltage}}();}
+\DoxyCodeLine{36 }
+\DoxyCodeLine{37 \textcolor{keyword}{private}:}
+\DoxyCodeLine{38    \mbox{\hyperlink{class_configuration}{Configuration}} *\_config;}
+\DoxyCodeLine{39    \mbox{\hyperlink{class_p_c_b}{PCB}} *\_pcb;}
+\DoxyCodeLine{40    \mbox{\hyperlink{class_i_a_board}{IABoard}} *\_ia;}
+\DoxyCodeLine{41 }
+\DoxyCodeLine{42    \mbox{\hyperlink{class_material_flow}{MaterialFlow}} *\_materialFlows[4];}
+\DoxyCodeLine{43 \};}
 
 \end{DoxyCode}

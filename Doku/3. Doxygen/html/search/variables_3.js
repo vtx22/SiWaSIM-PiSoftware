@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['freqat100_0',['freqAt100',['../class_configuration.html#a4248163a3f41503860502e63931cc3ed',1,'Configuration']]]
+  ['d_0',['d',['../class_configuration.html#a3f0fbeaebbee926fd0f399c24d9e6b9b',1,'Configuration']]]
 ];

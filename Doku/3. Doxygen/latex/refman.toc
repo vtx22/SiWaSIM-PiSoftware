@@ -11,166 +11,219 @@
 \contentsline {subsection}{\numberline {3.1.2}Member Function Documentation}{6}{subsection.3.1.2}%
 \contentsline {subsubsection}{\numberline {3.1.2.1}loadConfiguration()}{6}{subsubsection.3.1.2.1}%
 \contentsline {subsection}{\numberline {3.1.3}Member Data Documentation}{6}{subsection.3.1.3}%
-\contentsline {subsubsection}{\numberline {3.1.3.1}addvol\_ratio}{6}{subsubsection.3.1.3.1}%
-\contentsline {subsubsection}{\numberline {3.1.3.2}cellCharecteristic}{7}{subsubsection.3.1.3.2}%
-\contentsline {subsubsection}{\numberline {3.1.3.3}cellMode}{7}{subsubsection.3.1.3.3}%
-\contentsline {subsubsection}{\numberline {3.1.3.4}exc\_voltage}{7}{subsubsection.3.1.3.4}%
-\contentsline {subsubsection}{\numberline {3.1.3.5}freqAt100}{7}{subsubsection.3.1.3.5}%
-\contentsline {subsubsection}{\numberline {3.1.3.6}initial\_weight}{7}{subsubsection.3.1.3.6}%
-\contentsline {subsubsection}{\numberline {3.1.3.7}load\_weight}{7}{subsubsection.3.1.3.7}%
-\contentsline {subsubsection}{\numberline {3.1.3.8}max\_diff\_voltage}{8}{subsubsection.3.1.3.8}%
-\contentsline {subsubsection}{\numberline {3.1.3.9}speedAt100}{8}{subsubsection.3.1.3.9}%
-\contentsline {subsubsection}{\numberline {3.1.3.10}systemType}{8}{subsubsection.3.1.3.10}%
-\contentsline {section}{\numberline {3.2}GPIO Class Reference}{8}{section.3.2}%
-\contentsline {subsection}{\numberline {3.2.1}Constructor \& Destructor Documentation}{8}{subsection.3.2.1}%
-\contentsline {subsubsection}{\numberline {3.2.1.1}GPIO()}{9}{subsubsection.3.2.1.1}%
-\contentsline {subsubsection}{\numberline {3.2.1.2}$\sim $GPIO()}{9}{subsubsection.3.2.1.2}%
-\contentsline {subsection}{\numberline {3.2.2}Member Function Documentation}{9}{subsection.3.2.2}%
-\contentsline {subsubsection}{\numberline {3.2.2.1}readPin()}{9}{subsubsection.3.2.2.1}%
-\contentsline {subsubsection}{\numberline {3.2.2.2}setPinMode()}{9}{subsubsection.3.2.2.2}%
-\contentsline {subsubsection}{\numberline {3.2.2.3}setPWM()}{9}{subsubsection.3.2.2.3}%
-\contentsline {subsubsection}{\numberline {3.2.2.4}writePin()}{9}{subsubsection.3.2.2.4}%
-\contentsline {section}{\numberline {3.3}I2C Class Reference}{10}{section.3.3}%
-\contentsline {subsection}{\numberline {3.3.1}Constructor \& Destructor Documentation}{10}{subsection.3.3.1}%
-\contentsline {subsubsection}{\numberline {3.3.1.1}I2C()}{10}{subsubsection.3.3.1.1}%
-\contentsline {subsubsection}{\numberline {3.3.1.2}$\sim $I2C()}{10}{subsubsection.3.3.1.2}%
-\contentsline {subsection}{\numberline {3.3.2}Member Function Documentation}{10}{subsection.3.3.2}%
-\contentsline {subsubsection}{\numberline {3.3.2.1}begin()}{10}{subsubsection.3.3.2.1}%
-\contentsline {subsubsection}{\numberline {3.3.2.2}readData()\hspace {0.1cm}{\footnotesize \ttfamily [1/2]}}{10}{subsubsection.3.3.2.2}%
-\contentsline {subsubsection}{\numberline {3.3.2.3}readData()\hspace {0.1cm}{\footnotesize \ttfamily [2/2]}}{11}{subsubsection.3.3.2.3}%
-\contentsline {subsubsection}{\numberline {3.3.2.4}writeData()\hspace {0.1cm}{\footnotesize \ttfamily [1/2]}}{11}{subsubsection.3.3.2.4}%
-\contentsline {subsubsection}{\numberline {3.3.2.5}writeData()\hspace {0.1cm}{\footnotesize \ttfamily [2/2]}}{11}{subsubsection.3.3.2.5}%
-\contentsline {section}{\numberline {3.4}IABoard Class Reference}{11}{section.3.4}%
-\contentsline {subsection}{\numberline {3.4.1}Constructor \& Destructor Documentation}{12}{subsection.3.4.1}%
-\contentsline {subsubsection}{\numberline {3.4.1.1}IABoard()}{12}{subsubsection.3.4.1.1}%
-\contentsline {subsubsection}{\numberline {3.4.1.2}$\sim $IABoard()}{12}{subsubsection.3.4.1.2}%
-\contentsline {subsection}{\numberline {3.4.2}Member Function Documentation}{12}{subsection.3.4.2}%
-\contentsline {subsubsection}{\numberline {3.4.2.1}detectBoard()}{12}{subsubsection.3.4.2.1}%
-\contentsline {subsubsection}{\numberline {3.4.2.2}digitalRead()\hspace {0.1cm}{\footnotesize \ttfamily [1/2]}}{12}{subsubsection.3.4.2.2}%
-\contentsline {subsubsection}{\numberline {3.4.2.3}digitalRead()\hspace {0.1cm}{\footnotesize \ttfamily [2/2]}}{12}{subsubsection.3.4.2.3}%
-\contentsline {subsubsection}{\numberline {3.4.2.4}getAnalogCurOut()}{12}{subsubsection.3.4.2.4}%
-\contentsline {subsubsection}{\numberline {3.4.2.5}getAnalogVolOut()}{12}{subsubsection.3.4.2.5}%
-\contentsline {subsubsection}{\numberline {3.4.2.6}getLED()}{12}{subsubsection.3.4.2.6}%
-\contentsline {subsubsection}{\numberline {3.4.2.7}getOpenDrainDOUT()\hspace {0.1cm}{\footnotesize \ttfamily [1/2]}}{13}{subsubsection.3.4.2.7}%
-\contentsline {subsubsection}{\numberline {3.4.2.8}getOpenDrainDOUT()\hspace {0.1cm}{\footnotesize \ttfamily [2/2]}}{13}{subsubsection.3.4.2.8}%
-\contentsline {subsubsection}{\numberline {3.4.2.9}getOpenDrainPWM()}{13}{subsubsection.3.4.2.9}%
-\contentsline {subsubsection}{\numberline {3.4.2.10}getTransistionType()}{13}{subsubsection.3.4.2.10}%
-\contentsline {subsubsection}{\numberline {3.4.2.11}readAnalogCurIn()}{13}{subsubsection.3.4.2.11}%
-\contentsline {subsubsection}{\numberline {3.4.2.12}readAnalogVolIn()}{14}{subsubsection.3.4.2.12}%
-\contentsline {subsubsection}{\numberline {3.4.2.13}readAnalogVolInPM()}{14}{subsubsection.3.4.2.13}%
-\contentsline {subsubsection}{\numberline {3.4.2.14}readTransistions()}{14}{subsubsection.3.4.2.14}%
-\contentsline {subsubsection}{\numberline {3.4.2.15}resetTransitions()}{15}{subsubsection.3.4.2.15}%
-\contentsline {subsubsection}{\numberline {3.4.2.16}setAllLED()}{15}{subsubsection.3.4.2.16}%
-\contentsline {subsubsection}{\numberline {3.4.2.17}setAllOFF()}{15}{subsubsection.3.4.2.17}%
-\contentsline {subsubsection}{\numberline {3.4.2.18}setAnalogCurOut()}{15}{subsubsection.3.4.2.18}%
-\contentsline {subsubsection}{\numberline {3.4.2.19}setAnalogVolOut()}{15}{subsubsection.3.4.2.19}%
-\contentsline {subsubsection}{\numberline {3.4.2.20}setLED()}{15}{subsubsection.3.4.2.20}%
-\contentsline {subsubsection}{\numberline {3.4.2.21}setOpenDrainDOUT()}{16}{subsubsection.3.4.2.21}%
-\contentsline {subsubsection}{\numberline {3.4.2.22}setOpenDrainPWM()}{16}{subsubsection.3.4.2.22}%
-\contentsline {subsubsection}{\numberline {3.4.2.23}setTransistionType()}{16}{subsubsection.3.4.2.23}%
-\contentsline {section}{\numberline {3.5}PCB Class Reference}{16}{section.3.5}%
-\contentsline {subsection}{\numberline {3.5.1}Constructor \& Destructor Documentation}{17}{subsection.3.5.1}%
-\contentsline {subsubsection}{\numberline {3.5.1.1}PCB()}{17}{subsubsection.3.5.1.1}%
-\contentsline {subsubsection}{\numberline {3.5.1.2}$\sim $PCB()}{17}{subsubsection.3.5.1.2}%
-\contentsline {subsection}{\numberline {3.5.2}Member Function Documentation}{17}{subsection.3.5.2}%
-\contentsline {subsubsection}{\numberline {3.5.2.1}getEXCVoltage()}{17}{subsubsection.3.5.2.1}%
-\contentsline {subsubsection}{\numberline {3.5.2.2}getSENVoltage()}{18}{subsubsection.3.5.2.2}%
-\contentsline {subsubsection}{\numberline {3.5.2.3}ledBusy()}{18}{subsubsection.3.5.2.3}%
-\contentsline {subsubsection}{\numberline {3.5.2.4}ledFault()}{18}{subsubsection.3.5.2.4}%
-\contentsline {subsubsection}{\numberline {3.5.2.5}ledReady()}{18}{subsubsection.3.5.2.5}%
-\contentsline {subsubsection}{\numberline {3.5.2.6}reloadConfig()}{18}{subsubsection.3.5.2.6}%
-\contentsline {subsubsection}{\numberline {3.5.2.7}setEXTRASW1()}{18}{subsubsection.3.5.2.7}%
-\contentsline {subsubsection}{\numberline {3.5.2.8}setEXTRASW2()}{18}{subsubsection.3.5.2.8}%
-\contentsline {subsubsection}{\numberline {3.5.2.9}setImpedance()}{19}{subsubsection.3.5.2.9}%
-\contentsline {subsubsection}{\numberline {3.5.2.10}setLoadcellDCVoltage()}{19}{subsubsection.3.5.2.10}%
-\contentsline {subsubsection}{\numberline {3.5.2.11}setLoadcellVoltage()}{19}{subsubsection.3.5.2.11}%
-\contentsline {subsubsection}{\numberline {3.5.2.12}setPOWERSW1()}{19}{subsubsection.3.5.2.12}%
-\contentsline {subsubsection}{\numberline {3.5.2.13}setPOWERSW2()}{19}{subsubsection.3.5.2.13}%
-\contentsline {subsubsection}{\numberline {3.5.2.14}setPWM()}{19}{subsubsection.3.5.2.14}%
-\contentsline {subsubsection}{\numberline {3.5.2.15}setSENVoltage()}{20}{subsubsection.3.5.2.15}%
-\contentsline {section}{\numberline {3.6}Simulator Class Reference}{20}{section.3.6}%
-\contentsline {subsection}{\numberline {3.6.1}Constructor \& Destructor Documentation}{20}{subsection.3.6.1}%
-\contentsline {subsubsection}{\numberline {3.6.1.1}Simulator()}{20}{subsubsection.3.6.1.1}%
-\contentsline {subsubsection}{\numberline {3.6.1.2}$\sim $Simulator()}{20}{subsubsection.3.6.1.2}%
-\contentsline {subsection}{\numberline {3.6.2}Member Function Documentation}{20}{subsection.3.6.2}%
-\contentsline {subsubsection}{\numberline {3.6.2.1}bootupAnimation()}{21}{subsubsection.3.6.2.1}%
-\contentsline {subsubsection}{\numberline {3.6.2.2}loadConfig()}{21}{subsubsection.3.6.2.2}%
-\contentsline {subsubsection}{\numberline {3.6.2.3}setVelocity()}{21}{subsubsection.3.6.2.3}%
-\contentsline {subsubsection}{\numberline {3.6.2.4}setVelocityFRQ()}{21}{subsubsection.3.6.2.4}%
-\contentsline {subsubsection}{\numberline {3.6.2.5}setVelocityPER()}{21}{subsubsection.3.6.2.5}%
-\contentsline {subsubsection}{\numberline {3.6.2.6}setWeightKG()}{22}{subsubsection.3.6.2.6}%
-\contentsline {subsubsection}{\numberline {3.6.2.7}setWeightPER()}{22}{subsubsection.3.6.2.7}%
-\contentsline {section}{\numberline {3.7}UART Class Reference}{22}{section.3.7}%
-\contentsline {subsection}{\numberline {3.7.1}Constructor \& Destructor Documentation}{23}{subsection.3.7.1}%
-\contentsline {subsubsection}{\numberline {3.7.1.1}UART()}{23}{subsubsection.3.7.1.1}%
-\contentsline {subsubsection}{\numberline {3.7.1.2}$\sim $UART()}{23}{subsubsection.3.7.1.2}%
+\contentsline {subsubsection}{\numberline {3.1.3.1}a}{7}{subsubsection.3.1.3.1}%
+\contentsline {subsubsection}{\numberline {3.1.3.2}addvol\_ratio}{7}{subsubsection.3.1.3.2}%
+\contentsline {subsubsection}{\numberline {3.1.3.3}b}{7}{subsubsection.3.1.3.3}%
+\contentsline {subsubsection}{\numberline {3.1.3.4}c}{7}{subsubsection.3.1.3.4}%
+\contentsline {subsubsection}{\numberline {3.1.3.5}cellCharecteristic}{7}{subsubsection.3.1.3.5}%
+\contentsline {subsubsection}{\numberline {3.1.3.6}cellMode}{7}{subsubsection.3.1.3.6}%
+\contentsline {subsubsection}{\numberline {3.1.3.7}d}{7}{subsubsection.3.1.3.7}%
+\contentsline {subsubsection}{\numberline {3.1.3.8}endVoltage}{8}{subsubsection.3.1.3.8}%
+\contentsline {subsubsection}{\numberline {3.1.3.9}exc\_voltage}{8}{subsubsection.3.1.3.9}%
+\contentsline {subsubsection}{\numberline {3.1.3.10}freqAt100}{8}{subsubsection.3.1.3.10}%
+\contentsline {subsubsection}{\numberline {3.1.3.11}initial\_weight}{8}{subsubsection.3.1.3.11}%
+\contentsline {subsubsection}{\numberline {3.1.3.12}inputChannel1}{8}{subsubsection.3.1.3.12}%
+\contentsline {subsubsection}{\numberline {3.1.3.13}inputChannel2}{8}{subsubsection.3.1.3.13}%
+\contentsline {subsubsection}{\numberline {3.1.3.14}inputChannel3}{8}{subsubsection.3.1.3.14}%
+\contentsline {subsubsection}{\numberline {3.1.3.15}inputChannel4}{9}{subsubsection.3.1.3.15}%
+\contentsline {subsubsection}{\numberline {3.1.3.16}load\_weight}{9}{subsubsection.3.1.3.16}%
+\contentsline {subsubsection}{\numberline {3.1.3.17}max\_diff\_voltage}{9}{subsubsection.3.1.3.17}%
+\contentsline {subsubsection}{\numberline {3.1.3.18}speedAt100}{9}{subsubsection.3.1.3.18}%
+\contentsline {subsubsection}{\numberline {3.1.3.19}startVoltage}{9}{subsubsection.3.1.3.19}%
+\contentsline {subsubsection}{\numberline {3.1.3.20}systemType}{9}{subsubsection.3.1.3.20}%
+\contentsline {section}{\numberline {3.2}CURVE Struct Reference}{10}{section.3.2}%
+\contentsline {subsection}{\numberline {3.2.1}Member Data Documentation}{10}{subsection.3.2.1}%
+\contentsline {subsubsection}{\numberline {3.2.1.1}fallTime}{10}{subsubsection.3.2.1.1}%
+\contentsline {subsubsection}{\numberline {3.2.1.2}maxFlow}{10}{subsubsection.3.2.1.2}%
+\contentsline {subsubsection}{\numberline {3.2.1.3}riseTime}{10}{subsubsection.3.2.1.3}%
+\contentsline {subsubsection}{\numberline {3.2.1.4}startDelay}{11}{subsubsection.3.2.1.4}%
+\contentsline {subsubsection}{\numberline {3.2.1.5}stopDelay}{11}{subsubsection.3.2.1.5}%
+\contentsline {section}{\numberline {3.3}GPIO Class Reference}{11}{section.3.3}%
+\contentsline {subsection}{\numberline {3.3.1}Constructor \& Destructor Documentation}{11}{subsection.3.3.1}%
+\contentsline {subsubsection}{\numberline {3.3.1.1}GPIO()}{11}{subsubsection.3.3.1.1}%
+\contentsline {subsubsection}{\numberline {3.3.1.2}$\sim $GPIO()}{11}{subsubsection.3.3.1.2}%
+\contentsline {subsection}{\numberline {3.3.2}Member Function Documentation}{12}{subsection.3.3.2}%
+\contentsline {subsubsection}{\numberline {3.3.2.1}readPin()}{12}{subsubsection.3.3.2.1}%
+\contentsline {subsubsection}{\numberline {3.3.2.2}setPinMode()}{12}{subsubsection.3.3.2.2}%
+\contentsline {subsubsection}{\numberline {3.3.2.3}setPWM()}{12}{subsubsection.3.3.2.3}%
+\contentsline {subsubsection}{\numberline {3.3.2.4}writePin()}{12}{subsubsection.3.3.2.4}%
+\contentsline {section}{\numberline {3.4}I2C Class Reference}{12}{section.3.4}%
+\contentsline {subsection}{\numberline {3.4.1}Constructor \& Destructor Documentation}{13}{subsection.3.4.1}%
+\contentsline {subsubsection}{\numberline {3.4.1.1}I2C()}{13}{subsubsection.3.4.1.1}%
+\contentsline {subsubsection}{\numberline {3.4.1.2}$\sim $I2C()}{13}{subsubsection.3.4.1.2}%
+\contentsline {subsection}{\numberline {3.4.2}Member Function Documentation}{13}{subsection.3.4.2}%
+\contentsline {subsubsection}{\numberline {3.4.2.1}begin()}{13}{subsubsection.3.4.2.1}%
+\contentsline {subsubsection}{\numberline {3.4.2.2}readData()\hspace {0.1cm}{\footnotesize \ttfamily [1/2]}}{13}{subsubsection.3.4.2.2}%
+\contentsline {subsubsection}{\numberline {3.4.2.3}readData()\hspace {0.1cm}{\footnotesize \ttfamily [2/2]}}{14}{subsubsection.3.4.2.3}%
+\contentsline {subsubsection}{\numberline {3.4.2.4}writeData()\hspace {0.1cm}{\footnotesize \ttfamily [1/2]}}{14}{subsubsection.3.4.2.4}%
+\contentsline {subsubsection}{\numberline {3.4.2.5}writeData()\hspace {0.1cm}{\footnotesize \ttfamily [2/2]}}{14}{subsubsection.3.4.2.5}%
+\contentsline {section}{\numberline {3.5}IABoard Class Reference}{14}{section.3.5}%
+\contentsline {subsection}{\numberline {3.5.1}Constructor \& Destructor Documentation}{15}{subsection.3.5.1}%
+\contentsline {subsubsection}{\numberline {3.5.1.1}IABoard()}{15}{subsubsection.3.5.1.1}%
+\contentsline {subsubsection}{\numberline {3.5.1.2}$\sim $IABoard()}{15}{subsubsection.3.5.1.2}%
+\contentsline {subsection}{\numberline {3.5.2}Member Function Documentation}{15}{subsection.3.5.2}%
+\contentsline {subsubsection}{\numberline {3.5.2.1}detectBoard()}{15}{subsubsection.3.5.2.1}%
+\contentsline {subsubsection}{\numberline {3.5.2.2}digitalRead()\hspace {0.1cm}{\footnotesize \ttfamily [1/2]}}{15}{subsubsection.3.5.2.2}%
+\contentsline {subsubsection}{\numberline {3.5.2.3}digitalRead()\hspace {0.1cm}{\footnotesize \ttfamily [2/2]}}{16}{subsubsection.3.5.2.3}%
+\contentsline {subsubsection}{\numberline {3.5.2.4}getAnalogCurOut()}{16}{subsubsection.3.5.2.4}%
+\contentsline {subsubsection}{\numberline {3.5.2.5}getAnalogVolOut()}{16}{subsubsection.3.5.2.5}%
+\contentsline {subsubsection}{\numberline {3.5.2.6}getBoardData()\hspace {0.1cm}{\footnotesize \ttfamily [1/2]}}{16}{subsubsection.3.5.2.6}%
+\contentsline {subsubsection}{\numberline {3.5.2.7}getBoardData()\hspace {0.1cm}{\footnotesize \ttfamily [2/2]}}{16}{subsubsection.3.5.2.7}%
+\contentsline {subsubsection}{\numberline {3.5.2.8}getDigitalRead()}{16}{subsubsection.3.5.2.8}%
+\contentsline {subsubsection}{\numberline {3.5.2.9}getLED()}{16}{subsubsection.3.5.2.9}%
+\contentsline {subsubsection}{\numberline {3.5.2.10}getOpenDrainDOUT()\hspace {0.1cm}{\footnotesize \ttfamily [1/2]}}{17}{subsubsection.3.5.2.10}%
+\contentsline {subsubsection}{\numberline {3.5.2.11}getOpenDrainDOUT()\hspace {0.1cm}{\footnotesize \ttfamily [2/2]}}{17}{subsubsection.3.5.2.11}%
+\contentsline {subsubsection}{\numberline {3.5.2.12}getOpenDrainPWM()}{17}{subsubsection.3.5.2.12}%
+\contentsline {subsubsection}{\numberline {3.5.2.13}getTransistionType()}{17}{subsubsection.3.5.2.13}%
+\contentsline {subsubsection}{\numberline {3.5.2.14}readAnalogCurIn()}{17}{subsubsection.3.5.2.14}%
+\contentsline {subsubsection}{\numberline {3.5.2.15}readAnalogVolIn()}{18}{subsubsection.3.5.2.15}%
+\contentsline {subsubsection}{\numberline {3.5.2.16}readAnalogVolInPM()}{18}{subsubsection.3.5.2.16}%
+\contentsline {subsubsection}{\numberline {3.5.2.17}readTransistions()}{18}{subsubsection.3.5.2.17}%
+\contentsline {subsubsection}{\numberline {3.5.2.18}resetTransitions()}{19}{subsubsection.3.5.2.18}%
+\contentsline {subsubsection}{\numberline {3.5.2.19}setAllLED()}{19}{subsubsection.3.5.2.19}%
+\contentsline {subsubsection}{\numberline {3.5.2.20}setAllOFF()}{19}{subsubsection.3.5.2.20}%
+\contentsline {subsubsection}{\numberline {3.5.2.21}setAnalogCurOut()}{19}{subsubsection.3.5.2.21}%
+\contentsline {subsubsection}{\numberline {3.5.2.22}setAnalogVolOut()}{19}{subsubsection.3.5.2.22}%
+\contentsline {subsubsection}{\numberline {3.5.2.23}setLED()}{19}{subsubsection.3.5.2.23}%
+\contentsline {subsubsection}{\numberline {3.5.2.24}setOpenDrainDOUT()}{20}{subsubsection.3.5.2.24}%
+\contentsline {subsubsection}{\numberline {3.5.2.25}setOpenDrainPWM()}{20}{subsubsection.3.5.2.25}%
+\contentsline {subsubsection}{\numberline {3.5.2.26}setTransistionType()}{20}{subsubsection.3.5.2.26}%
+\contentsline {section}{\numberline {3.6}Material\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Flow Class Reference}{20}{section.3.6}%
+\contentsline {subsection}{\numberline {3.6.1}Constructor \& Destructor Documentation}{21}{subsection.3.6.1}%
+\contentsline {subsubsection}{\numberline {3.6.1.1}MaterialFlow()\hspace {0.1cm}{\footnotesize \ttfamily [1/2]}}{21}{subsubsection.3.6.1.1}%
+\contentsline {subsubsection}{\numberline {3.6.1.2}MaterialFlow()\hspace {0.1cm}{\footnotesize \ttfamily [2/2]}}{21}{subsubsection.3.6.1.2}%
+\contentsline {subsubsection}{\numberline {3.6.1.3}$\sim $MaterialFlow()}{21}{subsubsection.3.6.1.3}%
+\contentsline {subsection}{\numberline {3.6.2}Member Function Documentation}{21}{subsection.3.6.2}%
+\contentsline {subsubsection}{\numberline {3.6.2.1}setFlowCurve()}{21}{subsubsection.3.6.2.1}%
+\contentsline {subsubsection}{\numberline {3.6.2.2}setFlowType()}{22}{subsubsection.3.6.2.2}%
+\contentsline {subsubsection}{\numberline {3.6.2.3}update()}{22}{subsubsection.3.6.2.3}%
+\contentsline {section}{\numberline {3.7}PCB Class Reference}{22}{section.3.7}%
+\contentsline {subsection}{\numberline {3.7.1}Constructor \& Destructor Documentation}{22}{subsection.3.7.1}%
+\contentsline {subsubsection}{\numberline {3.7.1.1}PCB()}{23}{subsubsection.3.7.1.1}%
+\contentsline {subsubsection}{\numberline {3.7.1.2}$\sim $PCB()}{23}{subsubsection.3.7.1.2}%
 \contentsline {subsection}{\numberline {3.7.2}Member Function Documentation}{23}{subsection.3.7.2}%
-\contentsline {subsubsection}{\numberline {3.7.2.1}begin()}{23}{subsubsection.3.7.2.1}%
-\contentsline {subsubsection}{\numberline {3.7.2.2}receiveMSG()}{23}{subsubsection.3.7.2.2}%
-\contentsline {subsubsection}{\numberline {3.7.2.3}transmitMSG()}{23}{subsubsection.3.7.2.3}%
-\contentsline {chapter}{\numberline {4}File Documentation}{25}{chapter.4}%
-\contentsline {section}{\numberline {4.1}F\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}:/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}GITHUB/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Si\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Wa\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}SIM-\/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Pi\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Software/src/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Configuration.cpp File Reference}{25}{section.4.1}%
-\contentsline {section}{\numberline {4.2}F\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}:/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}GITHUB/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Si\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Wa\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}SIM-\/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Pi\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Software/src/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Configuration.hpp File Reference}{25}{section.4.2}%
-\contentsline {subsection}{\numberline {4.2.1}Typedef Documentation}{25}{subsection.4.2.1}%
-\contentsline {subsubsection}{\numberline {4.2.1.1}json}{26}{subsubsection.4.2.1.1}%
-\contentsline {subsection}{\numberline {4.2.2}Enumeration Type Documentation}{26}{subsection.4.2.2}%
-\contentsline {subsubsection}{\numberline {4.2.2.1}IMPEDANCE}{26}{subsubsection.4.2.2.1}%
-\contentsline {subsubsection}{\numberline {4.2.2.2}LoadCellMode}{26}{subsubsection.4.2.2.2}%
-\contentsline {subsubsection}{\numberline {4.2.2.3}SYSTEM\_TYPE}{26}{subsubsection.4.2.2.3}%
-\contentsline {section}{\numberline {4.3}Configuration.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}hpp}{27}{section.4.3}%
-\contentsline {section}{\numberline {4.4}F\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}:/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}GITHUB/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Si\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Wa\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}SIM-\/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Pi\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Software/src/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}GPIO.cpp File Reference}{27}{section.4.4}%
-\contentsline {section}{\numberline {4.5}F\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}:/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}GITHUB/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Si\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Wa\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}SIM-\/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Pi\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Software/src/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}GPIO.hpp File Reference}{27}{section.4.5}%
-\contentsline {section}{\numberline {4.6}GPIO.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}hpp}{28}{section.4.6}%
-\contentsline {section}{\numberline {4.7}F\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}:/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}GITHUB/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Si\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Wa\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}SIM-\/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Pi\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Software/src/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}I2C.cpp File Reference}{28}{section.4.7}%
-\contentsline {section}{\numberline {4.8}F\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}:/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}GITHUB/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Si\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Wa\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}SIM-\/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Pi\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Software/src/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}I2C.hpp File Reference}{28}{section.4.8}%
-\contentsline {section}{\numberline {4.9}I2\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}C.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}hpp}{29}{section.4.9}%
-\contentsline {section}{\numberline {4.10}F\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}:/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}GITHUB/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Si\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Wa\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}SIM-\/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Pi\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Software/src/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}IABoard.cpp File Reference}{29}{section.4.10}%
-\contentsline {section}{\numberline {4.11}F\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}:/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}GITHUB/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Si\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Wa\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}SIM-\/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Pi\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Software/src/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}IABoard.hpp File Reference}{29}{section.4.11}%
-\contentsline {subsection}{\numberline {4.11.1}Macro Definition Documentation}{30}{subsection.4.11.1}%
-\contentsline {subsubsection}{\numberline {4.11.1.1}I2C\_ADDRESS}{30}{subsubsection.4.11.1.1}%
-\contentsline {subsection}{\numberline {4.11.2}Enumeration Type Documentation}{30}{subsection.4.11.2}%
-\contentsline {subsubsection}{\numberline {4.11.2.1}TRANSITION}{30}{subsubsection.4.11.2.1}%
-\contentsline {section}{\numberline {4.12}IABoard.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}hpp}{30}{section.4.12}%
-\contentsline {section}{\numberline {4.13}F\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}:/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}GITHUB/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Si\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Wa\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}SIM-\/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Pi\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Software/src/main.cpp File Reference}{31}{section.4.13}%
-\contentsline {subsection}{\numberline {4.13.1}Function Documentation}{32}{subsection.4.13.1}%
-\contentsline {subsubsection}{\numberline {4.13.1.1}main()}{32}{subsubsection.4.13.1.1}%
-\contentsline {section}{\numberline {4.14}F\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}:/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}GITHUB/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Si\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Wa\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}SIM-\/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Pi\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Software/src/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}PCB.cpp File Reference}{32}{section.4.14}%
-\contentsline {section}{\numberline {4.15}F\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}:/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}GITHUB/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Si\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Wa\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}SIM-\/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Pi\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Software/src/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}PCB.hpp File Reference}{32}{section.4.15}%
-\contentsline {subsection}{\numberline {4.15.1}Macro Definition Documentation}{33}{subsection.4.15.1}%
-\contentsline {subsubsection}{\numberline {4.15.1.1}ADDVOL\_CHANNEL}{33}{subsubsection.4.15.1.1}%
-\contentsline {subsubsection}{\numberline {4.15.1.2}CELL\_DC}{33}{subsubsection.4.15.1.2}%
-\contentsline {subsubsection}{\numberline {4.15.1.3}EXC\_IN}{33}{subsubsection.4.15.1.3}%
-\contentsline {subsubsection}{\numberline {4.15.1.4}PIN\_EXTRASW1}{33}{subsubsection.4.15.1.4}%
-\contentsline {subsubsection}{\numberline {4.15.1.5}PIN\_EXTRASW2}{33}{subsubsection.4.15.1.5}%
-\contentsline {subsubsection}{\numberline {4.15.1.6}PIN\_IMPEDANCE1}{33}{subsubsection.4.15.1.6}%
-\contentsline {subsubsection}{\numberline {4.15.1.7}PIN\_IMPEDANCE2}{33}{subsubsection.4.15.1.7}%
-\contentsline {subsubsection}{\numberline {4.15.1.8}PIN\_LED\_BUSY}{34}{subsubsection.4.15.1.8}%
-\contentsline {subsubsection}{\numberline {4.15.1.9}PIN\_LED\_FAULT}{34}{subsubsection.4.15.1.9}%
-\contentsline {subsubsection}{\numberline {4.15.1.10}PIN\_LED\_READY}{34}{subsubsection.4.15.1.10}%
-\contentsline {subsubsection}{\numberline {4.15.1.11}PIN\_POWERSW1}{34}{subsubsection.4.15.1.11}%
-\contentsline {subsubsection}{\numberline {4.15.1.12}PIN\_POWERSW2}{34}{subsubsection.4.15.1.12}%
-\contentsline {subsubsection}{\numberline {4.15.1.13}PWM\_PIN}{34}{subsubsection.4.15.1.13}%
-\contentsline {subsubsection}{\numberline {4.15.1.14}SEN\_IN}{34}{subsubsection.4.15.1.14}%
-\contentsline {subsubsection}{\numberline {4.15.1.15}SEN\_OUT}{34}{subsubsection.4.15.1.15}%
-\contentsline {subsubsection}{\numberline {4.15.1.16}SUBVOL\_CHANNEL}{35}{subsubsection.4.15.1.16}%
-\contentsline {section}{\numberline {4.16}PCB.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}hpp}{35}{section.4.16}%
-\contentsline {section}{\numberline {4.17}F\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}:/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}GITHUB/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Si\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Wa\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}SIM-\/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Pi\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Software/src/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Simulator.cpp File Reference}{36}{section.4.17}%
-\contentsline {section}{\numberline {4.18}F\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}:/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}GITHUB/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Si\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Wa\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}SIM-\/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Pi\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Software/src/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Simulator.hpp File Reference}{36}{section.4.18}%
-\contentsline {subsection}{\numberline {4.18.1}Macro Definition Documentation}{36}{subsection.4.18.1}%
-\contentsline {subsubsection}{\numberline {4.18.1.1}CONFIG\_PATH}{36}{subsubsection.4.18.1.1}%
-\contentsline {section}{\numberline {4.19}Simulator.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}hpp}{36}{section.4.19}%
-\contentsline {section}{\numberline {4.20}F\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}:/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}GITHUB/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Si\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Wa\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}SIM-\/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Pi\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Software/src/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}UART.cpp File Reference}{37}{section.4.20}%
-\contentsline {section}{\numberline {4.21}F\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}:/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}GITHUB/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Si\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Wa\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}SIM-\/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Pi\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Software/src/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}UART.hpp File Reference}{37}{section.4.21}%
-\contentsline {section}{\numberline {4.22}UART.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}hpp}{37}{section.4.22}%
-\contentsline {section}{\numberline {4.23}F\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}:/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}GITHUB/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Si\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Wa\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}SIM-\/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Pi\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Software/src/utility.cpp File Reference}{38}{section.4.23}%
-\contentsline {subsection}{\numberline {4.23.1}Function Documentation}{38}{subsection.4.23.1}%
-\contentsline {subsubsection}{\numberline {4.23.1.1}constrainMax()}{38}{subsubsection.4.23.1.1}%
-\contentsline {subsubsection}{\numberline {4.23.1.2}constrainMin()}{38}{subsubsection.4.23.1.2}%
-\contentsline {subsubsection}{\numberline {4.23.1.3}constrainMinMax()}{39}{subsubsection.4.23.1.3}%
-\contentsline {section}{\numberline {4.24}F\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}:/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}GITHUB/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Si\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Wa\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}SIM-\/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Pi\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Software/src/utility.hpp File Reference}{39}{section.4.24}%
-\contentsline {subsection}{\numberline {4.24.1}Function Documentation}{39}{subsection.4.24.1}%
-\contentsline {subsubsection}{\numberline {4.24.1.1}constrainMax()}{39}{subsubsection.4.24.1.1}%
-\contentsline {subsubsection}{\numberline {4.24.1.2}constrainMin()}{40}{subsubsection.4.24.1.2}%
-\contentsline {subsubsection}{\numberline {4.24.1.3}constrainMinMax()}{40}{subsubsection.4.24.1.3}%
-\contentsline {section}{\numberline {4.25}utility.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}hpp}{40}{section.4.25}%
-\contentsline {chapter}{Index}{41}{section*.25}%
+\contentsline {subsubsection}{\numberline {3.7.2.1}getBoardStatus()}{23}{subsubsection.3.7.2.1}%
+\contentsline {subsubsection}{\numberline {3.7.2.2}getEXCVoltage()}{23}{subsubsection.3.7.2.2}%
+\contentsline {subsubsection}{\numberline {3.7.2.3}getSENVoltage()}{23}{subsubsection.3.7.2.3}%
+\contentsline {subsubsection}{\numberline {3.7.2.4}ledBusy()}{23}{subsubsection.3.7.2.4}%
+\contentsline {subsubsection}{\numberline {3.7.2.5}ledFault()}{23}{subsubsection.3.7.2.5}%
+\contentsline {subsubsection}{\numberline {3.7.2.6}ledReady()}{24}{subsubsection.3.7.2.6}%
+\contentsline {subsubsection}{\numberline {3.7.2.7}reloadConfig()}{24}{subsubsection.3.7.2.7}%
+\contentsline {subsubsection}{\numberline {3.7.2.8}setCellAddvol()}{24}{subsubsection.3.7.2.8}%
+\contentsline {subsubsection}{\numberline {3.7.2.9}setCellSubvol()}{24}{subsubsection.3.7.2.9}%
+\contentsline {subsubsection}{\numberline {3.7.2.10}setEXTRASW1()}{24}{subsubsection.3.7.2.10}%
+\contentsline {subsubsection}{\numberline {3.7.2.11}setEXTRASW2()}{24}{subsubsection.3.7.2.11}%
+\contentsline {subsubsection}{\numberline {3.7.2.12}setImpedance()}{24}{subsubsection.3.7.2.12}%
+\contentsline {subsubsection}{\numberline {3.7.2.13}setLoadcellDCVoltage()}{25}{subsubsection.3.7.2.13}%
+\contentsline {subsubsection}{\numberline {3.7.2.14}setLoadcellVoltage()}{25}{subsubsection.3.7.2.14}%
+\contentsline {subsubsection}{\numberline {3.7.2.15}setPOWERSW1()}{25}{subsubsection.3.7.2.15}%
+\contentsline {subsubsection}{\numberline {3.7.2.16}setPOWERSW2()}{25}{subsubsection.3.7.2.16}%
+\contentsline {subsubsection}{\numberline {3.7.2.17}setPWM()}{25}{subsubsection.3.7.2.17}%
+\contentsline {subsubsection}{\numberline {3.7.2.18}setSENVoltage()}{25}{subsubsection.3.7.2.18}%
+\contentsline {section}{\numberline {3.8}Simulator Class Reference}{26}{section.3.8}%
+\contentsline {subsection}{\numberline {3.8.1}Constructor \& Destructor Documentation}{26}{subsection.3.8.1}%
+\contentsline {subsubsection}{\numberline {3.8.1.1}Simulator()}{26}{subsubsection.3.8.1.1}%
+\contentsline {subsubsection}{\numberline {3.8.1.2}$\sim $Simulator()}{26}{subsubsection.3.8.1.2}%
+\contentsline {subsection}{\numberline {3.8.2}Member Function Documentation}{26}{subsection.3.8.2}%
+\contentsline {subsubsection}{\numberline {3.8.2.1}bootupAnimation()}{26}{subsubsection.3.8.2.1}%
+\contentsline {subsubsection}{\numberline {3.8.2.2}calibrateLCVoltage()}{27}{subsubsection.3.8.2.2}%
+\contentsline {subsubsection}{\numberline {3.8.2.3}reloadConfig()}{27}{subsubsection.3.8.2.3}%
+\contentsline {subsubsection}{\numberline {3.8.2.4}run()}{27}{subsubsection.3.8.2.4}%
+\contentsline {subsubsection}{\numberline {3.8.2.5}runPassive()}{27}{subsubsection.3.8.2.5}%
+\contentsline {subsubsection}{\numberline {3.8.2.6}setImpedance()}{27}{subsubsection.3.8.2.6}%
+\contentsline {subsubsection}{\numberline {3.8.2.7}setVelocity()}{27}{subsubsection.3.8.2.7}%
+\contentsline {subsubsection}{\numberline {3.8.2.8}setVelocityFRQ()}{28}{subsubsection.3.8.2.8}%
+\contentsline {subsubsection}{\numberline {3.8.2.9}setVelocityPER()}{28}{subsubsection.3.8.2.9}%
+\contentsline {subsubsection}{\numberline {3.8.2.10}setWeightKG()}{28}{subsubsection.3.8.2.10}%
+\contentsline {subsubsection}{\numberline {3.8.2.11}setWeightPER()}{28}{subsubsection.3.8.2.11}%
+\contentsline {subsubsection}{\numberline {3.8.2.12}testFunction()}{29}{subsubsection.3.8.2.12}%
+\contentsline {section}{\numberline {3.9}UART Class Reference}{29}{section.3.9}%
+\contentsline {subsection}{\numberline {3.9.1}Constructor \& Destructor Documentation}{29}{subsection.3.9.1}%
+\contentsline {subsubsection}{\numberline {3.9.1.1}UART()}{29}{subsubsection.3.9.1.1}%
+\contentsline {subsubsection}{\numberline {3.9.1.2}$\sim $UART()}{29}{subsubsection.3.9.1.2}%
+\contentsline {subsection}{\numberline {3.9.2}Member Function Documentation}{29}{subsection.3.9.2}%
+\contentsline {subsubsection}{\numberline {3.9.2.1}begin()}{30}{subsubsection.3.9.2.1}%
+\contentsline {subsubsection}{\numberline {3.9.2.2}receiveMSG()}{30}{subsubsection.3.9.2.2}%
+\contentsline {subsubsection}{\numberline {3.9.2.3}transmitMSG()}{30}{subsubsection.3.9.2.3}%
+\contentsline {chapter}{\numberline {4}File Documentation}{31}{chapter.4}%
+\contentsline {section}{\numberline {4.1}F\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}:/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}GITHUB/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Si\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Wa\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}SIM-\/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Pi\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Software/src/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Configuration.cpp File Reference}{31}{section.4.1}%
+\contentsline {section}{\numberline {4.2}F\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}:/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}GITHUB/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Si\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Wa\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}SIM-\/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Pi\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Software/src/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Configuration.hpp File Reference}{31}{section.4.2}%
+\contentsline {subsection}{\numberline {4.2.1}Macro Definition Documentation}{32}{subsection.4.2.1}%
+\contentsline {subsubsection}{\numberline {4.2.1.1}ADDVOL\_CHANNEL}{32}{subsubsection.4.2.1.1}%
+\contentsline {subsubsection}{\numberline {4.2.1.2}CELL\_DC}{32}{subsubsection.4.2.1.2}%
+\contentsline {subsubsection}{\numberline {4.2.1.3}CONFIG\_PATH}{32}{subsubsection.4.2.1.3}%
+\contentsline {subsubsection}{\numberline {4.2.1.4}EXC\_IN}{32}{subsubsection.4.2.1.4}%
+\contentsline {subsubsection}{\numberline {4.2.1.5}I2C\_ADDRESS}{33}{subsubsection.4.2.1.5}%
+\contentsline {subsubsection}{\numberline {4.2.1.6}I2C\_DEVICE}{33}{subsubsection.4.2.1.6}%
+\contentsline {subsubsection}{\numberline {4.2.1.7}PIN\_EXTRASW1}{33}{subsubsection.4.2.1.7}%
+\contentsline {subsubsection}{\numberline {4.2.1.8}PIN\_EXTRASW2}{33}{subsubsection.4.2.1.8}%
+\contentsline {subsubsection}{\numberline {4.2.1.9}PIN\_IMPEDANCE1}{33}{subsubsection.4.2.1.9}%
+\contentsline {subsubsection}{\numberline {4.2.1.10}PIN\_IMPEDANCE2}{33}{subsubsection.4.2.1.10}%
+\contentsline {subsubsection}{\numberline {4.2.1.11}PIN\_LED\_BUSY}{33}{subsubsection.4.2.1.11}%
+\contentsline {subsubsection}{\numberline {4.2.1.12}PIN\_LED\_FAULT}{33}{subsubsection.4.2.1.12}%
+\contentsline {subsubsection}{\numberline {4.2.1.13}PIN\_LED\_READY}{34}{subsubsection.4.2.1.13}%
+\contentsline {subsubsection}{\numberline {4.2.1.14}PIN\_POWERSW1}{34}{subsubsection.4.2.1.14}%
+\contentsline {subsubsection}{\numberline {4.2.1.15}PIN\_POWERSW2}{34}{subsubsection.4.2.1.15}%
+\contentsline {subsubsection}{\numberline {4.2.1.16}PWM\_PIN}{34}{subsubsection.4.2.1.16}%
+\contentsline {subsubsection}{\numberline {4.2.1.17}SEN\_IN}{34}{subsubsection.4.2.1.17}%
+\contentsline {subsubsection}{\numberline {4.2.1.18}SEN\_OUT}{34}{subsubsection.4.2.1.18}%
+\contentsline {subsubsection}{\numberline {4.2.1.19}SUBVOL\_CHANNEL}{34}{subsubsection.4.2.1.19}%
+\contentsline {subsection}{\numberline {4.2.2}Typedef Documentation}{34}{subsection.4.2.2}%
+\contentsline {subsubsection}{\numberline {4.2.2.1}json}{35}{subsubsection.4.2.2.1}%
+\contentsline {subsection}{\numberline {4.2.3}Enumeration Type Documentation}{35}{subsection.4.2.3}%
+\contentsline {subsubsection}{\numberline {4.2.3.1}IMPEDANCE}{35}{subsubsection.4.2.3.1}%
+\contentsline {subsubsection}{\numberline {4.2.3.2}LoadCellMode}{35}{subsubsection.4.2.3.2}%
+\contentsline {subsubsection}{\numberline {4.2.3.3}MATERIAL\_FLOW}{35}{subsubsection.4.2.3.3}%
+\contentsline {subsubsection}{\numberline {4.2.3.4}RUN\_MODE}{36}{subsubsection.4.2.3.4}%
+\contentsline {subsubsection}{\numberline {4.2.3.5}SYSTEM\_TYPE}{36}{subsubsection.4.2.3.5}%
+\contentsline {section}{\numberline {4.3}Configuration.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}hpp}{36}{section.4.3}%
+\contentsline {section}{\numberline {4.4}F\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}:/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}GITHUB/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Si\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Wa\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}SIM-\/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Pi\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Software/src/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}GPIO.cpp File Reference}{38}{section.4.4}%
+\contentsline {section}{\numberline {4.5}F\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}:/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}GITHUB/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Si\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Wa\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}SIM-\/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Pi\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Software/src/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}GPIO.hpp File Reference}{38}{section.4.5}%
+\contentsline {section}{\numberline {4.6}GPIO.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}hpp}{38}{section.4.6}%
+\contentsline {section}{\numberline {4.7}F\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}:/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}GITHUB/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Si\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Wa\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}SIM-\/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Pi\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Software/src/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}I2C.cpp File Reference}{38}{section.4.7}%
+\contentsline {section}{\numberline {4.8}F\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}:/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}GITHUB/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Si\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Wa\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}SIM-\/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Pi\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Software/src/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}I2C.hpp File Reference}{39}{section.4.8}%
+\contentsline {section}{\numberline {4.9}I2\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}C.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}hpp}{39}{section.4.9}%
+\contentsline {section}{\numberline {4.10}F\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}:/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}GITHUB/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Si\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Wa\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}SIM-\/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Pi\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Software/src/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}IABoard.cpp File Reference}{39}{section.4.10}%
+\contentsline {section}{\numberline {4.11}F\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}:/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}GITHUB/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Si\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Wa\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}SIM-\/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Pi\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Software/src/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}IABoard.hpp File Reference}{39}{section.4.11}%
+\contentsline {subsection}{\numberline {4.11.1}Enumeration Type Documentation}{40}{subsection.4.11.1}%
+\contentsline {subsubsection}{\numberline {4.11.1.1}TRANSITION}{40}{subsubsection.4.11.1.1}%
+\contentsline {section}{\numberline {4.12}IABoard.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}hpp}{40}{section.4.12}%
+\contentsline {section}{\numberline {4.13}F\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}:/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}GITHUB/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Si\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Wa\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}SIM-\/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Pi\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Software/src/main.cpp File Reference}{41}{section.4.13}%
+\contentsline {subsection}{\numberline {4.13.1}Function Documentation}{42}{subsection.4.13.1}%
+\contentsline {subsubsection}{\numberline {4.13.1.1}main()}{42}{subsubsection.4.13.1.1}%
+\contentsline {section}{\numberline {4.14}F\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}:/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}GITHUB/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Si\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Wa\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}SIM-\/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Pi\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Software/src/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Material\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Flow.cpp File Reference}{42}{section.4.14}%
+\contentsline {section}{\numberline {4.15}F\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}:/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}GITHUB/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Si\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Wa\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}SIM-\/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Pi\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Software/src/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Material\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Flow.hpp File Reference}{42}{section.4.15}%
+\contentsline {section}{\numberline {4.16}Material\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Flow.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}hpp}{43}{section.4.16}%
+\contentsline {section}{\numberline {4.17}F\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}:/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}GITHUB/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Si\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Wa\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}SIM-\/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Pi\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Software/src/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}PCB.cpp File Reference}{43}{section.4.17}%
+\contentsline {section}{\numberline {4.18}F\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}:/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}GITHUB/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Si\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Wa\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}SIM-\/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Pi\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Software/src/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}PCB.hpp File Reference}{43}{section.4.18}%
+\contentsline {section}{\numberline {4.19}PCB.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}hpp}{44}{section.4.19}%
+\contentsline {section}{\numberline {4.20}F\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}:/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}GITHUB/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Si\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Wa\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}SIM-\/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Pi\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Software/src/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Simulator.cpp File Reference}{44}{section.4.20}%
+\contentsline {section}{\numberline {4.21}F\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}:/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}GITHUB/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Si\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Wa\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}SIM-\/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Pi\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Software/src/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Simulator.hpp File Reference}{44}{section.4.21}%
+\contentsline {section}{\numberline {4.22}Simulator.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}hpp}{45}{section.4.22}%
+\contentsline {section}{\numberline {4.23}F\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}:/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}GITHUB/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Si\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Wa\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}SIM-\/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Pi\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Software/src/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}UART.cpp File Reference}{45}{section.4.23}%
+\contentsline {section}{\numberline {4.24}F\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}:/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}GITHUB/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Si\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Wa\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}SIM-\/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Pi\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Software/src/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}UART.hpp File Reference}{45}{section.4.24}%
+\contentsline {section}{\numberline {4.25}UART.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}hpp}{46}{section.4.25}%
+\contentsline {section}{\numberline {4.26}F\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}:/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}GITHUB/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Si\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Wa\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}SIM-\/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Pi\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Software/src/utility.cpp File Reference}{46}{section.4.26}%
+\contentsline {subsection}{\numberline {4.26.1}Function Documentation}{46}{subsection.4.26.1}%
+\contentsline {subsubsection}{\numberline {4.26.1.1}calculateAverage()}{46}{subsubsection.4.26.1.1}%
+\contentsline {subsubsection}{\numberline {4.26.1.2}calculateCubic()}{47}{subsubsection.4.26.1.2}%
+\contentsline {subsubsection}{\numberline {4.26.1.3}calculateCubicDeriv()}{47}{subsubsection.4.26.1.3}%
+\contentsline {subsubsection}{\numberline {4.26.1.4}constrainMax()}{47}{subsubsection.4.26.1.4}%
+\contentsline {subsubsection}{\numberline {4.26.1.5}constrainMin()}{48}{subsubsection.4.26.1.5}%
+\contentsline {subsubsection}{\numberline {4.26.1.6}constrainMinMax()}{48}{subsubsection.4.26.1.6}%
+\contentsline {subsubsection}{\numberline {4.26.1.7}cubicRegression()}{48}{subsubsection.4.26.1.7}%
+\contentsline {subsubsection}{\numberline {4.26.1.8}linearRegression()}{49}{subsubsection.4.26.1.8}%
+\contentsline {subsubsection}{\numberline {4.26.1.9}solveCubicForVoltage()}{49}{subsubsection.4.26.1.9}%
+\contentsline {section}{\numberline {4.27}F\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}:/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}GITHUB/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Si\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Wa\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}SIM-\/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Pi\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Software/src/utility.hpp File Reference}{49}{section.4.27}%
+\contentsline {subsection}{\numberline {4.27.1}Function Documentation}{50}{subsection.4.27.1}%
+\contentsline {subsubsection}{\numberline {4.27.1.1}calculateAverage()}{50}{subsubsection.4.27.1.1}%
+\contentsline {subsubsection}{\numberline {4.27.1.2}calculateCubic()}{50}{subsubsection.4.27.1.2}%
+\contentsline {subsubsection}{\numberline {4.27.1.3}calculateCubicDeriv()}{51}{subsubsection.4.27.1.3}%
+\contentsline {subsubsection}{\numberline {4.27.1.4}constrainMax()}{51}{subsubsection.4.27.1.4}%
+\contentsline {subsubsection}{\numberline {4.27.1.5}constrainMin()}{51}{subsubsection.4.27.1.5}%
+\contentsline {subsubsection}{\numberline {4.27.1.6}constrainMinMax()}{52}{subsubsection.4.27.1.6}%
+\contentsline {subsubsection}{\numberline {4.27.1.7}cubicRegression()}{52}{subsubsection.4.27.1.7}%
+\contentsline {subsubsection}{\numberline {4.27.1.8}linearRegression()}{52}{subsubsection.4.27.1.8}%
+\contentsline {subsubsection}{\numberline {4.27.1.9}solveCubicForVoltage()}{53}{subsubsection.4.27.1.9}%
+\contentsline {section}{\numberline {4.28}utility.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}hpp}{53}{section.4.28}%
+\contentsline {chapter}{Index}{55}{section*.26}%

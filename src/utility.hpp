@@ -20,4 +20,4 @@ void cubicRegression(std::vector<float> x, std::vector<float> y, float *a, float
 float solveCubicForVoltage(float a, float b, float c, float d, float value);
 
 float calculateCubic(float a, float b, float c, float d, float x);
-float calculateCubicDeriv(float a, float b, float c, float d, float x);
+float calculateCubicDeriv(float a, float b, float c, float x);

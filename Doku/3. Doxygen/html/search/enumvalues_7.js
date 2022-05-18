@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['short_0',['SHORT',['../_configuration_8hpp.html#a8cdbfc5a2637c1334b36e71aaf4f960ea7a1fe3ba88f0c16cb494922948a9597d',1,'Configuration.hpp']]]
+  ['manual_0',['MANUAL',['../_configuration_8hpp.html#a8c551c1eb58ae69a51730eb254b93c91a506e8dd29460ea318b68d035f679b01b',1,'Configuration.hpp']]]
 ];

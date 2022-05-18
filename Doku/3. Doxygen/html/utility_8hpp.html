@@ -72,7 +72,11 @@ $(function() {
   <div class="headertitle"><div class="title">utility.hpp File Reference</div></div>
 </div><!--header-->
 <div class="contents">
-
+<div class="textblock"><code>#include &lt;vector&gt;</code><br />
+<code>#include &lt;iostream&gt;</code><br />
+<code>#include &lt;cmath&gt;</code><br />
+<code>#include &quot;Eigen/Dense&quot;</code><br />
+</div>
 <p><a href="utility_8hpp_source.html">Go to the source code of this file.</a></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
@@ -83,8 +87,131 @@ Functions</h2></td></tr>
 <tr class="separator:adcfdb18ef60fdac6bab11f4aeec470e2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5124739dfc2606b0b4508d175e617d86"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="utility_8hpp.html#a5124739dfc2606b0b4508d175e617d86">constrainMax</a> (float value, float max)</td></tr>
 <tr class="separator:a5124739dfc2606b0b4508d175e617d86"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a850dd7c2b5043c33786b5fee48f2e4c2"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="utility_8hpp.html#a850dd7c2b5043c33786b5fee48f2e4c2">linearRegression</a> (std::vector&lt; float &gt; x, std::vector&lt; float &gt; y, float *m, float *b)</td></tr>
+<tr class="separator:a850dd7c2b5043c33786b5fee48f2e4c2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a94cb286a882e6071a8bebc2237101a80"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="utility_8hpp.html#a94cb286a882e6071a8bebc2237101a80">calculateAverage</a> (std::vector&lt; float &gt; values)</td></tr>
+<tr class="separator:a94cb286a882e6071a8bebc2237101a80"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acf0a0c75a6add075ab6aefedbf7ae172"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="utility_8hpp.html#acf0a0c75a6add075ab6aefedbf7ae172">cubicRegression</a> (std::vector&lt; float &gt; x, std::vector&lt; float &gt; y, float *a, float *b, float *c, float *d)</td></tr>
+<tr class="separator:acf0a0c75a6add075ab6aefedbf7ae172"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a88e4fb018f92eb63b61ea28087819ce3"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="utility_8hpp.html#a88e4fb018f92eb63b61ea28087819ce3">solveCubicForVoltage</a> (float a, float b, float c, float d, float value)</td></tr>
+<tr class="separator:a88e4fb018f92eb63b61ea28087819ce3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4ebc121761f629a729747ff570b4088c"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="utility_8hpp.html#a4ebc121761f629a729747ff570b4088c">calculateCubic</a> (float a, float b, float c, float d, float x)</td></tr>
+<tr class="separator:a4ebc121761f629a729747ff570b4088c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7940f050e1ee40acf63aee97c4bfd339"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="utility_8hpp.html#a7940f050e1ee40acf63aee97c4bfd339">calculateCubicDeriv</a> (float a, float b, float c, float x)</td></tr>
+<tr class="separator:a7940f050e1ee40acf63aee97c4bfd339"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Function Documentation</h2>
+<a id="a94cb286a882e6071a8bebc2237101a80" name="a94cb286a882e6071a8bebc2237101a80"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a94cb286a882e6071a8bebc2237101a80">&#9670;&nbsp;</a></span>calculateAverage()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">float calculateAverage </td>
+          <td>(</td>
+          <td class="paramtype">std::vector&lt; float &gt;&#160;</td>
+          <td class="paramname"><em>values</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p >Calculates the average of values of a vector </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">values</td><td>The vector that contains the values </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Returns the average of the values in the vector </dd></dl>
+
+</div>
+</div>
+<a id="a4ebc121761f629a729747ff570b4088c" name="a4ebc121761f629a729747ff570b4088c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4ebc121761f629a729747ff570b4088c">&#9670;&nbsp;</a></span>calculateCubic()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">float calculateCubic </td>
+          <td>(</td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>a</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>b</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>c</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>d</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>x</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a7940f050e1ee40acf63aee97c4bfd339" name="a7940f050e1ee40acf63aee97c4bfd339"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7940f050e1ee40acf63aee97c4bfd339">&#9670;&nbsp;</a></span>calculateCubicDeriv()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">float calculateCubicDeriv </td>
+          <td>(</td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>a</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>b</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>c</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>x</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <a id="a5124739dfc2606b0b4508d175e617d86" name="a5124739dfc2606b0b4508d175e617d86"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a5124739dfc2606b0b4508d175e617d86">&#9670;&nbsp;</a></span>constrainMax()</h2>
 
@@ -197,6 +324,167 @@ Functions</h2></td></tr>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>Returns the clipped / constrained value </dd></dl>
+
+</div>
+</div>
+<a id="acf0a0c75a6add075ab6aefedbf7ae172" name="acf0a0c75a6add075ab6aefedbf7ae172"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acf0a0c75a6add075ab6aefedbf7ae172">&#9670;&nbsp;</a></span>cubicRegression()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void cubicRegression </td>
+          <td>(</td>
+          <td class="paramtype">std::vector&lt; float &gt;&#160;</td>
+          <td class="paramname"><em>x</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::vector&lt; float &gt;&#160;</td>
+          <td class="paramname"><em>y</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float *&#160;</td>
+          <td class="paramname"><em>a</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float *&#160;</td>
+          <td class="paramname"><em>b</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float *&#160;</td>
+          <td class="paramname"><em>c</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float *&#160;</td>
+          <td class="paramname"><em>d</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p >Calculates a cubic regression f(x)=ax^3+bx^2+cx+d for a dataset of x and y values </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">x</td><td>Vector of x-values of the dataset </td></tr>
+    <tr><td class="paramname">y</td><td>Vector of y-values of the dataset </td></tr>
+    <tr><td class="paramname">a</td><td>Coefficient in front of x^3 </td></tr>
+    <tr><td class="paramname">b</td><td>Coefficient in front of x^2 </td></tr>
+    <tr><td class="paramname">c</td><td>Coefficient in front of x^1 </td></tr>
+    <tr><td class="paramname">d</td><td>Coefficient in front of x^0 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a850dd7c2b5043c33786b5fee48f2e4c2" name="a850dd7c2b5043c33786b5fee48f2e4c2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a850dd7c2b5043c33786b5fee48f2e4c2">&#9670;&nbsp;</a></span>linearRegression()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void linearRegression </td>
+          <td>(</td>
+          <td class="paramtype">std::vector&lt; float &gt;&#160;</td>
+          <td class="paramname"><em>x</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::vector&lt; float &gt;&#160;</td>
+          <td class="paramname"><em>y</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float *&#160;</td>
+          <td class="paramname"><em>m</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float *&#160;</td>
+          <td class="paramname"><em>b</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p >Calculates a linear regression f(x)=mx+b for a dataset of x and y values </p>
+
+</div>
+</div>
+<a id="a88e4fb018f92eb63b61ea28087819ce3" name="a88e4fb018f92eb63b61ea28087819ce3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a88e4fb018f92eb63b61ea28087819ce3">&#9670;&nbsp;</a></span>solveCubicForVoltage()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">float solveCubicForVoltage </td>
+          <td>(</td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>a</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>b</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>c</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>d</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>value</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p >Newton-Raphson Method for finding the x-value that corresponds to a y-value of a cubic function ax^3+x^2+cx+d=value, only for the range 0 - 10 </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">a</td><td>Coefficient in front of x^3 </td></tr>
+    <tr><td class="paramname">b</td><td>Coefficient in front of x^2 </td></tr>
+    <tr><td class="paramname">c</td><td>Coefficient in front of x^1 </td></tr>
+    <tr><td class="paramname">d</td><td>Coefficient in front of x^0 </td></tr>
+    <tr><td class="paramname">value</td><td>y-value of the cubic function that corresponds to the wanted x-value </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Returns the x-value that corresponds to the y-value </dd></dl>
 
 </div>
 </div>

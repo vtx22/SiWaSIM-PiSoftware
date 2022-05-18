@@ -17,6 +17,8 @@ uint8\+\_\+t \mbox{\hyperlink{class_i_a_board_a90742c9628677c0e8ddf120c6f5d4247}
 \item 
 bool \mbox{\hyperlink{class_i_a_board_aa3886850e0b394bcf7a7933ebc7dae13}{digital\+Read}} (uint8\+\_\+t channel)
 \item 
+bool \mbox{\hyperlink{class_i_a_board_a0a06189477e17f6ada1b45508e9636cc}{get\+Digital\+Read}} (uint8\+\_\+t channel)
+\item 
 uint16\+\_\+t \mbox{\hyperlink{class_i_a_board_a24cf40186ccefa1ef47e809b9de5faa9}{read\+Transistions}} (uint8\+\_\+t channel)
 \item 
 \mbox{\hyperlink{_i_a_board_8hpp_a031ceda83d144811bf209020a0cf69ff}{TRANSITION}} \mbox{\hyperlink{class_i_a_board_aa5d275c8809b6e6cea0d356f9c4a054a}{get\+Transistion\+Type}} (uint8\+\_\+t channel)
@@ -54,6 +56,10 @@ float \mbox{\hyperlink{class_i_a_board_a300178bdb61a6a6b74427031b181a597}{read\+
 float \mbox{\hyperlink{class_i_a_board_a291abadcc858294866a7b2853e423a99}{read\+Analog\+Vol\+In\+PM}} (uint8\+\_\+t channel)
 \item 
 float \mbox{\hyperlink{class_i_a_board_af66593a8851468487bd904d61de67569}{read\+Analog\+Cur\+In}} (uint8\+\_\+t channel)
+\item 
+void \mbox{\hyperlink{class_i_a_board_a6f9c24770610896281be7d6f22d1a397}{get\+Board\+Data}} ()
+\item 
+void \mbox{\hyperlink{class_i_a_board_a3d8e2e8c8381db8369120199d492a534}{get\+Board\+Data}} (uint8\+\_\+t $\ast$temp, float $\ast$rail24, float $\ast$rail5)
 \item 
 void \mbox{\hyperlink{class_i_a_board_a6136315b8cf22149ed58dbd907192616}{set\+All\+OFF}} ()
 \end{DoxyCompactItemize}
@@ -104,6 +110,24 @@ void \mbox{\hyperlink{class_i_a_board_a6136315b8cf22149ed58dbd907192616}{set\+Al
 \index{getAnalogVolOut@{getAnalogVolOut}!IABoard@{IABoard}}
 \doxysubsubsection{\texorpdfstring{getAnalogVolOut()}{getAnalogVolOut()}}
 {\footnotesize\ttfamily float IABoard\+::get\+Analog\+Vol\+Out (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{channel }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_i_a_board_a6f9c24770610896281be7d6f22d1a397}\label{class_i_a_board_a6f9c24770610896281be7d6f22d1a397}} 
+\index{IABoard@{IABoard}!getBoardData@{getBoardData}}
+\index{getBoardData@{getBoardData}!IABoard@{IABoard}}
+\doxysubsubsection{\texorpdfstring{getBoardData()}{getBoardData()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily void IABoard\+::get\+Board\+Data (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Receives the board data through the command. Board data includes temperature, 24V input rail voltage and 5V rail voltage \mbox{\Hypertarget{class_i_a_board_a3d8e2e8c8381db8369120199d492a534}\label{class_i_a_board_a3d8e2e8c8381db8369120199d492a534}} 
+\index{IABoard@{IABoard}!getBoardData@{getBoardData}}
+\index{getBoardData@{getBoardData}!IABoard@{IABoard}}
+\doxysubsubsection{\texorpdfstring{getBoardData()}{getBoardData()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void IABoard\+::get\+Board\+Data (\begin{DoxyParamCaption}\item[{uint8\+\_\+t $\ast$}]{temp,  }\item[{float $\ast$}]{rail24,  }\item[{float $\ast$}]{rail5 }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_i_a_board_a0a06189477e17f6ada1b45508e9636cc}\label{class_i_a_board_a0a06189477e17f6ada1b45508e9636cc}} 
+\index{IABoard@{IABoard}!getDigitalRead@{getDigitalRead}}
+\index{getDigitalRead@{getDigitalRead}!IABoard@{IABoard}}
+\doxysubsubsection{\texorpdfstring{getDigitalRead()}{getDigitalRead()}}
+{\footnotesize\ttfamily bool IABoard\+::get\+Digital\+Read (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{channel }\end{DoxyParamCaption})}
 
 \mbox{\Hypertarget{class_i_a_board_ada67b4c599cb1c0b5e733e51f33deb2e}\label{class_i_a_board_ada67b4c599cb1c0b5e733e51f33deb2e}} 
 \index{IABoard@{IABoard}!getLED@{getLED}}

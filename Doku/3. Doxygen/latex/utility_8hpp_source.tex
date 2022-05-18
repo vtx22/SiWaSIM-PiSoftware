@@ -3,9 +3,27 @@
 \mbox{\hyperlink{utility_8hpp}{Go to the documentation of this file.}}
 \begin{DoxyCode}{0}
 \DoxyCodeLine{1 \textcolor{preprocessor}{\#pragma once}}
-\DoxyCodeLine{2 }
-\DoxyCodeLine{3 \textcolor{keywordtype}{float} \mbox{\hyperlink{utility_8hpp_af5725d0ad4b80368c8cb701c04ec169a}{constrainMinMax}}(\textcolor{keywordtype}{float} value, \textcolor{keywordtype}{float} min, \textcolor{keywordtype}{float} max);}
-\DoxyCodeLine{4 \textcolor{keywordtype}{float} \mbox{\hyperlink{utility_8hpp_adcfdb18ef60fdac6bab11f4aeec470e2}{constrainMin}}(\textcolor{keywordtype}{float} value, \textcolor{keywordtype}{float} min);}
-\DoxyCodeLine{5 \textcolor{keywordtype}{float} \mbox{\hyperlink{utility_8hpp_a5124739dfc2606b0b4508d175e617d86}{constrainMax}}(\textcolor{keywordtype}{float} value, \textcolor{keywordtype}{float} max);}
+\DoxyCodeLine{2 \textcolor{preprocessor}{\#include <vector>}}
+\DoxyCodeLine{3 \textcolor{preprocessor}{\#include <iostream>}}
+\DoxyCodeLine{4 \textcolor{preprocessor}{\#include <cmath>}}
+\DoxyCodeLine{5 \textcolor{preprocessor}{\#include "{}Eigen/Dense"{}}}
+\DoxyCodeLine{6 }
+\DoxyCodeLine{7 \textcolor{keyword}{using} Eigen::MatrixXd;}
+\DoxyCodeLine{8 \textcolor{keyword}{using} Eigen::VectorXd;}
+\DoxyCodeLine{9 }
+\DoxyCodeLine{10 \textcolor{keywordtype}{float} \mbox{\hyperlink{utility_8hpp_af5725d0ad4b80368c8cb701c04ec169a}{constrainMinMax}}(\textcolor{keywordtype}{float} value, \textcolor{keywordtype}{float} min, \textcolor{keywordtype}{float} max);}
+\DoxyCodeLine{11 \textcolor{keywordtype}{float} \mbox{\hyperlink{utility_8hpp_adcfdb18ef60fdac6bab11f4aeec470e2}{constrainMin}}(\textcolor{keywordtype}{float} value, \textcolor{keywordtype}{float} min);}
+\DoxyCodeLine{12 \textcolor{keywordtype}{float} \mbox{\hyperlink{utility_8hpp_a5124739dfc2606b0b4508d175e617d86}{constrainMax}}(\textcolor{keywordtype}{float} value, \textcolor{keywordtype}{float} max);}
+\DoxyCodeLine{13 }
+\DoxyCodeLine{14 \textcolor{keywordtype}{void} \mbox{\hyperlink{utility_8hpp_a850dd7c2b5043c33786b5fee48f2e4c2}{linearRegression}}(std::vector<float> x, std::vector<float> y, \textcolor{keywordtype}{float} *m, \textcolor{keywordtype}{float} *b);}
+\DoxyCodeLine{15 }
+\DoxyCodeLine{16 \textcolor{keywordtype}{float} \mbox{\hyperlink{utility_8hpp_a94cb286a882e6071a8bebc2237101a80}{calculateAverage}}(std::vector<float> values);}
+\DoxyCodeLine{17 }
+\DoxyCodeLine{18 \textcolor{keywordtype}{void} \mbox{\hyperlink{utility_8hpp_acf0a0c75a6add075ab6aefedbf7ae172}{cubicRegression}}(std::vector<float> x, std::vector<float> y, \textcolor{keywordtype}{float} *a, \textcolor{keywordtype}{float} *b, \textcolor{keywordtype}{float} *c, \textcolor{keywordtype}{float} *d);}
+\DoxyCodeLine{19 }
+\DoxyCodeLine{20 \textcolor{keywordtype}{float} \mbox{\hyperlink{utility_8hpp_a88e4fb018f92eb63b61ea28087819ce3}{solveCubicForVoltage}}(\textcolor{keywordtype}{float} a, \textcolor{keywordtype}{float} b, \textcolor{keywordtype}{float} c, \textcolor{keywordtype}{float} d, \textcolor{keywordtype}{float} value);}
+\DoxyCodeLine{21 }
+\DoxyCodeLine{22 \textcolor{keywordtype}{float} \mbox{\hyperlink{utility_8hpp_a4ebc121761f629a729747ff570b4088c}{calculateCubic}}(\textcolor{keywordtype}{float} a, \textcolor{keywordtype}{float} b, \textcolor{keywordtype}{float} c, \textcolor{keywordtype}{float} d, \textcolor{keywordtype}{float} x);}
+\DoxyCodeLine{23 \textcolor{keywordtype}{float} \mbox{\hyperlink{utility_8hpp_a7940f050e1ee40acf63aee97c4bfd339}{calculateCubicDeriv}}(\textcolor{keywordtype}{float} a, \textcolor{keywordtype}{float} b, \textcolor{keywordtype}{float} c, \textcolor{keywordtype}{float} x);}
 
 \end{DoxyCode}

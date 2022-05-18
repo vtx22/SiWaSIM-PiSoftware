@@ -9,6 +9,47 @@
 \item 
 class \mbox{\hyperlink{class_configuration}{Configuration}}
 \end{DoxyCompactItemize}
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{_configuration_8hpp_a863ab5d791c86f9dfff4c6e90624130c}{CONFIG\+\_\+\+PATH}}~\char`\"{}/home/siwasim/Si\+Wa\+SIM-\/Pi\+Software/Konfiguration/\mbox{\hyperlink{_configuration_8hpp_ab701e3ac61a85b337ec5c1abaad6742d}{config.\+json}}\char`\"{}
+\item 
+\#define \mbox{\hyperlink{_configuration_8hpp_a770f0c15acd838afca500d56b792c6b5}{I2\+C\+\_\+\+ADDRESS}}~0x50
+\item 
+\#define \mbox{\hyperlink{_configuration_8hpp_a8a6c12d0194007da86226886cfce89b4}{I2\+C\+\_\+\+DEVICE}}~\char`\"{}/dev/i2c-\/1\char`\"{}
+\item 
+\#define \mbox{\hyperlink{_configuration_8hpp_a752620083196dc7ca8f7432c374e99b8}{PIN\+\_\+\+LED\+\_\+\+READY}}~23
+\item 
+\#define \mbox{\hyperlink{_configuration_8hpp_ad35d060765213f592160e61e38a1d20f}{PIN\+\_\+\+LED\+\_\+\+BUSY}}~24
+\item 
+\#define \mbox{\hyperlink{_configuration_8hpp_a21849fac96176c9fa46c3f6ed3930649}{PIN\+\_\+\+LED\+\_\+\+FAULT}}~25
+\item 
+\#define \mbox{\hyperlink{_configuration_8hpp_af5a48adc9d939102a42f2829b7a1b8ac}{PWM\+\_\+\+PIN}}~13
+\item 
+\#define \mbox{\hyperlink{_configuration_8hpp_a2315b2b62bd4577c0870b3852ab788ed}{PIN\+\_\+\+POWERSW1}}~4
+\item 
+\#define \mbox{\hyperlink{_configuration_8hpp_afbcf274810ed18702e61d62a649512c7}{PIN\+\_\+\+POWERSW2}}~26
+\item 
+\#define \mbox{\hyperlink{_configuration_8hpp_a8b1c9c45ca955b85f7c45d57eb4a825b}{PIN\+\_\+\+IMPEDANCE1}}~5
+\item 
+\#define \mbox{\hyperlink{_configuration_8hpp_a7845ca93e61bb4b1d8228ff6763210e5}{PIN\+\_\+\+IMPEDANCE2}}~6
+\item 
+\#define \mbox{\hyperlink{_configuration_8hpp_a4c755bd725051f6e6be94d394c238ede}{PIN\+\_\+\+EXTRASW1}}~27
+\item 
+\#define \mbox{\hyperlink{_configuration_8hpp_a478893b8e3494e72b505fea6dcd13045}{PIN\+\_\+\+EXTRASW2}}~22
+\item 
+\#define \mbox{\hyperlink{_configuration_8hpp_a788158601d4e5f8894d10de8da3e0ba1}{ADDVOL\+\_\+\+CHANNEL}}~2
+\item 
+\#define \mbox{\hyperlink{_configuration_8hpp_a96e067272d5341413b5994fc6ef3e9b2}{SUBVOL\+\_\+\+CHANNEL}}~3
+\item 
+\#define \mbox{\hyperlink{_configuration_8hpp_a1516636e78dba1fd9a778bb79410292e}{CELL\+\_\+\+DC}}~1
+\item 
+\#define \mbox{\hyperlink{_configuration_8hpp_af501c44a5cc295c4bf2ed8bfd01cd1ac}{SEN\+\_\+\+OUT}}~4
+\item 
+\#define \mbox{\hyperlink{_configuration_8hpp_a2d85709f1fa26a3a06207fccf19337a5}{EXC\+\_\+\+IN}}~1
+\item 
+\#define \mbox{\hyperlink{_configuration_8hpp_ad3d9d23608251e1358be0d6319fb8bff}{SEN\+\_\+\+IN}}~2
+\end{DoxyCompactItemize}
 \doxysubsection*{Typedefs}
 \begin{DoxyCompactItemize}
 \item 
@@ -30,7 +71,142 @@ enum \mbox{\hyperlink{_configuration_8hpp_a8cdbfc5a2637c1334b36e71aaf4f960e}{IMP
 enum \mbox{\hyperlink{_configuration_8hpp_ad1b1a6023bad2f6ca0db2b313854a671}{SYSTEM\+\_\+\+TYPE}} \{ \mbox{\hyperlink{_configuration_8hpp_ad1b1a6023bad2f6ca0db2b313854a671a84bfc2ea4b24a3d1df91832df23330ab}{DOSING\+\_\+\+SCALE}} = 0x01
 , \mbox{\hyperlink{_configuration_8hpp_ad1b1a6023bad2f6ca0db2b313854a671ad2dddc63d8fae358d6c7eac5eb9190ee}{BELT\+\_\+\+SCALE}} = 0x02
  \}
+\item 
+enum \mbox{\hyperlink{_configuration_8hpp_a560491d8fd69bb6815b29b953b7a2c7a}{MATERIAL\+\_\+\+FLOW}} \{ \newline
+\mbox{\hyperlink{_configuration_8hpp_a560491d8fd69bb6815b29b953b7a2c7aac157bdf0b85a40d2619cbc8bc1ae5fe2}{NONE}} = 0x00
+, \mbox{\hyperlink{_configuration_8hpp_a560491d8fd69bb6815b29b953b7a2c7aa2f0d18fc0d0fa4a6cd92dc328501874d}{EMPTY}}
+, \mbox{\hyperlink{_configuration_8hpp_a560491d8fd69bb6815b29b953b7a2c7aac5a963f145f3153de0afe16e7d8cec76}{FINE}}
+, \mbox{\hyperlink{_configuration_8hpp_a560491d8fd69bb6815b29b953b7a2c7aa7a40b4195259848f1215900a270eb746}{COARSE}}
+, \newline
+\mbox{\hyperlink{_configuration_8hpp_a560491d8fd69bb6815b29b953b7a2c7aa0522d668568ba049c743b60edb301cf0}{XCOARSE}}
+ \}
+\item 
+enum \mbox{\hyperlink{_configuration_8hpp_a8c551c1eb58ae69a51730eb254b93c91}{RUN\+\_\+\+MODE}} \{ \newline
+\mbox{\hyperlink{_configuration_8hpp_a8c551c1eb58ae69a51730eb254b93c91aeef9468d1b98bca652a04bf5063fd9d6}{AUTO}}
+, \mbox{\hyperlink{_configuration_8hpp_a8c551c1eb58ae69a51730eb254b93c91a48be352751e0dd34bbad624be5667ee2}{PASSIVE}}
+, \mbox{\hyperlink{_configuration_8hpp_a8c551c1eb58ae69a51730eb254b93c91a506e8dd29460ea318b68d035f679b01b}{MANUAL}}
+, \mbox{\hyperlink{_configuration_8hpp_a8c551c1eb58ae69a51730eb254b93c91afd6a0e4343048b10646dd2976cc5ad18}{IDLE}}
+, \newline
+\mbox{\hyperlink{_configuration_8hpp_a8c551c1eb58ae69a51730eb254b93c91aac132f2982b98bcaa3445e535a03ff75}{OFF}}
+ \}
 \end{DoxyCompactItemize}
+
+
+\doxysubsection{Macro Definition Documentation}
+\mbox{\Hypertarget{_configuration_8hpp_a788158601d4e5f8894d10de8da3e0ba1}\label{_configuration_8hpp_a788158601d4e5f8894d10de8da3e0ba1}} 
+\index{Configuration.hpp@{Configuration.hpp}!ADDVOL\_CHANNEL@{ADDVOL\_CHANNEL}}
+\index{ADDVOL\_CHANNEL@{ADDVOL\_CHANNEL}!Configuration.hpp@{Configuration.hpp}}
+\doxysubsubsection{\texorpdfstring{ADDVOL\_CHANNEL}{ADDVOL\_CHANNEL}}
+{\footnotesize\ttfamily \#define ADDVOL\+\_\+\+CHANNEL~2}
+
+\mbox{\Hypertarget{_configuration_8hpp_a1516636e78dba1fd9a778bb79410292e}\label{_configuration_8hpp_a1516636e78dba1fd9a778bb79410292e}} 
+\index{Configuration.hpp@{Configuration.hpp}!CELL\_DC@{CELL\_DC}}
+\index{CELL\_DC@{CELL\_DC}!Configuration.hpp@{Configuration.hpp}}
+\doxysubsubsection{\texorpdfstring{CELL\_DC}{CELL\_DC}}
+{\footnotesize\ttfamily \#define CELL\+\_\+\+DC~1}
+
+\mbox{\Hypertarget{_configuration_8hpp_a863ab5d791c86f9dfff4c6e90624130c}\label{_configuration_8hpp_a863ab5d791c86f9dfff4c6e90624130c}} 
+\index{Configuration.hpp@{Configuration.hpp}!CONFIG\_PATH@{CONFIG\_PATH}}
+\index{CONFIG\_PATH@{CONFIG\_PATH}!Configuration.hpp@{Configuration.hpp}}
+\doxysubsubsection{\texorpdfstring{CONFIG\_PATH}{CONFIG\_PATH}}
+{\footnotesize\ttfamily \#define CONFIG\+\_\+\+PATH~\char`\"{}/home/siwasim/Si\+Wa\+SIM-\/Pi\+Software/Konfiguration/\mbox{\hyperlink{_configuration_8hpp_ab701e3ac61a85b337ec5c1abaad6742d}{config.\+json}}\char`\"{}}
+
+\mbox{\Hypertarget{_configuration_8hpp_a2d85709f1fa26a3a06207fccf19337a5}\label{_configuration_8hpp_a2d85709f1fa26a3a06207fccf19337a5}} 
+\index{Configuration.hpp@{Configuration.hpp}!EXC\_IN@{EXC\_IN}}
+\index{EXC\_IN@{EXC\_IN}!Configuration.hpp@{Configuration.hpp}}
+\doxysubsubsection{\texorpdfstring{EXC\_IN}{EXC\_IN}}
+{\footnotesize\ttfamily \#define EXC\+\_\+\+IN~1}
+
+\mbox{\Hypertarget{_configuration_8hpp_a770f0c15acd838afca500d56b792c6b5}\label{_configuration_8hpp_a770f0c15acd838afca500d56b792c6b5}} 
+\index{Configuration.hpp@{Configuration.hpp}!I2C\_ADDRESS@{I2C\_ADDRESS}}
+\index{I2C\_ADDRESS@{I2C\_ADDRESS}!Configuration.hpp@{Configuration.hpp}}
+\doxysubsubsection{\texorpdfstring{I2C\_ADDRESS}{I2C\_ADDRESS}}
+{\footnotesize\ttfamily \#define I2\+C\+\_\+\+ADDRESS~0x50}
+
+\mbox{\Hypertarget{_configuration_8hpp_a8a6c12d0194007da86226886cfce89b4}\label{_configuration_8hpp_a8a6c12d0194007da86226886cfce89b4}} 
+\index{Configuration.hpp@{Configuration.hpp}!I2C\_DEVICE@{I2C\_DEVICE}}
+\index{I2C\_DEVICE@{I2C\_DEVICE}!Configuration.hpp@{Configuration.hpp}}
+\doxysubsubsection{\texorpdfstring{I2C\_DEVICE}{I2C\_DEVICE}}
+{\footnotesize\ttfamily \#define I2\+C\+\_\+\+DEVICE~\char`\"{}/dev/i2c-\/1\char`\"{}}
+
+\mbox{\Hypertarget{_configuration_8hpp_a4c755bd725051f6e6be94d394c238ede}\label{_configuration_8hpp_a4c755bd725051f6e6be94d394c238ede}} 
+\index{Configuration.hpp@{Configuration.hpp}!PIN\_EXTRASW1@{PIN\_EXTRASW1}}
+\index{PIN\_EXTRASW1@{PIN\_EXTRASW1}!Configuration.hpp@{Configuration.hpp}}
+\doxysubsubsection{\texorpdfstring{PIN\_EXTRASW1}{PIN\_EXTRASW1}}
+{\footnotesize\ttfamily \#define PIN\+\_\+\+EXTRASW1~27}
+
+\mbox{\Hypertarget{_configuration_8hpp_a478893b8e3494e72b505fea6dcd13045}\label{_configuration_8hpp_a478893b8e3494e72b505fea6dcd13045}} 
+\index{Configuration.hpp@{Configuration.hpp}!PIN\_EXTRASW2@{PIN\_EXTRASW2}}
+\index{PIN\_EXTRASW2@{PIN\_EXTRASW2}!Configuration.hpp@{Configuration.hpp}}
+\doxysubsubsection{\texorpdfstring{PIN\_EXTRASW2}{PIN\_EXTRASW2}}
+{\footnotesize\ttfamily \#define PIN\+\_\+\+EXTRASW2~22}
+
+\mbox{\Hypertarget{_configuration_8hpp_a8b1c9c45ca955b85f7c45d57eb4a825b}\label{_configuration_8hpp_a8b1c9c45ca955b85f7c45d57eb4a825b}} 
+\index{Configuration.hpp@{Configuration.hpp}!PIN\_IMPEDANCE1@{PIN\_IMPEDANCE1}}
+\index{PIN\_IMPEDANCE1@{PIN\_IMPEDANCE1}!Configuration.hpp@{Configuration.hpp}}
+\doxysubsubsection{\texorpdfstring{PIN\_IMPEDANCE1}{PIN\_IMPEDANCE1}}
+{\footnotesize\ttfamily \#define PIN\+\_\+\+IMPEDANCE1~5}
+
+\mbox{\Hypertarget{_configuration_8hpp_a7845ca93e61bb4b1d8228ff6763210e5}\label{_configuration_8hpp_a7845ca93e61bb4b1d8228ff6763210e5}} 
+\index{Configuration.hpp@{Configuration.hpp}!PIN\_IMPEDANCE2@{PIN\_IMPEDANCE2}}
+\index{PIN\_IMPEDANCE2@{PIN\_IMPEDANCE2}!Configuration.hpp@{Configuration.hpp}}
+\doxysubsubsection{\texorpdfstring{PIN\_IMPEDANCE2}{PIN\_IMPEDANCE2}}
+{\footnotesize\ttfamily \#define PIN\+\_\+\+IMPEDANCE2~6}
+
+\mbox{\Hypertarget{_configuration_8hpp_ad35d060765213f592160e61e38a1d20f}\label{_configuration_8hpp_ad35d060765213f592160e61e38a1d20f}} 
+\index{Configuration.hpp@{Configuration.hpp}!PIN\_LED\_BUSY@{PIN\_LED\_BUSY}}
+\index{PIN\_LED\_BUSY@{PIN\_LED\_BUSY}!Configuration.hpp@{Configuration.hpp}}
+\doxysubsubsection{\texorpdfstring{PIN\_LED\_BUSY}{PIN\_LED\_BUSY}}
+{\footnotesize\ttfamily \#define PIN\+\_\+\+LED\+\_\+\+BUSY~24}
+
+\mbox{\Hypertarget{_configuration_8hpp_a21849fac96176c9fa46c3f6ed3930649}\label{_configuration_8hpp_a21849fac96176c9fa46c3f6ed3930649}} 
+\index{Configuration.hpp@{Configuration.hpp}!PIN\_LED\_FAULT@{PIN\_LED\_FAULT}}
+\index{PIN\_LED\_FAULT@{PIN\_LED\_FAULT}!Configuration.hpp@{Configuration.hpp}}
+\doxysubsubsection{\texorpdfstring{PIN\_LED\_FAULT}{PIN\_LED\_FAULT}}
+{\footnotesize\ttfamily \#define PIN\+\_\+\+LED\+\_\+\+FAULT~25}
+
+\mbox{\Hypertarget{_configuration_8hpp_a752620083196dc7ca8f7432c374e99b8}\label{_configuration_8hpp_a752620083196dc7ca8f7432c374e99b8}} 
+\index{Configuration.hpp@{Configuration.hpp}!PIN\_LED\_READY@{PIN\_LED\_READY}}
+\index{PIN\_LED\_READY@{PIN\_LED\_READY}!Configuration.hpp@{Configuration.hpp}}
+\doxysubsubsection{\texorpdfstring{PIN\_LED\_READY}{PIN\_LED\_READY}}
+{\footnotesize\ttfamily \#define PIN\+\_\+\+LED\+\_\+\+READY~23}
+
+\mbox{\Hypertarget{_configuration_8hpp_a2315b2b62bd4577c0870b3852ab788ed}\label{_configuration_8hpp_a2315b2b62bd4577c0870b3852ab788ed}} 
+\index{Configuration.hpp@{Configuration.hpp}!PIN\_POWERSW1@{PIN\_POWERSW1}}
+\index{PIN\_POWERSW1@{PIN\_POWERSW1}!Configuration.hpp@{Configuration.hpp}}
+\doxysubsubsection{\texorpdfstring{PIN\_POWERSW1}{PIN\_POWERSW1}}
+{\footnotesize\ttfamily \#define PIN\+\_\+\+POWERSW1~4}
+
+\mbox{\Hypertarget{_configuration_8hpp_afbcf274810ed18702e61d62a649512c7}\label{_configuration_8hpp_afbcf274810ed18702e61d62a649512c7}} 
+\index{Configuration.hpp@{Configuration.hpp}!PIN\_POWERSW2@{PIN\_POWERSW2}}
+\index{PIN\_POWERSW2@{PIN\_POWERSW2}!Configuration.hpp@{Configuration.hpp}}
+\doxysubsubsection{\texorpdfstring{PIN\_POWERSW2}{PIN\_POWERSW2}}
+{\footnotesize\ttfamily \#define PIN\+\_\+\+POWERSW2~26}
+
+\mbox{\Hypertarget{_configuration_8hpp_af5a48adc9d939102a42f2829b7a1b8ac}\label{_configuration_8hpp_af5a48adc9d939102a42f2829b7a1b8ac}} 
+\index{Configuration.hpp@{Configuration.hpp}!PWM\_PIN@{PWM\_PIN}}
+\index{PWM\_PIN@{PWM\_PIN}!Configuration.hpp@{Configuration.hpp}}
+\doxysubsubsection{\texorpdfstring{PWM\_PIN}{PWM\_PIN}}
+{\footnotesize\ttfamily \#define PWM\+\_\+\+PIN~13}
+
+\mbox{\Hypertarget{_configuration_8hpp_ad3d9d23608251e1358be0d6319fb8bff}\label{_configuration_8hpp_ad3d9d23608251e1358be0d6319fb8bff}} 
+\index{Configuration.hpp@{Configuration.hpp}!SEN\_IN@{SEN\_IN}}
+\index{SEN\_IN@{SEN\_IN}!Configuration.hpp@{Configuration.hpp}}
+\doxysubsubsection{\texorpdfstring{SEN\_IN}{SEN\_IN}}
+{\footnotesize\ttfamily \#define SEN\+\_\+\+IN~2}
+
+\mbox{\Hypertarget{_configuration_8hpp_af501c44a5cc295c4bf2ed8bfd01cd1ac}\label{_configuration_8hpp_af501c44a5cc295c4bf2ed8bfd01cd1ac}} 
+\index{Configuration.hpp@{Configuration.hpp}!SEN\_OUT@{SEN\_OUT}}
+\index{SEN\_OUT@{SEN\_OUT}!Configuration.hpp@{Configuration.hpp}}
+\doxysubsubsection{\texorpdfstring{SEN\_OUT}{SEN\_OUT}}
+{\footnotesize\ttfamily \#define SEN\+\_\+\+OUT~4}
+
+\mbox{\Hypertarget{_configuration_8hpp_a96e067272d5341413b5994fc6ef3e9b2}\label{_configuration_8hpp_a96e067272d5341413b5994fc6ef3e9b2}} 
+\index{Configuration.hpp@{Configuration.hpp}!SUBVOL\_CHANNEL@{SUBVOL\_CHANNEL}}
+\index{SUBVOL\_CHANNEL@{SUBVOL\_CHANNEL}!Configuration.hpp@{Configuration.hpp}}
+\doxysubsubsection{\texorpdfstring{SUBVOL\_CHANNEL}{SUBVOL\_CHANNEL}}
+{\footnotesize\ttfamily \#define SUBVOL\+\_\+\+CHANNEL~3}
+
 
 
 \doxysubsection{Typedef Documentation}
@@ -80,6 +256,62 @@ OVERLOAD&Positive differential voltage from 0 -\/ 120\% nominal load. \\
 
 \raisebox{\heightof{T}}[0pt][0pt]{\index{INVERTED@{INVERTED}!Configuration.hpp@{Configuration.hpp}}\index{Configuration.hpp@{Configuration.hpp}!INVERTED@{INVERTED}}}\mbox{\Hypertarget{_configuration_8hpp_a79dd9036c94e58a35b6e18d61a36fb66a1e172b06bae2f97e733787d76106800e}\label{_configuration_8hpp_a79dd9036c94e58a35b6e18d61a36fb66a1e172b06bae2f97e733787d76106800e}} 
 INVERTED&Negative differential voltage from 0 -\/ 100\% nominal load. \\
+\hline
+
+\end{DoxyEnumFields}
+\mbox{\Hypertarget{_configuration_8hpp_a560491d8fd69bb6815b29b953b7a2c7a}\label{_configuration_8hpp_a560491d8fd69bb6815b29b953b7a2c7a}} 
+\index{Configuration.hpp@{Configuration.hpp}!MATERIAL\_FLOW@{MATERIAL\_FLOW}}
+\index{MATERIAL\_FLOW@{MATERIAL\_FLOW}!Configuration.hpp@{Configuration.hpp}}
+\doxysubsubsection{\texorpdfstring{MATERIAL\_FLOW}{MATERIAL\_FLOW}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{_configuration_8hpp_a560491d8fd69bb6815b29b953b7a2c7a}{MATERIAL\+\_\+\+FLOW}}}
+
+Types of different material flows \begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{NONE@{NONE}!Configuration.hpp@{Configuration.hpp}}\index{Configuration.hpp@{Configuration.hpp}!NONE@{NONE}}}\mbox{\Hypertarget{_configuration_8hpp_a560491d8fd69bb6815b29b953b7a2c7aac157bdf0b85a40d2619cbc8bc1ae5fe2}\label{_configuration_8hpp_a560491d8fd69bb6815b29b953b7a2c7aac157bdf0b85a40d2619cbc8bc1ae5fe2}} 
+NONE&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{EMPTY@{EMPTY}!Configuration.hpp@{Configuration.hpp}}\index{Configuration.hpp@{Configuration.hpp}!EMPTY@{EMPTY}}}\mbox{\Hypertarget{_configuration_8hpp_a560491d8fd69bb6815b29b953b7a2c7aa2f0d18fc0d0fa4a6cd92dc328501874d}\label{_configuration_8hpp_a560491d8fd69bb6815b29b953b7a2c7aa2f0d18fc0d0fa4a6cd92dc328501874d}} 
+EMPTY&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{FINE@{FINE}!Configuration.hpp@{Configuration.hpp}}\index{Configuration.hpp@{Configuration.hpp}!FINE@{FINE}}}\mbox{\Hypertarget{_configuration_8hpp_a560491d8fd69bb6815b29b953b7a2c7aac5a963f145f3153de0afe16e7d8cec76}\label{_configuration_8hpp_a560491d8fd69bb6815b29b953b7a2c7aac5a963f145f3153de0afe16e7d8cec76}} 
+FINE&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{COARSE@{COARSE}!Configuration.hpp@{Configuration.hpp}}\index{Configuration.hpp@{Configuration.hpp}!COARSE@{COARSE}}}\mbox{\Hypertarget{_configuration_8hpp_a560491d8fd69bb6815b29b953b7a2c7aa7a40b4195259848f1215900a270eb746}\label{_configuration_8hpp_a560491d8fd69bb6815b29b953b7a2c7aa7a40b4195259848f1215900a270eb746}} 
+COARSE&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{XCOARSE@{XCOARSE}!Configuration.hpp@{Configuration.hpp}}\index{Configuration.hpp@{Configuration.hpp}!XCOARSE@{XCOARSE}}}\mbox{\Hypertarget{_configuration_8hpp_a560491d8fd69bb6815b29b953b7a2c7aa0522d668568ba049c743b60edb301cf0}\label{_configuration_8hpp_a560491d8fd69bb6815b29b953b7a2c7aa0522d668568ba049c743b60edb301cf0}} 
+XCOARSE&\\
+\hline
+
+\end{DoxyEnumFields}
+\mbox{\Hypertarget{_configuration_8hpp_a8c551c1eb58ae69a51730eb254b93c91}\label{_configuration_8hpp_a8c551c1eb58ae69a51730eb254b93c91}} 
+\index{Configuration.hpp@{Configuration.hpp}!RUN\_MODE@{RUN\_MODE}}
+\index{RUN\_MODE@{RUN\_MODE}!Configuration.hpp@{Configuration.hpp}}
+\doxysubsubsection{\texorpdfstring{RUN\_MODE}{RUN\_MODE}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{_configuration_8hpp_a8c551c1eb58ae69a51730eb254b93c91}{RUN\+\_\+\+MODE}}}
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{AUTO@{AUTO}!Configuration.hpp@{Configuration.hpp}}\index{Configuration.hpp@{Configuration.hpp}!AUTO@{AUTO}}}\mbox{\Hypertarget{_configuration_8hpp_a8c551c1eb58ae69a51730eb254b93c91aeef9468d1b98bca652a04bf5063fd9d6}\label{_configuration_8hpp_a8c551c1eb58ae69a51730eb254b93c91aeef9468d1b98bca652a04bf5063fd9d6}} 
+AUTO&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{PASSIVE@{PASSIVE}!Configuration.hpp@{Configuration.hpp}}\index{Configuration.hpp@{Configuration.hpp}!PASSIVE@{PASSIVE}}}\mbox{\Hypertarget{_configuration_8hpp_a8c551c1eb58ae69a51730eb254b93c91a48be352751e0dd34bbad624be5667ee2}\label{_configuration_8hpp_a8c551c1eb58ae69a51730eb254b93c91a48be352751e0dd34bbad624be5667ee2}} 
+PASSIVE&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{MANUAL@{MANUAL}!Configuration.hpp@{Configuration.hpp}}\index{Configuration.hpp@{Configuration.hpp}!MANUAL@{MANUAL}}}\mbox{\Hypertarget{_configuration_8hpp_a8c551c1eb58ae69a51730eb254b93c91a506e8dd29460ea318b68d035f679b01b}\label{_configuration_8hpp_a8c551c1eb58ae69a51730eb254b93c91a506e8dd29460ea318b68d035f679b01b}} 
+MANUAL&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{IDLE@{IDLE}!Configuration.hpp@{Configuration.hpp}}\index{Configuration.hpp@{Configuration.hpp}!IDLE@{IDLE}}}\mbox{\Hypertarget{_configuration_8hpp_a8c551c1eb58ae69a51730eb254b93c91afd6a0e4343048b10646dd2976cc5ad18}\label{_configuration_8hpp_a8c551c1eb58ae69a51730eb254b93c91afd6a0e4343048b10646dd2976cc5ad18}} 
+IDLE&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{OFF@{OFF}!Configuration.hpp@{Configuration.hpp}}\index{Configuration.hpp@{Configuration.hpp}!OFF@{OFF}}}\mbox{\Hypertarget{_configuration_8hpp_a8c551c1eb58ae69a51730eb254b93c91aac132f2982b98bcaa3445e535a03ff75}\label{_configuration_8hpp_a8c551c1eb58ae69a51730eb254b93c91aac132f2982b98bcaa3445e535a03ff75}} 
+OFF&\\
 \hline
 
 \end{DoxyEnumFields}

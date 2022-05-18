@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 21.12.10) (preloaded format=pdflatex 2022.1.19)  3 MAY 2022 01:06
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 21.12.10) (preloaded format=pdflatex 2022.1.19)  17 MAY 2022 15:42
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -751,12 +751,7 @@ tex.def
 File: l3backend-pdftex.def 2021-12-14 L3 backend support: PDF output (pdfTeX)
 \l__color_backend_stack_int=\count334
 \l__pdf_internal_box=\box121
-) (refman.aux
-
-LaTeX Warning: Label `_configuration_8hpp_ad1b1a6023bad2f6ca0db2b313854a671aa0f
-bc4c1fa19f3ad8f39e5a972ec39d2' multiply defined.
-
-)
+) (refman.aux)
 \openout1 = `refman.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 152.
@@ -901,20 +896,18 @@ LaTeX Font Info:    Font shape `T1/phv/m/n' will be
 
 LaTeX Font Info:    Font shape `T1/phv/b/n' will be
 (Font)              scaled to size 8.99994pt on input line 173.
+LaTeX Font Info:    Font shape `T1/phv/b/n' will be
+(Font)              scaled to size 6.29996pt on input line 173.
+
+[1]
 LaTeX Font Info:    Font shape `T1/phv/m/n' will be
 (Font)              scaled to size 7.19995pt on input line 173.
 LaTeX Font Info:    Trying to load font information for T1+pcr on input line 17
 3.
-
-(C:\Users\fynnr\AppData\Local\Programs\MiKTeX\tex/latex/psnfss\t1pcr.fd
+ (C:\Users\fynnr\AppData\Local\Programs\MiKTeX\tex/latex/psnfss\t1pcr.fd
 File: t1pcr.fd 2001/06/04 font definitions for T1/pcr.
 )
-LaTeX Font Info:    Font shape `T1/phv/b/n' will be
-(Font)              scaled to size 6.29996pt on input line 173.
-
-[1] [2] [3] [4] [5] [6
-
-]
+[2] [3] [4] [5] [6]
 Package hyperref Info: Option `pageanchor' set `true' on input line 176.
 
 Chapter 1.
@@ -934,6 +927,7 @@ LaTeX Font Info:    Font shape `T1/phv/bc/n' will be
 LaTeX Font Info:    Font shape `T1/phv/b/n' will be
 (Font)              scaled to size 12.9599pt on input line 1.
 ) [1
+
 
 ] [2
 
@@ -964,127 +958,168 @@ LaTeX Font Info:    Font shape `T1/phv/m/it' in size <7> not available
 (Font)              Font shape `T1/phv/m/sl' tried instead on input line 30.
 LaTeX Font Info:    Font shape `T1/phv/m/sl' will be
 (Font)              scaled to size 6.29996pt on input line 30.
-LaTeX Font Info:    Font shape `T1/pcr/m/it' in size <8> not available
-(Font)              Font shape `T1/pcr/m/sl' tried instead on input line 46.
 
-[5] [6] [7]) (class_g_p_i_o.tex [8]
+[5]
+LaTeX Font Info:    Font shape `T1/pcr/m/it' in size <8> not available
+(Font)              Font shape `T1/pcr/m/sl' tried instead on input line 66.
+ [6] [7] [8]) (struct_c_u_r_v_e.tex [9] [10]) (class_g_p_i_o.tex [11]
 LaTeX Font Info:    Font shape `T1/pcr/m/it' in size <7> not available
 (Font)              Font shape `T1/pcr/m/sl' tried instead on input line 56.
-) (class_i2_c.tex [9]
+)
+(class_i2_c.tex [12]
 LaTeX Font Info:    Font shape `T1/phv/b/n' will be
 (Font)              scaled to size 7.19995pt on input line 51.
- [10])
-(class_i_a_board.tex [11] [12]
-Underfull \hbox (badness 10000) detected at line 121
+ [13]) (class_i_a_board.tex [14] [15] [16]
+Underfull \hbox (badness 10000) detected at line 145
 [][][]
  []
 
-[13]
-Underfull \hbox (badness 10000) detected at line 161
-[][][]
- []
-
-
-Underfull \hbox (badness 10000) detected at line 177
+[17]
+Underfull \hbox (badness 10000) detected at line 185
 [][][]
  []
 
 
-Underfull \hbox (badness 10000) detected at line 193
+Underfull \hbox (badness 10000) detected at line 201
 [][][]
  []
 
-[14] [15]) (class_p_c_b.tex [16] [17] [18]) (class_simulator.tex [19] [20]
-[21]) (class_u_a_r_t.tex [22]) [23] [24
 
-]
+Underfull \hbox (badness 10000) detected at line 217
+[][][]
+ []
+
+[18] [19]) (class_material_flow.tex [20] [21]) (class_p_c_b.tex [22] [23]
+[24]) (class_simulator.tex [25] [26] [27] [28]) (class_u_a_r_t.tex [29])
+[30]
 Chapter 4.
 (_configuration_8cpp.tex) (_configuration_8hpp.tex
 Underfull \hbox (badness 10000) in paragraph at lines 3--7
 
  []
 
-[25]
+[31
 
-Package longtable Warning: Column widths have changed
-(longtable)                in table 4.3 on input line 101.
+] [32] [33] [34]
+Overfull \vbox (24.52792pt too high) has occurred while \output is active []
 
-) (_configuration_8hpp_source.tex [26]) (_g_p_i_o_8cpp.tex) (_g_p_i_o_8hpp.tex
+
+[35]) (_configuration_8hpp_source.tex [36] [37]) (_g_p_i_o_8cpp.tex)
+(_g_p_i_o_8hpp.tex
 Underfull \hbox (badness 10000) in paragraph at lines 3--7
 
  []
 
-[27]) (_g_p_i_o_8hpp_source.tex) (_i2_c_8cpp.tex) (_i2_c_8hpp.tex
+) (_g_p_i_o_8hpp_source.tex) (_i2_c_8cpp.tex) (_i2_c_8hpp.tex
 Underfull \hbox (badness 10000) in paragraph at lines 3--12
 
  []
 
-) (_i2_c_8hpp_source.tex [28]) (_i_a_board_8cpp.tex) (_i_a_board_8hpp.tex
-Underfull \hbox (badness 10000) in paragraph at lines 3--8
+[38]) (_i2_c_8hpp_source.tex) (_i_a_board_8cpp.tex) (_i_a_board_8hpp.tex
+Underfull \hbox (badness 10000) in paragraph at lines 3--9
 
  []
 
-[29]) (_i_a_board_8hpp_source.tex [30]) (main_8cpp.tex
-Underfull \hbox (badness 10000) in paragraph at lines 3--14
+[39]) (_i_a_board_8hpp_source.tex [40]) (main_8cpp.tex
+Underfull \hbox (badness 10000) in paragraph at lines 3--15
 
  []
 
-[31]) (_p_c_b_8cpp.tex) (_p_c_b_8hpp.tex
+[41]) (_material_flow_8cpp.tex) (_material_flow_8hpp.tex
+Underfull \hbox (badness 10000) in paragraph at lines 3--6
+
+ []
+
+) (_material_flow_8hpp_source.tex [42]) (_p_c_b_8cpp.tex) (_p_c_b_8hpp.tex
 Underfull \hbox (badness 10000) in paragraph at lines 3--7
 
  []
 
-[32] [33]) (_p_c_b_8hpp_source.tex [34]) (_simulator_8cpp.tex)
-(_simulator_8hpp.tex [35]
-Underfull \hbox (badness 10000) in paragraph at lines 3--8
+) (_p_c_b_8hpp_source.tex [43]) (_simulator_8cpp.tex) (_simulator_8hpp.tex
+Underfull \hbox (badness 10000) in paragraph at lines 3--9
 
  []
 
-) (_simulator_8hpp_source.tex) (_u_a_r_t_8cpp.tex [36]) (_u_a_r_t_8hpp.tex
+) (_simulator_8hpp_source.tex [44]) (_u_a_r_t_8cpp.tex) (_u_a_r_t_8hpp.tex
 Underfull \hbox (badness 10000) in paragraph at lines 3--10
 
  []
 
-) (_u_a_r_t_8hpp_source.tex) (utility_8cpp.tex
+) (_u_a_r_t_8hpp_source.tex [45]) (utility_8cpp.tex
 Underfull \hbox (badness 10000) in paragraph at lines 3--4
 
  []
 
-[37]
-Underfull \hbox (badness 10000) detected at line 29
-[][][]
- []
-
-[38]
-Underfull \hbox (badness 10000) detected at line 45
+[46]
+Underfull \hbox (badness 10000) detected at line 39
 [][][]
  []
 
 
-Underfull \hbox (badness 10000) detected at line 63
+Underfull \hbox (badness 10000) detected at line 67
+[][][]
+ []
+
+[47]
+Underfull \hbox (badness 10000) detected at line 83
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 101
+[][][]
+ []
+
+[48]
+Overfull \hbox (16.09276pt too wide) in paragraph at lines 137--138
+[]\T1/phv/m/n/10 Newton-[]Raphson Method for find-ing the x-value that cor-re-s
+ponds to a y-value of a cu-bic func-tion ax$[]$3+x$[]$2+cx+d=value,
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 150
 [][][]
  []
 
 ) (utility_8hpp.tex
-Overfull \vbox (21.91948pt too high) has occurred while \output is active []
+Underfull \hbox (badness 10000) in paragraph at lines 3--7
 
+ []
 
-[39]
-Underfull \hbox (badness 10000) detected at line 28
+[49]
+Underfull \hbox (badness 10000) detected at line 42
+[][][]
+ []
+
+[50]
+Underfull \hbox (badness 10000) detected at line 70
 [][][]
  []
 
 
-Underfull \hbox (badness 10000) detected at line 44
+Underfull \hbox (badness 10000) detected at line 86
 [][][]
  []
 
-
-Underfull \hbox (badness 10000) detected at line 62
+[51]
+Underfull \hbox (badness 10000) detected at line 104
 [][][]
  []
 
-) (utility_8hpp_source.tex) [40] (refman.ind
+[52]
+Overfull \hbox (16.09276pt too wide) in paragraph at lines 140--141
+[]\T1/phv/m/n/10 Newton-[]Raphson Method for find-ing the x-value that cor-re-s
+ponds to a y-value of a cu-bic func-tion ax$[]$3+x$[]$2+cx+d=value,
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 153
+[][][]
+ []
+
+) (utility_8hpp_source.tex) [53] [54
+
+] (refman.ind
 Underfull \hbox (badness 10000) in paragraph at lines 85--87
 []\T1/phv/m/n/10 F:/GITHUB/SiWaSIM-PiSoftware/src/Configuration.cpp,
  []
@@ -1099,26 +1134,18 @@ Underfull \hbox (badness 6608) in paragraph at lines 96--98
 []\T1/phv/m/n/10 F:/GITHUB/SiWaSIM-PiSoftware/src/IABoard.hpp, [][]24[][],
  []
 
-[41
+[55
 
 
-
-] [42] [43])
-
-Package longtable Warning: Table widths have changed. Rerun LaTeX.
-
-(refman.aux)
-
-LaTeX Warning: There were multiply-defined labels.
-
+] [56] [57]) (refman.aux)
 Package rerunfilecheck Info: File `refman.out' has not changed.
-(rerunfilecheck)             Checksum: E4A61856A644535A558FB2AD89756239;36942.
+(rerunfilecheck)             Checksum: 2EF5E00D2F0D081BACC09E914C253632;47506.
  ) 
 Here is how much of TeX's memory you used:
- 18667 strings out of 478659
- 315689 string characters out of 2845920
- 656078 words of memory out of 3000000
- 35936 multiletter control sequences out of 15000+600000
+ 18955 strings out of 478659
+ 326081 string characters out of 2845920
+ 674752 words of memory out of 3000000
+ 36075 multiletter control sequences out of 15000+600000
  465060 words of font info for 106 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  99i,16n,117p,756b,635s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -1128,17 +1155,18 @@ Here is how much of TeX's memory you used:
 /cm/cmmi8.pfb><C:/Users/fynnr/AppData/Local/Programs/MiKTeX/fonts/type1/public/
 amsfonts/cm/cmmi9.pfb><C:/Users/fynnr/AppData/Local/Programs/MiKTeX/fonts/type1
 /public/amsfonts/cm/cmsy10.pfb><C:/Users/fynnr/AppData/Local/Programs/MiKTeX/fo
-nts/type1/public/amsfonts/cm/cmsy8.pfb><C:/Users/fynnr/AppData/Local/Programs/M
-iKTeX/fonts/type1/urw/courier/ucrb8a.pfb><C:/Users/fynnr/AppData/Local/Programs
-/MiKTeX/fonts/type1/urw/courier/ucrr8a.pfb><C:/Users/fynnr/AppData/Local/Progra
-ms/MiKTeX/fonts/type1/urw/courier/ucrro8a.pfb><C:/Users/fynnr/AppData/Local/Pro
-grams/MiKTeX/fonts/type1/urw/helvetic/uhvb8a.pfb><C:/Users/fynnr/AppData/Local/
-Programs/MiKTeX/fonts/type1/urw/helvetic/uhvb8ac.pfb><C:/Users/fynnr/AppData/Lo
-cal/Programs/MiKTeX/fonts/type1/urw/helvetic/uhvr8a.pfb><C:/Users/fynnr/AppData
-/Local/Programs/MiKTeX/fonts/type1/urw/helvetic/uhvro8a.pfb>
-Output written on refman.pdf (51 pages, 475287 bytes).
+nts/type1/public/amsfonts/cm/cmsy7.pfb><C:/Users/fynnr/AppData/Local/Programs/M
+iKTeX/fonts/type1/public/amsfonts/cm/cmsy8.pfb><C:/Users/fynnr/AppData/Local/Pr
+ograms/MiKTeX/fonts/type1/urw/courier/ucrb8a.pfb><C:/Users/fynnr/AppData/Local/
+Programs/MiKTeX/fonts/type1/urw/courier/ucrr8a.pfb><C:/Users/fynnr/AppData/Loca
+l/Programs/MiKTeX/fonts/type1/urw/courier/ucrro8a.pfb><C:/Users/fynnr/AppData/L
+ocal/Programs/MiKTeX/fonts/type1/urw/helvetic/uhvb8a.pfb><C:/Users/fynnr/AppDat
+a/Local/Programs/MiKTeX/fonts/type1/urw/helvetic/uhvb8ac.pfb><C:/Users/fynnr/Ap
+pData/Local/Programs/MiKTeX/fonts/type1/urw/helvetic/uhvr8a.pfb><C:/Users/fynnr
+/AppData/Local/Programs/MiKTeX/fonts/type1/urw/helvetic/uhvro8a.pfb>
+Output written on refman.pdf (65 pages, 600351 bytes).
 PDF statistics:
- 2029 PDF objects out of 2073 (max. 8388607)
- 424 named destinations out of 1000 (max. 500000)
- 1401 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 2631 PDF objects out of 2984 (max. 8388607)
+ 562 named destinations out of 1000 (max. 500000)
+ 1825 words of extra memory for PDF output out of 10000 (max. 10000000)
 

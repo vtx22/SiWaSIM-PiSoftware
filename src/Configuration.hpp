@@ -100,6 +100,11 @@ enum RUN_MODE
 
 } typedef RUN_MODE;
 
+struct CUBIC_FUNCTION
+{
+   float a, b, c, d;
+} typedef CUBIC_FUNCTION;
+
 class Configuration
 {
 public:
@@ -134,6 +139,7 @@ public:
    float endVoltage = 9;
 
    float a, b, c, d;
+   CUBIC_FUNCTION calibrationReg;
 
    // Input channel assignment
    MATERIAL_FLOW inputChannel1 = MATERIAL_FLOW::EMPTY;

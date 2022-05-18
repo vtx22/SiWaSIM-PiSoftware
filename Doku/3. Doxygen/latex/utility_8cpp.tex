@@ -9,10 +9,48 @@ float \mbox{\hyperlink{utility_8cpp_af5725d0ad4b80368c8cb701c04ec169a}{constrain
 float \mbox{\hyperlink{utility_8cpp_adcfdb18ef60fdac6bab11f4aeec470e2}{constrain\+Min}} (float value, float min)
 \item 
 float \mbox{\hyperlink{utility_8cpp_a5124739dfc2606b0b4508d175e617d86}{constrain\+Max}} (float value, float max)
+\item 
+void \mbox{\hyperlink{utility_8cpp_a850dd7c2b5043c33786b5fee48f2e4c2}{linear\+Regression}} (std\+::vector$<$ float $>$ x, std\+::vector$<$ float $>$ y, float $\ast$m, float $\ast$b)
+\item 
+float \mbox{\hyperlink{utility_8cpp_a94cb286a882e6071a8bebc2237101a80}{calculate\+Average}} (std\+::vector$<$ float $>$ values)
+\item 
+void \mbox{\hyperlink{utility_8cpp_acf0a0c75a6add075ab6aefedbf7ae172}{cubic\+Regression}} (std\+::vector$<$ float $>$ x, std\+::vector$<$ float $>$ y, float $\ast$a, float $\ast$b, float $\ast$c, float $\ast$d)
+\item 
+float \mbox{\hyperlink{utility_8cpp_a88e4fb018f92eb63b61ea28087819ce3}{solve\+Cubic\+For\+Voltage}} (float a, float b, float c, float d, float value)
+\item 
+float \mbox{\hyperlink{utility_8cpp_a4ebc121761f629a729747ff570b4088c}{calculate\+Cubic}} (float a, float b, float c, float d, float x)
+\item 
+float \mbox{\hyperlink{utility_8cpp_a7940f050e1ee40acf63aee97c4bfd339}{calculate\+Cubic\+Deriv}} (float a, float b, float c, float x)
 \end{DoxyCompactItemize}
 
 
 \doxysubsection{Function Documentation}
+\mbox{\Hypertarget{utility_8cpp_a94cb286a882e6071a8bebc2237101a80}\label{utility_8cpp_a94cb286a882e6071a8bebc2237101a80}} 
+\index{utility.cpp@{utility.cpp}!calculateAverage@{calculateAverage}}
+\index{calculateAverage@{calculateAverage}!utility.cpp@{utility.cpp}}
+\doxysubsubsection{\texorpdfstring{calculateAverage()}{calculateAverage()}}
+{\footnotesize\ttfamily float calculate\+Average (\begin{DoxyParamCaption}\item[{std\+::vector$<$ float $>$}]{values }\end{DoxyParamCaption})}
+
+Calculates the average of values of a vector 
+\begin{DoxyParams}{Parameters}
+{\em values} & The vector that contains the values \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Returns the average of the values in the vector 
+\end{DoxyReturn}
+\mbox{\Hypertarget{utility_8cpp_a4ebc121761f629a729747ff570b4088c}\label{utility_8cpp_a4ebc121761f629a729747ff570b4088c}} 
+\index{utility.cpp@{utility.cpp}!calculateCubic@{calculateCubic}}
+\index{calculateCubic@{calculateCubic}!utility.cpp@{utility.cpp}}
+\doxysubsubsection{\texorpdfstring{calculateCubic()}{calculateCubic()}}
+{\footnotesize\ttfamily float calculate\+Cubic (\begin{DoxyParamCaption}\item[{float}]{a,  }\item[{float}]{b,  }\item[{float}]{c,  }\item[{float}]{d,  }\item[{float}]{x }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{utility_8cpp_a7940f050e1ee40acf63aee97c4bfd339}\label{utility_8cpp_a7940f050e1ee40acf63aee97c4bfd339}} 
+\index{utility.cpp@{utility.cpp}!calculateCubicDeriv@{calculateCubicDeriv}}
+\index{calculateCubicDeriv@{calculateCubicDeriv}!utility.cpp@{utility.cpp}}
+\doxysubsubsection{\texorpdfstring{calculateCubicDeriv()}{calculateCubicDeriv()}}
+{\footnotesize\ttfamily float calculate\+Cubic\+Deriv (\begin{DoxyParamCaption}\item[{float}]{a,  }\item[{float}]{b,  }\item[{float}]{c,  }\item[{float}]{x }\end{DoxyParamCaption})}
+
 \mbox{\Hypertarget{utility_8cpp_a5124739dfc2606b0b4508d175e617d86}\label{utility_8cpp_a5124739dfc2606b0b4508d175e617d86}} 
 \index{utility.cpp@{utility.cpp}!constrainMax@{constrainMax}}
 \index{constrainMax@{constrainMax}!utility.cpp@{utility.cpp}}
@@ -62,4 +100,53 @@ Constrain a value between an upper and a lower limit to clip the value
 \end{DoxyParams}
 \begin{DoxyReturn}{Returns}
 Returns the clipped / constrained value 
+\end{DoxyReturn}
+\mbox{\Hypertarget{utility_8cpp_acf0a0c75a6add075ab6aefedbf7ae172}\label{utility_8cpp_acf0a0c75a6add075ab6aefedbf7ae172}} 
+\index{utility.cpp@{utility.cpp}!cubicRegression@{cubicRegression}}
+\index{cubicRegression@{cubicRegression}!utility.cpp@{utility.cpp}}
+\doxysubsubsection{\texorpdfstring{cubicRegression()}{cubicRegression()}}
+{\footnotesize\ttfamily void cubic\+Regression (\begin{DoxyParamCaption}\item[{std\+::vector$<$ float $>$}]{x,  }\item[{std\+::vector$<$ float $>$}]{y,  }\item[{float $\ast$}]{a,  }\item[{float $\ast$}]{b,  }\item[{float $\ast$}]{c,  }\item[{float $\ast$}]{d }\end{DoxyParamCaption})}
+
+Calculates a cubic regression f(x)=ax$^\wedge$3+bx$^\wedge$2+cx+d for a dataset of x and y values 
+\begin{DoxyParams}{Parameters}
+{\em x} & Vector of x-\/values of the dataset \\
+\hline
+{\em y} & Vector of y-\/values of the dataset \\
+\hline
+{\em a} & Coefficient in front of x$^\wedge$3 \\
+\hline
+{\em b} & Coefficient in front of x$^\wedge$2 \\
+\hline
+{\em c} & Coefficient in front of x$^\wedge$1 \\
+\hline
+{\em d} & Coefficient in front of x$^\wedge$0 \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{utility_8cpp_a850dd7c2b5043c33786b5fee48f2e4c2}\label{utility_8cpp_a850dd7c2b5043c33786b5fee48f2e4c2}} 
+\index{utility.cpp@{utility.cpp}!linearRegression@{linearRegression}}
+\index{linearRegression@{linearRegression}!utility.cpp@{utility.cpp}}
+\doxysubsubsection{\texorpdfstring{linearRegression()}{linearRegression()}}
+{\footnotesize\ttfamily void linear\+Regression (\begin{DoxyParamCaption}\item[{std\+::vector$<$ float $>$}]{x,  }\item[{std\+::vector$<$ float $>$}]{y,  }\item[{float $\ast$}]{m,  }\item[{float $\ast$}]{b }\end{DoxyParamCaption})}
+
+Calculates a linear regression f(x)=mx+b for a dataset of x and y values \mbox{\Hypertarget{utility_8cpp_a88e4fb018f92eb63b61ea28087819ce3}\label{utility_8cpp_a88e4fb018f92eb63b61ea28087819ce3}} 
+\index{utility.cpp@{utility.cpp}!solveCubicForVoltage@{solveCubicForVoltage}}
+\index{solveCubicForVoltage@{solveCubicForVoltage}!utility.cpp@{utility.cpp}}
+\doxysubsubsection{\texorpdfstring{solveCubicForVoltage()}{solveCubicForVoltage()}}
+{\footnotesize\ttfamily float solve\+Cubic\+For\+Voltage (\begin{DoxyParamCaption}\item[{float}]{a,  }\item[{float}]{b,  }\item[{float}]{c,  }\item[{float}]{d,  }\item[{float}]{value }\end{DoxyParamCaption})}
+
+Newton-\/\+Raphson Method for finding the x-\/value that corresponds to a y-\/value of a cubic function ax$^\wedge$3+x$^\wedge$2+cx+d=value, only for the range 0 -\/ 10 
+\begin{DoxyParams}{Parameters}
+{\em a} & Coefficient in front of x$^\wedge$3 \\
+\hline
+{\em b} & Coefficient in front of x$^\wedge$2 \\
+\hline
+{\em c} & Coefficient in front of x$^\wedge$1 \\
+\hline
+{\em d} & Coefficient in front of x$^\wedge$0 \\
+\hline
+{\em value} & y-\/value of the cubic function that corresponds to the wanted x-\/value \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Returns the x-\/value that corresponds to the y-\/value 
 \end{DoxyReturn}

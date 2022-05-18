@@ -98,11 +98,11 @@ void PCB::setLoadcellVoltage(float voltage)
    }
 
    // Correction because if EXC is lower than expected the differential voltage has to decrease for example
-   voltage *= getEXCVoltage() / _config->exc_voltage;
+   // voltage *= getEXCVoltage() / _config->exc_voltage;
 
    std::cout << "EXC Voltage: " << getEXCVoltage() << std::endl;
 
-   addvol = solveCubicForVoltage(_config->a, _config->b, _config->c, _config->d, voltage / 1000.f);
+   addvol = solveCubicForVoltage(_config->calibrationReg.a, _config->calibrationReg.b, _config->calibrationReg.c, _config->calibrationReg.d, voltage / 1000.f);
 
    std::cout << "Wanted voltage: " << voltage << " mV, Addvol: " << addvol << std::endl;
 

@@ -21,9 +21,19 @@ void \mbox{\hyperlink{class_simulator_a8585f658197dbaba1905ef9654b8de80}{set\+Ve
 \item 
 void \mbox{\hyperlink{class_simulator_a279633984034631853a4ecf16d478be1}{set\+Velocity\+FRQ}} (float frequency)
 \item 
+void \mbox{\hyperlink{class_simulator_a3a09a331888d2087f6afbb53e1860195}{set\+Impedance}} (\mbox{\hyperlink{_configuration_8hpp_a8cdbfc5a2637c1334b36e71aaf4f960e}{IMPEDANCE}} impedance)
+\item 
 void \mbox{\hyperlink{class_simulator_abe9678f710894b6548da5b9a89391981}{bootup\+Animation}} ()
 \item 
-void \mbox{\hyperlink{class_simulator_a02dce5814f4cf0c17dbbfbc606032945}{load\+Config}} ()
+void \mbox{\hyperlink{class_simulator_a008cd4b74753e0452e732c93476f1f39}{reload\+Config}} ()
+\item 
+void \mbox{\hyperlink{class_simulator_a6582f4d0fe9ce549dc4769111e497aba}{test\+Function}} ()
+\item 
+float \mbox{\hyperlink{class_simulator_ad2658f679abc1321cb387ea635514369}{run}} (\mbox{\hyperlink{_configuration_8hpp_a8c551c1eb58ae69a51730eb254b93c91}{RUN\+\_\+\+MODE}} run\+Mode, float timestep, float $\ast$weight)
+\item 
+float \mbox{\hyperlink{class_simulator_a037bd4438dc54efd65663e76b1651062}{run\+Passive}} (float timestep, float $\ast$weight)
+\item 
+void \mbox{\hyperlink{class_simulator_a5a7b96a490946d1eb5ba025c7be178ef}{calibrate\+LCVoltage}} ()
 \end{DoxyCompactItemize}
 
 
@@ -49,11 +59,35 @@ void \mbox{\hyperlink{class_simulator_a02dce5814f4cf0c17dbbfbc606032945}{load\+C
 \doxysubsubsection{\texorpdfstring{bootupAnimation()}{bootupAnimation()}}
 {\footnotesize\ttfamily void Simulator\+::bootup\+Animation (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
-Starts an animation with the on board LEDs \mbox{\Hypertarget{class_simulator_a02dce5814f4cf0c17dbbfbc606032945}\label{class_simulator_a02dce5814f4cf0c17dbbfbc606032945}} 
-\index{Simulator@{Simulator}!loadConfig@{loadConfig}}
-\index{loadConfig@{loadConfig}!Simulator@{Simulator}}
-\doxysubsubsection{\texorpdfstring{loadConfig()}{loadConfig()}}
-{\footnotesize\ttfamily void Simulator\+::load\+Config (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+Starts an animation with the on board LEDs \mbox{\Hypertarget{class_simulator_a5a7b96a490946d1eb5ba025c7be178ef}\label{class_simulator_a5a7b96a490946d1eb5ba025c7be178ef}} 
+\index{Simulator@{Simulator}!calibrateLCVoltage@{calibrateLCVoltage}}
+\index{calibrateLCVoltage@{calibrateLCVoltage}!Simulator@{Simulator}}
+\doxysubsubsection{\texorpdfstring{calibrateLCVoltage()}{calibrateLCVoltage()}}
+{\footnotesize\ttfamily void Simulator\+::calibrate\+LCVoltage (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_simulator_a008cd4b74753e0452e732c93476f1f39}\label{class_simulator_a008cd4b74753e0452e732c93476f1f39}} 
+\index{Simulator@{Simulator}!reloadConfig@{reloadConfig}}
+\index{reloadConfig@{reloadConfig}!Simulator@{Simulator}}
+\doxysubsubsection{\texorpdfstring{reloadConfig()}{reloadConfig()}}
+{\footnotesize\ttfamily void Simulator\+::reload\+Config (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Reloads the configuration from the disk an stores the settings \mbox{\Hypertarget{class_simulator_ad2658f679abc1321cb387ea635514369}\label{class_simulator_ad2658f679abc1321cb387ea635514369}} 
+\index{Simulator@{Simulator}!run@{run}}
+\index{run@{run}!Simulator@{Simulator}}
+\doxysubsubsection{\texorpdfstring{run()}{run()}}
+{\footnotesize\ttfamily float Simulator\+::run (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{_configuration_8hpp_a8c551c1eb58ae69a51730eb254b93c91}{RUN\+\_\+\+MODE}}}]{run\+Mode,  }\item[{float}]{timestep,  }\item[{float $\ast$}]{weight }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_simulator_a037bd4438dc54efd65663e76b1651062}\label{class_simulator_a037bd4438dc54efd65663e76b1651062}} 
+\index{Simulator@{Simulator}!runPassive@{runPassive}}
+\index{runPassive@{runPassive}!Simulator@{Simulator}}
+\doxysubsubsection{\texorpdfstring{runPassive()}{runPassive()}}
+{\footnotesize\ttfamily float Simulator\+::run\+Passive (\begin{DoxyParamCaption}\item[{float}]{timestep,  }\item[{float $\ast$}]{weight }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_simulator_a3a09a331888d2087f6afbb53e1860195}\label{class_simulator_a3a09a331888d2087f6afbb53e1860195}} 
+\index{Simulator@{Simulator}!setImpedance@{setImpedance}}
+\index{setImpedance@{setImpedance}!Simulator@{Simulator}}
+\doxysubsubsection{\texorpdfstring{setImpedance()}{setImpedance()}}
+{\footnotesize\ttfamily void Simulator\+::set\+Impedance (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{_configuration_8hpp_a8cdbfc5a2637c1334b36e71aaf4f960e}{IMPEDANCE}}}]{impedance }\end{DoxyParamCaption})}
 
 \mbox{\Hypertarget{class_simulator_a667aa60bb9e7956adaf58ec0a068510b}\label{class_simulator_a667aa60bb9e7956adaf58ec0a068510b}} 
 \index{Simulator@{Simulator}!setVelocity@{setVelocity}}
@@ -110,6 +144,12 @@ Set the output weight as a percentage of the nominal load
 {\em percentage} & Percentage from 0 -\/ 1 where 1 represents the nominal load as specified \\
 \hline
 \end{DoxyParams}
+\mbox{\Hypertarget{class_simulator_a6582f4d0fe9ce549dc4769111e497aba}\label{class_simulator_a6582f4d0fe9ce549dc4769111e497aba}} 
+\index{Simulator@{Simulator}!testFunction@{testFunction}}
+\index{testFunction@{testFunction}!Simulator@{Simulator}}
+\doxysubsubsection{\texorpdfstring{testFunction()}{testFunction()}}
+{\footnotesize\ttfamily void Simulator\+::test\+Function (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
 
 
 The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}

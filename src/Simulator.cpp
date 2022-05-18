@@ -181,22 +181,10 @@ void Simulator::calibrateLCVoltage()
 
    cubicRegression(xValues, yValues, &a, &b, &c, &d);
 
-   std::cout << "a: " << a << " b: " << b << " c: " << c << " d: " << d << std::endl;
-
-   _config->a = a;
-   _config->b = b;
-   _config->c = c;
-   _config->d = d;
-
-   /*
-   float startVoltage = -b / m;
-   float endVoltage = (0.04 - b) / m;
-
-
-   _config->startVoltage = startVoltage;
-   _config->endVoltage = endVoltage;
-   */
-   // std::cout << "START: " << startVoltage << " END: " << endVoltage << std::endl;
+   _config->calibrationReg.a = a;
+   _config->calibrationReg.a = b;
+   _config->calibrationReg.a = c;
+   _config->calibrationReg.a = d;
 
    float voltage = 0;
    while (true)

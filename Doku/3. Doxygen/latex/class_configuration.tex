@@ -18,7 +18,7 @@ void \mbox{\hyperlink{class_configuration_a5c4ffeed7ac7333e9bcb8fd63232c60f}{loa
 \item 
 \mbox{\hyperlink{_configuration_8hpp_a79dd9036c94e58a35b6e18d61a36fb66}{Load\+Cell\+Mode}} \mbox{\hyperlink{class_configuration_a94120b68ed6b6175c152c2799baa4cc7}{cell\+Mode}} = \mbox{\hyperlink{_configuration_8hpp_a79dd9036c94e58a35b6e18d61a36fb66a50d1448013c6f17125caee18aa418af7}{Load\+Cell\+Mode\+::\+NORMAL}}
 \begin{DoxyCompactList}\small\item\em Loadcell mode to be simulated. \end{DoxyCompactList}\item 
-\mbox{\hyperlink{_configuration_8hpp_ad1b1a6023bad2f6ca0db2b313854a671}{SYSTEM\+\_\+\+TYPE}} \mbox{\hyperlink{class_configuration_a081b7708cde859dad986d1d538b4532a}{system\+Type}} = \mbox{\hyperlink{_configuration_8hpp_a79dd9036c94e58a35b6e18d61a36fb66a50d1448013c6f17125caee18aa418af7}{SYSTEM\+\_\+\+TYPE\+::\+NORMAL}}
+\mbox{\hyperlink{_configuration_8hpp_ad1b1a6023bad2f6ca0db2b313854a671}{SYSTEM\+\_\+\+TYPE}} \mbox{\hyperlink{class_configuration_a081b7708cde859dad986d1d538b4532a}{system\+Type}} = \mbox{\hyperlink{_configuration_8hpp_ad1b1a6023bad2f6ca0db2b313854a671a84bfc2ea4b24a3d1df91832df23330ab}{SYSTEM\+\_\+\+TYPE\+::\+DOSING\+\_\+\+SCALE}}
 \begin{DoxyCompactList}\small\item\em System type to be simulated. \end{DoxyCompactList}\item 
 float \mbox{\hyperlink{class_configuration_ae8d60d92e248f2beb56ab65b3675021b}{exc\+\_\+voltage}} = 10.f
 \begin{DoxyCompactList}\small\item\em Nominal EXC voltage ouputted by the SIWAREX module. \end{DoxyCompactList}\item 
@@ -35,7 +35,27 @@ float \mbox{\hyperlink{class_configuration_a4464bbfe8da8d5f4d8a3d98c340905a0}{ce
 float \mbox{\hyperlink{class_configuration_ae569342591db6be4b0e3e9aa68f9b957}{speed\+At100}} = 5
 \begin{DoxyCompactList}\small\item\em Belt velocity in m/s at 100\% speed. \end{DoxyCompactList}\item 
 float \mbox{\hyperlink{class_configuration_a4248163a3f41503860502e63931cc3ed}{freq\+At100}} = 10000
-\begin{DoxyCompactList}\small\item\em Belt encoder frequency at 100\% speed. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Belt encoder frequency at 100\% speed. \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{class_configuration_a6483708cbaaf922b5d6fdbe1632cbede}{start\+Voltage}} = 2
+\item 
+float \mbox{\hyperlink{class_configuration_ac51343f8ded8db13c1fce7becc414825}{end\+Voltage}} = 9
+\item 
+float \mbox{\hyperlink{class_configuration_ab9b5a63539f046c6f2d19cc94680f483}{a}}
+\item 
+float \mbox{\hyperlink{class_configuration_a45f402f94e6be5685a07767548f673ae}{b}}
+\item 
+float \mbox{\hyperlink{class_configuration_a04919c3b82ac5e946f86bbc0eb2d7ff4}{c}}
+\item 
+float \mbox{\hyperlink{class_configuration_a3f0fbeaebbee926fd0f399c24d9e6b9b}{d}}
+\item 
+\mbox{\hyperlink{_configuration_8hpp_a560491d8fd69bb6815b29b953b7a2c7a}{MATERIAL\+\_\+\+FLOW}} \mbox{\hyperlink{class_configuration_aa78d6dfaa0dc802df17d0e873f96078f}{input\+Channel1}} = \mbox{\hyperlink{_configuration_8hpp_a560491d8fd69bb6815b29b953b7a2c7aa2f0d18fc0d0fa4a6cd92dc328501874d}{MATERIAL\+\_\+\+FLOW\+::\+EMPTY}}
+\item 
+\mbox{\hyperlink{_configuration_8hpp_a560491d8fd69bb6815b29b953b7a2c7a}{MATERIAL\+\_\+\+FLOW}} \mbox{\hyperlink{class_configuration_a1613fbdf810c3944bd99b980ff4b9b95}{input\+Channel2}} = \mbox{\hyperlink{_configuration_8hpp_a560491d8fd69bb6815b29b953b7a2c7aac5a963f145f3153de0afe16e7d8cec76}{MATERIAL\+\_\+\+FLOW\+::\+FINE}}
+\item 
+\mbox{\hyperlink{_configuration_8hpp_a560491d8fd69bb6815b29b953b7a2c7a}{MATERIAL\+\_\+\+FLOW}} \mbox{\hyperlink{class_configuration_a05e043fd82ac0b9e0da67c9f1c6b8a8c}{input\+Channel3}} = \mbox{\hyperlink{_configuration_8hpp_a560491d8fd69bb6815b29b953b7a2c7aa7a40b4195259848f1215900a270eb746}{MATERIAL\+\_\+\+FLOW\+::\+COARSE}}
+\item 
+\mbox{\hyperlink{_configuration_8hpp_a560491d8fd69bb6815b29b953b7a2c7a}{MATERIAL\+\_\+\+FLOW}} \mbox{\hyperlink{class_configuration_a81a650d59731242f74bdb7a0b246dd40}{input\+Channel4}} = \mbox{\hyperlink{_configuration_8hpp_a560491d8fd69bb6815b29b953b7a2c7aa0522d668568ba049c743b60edb301cf0}{MATERIAL\+\_\+\+FLOW\+::\+XCOARSE}}
+\end{DoxyCompactItemize}
 
 
 \doxysubsection{Constructor \& Destructor Documentation}
@@ -68,6 +88,12 @@ Creates a new configuration that stores all configuration settings needed for th
 Loads a configuration file from the file system (specified by path in \mbox{\hyperlink{class_configuration_a911965960877c2f2ba1be3a5cf397f31}{Configuration(std\+::string path)}}) and parses all settings to their respective variables 
 
 \doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{class_configuration_ab9b5a63539f046c6f2d19cc94680f483}\label{class_configuration_ab9b5a63539f046c6f2d19cc94680f483}} 
+\index{Configuration@{Configuration}!a@{a}}
+\index{a@{a}!Configuration@{Configuration}}
+\doxysubsubsection{\texorpdfstring{a}{a}}
+{\footnotesize\ttfamily float Configuration\+::a}
+
 \mbox{\Hypertarget{class_configuration_adbdf6f1d3a1d29d9a65fe1e93ffa00aa}\label{class_configuration_adbdf6f1d3a1d29d9a65fe1e93ffa00aa}} 
 \index{Configuration@{Configuration}!addvol\_ratio@{addvol\_ratio}}
 \index{addvol\_ratio@{addvol\_ratio}!Configuration@{Configuration}}
@@ -77,6 +103,18 @@ Loads a configuration file from the file system (specified by path in \mbox{\hyp
 
 
 Inverted Op\+Amp gain (e.\+g.\+: At 10V Aout the added / subtracted voltage is 20mV -\/-\/\texorpdfstring{$>$}{>} ratio = 10V / 20mV = 500) 
+
+\mbox{\Hypertarget{class_configuration_a45f402f94e6be5685a07767548f673ae}\label{class_configuration_a45f402f94e6be5685a07767548f673ae}} 
+\index{Configuration@{Configuration}!b@{b}}
+\index{b@{b}!Configuration@{Configuration}}
+\doxysubsubsection{\texorpdfstring{b}{b}}
+{\footnotesize\ttfamily float Configuration\+::b}
+
+\mbox{\Hypertarget{class_configuration_a04919c3b82ac5e946f86bbc0eb2d7ff4}\label{class_configuration_a04919c3b82ac5e946f86bbc0eb2d7ff4}} 
+\index{Configuration@{Configuration}!c@{c}}
+\index{c@{c}!Configuration@{Configuration}}
+\doxysubsubsection{\texorpdfstring{c}{c}}
+{\footnotesize\ttfamily float Configuration\+::c}
 
 \mbox{\Hypertarget{class_configuration_a4464bbfe8da8d5f4d8a3d98c340905a0}\label{class_configuration_a4464bbfe8da8d5f4d8a3d98c340905a0}} 
 \index{Configuration@{Configuration}!cellCharecteristic@{cellCharecteristic}}
@@ -97,6 +135,18 @@ Characteristic in m\+V/V.
 
 
 Loadcell mode to be simulated. 
+
+\mbox{\Hypertarget{class_configuration_a3f0fbeaebbee926fd0f399c24d9e6b9b}\label{class_configuration_a3f0fbeaebbee926fd0f399c24d9e6b9b}} 
+\index{Configuration@{Configuration}!d@{d}}
+\index{d@{d}!Configuration@{Configuration}}
+\doxysubsubsection{\texorpdfstring{d}{d}}
+{\footnotesize\ttfamily float Configuration\+::d}
+
+\mbox{\Hypertarget{class_configuration_ac51343f8ded8db13c1fce7becc414825}\label{class_configuration_ac51343f8ded8db13c1fce7becc414825}} 
+\index{Configuration@{Configuration}!endVoltage@{endVoltage}}
+\index{endVoltage@{endVoltage}!Configuration@{Configuration}}
+\doxysubsubsection{\texorpdfstring{endVoltage}{endVoltage}}
+{\footnotesize\ttfamily float Configuration\+::end\+Voltage = 9}
 
 \mbox{\Hypertarget{class_configuration_ae8d60d92e248f2beb56ab65b3675021b}\label{class_configuration_ae8d60d92e248f2beb56ab65b3675021b}} 
 \index{Configuration@{Configuration}!exc\_voltage@{exc\_voltage}}
@@ -128,6 +178,30 @@ Belt encoder frequency at 100\% speed.
 
 Initial weight (for manual / non-\/auto mode) 
 
+\mbox{\Hypertarget{class_configuration_aa78d6dfaa0dc802df17d0e873f96078f}\label{class_configuration_aa78d6dfaa0dc802df17d0e873f96078f}} 
+\index{Configuration@{Configuration}!inputChannel1@{inputChannel1}}
+\index{inputChannel1@{inputChannel1}!Configuration@{Configuration}}
+\doxysubsubsection{\texorpdfstring{inputChannel1}{inputChannel1}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_configuration_8hpp_a560491d8fd69bb6815b29b953b7a2c7a}{MATERIAL\+\_\+\+FLOW}} Configuration\+::input\+Channel1 = \mbox{\hyperlink{_configuration_8hpp_a560491d8fd69bb6815b29b953b7a2c7aa2f0d18fc0d0fa4a6cd92dc328501874d}{MATERIAL\+\_\+\+FLOW\+::\+EMPTY}}}
+
+\mbox{\Hypertarget{class_configuration_a1613fbdf810c3944bd99b980ff4b9b95}\label{class_configuration_a1613fbdf810c3944bd99b980ff4b9b95}} 
+\index{Configuration@{Configuration}!inputChannel2@{inputChannel2}}
+\index{inputChannel2@{inputChannel2}!Configuration@{Configuration}}
+\doxysubsubsection{\texorpdfstring{inputChannel2}{inputChannel2}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_configuration_8hpp_a560491d8fd69bb6815b29b953b7a2c7a}{MATERIAL\+\_\+\+FLOW}} Configuration\+::input\+Channel2 = \mbox{\hyperlink{_configuration_8hpp_a560491d8fd69bb6815b29b953b7a2c7aac5a963f145f3153de0afe16e7d8cec76}{MATERIAL\+\_\+\+FLOW\+::\+FINE}}}
+
+\mbox{\Hypertarget{class_configuration_a05e043fd82ac0b9e0da67c9f1c6b8a8c}\label{class_configuration_a05e043fd82ac0b9e0da67c9f1c6b8a8c}} 
+\index{Configuration@{Configuration}!inputChannel3@{inputChannel3}}
+\index{inputChannel3@{inputChannel3}!Configuration@{Configuration}}
+\doxysubsubsection{\texorpdfstring{inputChannel3}{inputChannel3}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_configuration_8hpp_a560491d8fd69bb6815b29b953b7a2c7a}{MATERIAL\+\_\+\+FLOW}} Configuration\+::input\+Channel3 = \mbox{\hyperlink{_configuration_8hpp_a560491d8fd69bb6815b29b953b7a2c7aa7a40b4195259848f1215900a270eb746}{MATERIAL\+\_\+\+FLOW\+::\+COARSE}}}
+
+\mbox{\Hypertarget{class_configuration_a81a650d59731242f74bdb7a0b246dd40}\label{class_configuration_a81a650d59731242f74bdb7a0b246dd40}} 
+\index{Configuration@{Configuration}!inputChannel4@{inputChannel4}}
+\index{inputChannel4@{inputChannel4}!Configuration@{Configuration}}
+\doxysubsubsection{\texorpdfstring{inputChannel4}{inputChannel4}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_configuration_8hpp_a560491d8fd69bb6815b29b953b7a2c7a}{MATERIAL\+\_\+\+FLOW}} Configuration\+::input\+Channel4 = \mbox{\hyperlink{_configuration_8hpp_a560491d8fd69bb6815b29b953b7a2c7aa0522d668568ba049c743b60edb301cf0}{MATERIAL\+\_\+\+FLOW\+::\+XCOARSE}}}
+
 \mbox{\Hypertarget{class_configuration_ae5fb01ebff9c19f346cac9158b16b3a2}\label{class_configuration_ae5fb01ebff9c19f346cac9158b16b3a2}} 
 \index{Configuration@{Configuration}!load\_weight@{load\_weight}}
 \index{load\_weight@{load\_weight}!Configuration@{Configuration}}
@@ -158,11 +232,17 @@ Maximum Differential Voltage of SIG+-\/.
 
 Belt velocity in m/s at 100\% speed. 
 
+\mbox{\Hypertarget{class_configuration_a6483708cbaaf922b5d6fdbe1632cbede}\label{class_configuration_a6483708cbaaf922b5d6fdbe1632cbede}} 
+\index{Configuration@{Configuration}!startVoltage@{startVoltage}}
+\index{startVoltage@{startVoltage}!Configuration@{Configuration}}
+\doxysubsubsection{\texorpdfstring{startVoltage}{startVoltage}}
+{\footnotesize\ttfamily float Configuration\+::start\+Voltage = 2}
+
 \mbox{\Hypertarget{class_configuration_a081b7708cde859dad986d1d538b4532a}\label{class_configuration_a081b7708cde859dad986d1d538b4532a}} 
 \index{Configuration@{Configuration}!systemType@{systemType}}
 \index{systemType@{systemType}!Configuration@{Configuration}}
 \doxysubsubsection{\texorpdfstring{systemType}{systemType}}
-{\footnotesize\ttfamily \mbox{\hyperlink{_configuration_8hpp_ad1b1a6023bad2f6ca0db2b313854a671}{SYSTEM\+\_\+\+TYPE}} Configuration\+::system\+Type = \mbox{\hyperlink{_configuration_8hpp_a79dd9036c94e58a35b6e18d61a36fb66a50d1448013c6f17125caee18aa418af7}{SYSTEM\+\_\+\+TYPE\+::\+NORMAL}}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_configuration_8hpp_ad1b1a6023bad2f6ca0db2b313854a671}{SYSTEM\+\_\+\+TYPE}} Configuration\+::system\+Type = \mbox{\hyperlink{_configuration_8hpp_ad1b1a6023bad2f6ca0db2b313854a671a84bfc2ea4b24a3d1df91832df23330ab}{SYSTEM\+\_\+\+TYPE\+::\+DOSING\+\_\+\+SCALE}}}
 
 
 

@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['simulator_0',['Simulator',['../class_simulator.html',1,'']]]
+  ['pcb_0',['PCB',['../class_p_c_b.html',1,'']]]
 ];

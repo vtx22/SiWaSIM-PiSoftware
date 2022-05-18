@@ -88,10 +88,20 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a8585f658197dbaba1905ef9654b8de80"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a279633984034631853a4ecf16d478be1"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_simulator.html#a279633984034631853a4ecf16d478be1">setVelocityFRQ</a> (float frequency)</td></tr>
 <tr class="separator:a279633984034631853a4ecf16d478be1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3a09a331888d2087f6afbb53e1860195"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_simulator.html#a3a09a331888d2087f6afbb53e1860195">setImpedance</a> (<a class="el" href="_configuration_8hpp.html#a8cdbfc5a2637c1334b36e71aaf4f960e">IMPEDANCE</a> impedance)</td></tr>
+<tr class="separator:a3a09a331888d2087f6afbb53e1860195"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:abe9678f710894b6548da5b9a89391981"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_simulator.html#abe9678f710894b6548da5b9a89391981">bootupAnimation</a> ()</td></tr>
 <tr class="separator:abe9678f710894b6548da5b9a89391981"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a02dce5814f4cf0c17dbbfbc606032945"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_simulator.html#a02dce5814f4cf0c17dbbfbc606032945">loadConfig</a> ()</td></tr>
-<tr class="separator:a02dce5814f4cf0c17dbbfbc606032945"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a008cd4b74753e0452e732c93476f1f39"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_simulator.html#a008cd4b74753e0452e732c93476f1f39">reloadConfig</a> ()</td></tr>
+<tr class="separator:a008cd4b74753e0452e732c93476f1f39"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6582f4d0fe9ce549dc4769111e497aba"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_simulator.html#a6582f4d0fe9ce549dc4769111e497aba">testFunction</a> ()</td></tr>
+<tr class="separator:a6582f4d0fe9ce549dc4769111e497aba"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad2658f679abc1321cb387ea635514369"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_simulator.html#ad2658f679abc1321cb387ea635514369">run</a> (<a class="el" href="_configuration_8hpp.html#a8c551c1eb58ae69a51730eb254b93c91">RUN_MODE</a> runMode, float timestep, float *weight)</td></tr>
+<tr class="separator:ad2658f679abc1321cb387ea635514369"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a037bd4438dc54efd65663e76b1651062"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_simulator.html#a037bd4438dc54efd65663e76b1651062">runPassive</a> (float timestep, float *weight)</td></tr>
+<tr class="separator:a037bd4438dc54efd65663e76b1651062"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5a7b96a490946d1eb5ba025c7be178ef"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_simulator.html#a5a7b96a490946d1eb5ba025c7be178ef">calibrateLCVoltage</a> ()</td></tr>
+<tr class="separator:a5a7b96a490946d1eb5ba025c7be178ef"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="a031573bfcfe2e0f5c9539bcc1c7fc5d9" name="a031573bfcfe2e0f5c9539bcc1c7fc5d9"></a>
@@ -147,16 +157,114 @@ Public Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="a02dce5814f4cf0c17dbbfbc606032945" name="a02dce5814f4cf0c17dbbfbc606032945"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a02dce5814f4cf0c17dbbfbc606032945">&#9670;&nbsp;</a></span>loadConfig()</h2>
+<a id="a5a7b96a490946d1eb5ba025c7be178ef" name="a5a7b96a490946d1eb5ba025c7be178ef"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5a7b96a490946d1eb5ba025c7be178ef">&#9670;&nbsp;</a></span>calibrateLCVoltage()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void Simulator::loadConfig </td>
+          <td class="memname">void Simulator::calibrateLCVoltage </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a008cd4b74753e0452e732c93476f1f39" name="a008cd4b74753e0452e732c93476f1f39"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a008cd4b74753e0452e732c93476f1f39">&#9670;&nbsp;</a></span>reloadConfig()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Simulator::reloadConfig </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p >Reloads the configuration from the disk an stores the settings </p>
+
+</div>
+</div>
+<a id="ad2658f679abc1321cb387ea635514369" name="ad2658f679abc1321cb387ea635514369"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad2658f679abc1321cb387ea635514369">&#9670;&nbsp;</a></span>run()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">float Simulator::run </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="_configuration_8hpp.html#a8c551c1eb58ae69a51730eb254b93c91">RUN_MODE</a>&#160;</td>
+          <td class="paramname"><em>runMode</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>timestep</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float *&#160;</td>
+          <td class="paramname"><em>weight</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a037bd4438dc54efd65663e76b1651062" name="a037bd4438dc54efd65663e76b1651062"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a037bd4438dc54efd65663e76b1651062">&#9670;&nbsp;</a></span>runPassive()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">float Simulator::runPassive </td>
+          <td>(</td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>timestep</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float *&#160;</td>
+          <td class="paramname"><em>weight</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a3a09a331888d2087f6afbb53e1860195" name="a3a09a331888d2087f6afbb53e1860195"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3a09a331888d2087f6afbb53e1860195">&#9670;&nbsp;</a></span>setImpedance()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Simulator::setImpedance </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="_configuration_8hpp.html#a8cdbfc5a2637c1334b36e71aaf4f960e">IMPEDANCE</a>&#160;</td>
+          <td class="paramname"><em>impedance</em></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -281,6 +389,23 @@ Public Member Functions</h2></td></tr>
   </table>
   </dd>
 </dl>
+
+</div>
+</div>
+<a id="a6582f4d0fe9ce549dc4769111e497aba" name="a6582f4d0fe9ce549dc4769111e497aba"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6582f4d0fe9ce549dc4769111e497aba">&#9670;&nbsp;</a></span>testFunction()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Simulator::testFunction </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
 
 </div>
 </div>

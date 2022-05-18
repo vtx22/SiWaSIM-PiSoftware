@@ -19,6 +19,6 @@ public:
 private:
    int uart0 = -1;
    // std::string _dev;
-   const uint8_t _messageSizeRX = 0;     // Number of bytes to wait for
-   const uint8_t _messageTimeoutRX = 50; // Read Timeout in 0.1s steps
+   const uint8_t _messageSizeRX = 0;    // Number of bytes to wait for
+   const uint8_t _messageTimeoutRX = 1; // Read Timeout in 0.1s steps
 };

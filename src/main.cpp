@@ -10,6 +10,7 @@
 #include "IABoard.hpp"
 #include "PCB.hpp"
 #include "Simulator.hpp"
+#include "Modbus.hpp"
 
 #include "matplotlib/matplotlibcpp.h"
 namespace plt = matplotlibcpp;
@@ -18,6 +19,11 @@ int main()
 {
 
    Simulator sim;
+   UART uart;
+   Modbus modbus(&uart);
+
+   modbus.transmitRequest(3044, 2);
+   modbus.receiveResponse();
 
    /*
 
@@ -56,8 +62,8 @@ int main()
    plt::show();
    */
 
-   sim.calibrateLCVoltage();
-   sim.testFunction();
+   // sim.calibrateLCVoltage();
+   // sim.testFunction();
 
    return 0;
 }

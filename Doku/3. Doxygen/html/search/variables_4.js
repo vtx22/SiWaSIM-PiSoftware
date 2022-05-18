@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['initial_5fweight_0',['initial_weight',['../class_configuration.html#a1ef2ca5eb6c96f604912b00073d7c5a4',1,'Configuration']]]
+  ['endvoltage_0',['endVoltage',['../class_configuration.html#ac51343f8ded8db13c1fce7becc414825',1,'Configuration']]],
+  ['exc_5fvoltage_1',['exc_voltage',['../class_configuration.html#ae8d60d92e248f2beb56ab65b3675021b',1,'Configuration']]]
 ];
