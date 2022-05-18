@@ -12,7 +12,6 @@ UART::~UART()
 
 bool UART::begin()
 {
-   /// dev/ttyS0
    uart0 = open("dev/ttyS0", O_RDWR);
 
    if (uart0 < 0)
