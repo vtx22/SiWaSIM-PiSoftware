@@ -25,7 +25,7 @@ void Modbus::transmitRequest(uint16_t startRegister, uint16_t length)
    msg.push_back((length & 0xFF));
 
    // Append Checksum
-   uint16_t checksum = 0xE7CE; // calculateCRC(msg);
+   uint16_t checksum = 0x0386; // calculateCRC(msg);
 
    msg.push_back((checksum >> 8));
    msg.push_back((checksum & 0xFF));
