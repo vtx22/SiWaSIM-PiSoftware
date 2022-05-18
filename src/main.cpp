@@ -18,7 +18,7 @@ namespace plt = matplotlibcpp;
 int main()
 {
 
-   Simulator sim;
+   // Simulator sim;
    Modbus modbus;
 
    modbus.transmitRequest(3044, 2);
