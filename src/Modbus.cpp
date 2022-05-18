@@ -30,6 +30,13 @@ void Modbus::transmitRequest(uint16_t startRegister, uint16_t length)
    msg.push_back((checksum & 0xFF));
    msg.push_back((checksum >> 8));
 
+   std::cout << "Generated message:\n";
+   for (auto const &i : msg)
+   {
+      std::cout << " " << i << " ";
+   }
+   std::cout << std::endl;
+
    _uart->transmitMSG(&msg[0], msg.size());
 }
 
