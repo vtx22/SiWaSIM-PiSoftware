@@ -17,5 +17,5 @@ private:
    uint16_t calculateCRC(std::vector<uint8_t> data);
 
    UART *_uart;
-   const uint8_t _address = 0x20;
+   const uint8_t _address = 20;
 };
