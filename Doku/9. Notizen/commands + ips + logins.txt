@@ -5,4 +5,9 @@ C++ build: g++ -Wall -w -pthread -o main *.cpp -lpigpio
 C++ buil with matplot: g++ -Wall -w -pthread -o main *.cpp -I/usr/include/python3.9 -lpigpio -lpython3.9
 
 IP WW20: 192.168.2.125
+IP LH19: 192.168.2.116
 VNC Software: VNC Viewer  
+
+sudo systemctl disable hciuart //Uart für modem ausmachen
+
+dtoverlay=disable-bt in /boot/config.txt eintragen
