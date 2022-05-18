@@ -25,8 +25,8 @@ bool UART::begin()
 
    options.c_cflag = B19200 | CS8 | CLOCAL | CREAD | HUPCL;
    // options.c_cflag |= PARENB;
-   options.c_iflag = 0;
-   options.c_oflag = 0;
+   options.c_iflag = PARENB;
+   options.c_oflag = PARENB;
    options.c_lflag = 0;
 
    options.c_ispeed = B19200;
