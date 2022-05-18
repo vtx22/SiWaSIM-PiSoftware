@@ -10,7 +10,7 @@ public:
    Modbus(UART *uart);
    ~Modbus();
 
-   void transmitRequest(uint16_t register, uint16_t length);
+   void transmitRequest(uint16_t startRegister, uint16_t length);
    void receiveResponse();
 
 private:

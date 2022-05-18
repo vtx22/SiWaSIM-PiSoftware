@@ -2,6 +2,7 @@
 
 Modbus::Modbus(UART *uart) : _uart(uart)
 {
+   _uart = new UART();
 }
 
 Modbus::~Modbus()
