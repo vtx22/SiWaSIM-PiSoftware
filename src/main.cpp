@@ -41,10 +41,10 @@ int main()
 
    plt::figure_size(1600, 900);
 
-   plt::plot(x, data, {{"color", "b"}, {"label", "Cell Voltage in %"}});
+   plt::plot(x, data, {{"color", "b"}, {"label", "Relative Cell Voltage"}});
    // plt::plot(x, weightData, {{"color", "r"}, {"label", "weight in kg"}});
 
-   plt::title("Load Cell Voltage with analog bridge");
+   plt::title("Load Cell Voltage with SiWaSim");
    plt::xlabel("Time in seconds");
    plt::legend();
    plt::ylim(1 - 0.0005, 1 + 0.0005);
