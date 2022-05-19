@@ -24,7 +24,7 @@ int main()
    SIWAREX siwarex;
    std::vector<float> data, x;
    int cnt = 0;
-   while (cnt < 60 * 0.5)
+   while (cnt < 60 * 30)
    {
       float voltage = siwarex.getLoadcellVoltage();
       printf("Voltage is: %f mV\n", voltage);
@@ -42,7 +42,7 @@ int main()
    plt::title("Load Cell Voltage with analog bridge");
    plt::xlabel("Time in seconds");
    plt::legend();
-   plt::ylim(19.2, 20.8);
+   plt::ylim(19.8, 20.2);
    plt::grid(true);
    plt::show();
 
