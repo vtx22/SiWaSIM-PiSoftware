@@ -14,6 +14,5 @@ float SIWAREX::getLoadcellVoltage()
 {
    _modbus->transmitRequest(LOADCELL_VOLTAGE, 2);
    std::vector<uint8_t> msg = _modbus->receiveResponse();
-
-   return bytesToFloat(msg[3], msg[4], msg[5], msg[6]);
+   return bytesToFloat(&msg[3]);
 }
