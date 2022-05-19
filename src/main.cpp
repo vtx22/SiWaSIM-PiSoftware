@@ -21,7 +21,7 @@ int main()
    // Simulator sim;
    Modbus modbus;
 
-   modbus.transmitRequest(3044, 2);
+   modbus.transmitRequest(3058, 2);
    modbus.receiveResponse();
 
    /*
