@@ -218,7 +218,9 @@ float bytesToFloat(uint8_t *bytes)
 
 float bytesToFloat(uint8_t b0, uint8_t b1, uint8_t b2, uint8_t b3)
 {
+   printf("B3: %d, B2: %d, B1: %d, B0: %d\n", b3, b2, b1, b0);
    uint32_t bytes = (b3 << 24) + (b2 << 16) + (b1 << 8) + b0;
-   float f = *(float *)&bytes;
+   float *fp = (float *)&bytes;
+   float f = *fp;
    return f;
 }
