@@ -212,8 +212,9 @@ float calculateCubicDeriv(float a, float b, float c, float x)
 
 float bytesToFloat(uint8_t *bytes)
 {
-   printf("B0: %d, B1: %d, B2: %d, B3: %d\n", bytes[0], bytes[1], bytes[2], bytes[3]);
-   return *(float *)&bytes;
+   float f = *(float *)&bytes;
+   printf("f: %f", f);
+   return f;
 }
 
 float bytesToFloat(uint8_t b0, uint8_t b1, uint8_t b2, uint8_t b3)
