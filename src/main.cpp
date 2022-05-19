@@ -24,12 +24,17 @@ int main()
    SIWAREX siwarex;
    std::vector<float> data, x;
    int cnt = 0;
-   while (cnt < 60 * 5)
+   float firstVol;
+   while (cnt < 60 * 0.25)
    {
       float voltage = siwarex.getLoadcellVoltage();
-      printf("Voltage is: %f mV\n", voltage);
+      if (cnt == 0)
+      {
+         firstVol = voltage;
+      }
+      printf("Voltage is: %f mV\n", voltage / firstVol);
       x.push_back(cnt);
-      data.push_back(voltage);
+      data.push_back(voltage / firstVol);
       delay(1000ms);
       cnt++;
    }
