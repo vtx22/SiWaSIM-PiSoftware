@@ -216,7 +216,7 @@ float bytesToFloat(uint8_t *bytes)
    return f;
 }
 
-float bytesToFloat(uint8_t b3, uint8_t b2, uint8_t b1, uint8_t b0)
+float bytesToFloat(uint8_t b0, uint8_t b1, uint8_t b2, uint8_t b3)
 {
    uint32_t bytes = (b3 << 24) + (b2 << 16) + (b1 << 8) + b0;
    float f = *(float *)&bytes;
