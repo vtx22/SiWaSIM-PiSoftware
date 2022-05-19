@@ -47,7 +47,7 @@ int main()
    plt::title("Load Cell Voltage with analog bridge");
    plt::xlabel("Time in seconds");
    plt::legend();
-   plt::ylim(19.8, 20.2);
+   plt::ylim(0.98, 1.02);
    plt::grid(true);
    plt::show();
 
