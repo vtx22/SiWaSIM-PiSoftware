@@ -12,6 +12,9 @@ using json = nlohmann::json;
 #define I2C_ADDRESS 0x50
 #define I2C_DEVICE "/dev/i2c-1"
 
+// MODBUS
+#define SIWAREX_ADDRESS 0x14
+
 // LED Pins
 #define PIN_LED_READY 23
 #define PIN_LED_BUSY 24

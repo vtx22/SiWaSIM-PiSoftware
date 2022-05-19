@@ -11,6 +11,7 @@
 #include "PCB.hpp"
 #include "Simulator.hpp"
 #include "Modbus.hpp"
+#include "SIWAREX.hpp"
 
 #include "matplotlib/matplotlibcpp.h"
 namespace plt = matplotlibcpp;
@@ -19,12 +20,16 @@ int main()
 {
 
    // Simulator sim;
-   Modbus modbus;
 
-   modbus.transmitRequest(3058, 2);
-   modbus.receiveResponse();
+   SIWAREX siwarex;
 
-   /*
+   while (true)
+   {
+      printf("Voltage is: %f mV\n", siwarex.getLoadcellVoltage());
+      std::this_thread::sleep_for(1s);
+   }
+
+      /*
 
    // sim.bootupAnimation();
    float weight = 0;

@@ -209,3 +209,10 @@ float calculateCubicDeriv(float a, float b, float c, float x)
 {
    return 3 * a * x * x + 2 * b * x + c;
 }
+
+float bytesToFloat(uint8_t *bytes)
+{
+   float f;
+   memcpy(&f, &bytes, sizeof(f));
+   return f;
+}

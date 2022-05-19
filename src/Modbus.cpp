@@ -33,17 +33,9 @@ void Modbus::transmitRequest(uint16_t startRegister, uint16_t length)
    _uart->transmitMSG(&msg[0], msg.size());
 }
 
-void Modbus::receiveResponse()
+std::vector<uint8_t> Modbus::receiveResponse()
 {
-   std::vector<uint8_t> msg;
-   msg = _uart->receiveMSG();
-
-   std::cout << "Received message:\n";
-   for (auto const &i : msg)
-   {
-      std::cout << " " << i << " ";
-   }
-   std::cout << std::endl;
+   return _uart->receiveMSG();
 }
 
 uint16_t Modbus::calculateCRC(uint8_t *data, int length)

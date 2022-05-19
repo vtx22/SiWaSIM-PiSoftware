@@ -3,6 +3,7 @@
 #include "Configuration.hpp"
 #include "IABoard.hpp"
 #include "MaterialFlow.hpp"
+#include "SIWAREX.hpp"
 
 #include <chrono>
 #include <thread>
