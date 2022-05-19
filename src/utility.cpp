@@ -217,7 +217,7 @@ float bytesToFloat(uint8_t *bytes)
    return f;
 }
 
-float bytesToFloat(uint8_t b3, uint8_t b2, uint8_t b1, uint8_t b0)
+float bytesToFloat(uint8_t b0, uint8_t b1, uint8_t b2, uint8_t b3)
 {
    float f;
    uint8_t b[] = {b3, b2, b1, b0};
