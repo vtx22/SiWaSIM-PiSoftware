@@ -220,3 +220,20 @@ float bytesToFloat(uint8_t b3, uint8_t b2, uint8_t b1, uint8_t b0)
    uint32_t bytes = (b3 << 24) + (b2 << 16) + (b1 << 8) + b0;
    return *(float *)&bytes;
 }
+
+void delay(std::chrono::milliseconds delayMS)
+{
+   static std::chrono::time_point<std::chrono::system_clock, std::chrono::duration<double>> _lastCommand = std::chrono::system_clock::now();
+
+   // Calculate the time elapsed since the last time a command was executed (in ms)
+   auto diff = std::chrono::duration_cast<std::chrono::milliseconds>(std::chrono::system_clock::now() - _lastCommand).count();
+
+   // If the last commands was just a few ms ago, calculate the difference to the minimum time gap between commands and wait for the remaining time
+   if (diff < delayMS.count())
+   {
+      std::this_thread::sleep_for(std::chrono::milliseconds(delayMS.count() - diff));
+   }
+
+   // Save the time the current command was executed for next calculation
+   _lastCommand = std::chrono::system_clock::now();
+}

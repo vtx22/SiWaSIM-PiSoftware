@@ -30,7 +30,7 @@ int main()
       printf("Voltage is: %f mV\n", voltage);
       x.push_back(cnt);
       data.push_back(voltage);
-      std::this_thread::sleep_for(960ms);
+      delay(1000ms);
       cnt++;
    }
 
