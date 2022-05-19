@@ -12,7 +12,12 @@ SIWAREX::~SIWAREX()
 
 float SIWAREX::getLoadcellVoltage()
 {
-   _modbus->transmitRequest(LOADCELL_VOLTAGE, 2);
+   return requestFloat(LOADCELL_VOLTAGE);
+}
+
+float SIWAREX::requestFloat(uint16_t startRegister)
+{
+   _modbus->transmitRequest(startRegister, 2);
    std::vector<uint8_t> msg = _modbus->receiveResponse();
    return bytesToFloat(&msg[3]);
 }

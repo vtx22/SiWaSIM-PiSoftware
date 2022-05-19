@@ -14,5 +14,7 @@ public:
    float getLoadcellVoltage();
 
 private:
+   float requestFloat(uint16_t startRegister);
+
    Modbus *_modbus;
 };

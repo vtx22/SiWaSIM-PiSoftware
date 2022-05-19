@@ -22,49 +22,28 @@ int main()
    // Simulator sim;
 
    SIWAREX siwarex;
-
-   while (true)
+   std::vector<float> data, x;
+   int cnt = 0;
+   while (cnt < 60 * 30)
    {
-      printf("Voltage is: %f mV\n", siwarex.getLoadcellVoltage());
-      std::this_thread::sleep_for(1s);
-   }
-
-      /*
-
-   // sim.bootupAnimation();
-   float weight = 0;
-   sim.bootupAnimation();
-   std::vector<float> data, x, weightData;
-   data.push_back(0);
-   weightData.push_back(0);
-   x.push_back(-0.1);
-
-   for (int i = 0; i < 500; i++)
-   {
-      x.push_back(i / 100.f);
-
-      data.push_back(sim.run(RUN_MODE::PASSIVE, 0.01, &weight));
-      weightData.push_back(weight);
-
-      std::cout << "=========" << std::endl;
-      std::cout << "i:      " << i << std::endl;
-      std::cout << "flow:   " << data.back() << std::endl;
-      std::cout << "weight: " << weightData.back() << std::endl;
-      std::cout << "=========" << std::endl;
-      // std::this_thread::sleep_for(1ms);
+      float voltage = siwarex.getLoadcellVoltage();
+      printf("Voltage is: %f mV\n", voltage);
+      x.push_back(cnt);
+      data.push_back(voltage);
+      std::this_thread::sleep_for(960ms);
+      cnt++;
    }
 
    plt::figure_size(1600, 900);
 
-   plt::plot(x, data, {{"color", "b"}, {"label", "flow in kg/s"}});
-   plt::plot(x, weightData, {{"color", "r"}, {"label", "weight in kg"}});
+   plt::plot(x, data, {{"color", "b"}, {"label", "Cell Voltage in mV"}});
+   // plt::plot(x, weightData, {{"color", "r"}, {"label", "weight in kg"}});
 
-   plt::title("First flow test, step time 10ms");
+   plt::title("Load Cell Voltage with analog bridge");
    plt::xlabel("Time in seconds");
    plt::legend();
    plt::grid(true);
    plt::show();
-   */
 
    // sim.calibrateLCVoltage();
    // sim.testFunction();
