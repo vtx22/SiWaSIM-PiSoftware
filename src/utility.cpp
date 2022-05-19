@@ -219,6 +219,8 @@ float bytesToFloat(uint8_t *bytes)
 
 float bytesToFloat(uint8_t b0, uint8_t b1, uint8_t b2, uint8_t b3)
 {
+   printf("B0: %d, B1: %d, B2: %d, B3: %d\n");
+
    float f;
    uint8_t b[] = {b3, b2, b1, b0};
    memcpy(&f, &b, sizeof(f));
