@@ -25,7 +25,7 @@ int main()
    std::vector<float> data, x;
    int cnt = 0;
    float firstVol;
-   while (cnt < 60 * 0.25)
+   while (cnt < 60 * 1)
    {
       float voltage = siwarex.getLoadcellVoltage();
       if (cnt == 0)
@@ -41,13 +41,13 @@ int main()
 
    plt::figure_size(1600, 900);
 
-   plt::plot(x, data, {{"color", "b"}, {"label", "Cell Voltage in mV"}});
+   plt::plot(x, data, {{"color", "b"}, {"label", "Cell Voltage in %"}});
    // plt::plot(x, weightData, {{"color", "r"}, {"label", "weight in kg"}});
 
    plt::title("Load Cell Voltage with analog bridge");
    plt::xlabel("Time in seconds");
    plt::legend();
-   plt::ylim(0.98, 1.02);
+   plt::ylim(1 - 0.0005, 1 + 0.0005);
    plt::grid(true);
    plt::show();
 
