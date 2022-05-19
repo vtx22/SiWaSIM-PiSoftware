@@ -216,3 +216,11 @@ float bytesToFloat(uint8_t *bytes)
    memcpy(&f, &bytes, sizeof(f));
    return f;
 }
+
+float bytesToFloat(uint8_t b3, uint8_t b2, uint8_t b1, uint8_t b0)
+{
+   float f;
+   uint8_t b[] = {b0, b1, b2, b3};
+   memcpy(&f, &b, sizeof(f));
+   return f;
+}
