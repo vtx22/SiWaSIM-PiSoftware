@@ -8,7 +8,7 @@
 class SIWAREX
 {
 public:
-   SIWAREX(Modbus *modbus);
+   SIWAREX();
    ~SIWAREX();
 
    float getLoadcellVoltage();
