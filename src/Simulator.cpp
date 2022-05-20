@@ -181,10 +181,10 @@ void Simulator::calibrateLCVoltage(bool autoCalib)
          }
 
          voltage /= 5.f;
-
+         printf("Voltage is: %f mV\n", voltage);
          xValues.push_back(i);
          yValues.push_back(voltage / 1000.f);
-            }
+      }
    }
    else
    {
