@@ -27,7 +27,6 @@ int main()
 
    while (cnt < 60 * 1)
    {
-      pcb.setLoadcellVoltage();
       float voltage = siwarex.getLoadcellVoltage();
       if (cnt == 0)
       {
