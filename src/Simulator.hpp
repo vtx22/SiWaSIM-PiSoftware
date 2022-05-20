@@ -33,12 +33,13 @@ public:
    float run(RUN_MODE runMode, float timestep, float *weight);
    float runPassive(float timestep, float *weight);
 
-   void calibrateLCVoltage();
+   void calibrateLCVoltage(bool autoCalib);
 
 private:
    Configuration *_config;
    PCB *_pcb;
    IABoard *_ia;
+   SIWAREX *_siwarex;
 
    MaterialFlow *_materialFlows[4];
 };

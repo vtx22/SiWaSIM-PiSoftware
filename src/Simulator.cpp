@@ -5,6 +5,7 @@ Simulator::Simulator()
    _config = new Configuration(CONFIG_PATH);
    _pcb = new PCB(_config);
    _ia = new IABoard();
+   _siwarex = new SIWAREX();
 
    _materialFlows[0] = new MaterialFlow(1);
    _materialFlows[1] = new MaterialFlow(2);
@@ -154,7 +155,7 @@ void Simulator::testFunction()
    }
 }
 
-void Simulator::calibrateLCVoltage()
+void Simulator::calibrateLCVoltage(bool autoCalib)
 {
    std::cout << "\n======================\n";
    std::cout << "OUTPUT VOLTAGE CALIBRATION\n";
@@ -162,19 +163,46 @@ void Simulator::calibrateLCVoltage()
 
    std::vector<float> xValues, yValues;
 
-   for (uint8_t i = 2; i < 11; i++)
+   if (autoCalib)
    {
-      _ia->setAnalogVolOut(ADDVOL_CHANNEL, i);
-      _ia->setAnalogVolOut(SUBVOL_CHANNEL, i);
+      std::cout << "Auto calibration starting...\n\n";
 
-      std::cout << "Enter signed voltage between SIG+ and SIG- (in mV):\n";
+      for (uint8_t i = 2; i < 11; i++)
+      {
+         std::cout << "Sampling... (" << 11 - i << "of 9)\n";
+         _ia->setAnalogVolOut(ADDVOL_CHANNEL, i);
+         _ia->setAnalogVolOut(SUBVOL_CHANNEL, i);
 
-      std::string input = "";
-      std::getline(std::cin, input);
+         float voltage = 0;
 
-      xValues.push_back(i);
-      yValues.push_back(std::stof(input) / 1000.f);
+         for (uint8_t sample = 0; sample < 5; sample++)
+         {
+            voltage += _siwarex->getLoadcellVoltage();
+         }
+
+         voltage /= 5.f;
+
+         xValues.push_back(i);
+         yValues.push_back(voltage / 1000.f);
+      }
    }
+   else
+   {
+      for (uint8_t i = 2; i < 11; i++)
+      {
+         _ia->setAnalogVolOut(ADDVOL_CHANNEL, i);
+         _ia->setAnalogVolOut(SUBVOL_CHANNEL, i);
+
+         std::cout << "Enter signed voltage between SIG+ and SIG- (in mV):\n";
+
+         std::string input = "";
+         std::getline(std::cin, input);
+
+         xValues.push_back(i);
+         yValues.push_back(std::stof(input) / 1000.f);
+      }
+   }
+   std::cout << "DONE!\n\n";
 
    float a, b, c, d;
 
