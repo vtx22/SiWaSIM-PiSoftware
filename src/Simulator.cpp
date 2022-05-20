@@ -172,7 +172,7 @@ void Simulator::calibrateLCVoltage(bool autoCalib)
          std::cout << "Sampling... (" << i - 1 << " of 9)\n";
          _ia->setAnalogVolOut(ADDVOL_CHANNEL, i);
          _ia->setAnalogVolOut(SUBVOL_CHANNEL, i);
-         std::this_thread::sleep_for(3s);
+         std::this_thread::sleep_for(4s);
          float voltage = 0;
 
          for (uint8_t sample = 0; sample < 5; sample++)
@@ -181,7 +181,6 @@ void Simulator::calibrateLCVoltage(bool autoCalib)
          }
 
          voltage /= 5.f;
-         printf("Voltage is: %f mV\n", voltage);
          xValues.push_back(i);
          yValues.push_back(voltage / 1000.f);
       }
@@ -205,6 +204,11 @@ void Simulator::calibrateLCVoltage(bool autoCalib)
    std::cout << "DONE!\n\n";
 
    float a, b, c, d;
+
+   for (uint8_t i = 0; i < xValues.size(); i++)
+   {
+      printf("X: %d, Y: %f\n", xValues[i], yValues[i]);
+   }
 
    cubicRegression(xValues, yValues, &a, &b, &c, &d);
 
