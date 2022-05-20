@@ -22,7 +22,7 @@ int main()
 
    sim.calibrateLCVoltage(true);
 
-   return;
+   return 0;
    SIWAREX siwarex;
    std::vector<float> data, x;
    int cnt = 0;
