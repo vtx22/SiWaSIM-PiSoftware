@@ -19,7 +19,10 @@ namespace plt = matplotlibcpp;
 int main()
 {
    Simulator sim;
-   sim.testFunction();
+
+   sim.calibrateLCVoltage(true);
+
+   return;
    SIWAREX siwarex;
    std::vector<float> data, x;
    int cnt = 0;
