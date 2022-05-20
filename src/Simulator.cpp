@@ -144,15 +144,14 @@ float Simulator::runPassive(float timestep, float *weight)
 
 void Simulator::testFunction()
 {
-   setImpedance(IMPEDANCE::NOMINAL);
-
-   _pcb->ledBusy(1);
-   _pcb->ledFault(1);
-   _pcb->ledReady(1);
-
-   float voltage = 0;
-   _pcb->setCellSubvol(10);
-   _pcb->setCellAddvol(10);
+   bool state = false;
+   while (true)
+   {
+      _pcb->setPOWERSW1(state);
+      _pcb->setPOWERSW2(!state);
+      state = !state;
+      delay(100ms);
+   }
 }
 
 void Simulator::calibrateLCVoltage()

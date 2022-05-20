@@ -18,15 +18,8 @@ namespace plt = matplotlibcpp;
 
 int main()
 {
-   PCB pcb;
-   bool state = false;
-   while (true)
-   {
-      pcb.setPOWERSW1(state);
-      state = !state;
-      delay(100ms);
-   }
    Simulator sim;
+   sim.testFunction();
    SIWAREX siwarex;
    std::vector<float> data, x;
    int cnt = 0;
