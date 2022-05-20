@@ -184,6 +184,7 @@ void Simulator::calibrateLCVoltage(bool autoCalib)
 
          xValues.push_back(i);
          yValues.push_back(voltage / 1000.f);
+         std::this_thread::sleep_for(1s);
       }
    }
    else
