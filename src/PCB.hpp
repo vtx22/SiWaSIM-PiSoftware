@@ -37,6 +37,8 @@ public:
 
    void reloadConfig();
 
+   void setAllOff();
+
 private:
    GPIO *_gpio;
    IABoard *_ia;

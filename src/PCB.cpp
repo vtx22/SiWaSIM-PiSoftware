@@ -22,8 +22,25 @@ PCB::PCB(Configuration *config) : _config(config)
 
 PCB::~PCB()
 {
+   setAllOff();
    delete _gpio;
    delete _ia;
+}
+
+void PCB::setAllOff()
+{
+   _gpio->writePin(PIN_LED_READY, false);
+   _gpio->writePin(PIN_LED_BUSY, false);
+   _gpio->writePin(PIN_LED_FAULT, false);
+
+   _gpio->writePin(PIN_POWERSW1, false);
+   _gpio->writePin(PIN_POWERSW2, false);
+
+   _gpio->writePin(PIN_IMPEDANCE1, false);
+   _gpio->writePin(PIN_IMPEDANCE2, false);
+
+   _gpio->writePin(PIN_EXTRASW1, false);
+   _gpio->writePin(PIN_EXTRASW2, false);
 }
 
 void PCB::ledReady(bool state)
