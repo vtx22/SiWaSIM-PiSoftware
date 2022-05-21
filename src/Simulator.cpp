@@ -206,7 +206,7 @@ void Simulator::calibrateLCVoltage(bool autoCalib)
 
    float a, b, c, d;
 
-   for (uint8_t c = 0; i < xValues.size(); i++)
+   for (uint8_t c = 0; c < xValues.size(); c++)
    {
       printf("X: %d, Y: %f\n", xValues.at(c), yValues.at(c));
    }
