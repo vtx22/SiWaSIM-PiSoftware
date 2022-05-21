@@ -169,7 +169,7 @@ void Simulator::calibrateLCVoltage(bool autoCalib)
 
       for (uint8_t i = 2; i < 11; i++)
       {
-         std::cout << "Sampling... (" << i - 1 << " of 9)\n";
+         printf("Sampling... (%d of 9)\n", i - 1);
          _ia->setAnalogVolOut(ADDVOL_CHANNEL, i);
          _ia->setAnalogVolOut(SUBVOL_CHANNEL, i);
          std::this_thread::sleep_for(4s);
@@ -182,10 +182,8 @@ void Simulator::calibrateLCVoltage(bool autoCalib)
 
          voltage /= 5.f;
 
-         xValues.push_back((float)i);
-         printf("X is: %d\n", xValues.back());
-         yValues.push_back((float)(voltage / 1000.f));
-         printf("Y is: %f\n", yValues.back());
+         xValues.push_back(i);
+         yValues.push_back(voltage / 1000.f);
       }
    }
    else
