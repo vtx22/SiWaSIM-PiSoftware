@@ -208,8 +208,6 @@ void Simulator::calibrateLCVoltage(bool autoCalib)
 
    cubicRegression(xValues, yValues, &a, &b, &c, &d);
 
-   printf("A: %f, B: %f, C: %f, D: %f", a, b, c, d);
-
    _config->calibrationReg.a = a;
    _config->calibrationReg.a = b;
    _config->calibrationReg.a = c;

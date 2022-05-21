@@ -171,14 +171,17 @@ Newton-Raphson Method for finding the x-value that corresponds to a y-value of a
 */
 float solveCubicForVoltage(float a, float b, float c, float d, float value)
 {
+   printf("A: %f, B: %f, C: %f, D: %f, Value: %f\n", a, b, c, d, value);
    // Polynom needs the form ax^3+bx^2+cx+d = 0 as the methods finds roots
    d -= value;
 
-   float root = 5; // Start for approximation is the middle between 0 - 10V
+   float root = 5.f; // Start for approximation is the middle between 0 - 10V
    for (uint8_t iteration = 0; iteration < 10; iteration++)
    {
       root = root - (calculateCubic(a, b, c, d, root)) / (calculateCubicDeriv(a, b, c, root));
    }
+
+   printf("Root is: %f\n", root);
 
    return root;
 }
