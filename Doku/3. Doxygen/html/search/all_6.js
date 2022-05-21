@@ -7,11 +7,12 @@ var searchData=
   ['getdigitalread_4',['getDigitalRead',['../class_i_a_board.html#a0a06189477e17f6ada1b45508e9636cc',1,'IABoard']]],
   ['getexcvoltage_5',['getEXCVoltage',['../class_p_c_b.html#a21be5306353f7712e14c1583c0e24fce',1,'PCB']]],
   ['getled_6',['getLED',['../class_i_a_board.html#ada67b4c599cb1c0b5e733e51f33deb2e',1,'IABoard']]],
-  ['getopendraindout_7',['getOpenDrainDOUT',['../class_i_a_board.html#a724f4caaf3df8a66d85b68aea2061248',1,'IABoard::getOpenDrainDOUT()'],['../class_i_a_board.html#a0c65053b177fc0160a51f53b1a64e3e0',1,'IABoard::getOpenDrainDOUT(uint8_t channel)']]],
-  ['getopendrainpwm_8',['getOpenDrainPWM',['../class_i_a_board.html#aa290b60191f0e508db95be68dbeef116',1,'IABoard']]],
-  ['getsenvoltage_9',['getSENVoltage',['../class_p_c_b.html#a038e1b1078d5e9757a25c94fdf09410b',1,'PCB']]],
-  ['gettransistiontype_10',['getTransistionType',['../class_i_a_board.html#aa5d275c8809b6e6cea0d356f9c4a054a',1,'IABoard']]],
-  ['gpio_11',['GPIO',['../class_g_p_i_o.html',1,'GPIO'],['../class_g_p_i_o.html#ab443a641cef81b1a9ec0211c5aa9c1ac',1,'GPIO::GPIO()']]],
-  ['gpio_2ecpp_12',['GPIO.cpp',['../_g_p_i_o_8cpp.html',1,'']]],
-  ['gpio_2ehpp_13',['GPIO.hpp',['../_g_p_i_o_8hpp.html',1,'']]]
+  ['getloadcellvoltage_7',['getLoadcellVoltage',['../class_s_i_w_a_r_e_x.html#a8c20f91f42a2f62ed7fba58c90e793c5',1,'SIWAREX']]],
+  ['getopendraindout_8',['getOpenDrainDOUT',['../class_i_a_board.html#a724f4caaf3df8a66d85b68aea2061248',1,'IABoard::getOpenDrainDOUT()'],['../class_i_a_board.html#a0c65053b177fc0160a51f53b1a64e3e0',1,'IABoard::getOpenDrainDOUT(uint8_t channel)']]],
+  ['getopendrainpwm_9',['getOpenDrainPWM',['../class_i_a_board.html#aa290b60191f0e508db95be68dbeef116',1,'IABoard']]],
+  ['getsenvoltage_10',['getSENVoltage',['../class_p_c_b.html#a038e1b1078d5e9757a25c94fdf09410b',1,'PCB']]],
+  ['gettransistiontype_11',['getTransistionType',['../class_i_a_board.html#aa5d275c8809b6e6cea0d356f9c4a054a',1,'IABoard']]],
+  ['gpio_12',['GPIO',['../class_g_p_i_o.html',1,'GPIO'],['../class_g_p_i_o.html#ab443a641cef81b1a9ec0211c5aa9c1ac',1,'GPIO::GPIO()']]],
+  ['gpio_2ecpp_13',['GPIO.cpp',['../_g_p_i_o_8cpp.html',1,'']]],
+  ['gpio_2ehpp_14',['GPIO.hpp',['../_g_p_i_o_8hpp.html',1,'']]]
 ];

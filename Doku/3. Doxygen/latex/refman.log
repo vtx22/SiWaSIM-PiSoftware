@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 21.12.10) (preloaded format=pdflatex 2022.1.19)  17 MAY 2022 15:42
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 21.12.10) (preloaded format=pdflatex 2022.1.19)  21 MAY 2022 19:58
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -907,7 +907,9 @@ LaTeX Font Info:    Trying to load font information for T1+pcr on input line 17
  (C:\Users\fynnr\AppData\Local\Programs\MiKTeX\tex/latex/psnfss\t1pcr.fd
 File: t1pcr.fd 2001/06/04 font definitions for T1/pcr.
 )
-[2] [3] [4] [5] [6]
+[2] [3] [4] [5] [6] [7] [8
+
+]
 Package hyperref Info: Option `pageanchor' set `true' on input line 176.
 
 Chapter 1.
@@ -927,7 +929,6 @@ LaTeX Font Info:    Font shape `T1/phv/bc/n' will be
 LaTeX Font Info:    Font shape `T1/phv/b/n' will be
 (Font)              scaled to size 12.9599pt on input line 1.
 ) [1
-
 
 ] [2
 
@@ -961,20 +962,21 @@ LaTeX Font Info:    Font shape `T1/phv/m/sl' will be
 
 [5]
 LaTeX Font Info:    Font shape `T1/pcr/m/it' in size <8> not available
-(Font)              Font shape `T1/pcr/m/sl' tried instead on input line 66.
- [6] [7] [8]) (struct_c_u_r_v_e.tex [9] [10]) (class_g_p_i_o.tex [11]
+(Font)              Font shape `T1/pcr/m/sl' tried instead on input line 68.
+ [6] [7] [8]) (struct_c_u_b_i_c___f_u_n_c_t_i_o_n.tex [9])
+(struct_c_u_r_v_e.tex [10] [11]) (class_g_p_i_o.tex [12]
 LaTeX Font Info:    Font shape `T1/pcr/m/it' in size <7> not available
 (Font)              Font shape `T1/pcr/m/sl' tried instead on input line 56.
-)
-(class_i2_c.tex [12]
+) (class_i2_c.tex
+[13]
 LaTeX Font Info:    Font shape `T1/phv/b/n' will be
 (Font)              scaled to size 7.19995pt on input line 51.
- [13]) (class_i_a_board.tex [14] [15] [16]
+ [14]) (class_i_a_board.tex [15] [16] [17]
 Underfull \hbox (badness 10000) detected at line 145
 [][][]
  []
 
-[17]
+[18]
 Underfull \hbox (badness 10000) detected at line 185
 [][][]
  []
@@ -989,137 +991,217 @@ Underfull \hbox (badness 10000) detected at line 217
 [][][]
  []
 
-[18] [19]) (class_material_flow.tex [20] [21]) (class_p_c_b.tex [22] [23]
-[24]) (class_simulator.tex [25] [26] [27] [28]) (class_u_a_r_t.tex [29])
-[30]
+[19] [20]) (class_material_flow.tex [21] [22]) (class_modbus.tex [23])
+(class_p_c_b.tex [24] [25] [26]) (class_simulator.tex [27] [28] [29] [30])
+(class_s_i_w_a_r_e_x.tex [31]) (class_u_a_r_t.tex [32]) [33] [34
+
+]
 Chapter 4.
 (_configuration_8cpp.tex) (_configuration_8hpp.tex
 Underfull \hbox (badness 10000) in paragraph at lines 3--7
 
  []
 
-[31
-
-] [32] [33] [34]
-Overfull \vbox (24.52792pt too high) has occurred while \output is active []
-
-
-[35]) (_configuration_8hpp_source.tex [36] [37]) (_g_p_i_o_8cpp.tex)
-(_g_p_i_o_8hpp.tex
+[35] [36] [37] [38] [39]) (_configuration_8hpp_source.tex [40] [41])
+(_g_p_i_o_8cpp.tex) (_g_p_i_o_8hpp.tex
 Underfull \hbox (badness 10000) in paragraph at lines 3--7
 
  []
 
-) (_g_p_i_o_8hpp_source.tex) (_i2_c_8cpp.tex) (_i2_c_8hpp.tex
+) (_g_p_i_o_8hpp_source.tex [42]) (_i2_c_8cpp.tex) (_i2_c_8hpp.tex
 Underfull \hbox (badness 10000) in paragraph at lines 3--12
 
  []
 
-[38]) (_i2_c_8hpp_source.tex) (_i_a_board_8cpp.tex) (_i_a_board_8hpp.tex
+) (_i2_c_8hpp_source.tex) (_i_a_board_8cpp.tex [43]) (_i_a_board_8hpp.tex
 Underfull \hbox (badness 10000) in paragraph at lines 3--9
 
  []
 
-[39]) (_i_a_board_8hpp_source.tex [40]) (main_8cpp.tex
-Underfull \hbox (badness 10000) in paragraph at lines 3--15
+
+Overfull \vbox (23.2553pt too high) has occurred while \output is active []
+
+
+[44]) (_i_a_board_8hpp_source.tex [45]) (main_8cpp.tex
+Underfull \hbox (badness 10000) in paragraph at lines 3--17
 
  []
 
-[41]) (_material_flow_8cpp.tex) (_material_flow_8hpp.tex
+) (_material_flow_8cpp.tex) (_material_flow_8hpp.tex
 Underfull \hbox (badness 10000) in paragraph at lines 3--6
 
  []
 
-) (_material_flow_8hpp_source.tex [42]) (_p_c_b_8cpp.tex) (_p_c_b_8hpp.tex
+[46]) (_material_flow_8hpp_source.tex) (_modbus_8cpp.tex) (_modbus_8hpp.tex
 Underfull \hbox (badness 10000) in paragraph at lines 3--7
 
  []
 
-) (_p_c_b_8hpp_source.tex [43]) (_simulator_8cpp.tex) (_simulator_8hpp.tex
-Underfull \hbox (badness 10000) in paragraph at lines 3--9
+[47]) (_modbus_8hpp_source.tex) (_p_c_b_8cpp.tex) (_p_c_b_8hpp.tex
+Underfull \hbox (badness 10000) in paragraph at lines 3--7
 
  []
 
-) (_simulator_8hpp_source.tex [44]) (_u_a_r_t_8cpp.tex) (_u_a_r_t_8hpp.tex
+) (_p_c_b_8hpp_source.tex [48]) (_simulator_8cpp.tex) (_simulator_8hpp.tex
 Underfull \hbox (badness 10000) in paragraph at lines 3--10
 
  []
 
-) (_u_a_r_t_8hpp_source.tex [45]) (utility_8cpp.tex
-Underfull \hbox (badness 10000) in paragraph at lines 3--4
-
- []
-
-[46]
-Underfull \hbox (badness 10000) detected at line 39
-[][][]
- []
-
-
-Underfull \hbox (badness 10000) detected at line 67
-[][][]
- []
-
-[47]
-Underfull \hbox (badness 10000) detected at line 83
-[][][]
- []
-
-
-Underfull \hbox (badness 10000) detected at line 101
-[][][]
- []
-
-[48]
-Overfull \hbox (16.09276pt too wide) in paragraph at lines 137--138
-[]\T1/phv/m/n/10 Newton-[]Raphson Method for find-ing the x-value that cor-re-s
-ponds to a y-value of a cu-bic func-tion ax$[]$3+x$[]$2+cx+d=value,
- []
-
-
-Underfull \hbox (badness 10000) detected at line 150
-[][][]
- []
-
-) (utility_8hpp.tex
+) (_simulator_8hpp_source.tex [49]) (_s_i_w_a_r_e_x_8cpp.tex)
+(_s_i_w_a_r_e_x_8hpp.tex
 Underfull \hbox (badness 10000) in paragraph at lines 3--7
 
  []
 
-[49]
-Underfull \hbox (badness 10000) detected at line 42
+) (_s_i_w_a_r_e_x_8hpp_source.tex [50])
+(_s_i_w_a_r_e_x___r_e_g_i_s_t_e_r_8hpp.tex)
+(_s_i_w_a_r_e_x___r_e_g_i_s_t_e_r_8hpp_source.tex) (_u_a_r_t_8cpp.tex)
+(_u_a_r_t_8hpp.tex
+Underfull \hbox (badness 10000) in paragraph at lines 3--10
+
+ []
+
+[51]) (_u_a_r_t_8hpp_source.tex) (utility_8cpp.tex
+Underfull \hbox (badness 10000) in paragraph at lines 3--4
+
+ []
+
+[52]
+Underfull \hbox (badness 10000) detected at line 57
 [][][]
  []
 
-[50]
-Underfull \hbox (badness 10000) detected at line 70
+[53]
+Underfull \hbox (badness 10000) detected at line 79
 [][][]
  []
 
 
-Underfull \hbox (badness 10000) detected at line 86
+Underfull \hbox (badness 10000) detected at line 99
 [][][]
  []
 
-[51]
+
+Overfull \vbox (8.8248pt too high) has occurred while \output is active []
+
+
+[54]
+Underfull \hbox (badness 10000) detected at line 115
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 131
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 149
+[][][]
+ []
+
+[55]
+! Undefined control sequence.
+<recently read> \text 
+                      
+l.177 $\text
+            {result} = (X^T \cdot X)^{-1} \cdot X^T \cdot y$
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+
+Overfull \vbox (7.13342pt too high) has occurred while \output is active []
+
+
+[56]
+! Undefined control sequence.
+l.210 ... cubic function $f(x)=ax^3+x^2+cx+d=\text
+                                                  {value}$, only for the ran...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+
+Underfull \hbox (badness 10000) detected at line 223
+[][][]
+ []
+
+) (utility_8hpp.tex
+Underfull \hbox (badness 10000) in paragraph at lines 3--9
+
+ []
+
+[57]
+Underfull \hbox (badness 10000) detected at line 62
+[][][]
+ []
+
+[58]
+Underfull \hbox (badness 10000) detected at line 84
+[][][]
+ []
+
+
 Underfull \hbox (badness 10000) detected at line 104
 [][][]
  []
 
-[52]
-Overfull \hbox (16.09276pt too wide) in paragraph at lines 140--141
-[]\T1/phv/m/n/10 Newton-[]Raphson Method for find-ing the x-value that cor-re-s
-ponds to a y-value of a cu-bic func-tion ax$[]$3+x$[]$2+cx+d=value,
- []
+
+Overfull \vbox (8.8248pt too high) has occurred while \output is active []
 
 
-Underfull \hbox (badness 10000) detected at line 153
+[59]
+Underfull \hbox (badness 10000) detected at line 120
 [][][]
  []
 
-) (utility_8hpp_source.tex) [53] [54
 
-] (refman.ind
+Underfull \hbox (badness 10000) detected at line 136
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 154
+[][][]
+ []
+
+[60]
+! Undefined control sequence.
+<recently read> \text 
+                      
+l.182 $\text
+            {result} = (X^T \cdot X)^{-1} \cdot X^T \cdot y$
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+
+Overfull \vbox (7.13342pt too high) has occurred while \output is active []
+
+
+[61]
+! Undefined control sequence.
+l.215 ... cubic function $f(x)=ax^3+x^2+cx+d=\text
+                                                  {value}$, only for the ran...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+
+Underfull \hbox (badness 10000) detected at line 228
+[][][]
+ []
+
+) (utility_8hpp_source.tex) [62] (refman.ind
 Underfull \hbox (badness 10000) in paragraph at lines 85--87
 []\T1/phv/m/n/10 F:/GITHUB/SiWaSIM-PiSoftware/src/Configuration.cpp,
  []
@@ -1134,39 +1216,47 @@ Underfull \hbox (badness 6608) in paragraph at lines 96--98
 []\T1/phv/m/n/10 F:/GITHUB/SiWaSIM-PiSoftware/src/IABoard.hpp, [][]24[][],
  []
 
-[55
+[63
 
 
-] [56] [57]) (refman.aux)
+
+] [64] [65]) (refman.aux)
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
 Package rerunfilecheck Info: File `refman.out' has not changed.
-(rerunfilecheck)             Checksum: 2EF5E00D2F0D081BACC09E914C253632;47506.
+(rerunfilecheck)             Checksum: 2A33C5666572644246EF313E0A51FEAE;56232.
  ) 
 Here is how much of TeX's memory you used:
- 18955 strings out of 478659
- 326081 string characters out of 2845920
- 674752 words of memory out of 3000000
- 36075 multiletter control sequences out of 15000+600000
+ 19180 strings out of 478659
+ 332985 string characters out of 2845920
+ 690918 words of memory out of 3000000
+ 36185 multiletter control sequences out of 15000+600000
  465060 words of font info for 106 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 99i,16n,117p,756b,635s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 99i,16n,117p,882b,635s stack positions out of 5000i,500n,10000p,200000b,80000s
 {C:/Users/fynnr/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/base/8r.enc}<C:
 /Users/fynnr/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi1
 0.pfb><C:/Users/fynnr/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts
-/cm/cmmi8.pfb><C:/Users/fynnr/AppData/Local/Programs/MiKTeX/fonts/type1/public/
-amsfonts/cm/cmmi9.pfb><C:/Users/fynnr/AppData/Local/Programs/MiKTeX/fonts/type1
-/public/amsfonts/cm/cmsy10.pfb><C:/Users/fynnr/AppData/Local/Programs/MiKTeX/fo
-nts/type1/public/amsfonts/cm/cmsy7.pfb><C:/Users/fynnr/AppData/Local/Programs/M
-iKTeX/fonts/type1/public/amsfonts/cm/cmsy8.pfb><C:/Users/fynnr/AppData/Local/Pr
-ograms/MiKTeX/fonts/type1/urw/courier/ucrb8a.pfb><C:/Users/fynnr/AppData/Local/
-Programs/MiKTeX/fonts/type1/urw/courier/ucrr8a.pfb><C:/Users/fynnr/AppData/Loca
-l/Programs/MiKTeX/fonts/type1/urw/courier/ucrro8a.pfb><C:/Users/fynnr/AppData/L
-ocal/Programs/MiKTeX/fonts/type1/urw/helvetic/uhvb8a.pfb><C:/Users/fynnr/AppDat
-a/Local/Programs/MiKTeX/fonts/type1/urw/helvetic/uhvb8ac.pfb><C:/Users/fynnr/Ap
-pData/Local/Programs/MiKTeX/fonts/type1/urw/helvetic/uhvr8a.pfb><C:/Users/fynnr
-/AppData/Local/Programs/MiKTeX/fonts/type1/urw/helvetic/uhvro8a.pfb>
-Output written on refman.pdf (65 pages, 600351 bytes).
+/cm/cmmi7.pfb><C:/Users/fynnr/AppData/Local/Programs/MiKTeX/fonts/type1/public/
+amsfonts/cm/cmmi8.pfb><C:/Users/fynnr/AppData/Local/Programs/MiKTeX/fonts/type1
+/public/amsfonts/cm/cmmi9.pfb><C:/Users/fynnr/AppData/Local/Programs/MiKTeX/fon
+ts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/fynnr/AppData/Local/Programs/Mi
+KTeX/fonts/type1/public/amsfonts/cm/cmr7.pfb><C:/Users/fynnr/AppData/Local/Prog
+rams/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/fynnr/AppData/L
+ocal/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy7.pfb><C:/Users/fynnr/A
+ppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy8.pfb><C:/Users
+/fynnr/AppData/Local/Programs/MiKTeX/fonts/type1/urw/courier/ucrb8a.pfb><C:/Use
+rs/fynnr/AppData/Local/Programs/MiKTeX/fonts/type1/urw/courier/ucrr8a.pfb><C:/U
+sers/fynnr/AppData/Local/Programs/MiKTeX/fonts/type1/urw/courier/ucrro8a.pfb><C
+:/Users/fynnr/AppData/Local/Programs/MiKTeX/fonts/type1/urw/helvetic/uhvb8a.pfb
+><C:/Users/fynnr/AppData/Local/Programs/MiKTeX/fonts/type1/urw/helvetic/uhvb8ac
+.pfb><C:/Users/fynnr/AppData/Local/Programs/MiKTeX/fonts/type1/urw/helvetic/uhv
+r8a.pfb><C:/Users/fynnr/AppData/Local/Programs/MiKTeX/fonts/type1/urw/helvetic/
+uhvro8a.pfb>
+Output written on refman.pdf (75 pages, 704555 bytes).
 PDF statistics:
- 2631 PDF objects out of 2984 (max. 8388607)
- 562 named destinations out of 1000 (max. 500000)
- 1825 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 3027 PDF objects out of 3580 (max. 8388607)
+ 652 named destinations out of 1000 (max. 500000)
+ 2129 words of extra memory for PDF output out of 10000 (max. 10000000)
 

@@ -8,5 +8,8 @@ var searchData=
   ['materialflow_2ecpp_5',['MaterialFlow.cpp',['../_material_flow_8cpp.html',1,'']]],
   ['materialflow_2ehpp_6',['MaterialFlow.hpp',['../_material_flow_8hpp.html',1,'']]],
   ['max_5fdiff_5fvoltage_7',['max_diff_voltage',['../class_configuration.html#aa64f51fe43c020c59d15e95828e56af1',1,'Configuration']]],
-  ['maxflow_8',['maxFlow',['../struct_c_u_r_v_e.html#a1af5c48afdd778d732c1b75223117fa8',1,'CURVE']]]
+  ['maxflow_8',['maxFlow',['../struct_c_u_r_v_e.html#a1af5c48afdd778d732c1b75223117fa8',1,'CURVE']]],
+  ['modbus_9',['Modbus',['../class_modbus.html',1,'Modbus'],['../class_modbus.html#a101809cdd4734537bab58dc315a840b4',1,'Modbus::Modbus()']]],
+  ['modbus_2ecpp_10',['Modbus.cpp',['../_modbus_8cpp.html',1,'']]],
+  ['modbus_2ehpp_11',['Modbus.hpp',['../_modbus_8hpp.html',1,'']]]
 ];

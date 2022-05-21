@@ -202,7 +202,6 @@ void Simulator::calibrateLCVoltage(bool autoCalib)
          yValues.push_back(std::stof(input) / 1000.f);
       }
    }
-   std::cout << "DONE!\n\n";
 
    float a, b, c, d;
 
@@ -213,16 +212,29 @@ void Simulator::calibrateLCVoltage(bool autoCalib)
    _config->calibrationReg.c = c;
    _config->calibrationReg.d = d;
 
-   float voltage = 0;
-   while (true)
-   {
-      if (voltage > 40)
-      {
-         voltage = 0;
-      }
+   std::cout << "DONE!\n\n";
+}
 
-      _pcb->setLoadcellVoltage(voltage);
-      voltage += 1;
-      std::this_thread::sleep_for(5s);
+std::vector<float> Simulator::longTermTest()
+{
+   _pcb->setLoadcellVoltage(20);
+   std::this_thread::sleep_for(5s);
+   std::vector<float> yValues;
+
+   int numOfSamples = 60 * 0.5;
+   int sample = 0;
+   bool state = false;
+
+   while (sample < numOfSamples)
+   {
+      yValues.push_back(_siwarex->getLoadcellVoltage());
+      _pcb->setEXTRASW1(state);
+      state = !state;
+
+      delay(1000ms);
+
+      sample++;
    }
+
+   return yValues;
 }

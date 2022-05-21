@@ -94,8 +94,72 @@ Functions</h2></td></tr>
 <tr class="separator:a4ebc121761f629a729747ff570b4088c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7940f050e1ee40acf63aee97c4bfd339"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="utility_8cpp.html#a7940f050e1ee40acf63aee97c4bfd339">calculateCubicDeriv</a> (float a, float b, float c, float x)</td></tr>
 <tr class="separator:a7940f050e1ee40acf63aee97c4bfd339"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a45d0cc2af27bed8efb2baa70885d7d54"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="utility_8cpp.html#a45d0cc2af27bed8efb2baa70885d7d54">bytesToFloat</a> (uint8_t *bytes)</td></tr>
+<tr class="separator:a45d0cc2af27bed8efb2baa70885d7d54"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae25b91f9c16e30a504420c381d901f3d"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="utility_8cpp.html#ae25b91f9c16e30a504420c381d901f3d">bytesToFloat</a> (uint8_t b3, uint8_t b2, uint8_t b1, uint8_t b0)</td></tr>
+<tr class="separator:ae25b91f9c16e30a504420c381d901f3d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac4d7017f07df12c097fd0b3d708019dd"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="utility_8cpp.html#ac4d7017f07df12c097fd0b3d708019dd">delay</a> (std::chrono::milliseconds delayMS)</td></tr>
+<tr class="separator:ac4d7017f07df12c097fd0b3d708019dd"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Function Documentation</h2>
+<a id="a45d0cc2af27bed8efb2baa70885d7d54" name="a45d0cc2af27bed8efb2baa70885d7d54"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a45d0cc2af27bed8efb2baa70885d7d54">&#9670;&nbsp;</a></span>bytesToFloat() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">float bytesToFloat </td>
+          <td>(</td>
+          <td class="paramtype">uint8_t *&#160;</td>
+          <td class="paramname"><em>bytes</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ae25b91f9c16e30a504420c381d901f3d" name="ae25b91f9c16e30a504420c381d901f3d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae25b91f9c16e30a504420c381d901f3d">&#9670;&nbsp;</a></span>bytesToFloat() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">float bytesToFloat </td>
+          <td>(</td>
+          <td class="paramtype">uint8_t&#160;</td>
+          <td class="paramname"><em>b3</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint8_t&#160;</td>
+          <td class="paramname"><em>b2</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint8_t&#160;</td>
+          <td class="paramname"><em>b1</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint8_t&#160;</td>
+          <td class="paramname"><em>b0</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <a id="a94cb286a882e6071a8bebc2237101a80" name="a94cb286a882e6071a8bebc2237101a80"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a94cb286a882e6071a8bebc2237101a80">&#9670;&nbsp;</a></span>calculateAverage()</h2>
 
@@ -164,6 +228,17 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p >Calculates a y-value of a cubic function with <img class="formulaInl" alt="$f(x)=ax^3 + bx^2 + cx + d$" src="form_12.png"/> </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">a</td><td>Coefficient in front of <img class="formulaInl" alt="$x^3$" src="form_8.png"/> </td></tr>
+    <tr><td class="paramname">b</td><td>Coefficient in front of <img class="formulaInl" alt="$x^2$" src="form_9.png"/> </td></tr>
+    <tr><td class="paramname">c</td><td>Coefficient in front of <img class="formulaInl" alt="$x^1$" src="form_10.png"/> </td></tr>
+    <tr><td class="paramname">d</td><td>Coefficient in front of <img class="formulaInl" alt="$x^0$" src="form_11.png"/> </td></tr>
+    <tr><td class="paramname">x</td><td>X-value for which the function should be calculated </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Returns the y-value <img class="formulaInl" alt="$y=f(x)$" src="form_13.png"/> </dd></dl>
 
 </div>
 </div>
@@ -204,6 +279,16 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p >Calculates a y-value of a cubic derivative function <img class="formulaInl" alt="$f'(x)$" src="form_14.png"/> with <img class="formulaInl" alt="$f(x)=ax^3 + bx^2 + cx + d$" src="form_12.png"/> and <img class="formulaInl" alt="$f'(x)=3ax^2 + 2bx + cx$" src="form_15.png"/> </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">a</td><td>Coefficient in front of <img class="formulaInl" alt="$x^3$" src="form_8.png"/> </td></tr>
+    <tr><td class="paramname">b</td><td>Coefficient in front of <img class="formulaInl" alt="$x^2$" src="form_9.png"/> </td></tr>
+    <tr><td class="paramname">c</td><td>Coefficient in front of <img class="formulaInl" alt="$x^1$" src="form_10.png"/> </td></tr>
+    <tr><td class="paramname">x</td><td>X-value for which the function should be calculated </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Returns the y-value <img class="formulaInl" alt="$y=f'(x)$" src="form_16.png"/> </dd></dl>
 
 </div>
 </div>
@@ -382,6 +467,29 @@ Functions</h2></td></tr>
   </table>
   </dd>
 </dl>
+<p >Calculates a cubic regression based on the following instructions: <a href="https://www.omnicalculator.com/statistics/cubic-regression">https://www.omnicalculator.com/statistics/cubic-regression</a></p>
+<p >The formula for the result vector which contains the function coefficients <img class="formulaInl" alt="$a,b,c,d$" src="form_0.png"/> is</p>
+<p ><img class="formulaInl" alt="$\text{result} = (X^T \cdot X)^{-1} \cdot X^T \cdot y$" src="form_1.png"/></p>
+<p >where...</p>
+<p ><img class="formulaInl" alt="$X$" src="form_2.png"/> is the base matrix <img class="formulaInl" alt="$X^T$" src="form_3.png"/> is the transposed base matrix <img class="formulaInl" alt="$\cdot$" src="form_4.png"/> represents the matrix multiplication <img class="formulaInl" alt="$.^{-1}$" src="form_5.png"/> represents the inverse of a matrix <img class="formulaInl" alt="$y$" src="form_6.png"/> is the vector that contains all y-values in the same order as the x-values in the base matrix</p>
+
+</div>
+</div>
+<a id="ac4d7017f07df12c097fd0b3d708019dd" name="ac4d7017f07df12c097fd0b3d708019dd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac4d7017f07df12c097fd0b3d708019dd">&#9670;&nbsp;</a></span>delay()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void delay </td>
+          <td>(</td>
+          <td class="paramtype">std::chrono::milliseconds&#160;</td>
+          <td class="paramname"><em>delayMS</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
 
 </div>
 </div>
@@ -422,7 +530,15 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p >Calculates a linear regression f(x)=mx+b for a dataset of x and y values </p>
+<p >Calculates a linear regression f(x) = mx + b for a dataset of x and y values </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">x</td><td>Vector of x-values of the dataset </td></tr>
+    <tr><td class="paramname">y</td><td>Vector of y-values of the dataset </td></tr>
+    <tr><td class="paramname">m</td><td>Pointer to the slope m </td></tr>
+    <tr><td class="paramname">b</td><td>Pointer to the y-intercept b </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
@@ -469,12 +585,12 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p >Newton-Raphson Method for finding the x-value that corresponds to a y-value of a cubic function ax^3+x^2+cx+d=value, only for the range 0 - 10 </p><dl class="params"><dt>Parameters</dt><dd>
+<p >Newton-Raphson Method for finding the x-value that corresponds to a y-value of a cubic function <img class="formulaInl" alt="$f(x)=ax^3+x^2+cx+d=\text{value}$" src="form_7.png"/>, only for the range 0 - 10 </p><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">a</td><td>Coefficient in front of x^3 </td></tr>
-    <tr><td class="paramname">b</td><td>Coefficient in front of x^2 </td></tr>
-    <tr><td class="paramname">c</td><td>Coefficient in front of x^1 </td></tr>
-    <tr><td class="paramname">d</td><td>Coefficient in front of x^0 </td></tr>
+    <tr><td class="paramname">a</td><td>Coefficient in front of <img class="formulaInl" alt="$x^3$" src="form_8.png"/> </td></tr>
+    <tr><td class="paramname">b</td><td>Coefficient in front of <img class="formulaInl" alt="$x^2$" src="form_9.png"/> </td></tr>
+    <tr><td class="paramname">c</td><td>Coefficient in front of <img class="formulaInl" alt="$x^1$" src="form_10.png"/> </td></tr>
+    <tr><td class="paramname">d</td><td>Coefficient in front of <img class="formulaInl" alt="$x^0$" src="form_11.png"/> </td></tr>
     <tr><td class="paramname">value</td><td>y-value of the cubic function that corresponds to the wanted x-value </td></tr>
   </table>
   </dd>

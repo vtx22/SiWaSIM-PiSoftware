@@ -7,43 +7,45 @@
 \DoxyCodeLine{3 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{_configuration_8hpp}{Configuration.hpp}}"{}}}
 \DoxyCodeLine{4 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{_i_a_board_8hpp}{IABoard.hpp}}"{}}}
 \DoxyCodeLine{5 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{_material_flow_8hpp}{MaterialFlow.hpp}}"{}}}
-\DoxyCodeLine{6 }
-\DoxyCodeLine{7 \textcolor{preprocessor}{\#include <chrono>}}
-\DoxyCodeLine{8 \textcolor{preprocessor}{\#include <thread>}}
-\DoxyCodeLine{9 }
-\DoxyCodeLine{10 \textcolor{keyword}{using namespace }std::chrono\_literals;}
-\DoxyCodeLine{11 }
-\DoxyCodeLine{12 \textcolor{keyword}{class }\mbox{\hyperlink{class_simulator}{Simulator}}}
-\DoxyCodeLine{13 \{}
-\DoxyCodeLine{14 \textcolor{keyword}{public}:}
-\DoxyCodeLine{15    \mbox{\hyperlink{class_simulator_a031573bfcfe2e0f5c9539bcc1c7fc5d9}{Simulator}}();}
-\DoxyCodeLine{16    \mbox{\hyperlink{class_simulator_a0f49aa04f42060a785adf77346b9de9f}{\string~Simulator}}();}
-\DoxyCodeLine{17 }
-\DoxyCodeLine{18    \textcolor{keywordtype}{void} \mbox{\hyperlink{class_simulator_a8a47e848e6f9381d5243f230801e4498}{setWeightPER}}(\textcolor{keywordtype}{float} percentage); \textcolor{comment}{// Set the weight from 0 -\/ 100\% of nominal Load}}
-\DoxyCodeLine{19    \textcolor{keywordtype}{void} \mbox{\hyperlink{class_simulator_a44bd3ad4c4e3531d257126b7fa3de374}{setWeightKG}}(\textcolor{keywordtype}{float} kg);          \textcolor{comment}{// Set the weight in kg}}
-\DoxyCodeLine{20 }
-\DoxyCodeLine{21    \textcolor{keywordtype}{void} \mbox{\hyperlink{class_simulator_a667aa60bb9e7956adaf58ec0a068510b}{setVelocity}}(\textcolor{keywordtype}{float} meterspersecond);}
-\DoxyCodeLine{22    \textcolor{keywordtype}{void} \mbox{\hyperlink{class_simulator_a8585f658197dbaba1905ef9654b8de80}{setVelocityPER}}(\textcolor{keywordtype}{float} percentage);}
-\DoxyCodeLine{23    \textcolor{keywordtype}{void} \mbox{\hyperlink{class_simulator_a279633984034631853a4ecf16d478be1}{setVelocityFRQ}}(\textcolor{keywordtype}{float} frequency);}
-\DoxyCodeLine{24 }
-\DoxyCodeLine{25    \textcolor{keywordtype}{void} \mbox{\hyperlink{class_simulator_a3a09a331888d2087f6afbb53e1860195}{setImpedance}}(\mbox{\hyperlink{_configuration_8hpp_a8cdbfc5a2637c1334b36e71aaf4f960e}{IMPEDANCE}} impedance);}
-\DoxyCodeLine{26 }
-\DoxyCodeLine{27    \textcolor{keywordtype}{void} \mbox{\hyperlink{class_simulator_abe9678f710894b6548da5b9a89391981}{bootupAnimation}}();}
-\DoxyCodeLine{28    \textcolor{keywordtype}{void} \mbox{\hyperlink{class_simulator_a008cd4b74753e0452e732c93476f1f39}{reloadConfig}}();}
-\DoxyCodeLine{29 }
-\DoxyCodeLine{30    \textcolor{keywordtype}{void} \mbox{\hyperlink{class_simulator_a6582f4d0fe9ce549dc4769111e497aba}{testFunction}}();}
-\DoxyCodeLine{31 }
-\DoxyCodeLine{32    \textcolor{keywordtype}{float} \mbox{\hyperlink{class_simulator_ad2658f679abc1321cb387ea635514369}{run}}(\mbox{\hyperlink{_configuration_8hpp_a8c551c1eb58ae69a51730eb254b93c91}{RUN\_MODE}} runMode, \textcolor{keywordtype}{float} timestep, \textcolor{keywordtype}{float} *weight);}
-\DoxyCodeLine{33    \textcolor{keywordtype}{float} \mbox{\hyperlink{class_simulator_a037bd4438dc54efd65663e76b1651062}{runPassive}}(\textcolor{keywordtype}{float} timestep, \textcolor{keywordtype}{float} *weight);}
-\DoxyCodeLine{34 }
-\DoxyCodeLine{35    \textcolor{keywordtype}{void} \mbox{\hyperlink{class_simulator_a5a7b96a490946d1eb5ba025c7be178ef}{calibrateLCVoltage}}();}
-\DoxyCodeLine{36 }
-\DoxyCodeLine{37 \textcolor{keyword}{private}:}
-\DoxyCodeLine{38    \mbox{\hyperlink{class_configuration}{Configuration}} *\_config;}
-\DoxyCodeLine{39    \mbox{\hyperlink{class_p_c_b}{PCB}} *\_pcb;}
-\DoxyCodeLine{40    \mbox{\hyperlink{class_i_a_board}{IABoard}} *\_ia;}
-\DoxyCodeLine{41 }
-\DoxyCodeLine{42    \mbox{\hyperlink{class_material_flow}{MaterialFlow}} *\_materialFlows[4];}
-\DoxyCodeLine{43 \};}
+\DoxyCodeLine{6 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{_s_i_w_a_r_e_x_8hpp}{SIWAREX.hpp}}"{}}}
+\DoxyCodeLine{7 }
+\DoxyCodeLine{8 \textcolor{preprocessor}{\#include <chrono>}}
+\DoxyCodeLine{9 \textcolor{preprocessor}{\#include <thread>}}
+\DoxyCodeLine{10 }
+\DoxyCodeLine{11 \textcolor{keyword}{using namespace }std::chrono\_literals;}
+\DoxyCodeLine{12 }
+\DoxyCodeLine{13 \textcolor{keyword}{class }\mbox{\hyperlink{class_simulator}{Simulator}}}
+\DoxyCodeLine{14 \{}
+\DoxyCodeLine{15 \textcolor{keyword}{public}:}
+\DoxyCodeLine{16    \mbox{\hyperlink{class_simulator_a031573bfcfe2e0f5c9539bcc1c7fc5d9}{Simulator}}();}
+\DoxyCodeLine{17    \mbox{\hyperlink{class_simulator_a0f49aa04f42060a785adf77346b9de9f}{\string~Simulator}}();}
+\DoxyCodeLine{18 }
+\DoxyCodeLine{19    \textcolor{keywordtype}{void} \mbox{\hyperlink{class_simulator_a8a47e848e6f9381d5243f230801e4498}{setWeightPER}}(\textcolor{keywordtype}{float} percentage); \textcolor{comment}{// Set the weight from 0 -\/ 100\% of nominal Load}}
+\DoxyCodeLine{20    \textcolor{keywordtype}{void} \mbox{\hyperlink{class_simulator_a44bd3ad4c4e3531d257126b7fa3de374}{setWeightKG}}(\textcolor{keywordtype}{float} kg);          \textcolor{comment}{// Set the weight in kg}}
+\DoxyCodeLine{21 }
+\DoxyCodeLine{22    \textcolor{keywordtype}{void} \mbox{\hyperlink{class_simulator_a667aa60bb9e7956adaf58ec0a068510b}{setVelocity}}(\textcolor{keywordtype}{float} meterspersecond);}
+\DoxyCodeLine{23    \textcolor{keywordtype}{void} \mbox{\hyperlink{class_simulator_a8585f658197dbaba1905ef9654b8de80}{setVelocityPER}}(\textcolor{keywordtype}{float} percentage);}
+\DoxyCodeLine{24    \textcolor{keywordtype}{void} \mbox{\hyperlink{class_simulator_a279633984034631853a4ecf16d478be1}{setVelocityFRQ}}(\textcolor{keywordtype}{float} frequency);}
+\DoxyCodeLine{25 }
+\DoxyCodeLine{26    \textcolor{keywordtype}{void} \mbox{\hyperlink{class_simulator_a3a09a331888d2087f6afbb53e1860195}{setImpedance}}(\mbox{\hyperlink{_configuration_8hpp_a8cdbfc5a2637c1334b36e71aaf4f960e}{IMPEDANCE}} impedance);}
+\DoxyCodeLine{27 }
+\DoxyCodeLine{28    \textcolor{keywordtype}{void} \mbox{\hyperlink{class_simulator_abe9678f710894b6548da5b9a89391981}{bootupAnimation}}();}
+\DoxyCodeLine{29    \textcolor{keywordtype}{void} \mbox{\hyperlink{class_simulator_a008cd4b74753e0452e732c93476f1f39}{reloadConfig}}();}
+\DoxyCodeLine{30 }
+\DoxyCodeLine{31    \textcolor{keywordtype}{void} \mbox{\hyperlink{class_simulator_a6582f4d0fe9ce549dc4769111e497aba}{testFunction}}();}
+\DoxyCodeLine{32 }
+\DoxyCodeLine{33    \textcolor{keywordtype}{float} \mbox{\hyperlink{class_simulator_ad2658f679abc1321cb387ea635514369}{run}}(\mbox{\hyperlink{_configuration_8hpp_a8c551c1eb58ae69a51730eb254b93c91}{RUN\_MODE}} runMode, \textcolor{keywordtype}{float} timestep, \textcolor{keywordtype}{float} *weight);}
+\DoxyCodeLine{34    \textcolor{keywordtype}{float} \mbox{\hyperlink{class_simulator_a037bd4438dc54efd65663e76b1651062}{runPassive}}(\textcolor{keywordtype}{float} timestep, \textcolor{keywordtype}{float} *weight);}
+\DoxyCodeLine{35 }
+\DoxyCodeLine{36    \textcolor{keywordtype}{void} \mbox{\hyperlink{class_simulator_a669b34415c54ff70a0985c1fadb5e8b6}{calibrateLCVoltage}}(\textcolor{keywordtype}{bool} autoCalib);}
+\DoxyCodeLine{37 }
+\DoxyCodeLine{38 \textcolor{keyword}{private}:}
+\DoxyCodeLine{39    \mbox{\hyperlink{class_configuration}{Configuration}} *\_config;}
+\DoxyCodeLine{40    \mbox{\hyperlink{class_p_c_b}{PCB}} *\_pcb;}
+\DoxyCodeLine{41    \mbox{\hyperlink{class_i_a_board}{IABoard}} *\_ia;}
+\DoxyCodeLine{42    \mbox{\hyperlink{class_s_i_w_a_r_e_x}{SIWAREX}} *\_siwarex;}
+\DoxyCodeLine{43 }
+\DoxyCodeLine{44    \mbox{\hyperlink{class_material_flow}{MaterialFlow}} *\_materialFlows[4];}
+\DoxyCodeLine{45 \};}
 
 \end{DoxyCode}

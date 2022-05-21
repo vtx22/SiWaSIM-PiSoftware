@@ -5,6 +5,7 @@ var searchData=
   ['ledready_2',['ledReady',['../class_p_c_b.html#ab6341a19176ab4ebb2f2e4c1283c4511',1,'PCB']]],
   ['linearregression_3',['linearRegression',['../utility_8cpp.html#a850dd7c2b5043c33786b5fee48f2e4c2',1,'linearRegression(std::vector&lt; float &gt; x, std::vector&lt; float &gt; y, float *m, float *b):&#160;utility.cpp'],['../utility_8hpp.html#a850dd7c2b5043c33786b5fee48f2e4c2',1,'linearRegression(std::vector&lt; float &gt; x, std::vector&lt; float &gt; y, float *m, float *b):&#160;utility.cpp']]],
   ['load_5fweight_4',['load_weight',['../class_configuration.html#ae5fb01ebff9c19f346cac9158b16b3a2',1,'Configuration']]],
-  ['loadcellmode_5',['LoadCellMode',['../_configuration_8hpp.html#a79dd9036c94e58a35b6e18d61a36fb66',1,'Configuration.hpp']]],
-  ['loadconfiguration_6',['loadConfiguration',['../class_configuration.html#a5c4ffeed7ac7333e9bcb8fd63232c60f',1,'Configuration']]]
+  ['loadcell_5fvoltage_5',['LOADCELL_VOLTAGE',['../_s_i_w_a_r_e_x___r_e_g_i_s_t_e_r_8hpp.html#a3e4880c987161c96864516084f91e13b',1,'SIWAREX_REGISTER.hpp']]],
+  ['loadcellmode_6',['LoadCellMode',['../_configuration_8hpp.html#a79dd9036c94e58a35b6e18d61a36fb66',1,'Configuration.hpp']]],
+  ['loadconfiguration_7',['loadConfiguration',['../class_configuration.html#a5c4ffeed7ac7333e9bcb8fd63232c60f',1,'Configuration']]]
 ];

@@ -1,0 +1,26 @@
+\hypertarget{_s_i_w_a_r_e_x_8hpp_source}{}\doxysection{SIWAREX.\+hpp}
+\label{_s_i_w_a_r_e_x_8hpp_source}\index{F:/GITHUB/SiWaSIM-\/PiSoftware/src/SIWAREX.hpp@{F:/GITHUB/SiWaSIM-\/PiSoftware/src/SIWAREX.hpp}}
+\mbox{\hyperlink{_s_i_w_a_r_e_x_8hpp}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{preprocessor}{\#pragma once}}
+\DoxyCodeLine{2 \textcolor{preprocessor}{\#include <vector>}}
+\DoxyCodeLine{3 }
+\DoxyCodeLine{4 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{_s_i_w_a_r_e_x___r_e_g_i_s_t_e_r_8hpp}{SIWAREX\_REGISTER.hpp}}"{}}}
+\DoxyCodeLine{5 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{_modbus_8hpp}{Modbus.hpp}}"{}}}
+\DoxyCodeLine{6 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{utility_8hpp}{utility.hpp}}"{}}}
+\DoxyCodeLine{7 }
+\DoxyCodeLine{8 \textcolor{keyword}{class }\mbox{\hyperlink{class_s_i_w_a_r_e_x}{SIWAREX}}}
+\DoxyCodeLine{9 \{}
+\DoxyCodeLine{10 \textcolor{keyword}{public}:}
+\DoxyCodeLine{11    \mbox{\hyperlink{class_s_i_w_a_r_e_x_ab32c0412ab577d4457d179cf4f15fb17}{SIWAREX}}();}
+\DoxyCodeLine{12    \mbox{\hyperlink{class_s_i_w_a_r_e_x_a9199394b85416d45c2a6ac8f6b7350bf}{\string~SIWAREX}}();}
+\DoxyCodeLine{13 }
+\DoxyCodeLine{14    \textcolor{keywordtype}{float} \mbox{\hyperlink{class_s_i_w_a_r_e_x_a8c20f91f42a2f62ed7fba58c90e793c5}{getLoadcellVoltage}}();}
+\DoxyCodeLine{15 }
+\DoxyCodeLine{16 \textcolor{keyword}{private}:}
+\DoxyCodeLine{17    \textcolor{keywordtype}{float} requestFloat(uint16\_t startRegister);}
+\DoxyCodeLine{18 }
+\DoxyCodeLine{19    \mbox{\hyperlink{class_modbus}{Modbus}} *\_modbus;}
+\DoxyCodeLine{20 \};}
+
+\end{DoxyCode}

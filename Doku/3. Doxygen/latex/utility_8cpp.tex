@@ -21,10 +21,28 @@ float \mbox{\hyperlink{utility_8cpp_a88e4fb018f92eb63b61ea28087819ce3}{solve\+Cu
 float \mbox{\hyperlink{utility_8cpp_a4ebc121761f629a729747ff570b4088c}{calculate\+Cubic}} (float a, float b, float c, float d, float x)
 \item 
 float \mbox{\hyperlink{utility_8cpp_a7940f050e1ee40acf63aee97c4bfd339}{calculate\+Cubic\+Deriv}} (float a, float b, float c, float x)
+\item 
+float \mbox{\hyperlink{utility_8cpp_a45d0cc2af27bed8efb2baa70885d7d54}{bytes\+To\+Float}} (uint8\+\_\+t $\ast$bytes)
+\item 
+float \mbox{\hyperlink{utility_8cpp_ae25b91f9c16e30a504420c381d901f3d}{bytes\+To\+Float}} (uint8\+\_\+t b3, uint8\+\_\+t b2, uint8\+\_\+t b1, uint8\+\_\+t b0)
+\item 
+void \mbox{\hyperlink{utility_8cpp_ac4d7017f07df12c097fd0b3d708019dd}{delay}} (std\+::chrono\+::milliseconds delay\+MS)
 \end{DoxyCompactItemize}
 
 
 \doxysubsection{Function Documentation}
+\mbox{\Hypertarget{utility_8cpp_a45d0cc2af27bed8efb2baa70885d7d54}\label{utility_8cpp_a45d0cc2af27bed8efb2baa70885d7d54}} 
+\index{utility.cpp@{utility.cpp}!bytesToFloat@{bytesToFloat}}
+\index{bytesToFloat@{bytesToFloat}!utility.cpp@{utility.cpp}}
+\doxysubsubsection{\texorpdfstring{bytesToFloat()}{bytesToFloat()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily float bytes\+To\+Float (\begin{DoxyParamCaption}\item[{uint8\+\_\+t $\ast$}]{bytes }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{utility_8cpp_ae25b91f9c16e30a504420c381d901f3d}\label{utility_8cpp_ae25b91f9c16e30a504420c381d901f3d}} 
+\index{utility.cpp@{utility.cpp}!bytesToFloat@{bytesToFloat}}
+\index{bytesToFloat@{bytesToFloat}!utility.cpp@{utility.cpp}}
+\doxysubsubsection{\texorpdfstring{bytesToFloat()}{bytesToFloat()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily float bytes\+To\+Float (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{b3,  }\item[{uint8\+\_\+t}]{b2,  }\item[{uint8\+\_\+t}]{b1,  }\item[{uint8\+\_\+t}]{b0 }\end{DoxyParamCaption})}
+
 \mbox{\Hypertarget{utility_8cpp_a94cb286a882e6071a8bebc2237101a80}\label{utility_8cpp_a94cb286a882e6071a8bebc2237101a80}} 
 \index{utility.cpp@{utility.cpp}!calculateAverage@{calculateAverage}}
 \index{calculateAverage@{calculateAverage}!utility.cpp@{utility.cpp}}
@@ -45,12 +63,42 @@ Returns the average of the values in the vector
 \doxysubsubsection{\texorpdfstring{calculateCubic()}{calculateCubic()}}
 {\footnotesize\ttfamily float calculate\+Cubic (\begin{DoxyParamCaption}\item[{float}]{a,  }\item[{float}]{b,  }\item[{float}]{c,  }\item[{float}]{d,  }\item[{float}]{x }\end{DoxyParamCaption})}
 
+Calculates a y-\/value of a cubic function with $f(x)=ax^3 + bx^2 + cx + d$ 
+\begin{DoxyParams}{Parameters}
+{\em a} & Coefficient in front of $x^3$ \\
+\hline
+{\em b} & Coefficient in front of $x^2$ \\
+\hline
+{\em c} & Coefficient in front of $x^1$ \\
+\hline
+{\em d} & Coefficient in front of $x^0$ \\
+\hline
+{\em x} & X-\/value for which the function should be calculated \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Returns the y-\/value $y=f(x)$ 
+\end{DoxyReturn}
 \mbox{\Hypertarget{utility_8cpp_a7940f050e1ee40acf63aee97c4bfd339}\label{utility_8cpp_a7940f050e1ee40acf63aee97c4bfd339}} 
 \index{utility.cpp@{utility.cpp}!calculateCubicDeriv@{calculateCubicDeriv}}
 \index{calculateCubicDeriv@{calculateCubicDeriv}!utility.cpp@{utility.cpp}}
 \doxysubsubsection{\texorpdfstring{calculateCubicDeriv()}{calculateCubicDeriv()}}
 {\footnotesize\ttfamily float calculate\+Cubic\+Deriv (\begin{DoxyParamCaption}\item[{float}]{a,  }\item[{float}]{b,  }\item[{float}]{c,  }\item[{float}]{x }\end{DoxyParamCaption})}
 
+Calculates a y-\/value of a cubic derivative function $f\textnormal{\textquotesingle}(x)$ with $f(x)=ax^3 + bx^2 + cx + d$ and $f\textnormal{\textquotesingle}(x)=3ax^2 + 2bx + cx$ 
+\begin{DoxyParams}{Parameters}
+{\em a} & Coefficient in front of $x^3$ \\
+\hline
+{\em b} & Coefficient in front of $x^2$ \\
+\hline
+{\em c} & Coefficient in front of $x^1$ \\
+\hline
+{\em x} & X-\/value for which the function should be calculated \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Returns the y-\/value $y=f\textnormal{\textquotesingle}(x)$ 
+\end{DoxyReturn}
 \mbox{\Hypertarget{utility_8cpp_a5124739dfc2606b0b4508d175e617d86}\label{utility_8cpp_a5124739dfc2606b0b4508d175e617d86}} 
 \index{utility.cpp@{utility.cpp}!constrainMax@{constrainMax}}
 \index{constrainMax@{constrainMax}!utility.cpp@{utility.cpp}}
@@ -122,27 +170,52 @@ Calculates a cubic regression f(x)=ax$^\wedge$3+bx$^\wedge$2+cx+d for a dataset 
 {\em d} & Coefficient in front of x$^\wedge$0 \\
 \hline
 \end{DoxyParams}
+Calculates a cubic regression based on the following instructions\+: \href{https://www.omnicalculator.com/statistics/cubic-regression}{\texttt{ https\+://www.\+omnicalculator.\+com/statistics/cubic-\/regression}}
+
+The formula for the result vector which contains the function coefficients $a,b,c,d$ is
+
+$\text{result} = (X^T \cdot X)^{-1} \cdot X^T \cdot y$
+
+where...
+
+$X$ is the base matrix $X^T$ is the transposed base matrix $\cdot$ represents the matrix multiplication $.^{-1}$ represents the inverse of a matrix $y$ is the vector that contains all y-\/values in the same order as the x-\/values in the base matrix\mbox{\Hypertarget{utility_8cpp_ac4d7017f07df12c097fd0b3d708019dd}\label{utility_8cpp_ac4d7017f07df12c097fd0b3d708019dd}} 
+\index{utility.cpp@{utility.cpp}!delay@{delay}}
+\index{delay@{delay}!utility.cpp@{utility.cpp}}
+\doxysubsubsection{\texorpdfstring{delay()}{delay()}}
+{\footnotesize\ttfamily void delay (\begin{DoxyParamCaption}\item[{std\+::chrono\+::milliseconds}]{delay\+MS }\end{DoxyParamCaption})}
+
 \mbox{\Hypertarget{utility_8cpp_a850dd7c2b5043c33786b5fee48f2e4c2}\label{utility_8cpp_a850dd7c2b5043c33786b5fee48f2e4c2}} 
 \index{utility.cpp@{utility.cpp}!linearRegression@{linearRegression}}
 \index{linearRegression@{linearRegression}!utility.cpp@{utility.cpp}}
 \doxysubsubsection{\texorpdfstring{linearRegression()}{linearRegression()}}
 {\footnotesize\ttfamily void linear\+Regression (\begin{DoxyParamCaption}\item[{std\+::vector$<$ float $>$}]{x,  }\item[{std\+::vector$<$ float $>$}]{y,  }\item[{float $\ast$}]{m,  }\item[{float $\ast$}]{b }\end{DoxyParamCaption})}
 
-Calculates a linear regression f(x)=mx+b for a dataset of x and y values \mbox{\Hypertarget{utility_8cpp_a88e4fb018f92eb63b61ea28087819ce3}\label{utility_8cpp_a88e4fb018f92eb63b61ea28087819ce3}} 
+Calculates a linear regression f(x) = mx + b for a dataset of x and y values 
+\begin{DoxyParams}{Parameters}
+{\em x} & Vector of x-\/values of the dataset \\
+\hline
+{\em y} & Vector of y-\/values of the dataset \\
+\hline
+{\em m} & Pointer to the slope m \\
+\hline
+{\em b} & Pointer to the y-\/intercept b \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{utility_8cpp_a88e4fb018f92eb63b61ea28087819ce3}\label{utility_8cpp_a88e4fb018f92eb63b61ea28087819ce3}} 
 \index{utility.cpp@{utility.cpp}!solveCubicForVoltage@{solveCubicForVoltage}}
 \index{solveCubicForVoltage@{solveCubicForVoltage}!utility.cpp@{utility.cpp}}
 \doxysubsubsection{\texorpdfstring{solveCubicForVoltage()}{solveCubicForVoltage()}}
 {\footnotesize\ttfamily float solve\+Cubic\+For\+Voltage (\begin{DoxyParamCaption}\item[{float}]{a,  }\item[{float}]{b,  }\item[{float}]{c,  }\item[{float}]{d,  }\item[{float}]{value }\end{DoxyParamCaption})}
 
-Newton-\/\+Raphson Method for finding the x-\/value that corresponds to a y-\/value of a cubic function ax$^\wedge$3+x$^\wedge$2+cx+d=value, only for the range 0 -\/ 10 
+Newton-\/\+Raphson Method for finding the x-\/value that corresponds to a y-\/value of a cubic function $f(x)=ax^3+x^2+cx+d=\text{value}$, only for the range 0 -\/ 10 
 \begin{DoxyParams}{Parameters}
-{\em a} & Coefficient in front of x$^\wedge$3 \\
+{\em a} & Coefficient in front of $x^3$ \\
 \hline
-{\em b} & Coefficient in front of x$^\wedge$2 \\
+{\em b} & Coefficient in front of $x^2$ \\
 \hline
-{\em c} & Coefficient in front of x$^\wedge$1 \\
+{\em c} & Coefficient in front of $x^1$ \\
 \hline
-{\em d} & Coefficient in front of x$^\wedge$0 \\
+{\em d} & Coefficient in front of $x^0$ \\
 \hline
 {\em value} & y-\/value of the cubic function that corresponds to the wanted x-\/value \\
 \hline

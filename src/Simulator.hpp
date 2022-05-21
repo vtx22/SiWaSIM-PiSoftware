@@ -34,6 +34,7 @@ public:
    float runPassive(float timestep, float *weight);
 
    void calibrateLCVoltage(bool autoCalib);
+   std::vector<float> longTermTest();
 
 private:
    Configuration *_config;

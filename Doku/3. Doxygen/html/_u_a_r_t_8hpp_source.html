@@ -91,15 +91,15 @@ $(function() {
 <div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span><span class="keyword">private</span>:</div>
 <div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>   <span class="keywordtype">int</span> uart0 = -1;</div>
 <div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>   <span class="comment">// std::string _dev;</span></div>
-<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>   <span class="keyword">const</span> uint8_t _messageSizeRX = 0;     <span class="comment">// Number of bytes to wait for</span></div>
-<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>   <span class="keyword">const</span> uint8_t _messageTimeoutRX = 50; <span class="comment">// Read Timeout in 0.1s steps</span></div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>   <span class="keyword">const</span> uint8_t _messageSizeRX = 0;    <span class="comment">// Number of bytes to wait for</span></div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>   <span class="keyword">const</span> uint8_t _messageTimeoutRX = 1; <span class="comment">// Read Timeout in 0.1s steps</span></div>
 <div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>};</div>
 <div class="ttc" id="aclass_u_a_r_t_html"><div class="ttname"><a href="class_u_a_r_t.html">UART</a></div><div class="ttdef"><b>Definition:</b> UART.hpp:11</div></div>
-<div class="ttc" id="aclass_u_a_r_t_html_a2423feaa8d0ea431418a2d789a7cbeb5"><div class="ttname"><a href="class_u_a_r_t.html#a2423feaa8d0ea431418a2d789a7cbeb5">UART::transmitMSG</a></div><div class="ttdeci">bool transmitMSG(uint8_t *msg, uint16_t length)</div><div class="ttdef"><b>Definition:</b> UART.cpp:48</div></div>
+<div class="ttc" id="aclass_u_a_r_t_html_a2423feaa8d0ea431418a2d789a7cbeb5"><div class="ttname"><a href="class_u_a_r_t.html#a2423feaa8d0ea431418a2d789a7cbeb5">UART::transmitMSG</a></div><div class="ttdeci">bool transmitMSG(uint8_t *msg, uint16_t length)</div><div class="ttdef"><b>Definition:</b> UART.cpp:50</div></div>
 <div class="ttc" id="aclass_u_a_r_t_html_a4cf691a683628ed764e042065efff58e"><div class="ttname"><a href="class_u_a_r_t.html#a4cf691a683628ed764e042065efff58e">UART::begin</a></div><div class="ttdeci">bool begin()</div><div class="ttdef"><b>Definition:</b> UART.cpp:13</div></div>
 <div class="ttc" id="aclass_u_a_r_t_html_a68e7e88d2a13f5da85f0fde1ef98515f"><div class="ttname"><a href="class_u_a_r_t.html#a68e7e88d2a13f5da85f0fde1ef98515f">UART::UART</a></div><div class="ttdeci">UART()</div><div class="ttdef"><b>Definition:</b> UART.cpp:3</div></div>
 <div class="ttc" id="aclass_u_a_r_t_html_a79aea29bd989d2e2ce9692042375b83e"><div class="ttname"><a href="class_u_a_r_t.html#a79aea29bd989d2e2ce9692042375b83e">UART::~UART</a></div><div class="ttdeci">~UART()</div><div class="ttdef"><b>Definition:</b> UART.cpp:8</div></div>
-<div class="ttc" id="aclass_u_a_r_t_html_a8a9423105732fdc49a5e69a02631fa93"><div class="ttname"><a href="class_u_a_r_t.html#a8a9423105732fdc49a5e69a02631fa93">UART::receiveMSG</a></div><div class="ttdeci">std::vector&lt; uint8_t &gt; receiveMSG()</div><div class="ttdef"><b>Definition:</b> UART.cpp:64</div></div>
+<div class="ttc" id="aclass_u_a_r_t_html_a8a9423105732fdc49a5e69a02631fa93"><div class="ttname"><a href="class_u_a_r_t.html#a8a9423105732fdc49a5e69a02631fa93">UART::receiveMSG</a></div><div class="ttdeci">std::vector&lt; uint8_t &gt; receiveMSG()</div><div class="ttdef"><b>Definition:</b> UART.cpp:66</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

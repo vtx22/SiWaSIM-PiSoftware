@@ -114,7 +114,7 @@ void cubicRegression(std::vector<float> x, std::vector<float> y, float *a, float
 
    The formula for the result vector which contains the function coefficients a,b,c,d is
 
-   result = (X^T * X)^-1 * X^T * y
+   result = (X^T * X)^-1 * X^T * y\f$
 
    where...
 
@@ -161,11 +161,11 @@ void cubicRegression(std::vector<float> x, std::vector<float> y, float *a, float
 }
 
 /*!
-Newton-Raphson Method for finding the x-value that corresponds to a y-value of a cubic function ax^3+x^2+cx+d=value, only for the range 0 - 10
-@param a Coefficient in front of x^3
-@param b Coefficient in front of x^2
-@param c Coefficient in front of x^1
-@param d Coefficient in front of x^0
+Newton-Raphson Method for finding the x-value that corresponds to a y-value of a cubic function \f$f(x)=ax^3+x^2+cx+d=\text{value}\f$, only for the range 0 - 10
+@param a Coefficient in front of \f$x^3\f$
+@param b Coefficient in front of \f$x^2\f$
+@param c Coefficient in front of \f$x^1\f$
+@param d Coefficient in front of \f$x^0\f$
 @param value y-value of the cubic function that corresponds to the wanted x-value
 @return Returns the x-value that corresponds to the y-value
 */
@@ -186,13 +186,13 @@ float solveCubicForVoltage(float a, float b, float c, float d, float value)
 }
 
 /*!
-Calculates a y-value of a cubic function with f(x)=ax^3 + bx^2 + cx + d
-@param a Coefficient in front of x^3
-@param b Coefficient in front of x^2
-@param c Coefficient in front of x^1
-@param d Coefficient in front of x^0
+Calculates a y-value of a cubic function with \f$f(x)=ax^3 + bx^2 + cx + d\f$
+@param a Coefficient in front of \f$x^3\f$
+@param b Coefficient in front of \f$x^2\f$
+@param c Coefficient in front of \f$x^1\f$
+@param d Coefficient in front of \f$x^0\f$
 @param x X-value for which the function should be calculated
-@return Returns the y-value f(x)
+@return Returns the y-value \f$y=f(x)\f$
 */
 float calculateCubic(float a, float b, float c, float d, float x)
 {
@@ -200,12 +200,12 @@ float calculateCubic(float a, float b, float c, float d, float x)
 }
 
 /*!
-Calculates a y-value of a cubic derivative function f'(x) with f(x)=ax^3 + bx^2 + cx + d and f'(x)=3ax^2 + 2bx + cx
-@param a Coefficient in front of x^3
-@param b Coefficient in front of x^2
-@param c Coefficient in front of x^1
+Calculates a y-value of a cubic derivative function \f$f'(x)\f$ with \f$f(x)=ax^3 + bx^2 + cx + d\f$ and \f$f'(x)=3ax^2 + 2bx + cx\f$
+@param a Coefficient in front of \f$x^3\f$
+@param b Coefficient in front of \f$x^2\f$
+@param c Coefficient in front of \f$x^1\f$
 @param x X-value for which the function should be calculated
-@return Returns the y-value f'(x)
+@return Returns the y-value \f$y=f'(x)\f$
 */
 float calculateCubicDeriv(float a, float b, float c, float x)
 {
@@ -227,10 +227,8 @@ void delay(std::chrono::milliseconds delayMS)
 {
    static std::chrono::time_point<std::chrono::system_clock, std::chrono::duration<double>> _lastCommand = std::chrono::system_clock::now();
 
-   // Calculate the time elapsed since the last time a command was executed (in ms)
    auto diff = std::chrono::duration_cast<std::chrono::milliseconds>(std::chrono::system_clock::now() - _lastCommand).count();
 
-   // If the last commands was just a few ms ago, calculate the difference to the minimum time gap between commands and wait for the remaining time
    if (diff < delayMS.count())
    {
       std::this_thread::sleep_for(std::chrono::milliseconds(delayMS.count() - diff));

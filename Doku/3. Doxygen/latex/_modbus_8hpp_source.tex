@@ -1,0 +1,28 @@
+\hypertarget{_modbus_8hpp_source}{}\doxysection{Modbus.\+hpp}
+\label{_modbus_8hpp_source}\index{F:/GITHUB/SiWaSIM-\/PiSoftware/src/Modbus.hpp@{F:/GITHUB/SiWaSIM-\/PiSoftware/src/Modbus.hpp}}
+\mbox{\hyperlink{_modbus_8hpp}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{preprocessor}{\#pragma once}}
+\DoxyCodeLine{2 \textcolor{preprocessor}{\#include <vector>}}
+\DoxyCodeLine{3 \textcolor{preprocessor}{\#include <iostream>}}
+\DoxyCodeLine{4 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{_configuration_8hpp}{Configuration.hpp}}"{}}}
+\DoxyCodeLine{5 }
+\DoxyCodeLine{6 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{_u_a_r_t_8hpp}{UART.hpp}}"{}}}
+\DoxyCodeLine{7 }
+\DoxyCodeLine{8 \textcolor{keyword}{class }\mbox{\hyperlink{class_modbus}{Modbus}}}
+\DoxyCodeLine{9 \{}
+\DoxyCodeLine{10 \textcolor{keyword}{public}:}
+\DoxyCodeLine{11    \mbox{\hyperlink{class_modbus_a101809cdd4734537bab58dc315a840b4}{Modbus}}();}
+\DoxyCodeLine{12    \mbox{\hyperlink{class_modbus_a9c96854fd161f2697c1dd72919c65653}{\string~Modbus}}();}
+\DoxyCodeLine{13 }
+\DoxyCodeLine{14    \textcolor{keywordtype}{void} \mbox{\hyperlink{class_modbus_a12fb8d6cdeebc5957ba7f360b2621e3c}{transmitRequest}}(uint16\_t startRegister, uint16\_t length);}
+\DoxyCodeLine{15    std::vector<uint8\_t> \mbox{\hyperlink{class_modbus_a0589b5f170919854ce360ce6377217fb}{receiveResponse}}();}
+\DoxyCodeLine{16 }
+\DoxyCodeLine{17 \textcolor{keyword}{private}:}
+\DoxyCodeLine{18    uint16\_t calculateCRC(uint8\_t *data, \textcolor{keywordtype}{int} length);}
+\DoxyCodeLine{19 }
+\DoxyCodeLine{20    \mbox{\hyperlink{class_u_a_r_t}{UART}} *\_uart;}
+\DoxyCodeLine{21    \textcolor{keyword}{const} uint8\_t \_address = \mbox{\hyperlink{_configuration_8hpp_ac22487dcddfdfd8199b5ffe754943328}{SIWAREX\_ADDRESS}};}
+\DoxyCodeLine{22 \};}
+
+\end{DoxyCode}
