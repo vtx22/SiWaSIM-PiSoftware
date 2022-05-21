@@ -119,8 +119,6 @@ void PCB::setLoadcellVoltage(float voltage)
 
    addvol = solveCubicForVoltage(_config->calibrationReg.a, _config->calibrationReg.b, _config->calibrationReg.c, _config->calibrationReg.d, voltage / 1000.f);
 
-   std::cout << "Wanted voltage: " << voltage << " mV, Addvol: " << addvol << std::endl;
-
    _ia->setAnalogVolOut(ADDVOL_CHANNEL, addvol);
    _ia->setAnalogVolOut(SUBVOL_CHANNEL, addvol);
 }

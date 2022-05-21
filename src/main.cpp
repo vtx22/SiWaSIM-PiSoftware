@@ -1,4 +1,5 @@
 #include <iostream>
+#include <fstream>
 #include <string>
 #include <stdio.h>
 #include <stdlib.h>
@@ -25,10 +26,16 @@ int main()
 
    data = sim.longTermTest();
 
+   std::ofstream file;
+   file.open(data.txt, std::ios::out);
+
    for (int i = 0; i < data.size(); i++)
    {
+      file << data[i] << "\n";
       x.push_back(i);
    }
+
+   file.close();
 
    plt::figure_size(1600, 900);
 
@@ -38,7 +45,7 @@ int main()
    plt::title("Load Cell Voltage with SiWaSim");
    plt::xlabel("Time in seconds");
    plt::legend();
-   plt::ylim(19, 21);
+   plt::ylim(19.75, 20.25);
    plt::grid(true);
    plt::show();
 

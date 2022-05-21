@@ -180,8 +180,6 @@ float solveCubicForVoltage(float a, float b, float c, float d, float value)
       root = root - (calculateCubic(a, b, c, d, root)) / (calculateCubicDeriv(a, b, c, root));
    }
 
-   printf("Root is: %f\n", root);
-
    return root;
 }
 
