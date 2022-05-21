@@ -208,7 +208,7 @@ void Simulator::calibrateLCVoltage(bool autoCalib)
 
    for (uint8_t c = 0; c < xValues.size(); c++)
    {
-      printf("X: %d, Y: %f\n", xValues.at(c), yValues.at(c));
+      printf("X: %d, Y: %f\n", (int)(xValues.at(c)), (float)(yValues.at(c)));
    }
 
    cubicRegression(xValues, yValues, &a, &b, &c, &d);
