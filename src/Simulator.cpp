@@ -209,9 +209,9 @@ void Simulator::calibrateLCVoltage(bool autoCalib)
    cubicRegression(xValues, yValues, &a, &b, &c, &d);
 
    _config->calibrationReg.a = a;
-   _config->calibrationReg.a = b;
-   _config->calibrationReg.a = c;
-   _config->calibrationReg.a = d;
+   _config->calibrationReg.b = b;
+   _config->calibrationReg.c = c;
+   _config->calibrationReg.d = d;
 
    float voltage = 0;
    while (true)

@@ -171,7 +171,6 @@ Newton-Raphson Method for finding the x-value that corresponds to a y-value of a
 */
 float solveCubicForVoltage(float a, float b, float c, float d, float value)
 {
-   printf("A: %f, B: %f, C: %f, D: %f, Value: %f\n", a, b, c, d, value);
    // Polynom needs the form ax^3+bx^2+cx+d = 0 as the methods finds roots
    d -= value;
 
