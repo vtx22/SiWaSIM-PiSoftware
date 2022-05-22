@@ -15,7 +15,7 @@ float SIWAREX::getLoadcellVoltage()
    return requestFloat(LOADCELL_VOLTAGE);
 }
 
-float SIWAREX::getLoadcellVoltage()
+float SIWAREX::getLoadcellImpedance()
 {
    return requestFloat(LOADCELL_IMPEDANCE);
 }
