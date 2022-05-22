@@ -12,6 +12,7 @@ public:
    ~SIWAREX();
 
    float getLoadcellVoltage();
+   float getLoadcellImpedance();
 
 private:
    float requestFloat(uint16_t startRegister);

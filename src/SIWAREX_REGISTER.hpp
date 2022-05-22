@@ -1,2 +1,3 @@
 #pragma once
+#define LOADCELL_IMPEDANCE 3056
 #define LOADCELL_VOLTAGE 3058

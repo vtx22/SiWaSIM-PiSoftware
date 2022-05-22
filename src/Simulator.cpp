@@ -234,6 +234,8 @@ std::vector<float> Simulator::longTermTest()
       _pcb->setEXTRASW1(state);
       state = !state;
 
+      printf("Imp: %f\n", _siwarex->getLoadcellImpedance());
+
       delay(1000ms);
 
       sample++;

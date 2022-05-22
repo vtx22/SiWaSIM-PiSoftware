@@ -15,6 +15,11 @@ float SIWAREX::getLoadcellVoltage()
    return requestFloat(LOADCELL_VOLTAGE);
 }
 
+float SIWAREX::getLoadcellVoltage()
+{
+   return requestFloat(LOADCELL_IMPEDANCE);
+}
+
 float SIWAREX::requestFloat(uint16_t startRegister)
 {
    _modbus->transmitRequest(startRegister, 2);
