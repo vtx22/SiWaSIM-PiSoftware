@@ -225,6 +225,9 @@ std::vector<float> Simulator::longTermTest()
    int sample = 0;
    bool state = false;
 
+   std::cout << "Starting...";
+   std::this_thread::sleep_for(500ms);
+
    while (sample < numOfSamples)
    {
       yValues.push_back(_siwarex->getLoadcellVoltage());
