@@ -27,7 +27,7 @@ int main()
    data = sim.longTermTest();
 
    std::ofstream file;
-   file.open(data.txt, std::ios::out);
+   file.open("data.txt", std::ios::out);
 
    for (int i = 0; i < data.size(); i++)
    {
