@@ -221,7 +221,7 @@ std::vector<float> Simulator::longTermTest()
    std::this_thread::sleep_for(5s);
    std::vector<float> yValues;
 
-   int numOfSamples = 60 * 60 * 8;
+   int numOfSamples = 100;
    int sample = 0;
    bool state = false;
 
