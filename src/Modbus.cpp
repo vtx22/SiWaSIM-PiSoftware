@@ -42,7 +42,7 @@ std::vector<uint8_t> Modbus::receiveResponse()
    {
       return {0, 0, 0, 0};
    }
-
+   std::cout << "Checksum is correct\n";
    return msg;
 }
 
