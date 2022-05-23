@@ -34,9 +34,8 @@ std::vector<uint8_t> SIWAREX::requestRegisters(uint16_t startRegister, uint16_t 
    std::vector<uint8_t> msg = _modbus->receiveResponse();
 
    printf("Received %d bytes\n", msg.size());
-   msg.erase(msg.size() - 1);
-   msg.erase(msg.size() - 1);
-
+   msg.pop_back();
+   msg.pop_back();
    msg.erase(msg.begin());
    msg.erase(msg.begin());
    msg.erase(msg.begin());
