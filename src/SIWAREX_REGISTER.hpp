@@ -15,7 +15,7 @@ struct DATASET
 {
    uint16_t startRegister;
    uint8_t length;
-   std::vector<PARAMS> params;
+   std::vector<PARAMETER> params;
 } typedef DATASET;
 
 #define LOADCELL_IMPEDANCE 3056
