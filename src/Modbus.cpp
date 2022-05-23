@@ -35,7 +35,15 @@ void Modbus::transmitRequest(uint16_t startRegister, uint16_t length)
 
 std::vector<uint8_t> Modbus::receiveResponse()
 {
-   return _uart->receiveMSG();
+   std::vector<uint8_t> msg = _uart->receiveMSG();
+   uint16_t checkSum = calculateCRC(&msg[0], msg.size() - 2);
+
+   if ((checkSum >> 8) != msg.back() || (checkSum & 0xFF) != msg.at(msg.size() - 2))
+   {
+      return {0, 0, 0, 0};
+   }
+
+   return msg;
 }
 
 uint16_t Modbus::calculateCRC(uint8_t *data, int length)
