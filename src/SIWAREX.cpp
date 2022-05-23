@@ -29,9 +29,15 @@ float SIWAREX::requestFloat(uint16_t startRegister)
 
 std::vector<uint8_t> SIWAREX::requestRegisters(uint16_t startRegister, uint16_t length)
 {
-
    _modbus->transmitRequest(startRegister, length);
    std::vector<uint8_t> msg = _modbus->receiveResponse();
+
+   msg.erase(msg.size() - 1);
+   msg.erase(msg.size() - 1);
+
+   msg.erase(msg.begin());
+   msg.erase(msg.begin());
+   msg.erase(msg.begin());
 
    return msg;
 }
