@@ -145,13 +145,12 @@ float Simulator::runPassive(float timestep, float *weight)
 
 void Simulator::testFunction()
 {
-   bool state = false;
-   while (true)
+   std::vector<uint8_t> data = _siwarex->requestRegisters(1000, 112);
+
+   printf("LENGTH: %d", data.size());
+   for (uint8_t i = 0; i < data.size(); i++)
    {
-      _pcb->setPOWERSW1(state);
-      _pcb->setPOWERSW2(!state);
-      state = !state;
-      delay(100ms);
+      printf("REG: %04X\n");
    }
 }
 

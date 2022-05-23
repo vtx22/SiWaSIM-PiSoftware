@@ -17,5 +17,7 @@ public:
 private:
    float requestFloat(uint16_t startRegister);
 
+   std::vector<uint8_t> requestRegisters(uint16_t startRegister, uint16_t length);
+
    Modbus *_modbus;
 };

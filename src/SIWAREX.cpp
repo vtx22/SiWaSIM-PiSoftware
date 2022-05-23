@@ -26,3 +26,18 @@ float SIWAREX::requestFloat(uint16_t startRegister)
    std::vector<uint8_t> msg = _modbus->receiveResponse();
    return bytesToFloat(&msg[3]);
 }
+
+std::vector<uint8_t> SIWAREX::requestRegisters(uint16_t startRegister, uint16_t length)
+{
+   std::vector<uint8_t> data;
+
+   for (uint16_t i = 0; i < length; i++)
+   {
+      _modbus->transmitRequest(startRegister + i, 1);
+      std::vector<uint8_t> msg = _modbus->receiveResponse();
+      data.push_back(msg[0]);
+      data.push_back(msg[1]);
+   }
+
+   return data;
+}
