@@ -1,4 +1,6 @@
 #pragma once
+#include <stdlib.h>
+#include <vector>
 
 struct PARAMETER
 {
@@ -13,7 +15,7 @@ struct DATASET
 {
    uint16_t startRegister;
    uint8_t length;
-   // std::vector<PARAMS> params;
+   std::vector<PARAMS> params;
 } typedef DATASET;
 
 #define LOADCELL_IMPEDANCE 3056
