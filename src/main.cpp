@@ -45,7 +45,7 @@ int main()
    plt::title("Load Cell Voltage with SiWaSim");
    plt::xlabel("Time in seconds");
    plt::legend();
-   // plt::ylim(19.75, 20.25);
+   plt::ylim(19.9, 20.1);
    plt::grid(true);
    plt::show();
 
