@@ -146,10 +146,10 @@ float Simulator::runPassive(float timestep, float *weight)
 void Simulator::testFunction()
 {
 
-   std::vector<uint8_t> data = _siwarex->requestRegisters(1140, 49);
+   std::vector<uint8_t> data = _siwarex->requestRegisters(1140, 31);
 
    printf("LENGTH: %d\n", data.size());
-   for (uint8_t i = 0; i < 49; i++)
+   for (uint8_t i = 0; i < 31; i++)
    {
       printf("REG %d: %02X %02X\n", 1140 + i, data.at(2 * i), data.at(1 + 2 * i));
    }
