@@ -214,7 +214,7 @@ std::vector<float> Simulator::longTermTest()
    std::this_thread::sleep_for(5s);
    std::vector<float> yValues;
 
-   int numOfSamples = 60 * 15;
+   int numOfSamples = 60 * 60 * 9;
    int sample = 0;
    bool state = false;
 
@@ -224,8 +224,6 @@ std::vector<float> Simulator::longTermTest()
    while (sample < numOfSamples)
    {
       yValues.push_back(_siwarex->getLoadcellVoltage());
-      _pcb->setEXTRASW1(state);
-      state = !state;
 
       delay(1000ms);
 
