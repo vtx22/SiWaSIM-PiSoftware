@@ -17,14 +17,19 @@ float SIWAREX::getLoadcellVoltage()
 
 float SIWAREX::getLoadcellImpedance()
 {
-   return requestFloat(LOADCELL_IMPEDANCE);
+   // return requestFloat(LOADCELL_IMPEDANCE);
+
+   std::vector<uint8_t> data = requestRegisters(LOADCELL_IMPEDANCE - 2; 4);
+   for (auto const &i : data)
+   {
+      printf("Data: %02X\n", i);
+   }
 }
 
 float SIWAREX::requestFloat(uint16_t startRegister)
 {
-   _modbus->transmitRequest(startRegister, 2);
-   std::vector<uint8_t> msg = _modbus->receiveResponse();
-   return bytesToFloat(&msg[3]);
+   std::vector<uint8_t> msg = requestRegisters(startRegister, 2);
+   return bytesToFloat(&msg[0]);
 }
 
 std::vector<uint8_t> SIWAREX::requestRegisters(uint16_t startRegister, uint16_t length)

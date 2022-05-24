@@ -145,6 +145,9 @@ float Simulator::runPassive(float timestep, float *weight)
 
 void Simulator::testFunction()
 {
+   _siwarex->getLoadcellImpedance();
+   return;
+
    std::vector<uint8_t> data = _siwarex->requestRegisters(1000, 100);
 
    printf("LENGTH: %d\n", data.size());
