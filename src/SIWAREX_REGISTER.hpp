@@ -18,5 +18,5 @@ struct DATASET
    std::vector<PARAMETER> params;
 } typedef DATASET;
 
-#define LOADCELL_IMPEDANCE 1150 // 3056
+#define LOADCELL_IMPEDANCE 3056
 #define LOADCELL_VOLTAGE 3058

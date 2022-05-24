@@ -28,6 +28,7 @@ float calculateCubic(float a, float b, float c, float d, float x);
 float calculateCubicDeriv(float a, float b, float c, float x);
 
 float bytesToFloat(uint8_t *bytes);
+float bytesToFloatSWRX(uint8_t *bytes);
 
 float bytesToFloat(uint8_t b3, uint8_t b2, uint8_t b1, uint8_t b0);
 
