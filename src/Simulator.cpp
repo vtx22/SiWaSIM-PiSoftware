@@ -150,7 +150,7 @@ void Simulator::testFunction()
    printf("LENGTH: %d\n", data.size());
    for (uint8_t i = 0; i < data.size(); i++)
    {
-      printf("REG: %02X\n", data.at(i));
+      printf("REG %d: %02X\n", 1000 + i, data.at(i));
    }
 }
 
