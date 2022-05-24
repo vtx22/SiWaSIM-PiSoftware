@@ -148,9 +148,9 @@ void Simulator::testFunction()
    std::vector<uint8_t> data = _siwarex->requestRegisters(1000, 100);
 
    printf("LENGTH: %d\n", data.size());
-   for (uint8_t i = 0; i < data.size(); i++)
+   for (uint8_t i = 0; i < data.size() / 2; i++)
    {
-      printf("REG %d: %02X\n", 1000 + i, data.at(i));
+      printf("REG %d: %02X %02X\n", 1000 + 2 * i, data.at(i), data.at(i + 1));
    }
 }
 
