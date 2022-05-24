@@ -23,7 +23,8 @@ float SIWAREX::getLoadcellImpedance()
 float SIWAREX::requestFloat(uint16_t startRegister)
 {
    std::vector<uint8_t> msg = requestRegisters(startRegister, 2);
-   return bytesToFloat(&msg[0]);
+
+   return bytesToFloatSWRX(&msg[0]);
 }
 
 std::vector<uint8_t> SIWAREX::requestRegisters(uint16_t startRegister, uint16_t length)
