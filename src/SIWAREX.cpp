@@ -24,6 +24,7 @@ float SIWAREX::getLoadcellImpedance()
    {
       printf("Data: %02X\n", i);
    }
+   return 0;
 }
 
 float SIWAREX::requestFloat(uint16_t startRegister)
