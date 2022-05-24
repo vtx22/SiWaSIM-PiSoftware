@@ -17,7 +17,7 @@ float SIWAREX::getLoadcellVoltage()
 
 float SIWAREX::getLoadcellImpedance()
 {
-   return requestFloat(LOADCELL_IMPEDANCE);
+   // return requestFloat(LOADCELL_IMPEDANCE);
 
    std::vector<uint8_t> data = requestRegisters(LOADCELL_VOLTAGE - 2, 4);
    for (auto const &i : data)
