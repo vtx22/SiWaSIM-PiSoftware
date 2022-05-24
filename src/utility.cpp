@@ -212,7 +212,7 @@ float calculateCubicDeriv(float a, float b, float c, float x)
 
 float bytesToFloat(uint8_t *bytes)
 {
-   return bytesToFloat(bytes[0], bytes[1], bytes[2], bytes[3]);
+   return bytesToFloat(bytes[0], bytes[1], bytes[3], bytes[2]);
 }
 
 float bytesToFloat(uint8_t b3, uint8_t b2, uint8_t b1, uint8_t b0)

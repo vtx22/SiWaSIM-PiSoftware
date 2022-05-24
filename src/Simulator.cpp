@@ -145,7 +145,9 @@ float Simulator::runPassive(float timestep, float *weight)
 
 void Simulator::testFunction()
 {
-   _siwarex->getLoadcellImpedance();
+   printf("Imp: %f\n", _siwarex->getLoadcellImpedance());
+   printf("Vol: %f\n", _siwarex->getLoadcellVoltage());
+
    return;
 
    std::vector<uint8_t> data = _siwarex->requestRegisters(1000, 100);
