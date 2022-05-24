@@ -22,9 +22,6 @@ int main()
    Simulator sim;
    std::vector<float> data, x;
 
-   sim.testFunction();
-   return 0;
-
    sim.calibrateLCVoltage(true);
 
    data = sim.longTermTest();
@@ -48,7 +45,7 @@ int main()
    plt::title("Load Cell Voltage with SiWaSim");
    plt::xlabel("Time in seconds");
    plt::legend();
-   plt::ylim(19.75, 20.25);
+   // plt::ylim(19.75, 20.25);
    plt::grid(true);
    plt::show();
 
