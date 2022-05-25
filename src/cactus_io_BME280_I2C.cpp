@@ -25,7 +25,7 @@
 
 BME280_I2C::BME280_I2C(I2C *i2c) : _i2c(i2c)
 {
-   _i2c = new I2C("/dev/i2c-1", BME280_ADDRESS);
+
    _i2caddr = BME280_ADDRESS;
 
    tempcal = 0.0;
@@ -273,7 +273,7 @@ Writes an 8 bit value over I2C
 
 void BME280_I2C::write8(uint8_t reg, uint8_t value)
 {
-
+   _i2c->setI2CAddress(BME280_ADDRESS);
    uint8_t data[2] = {reg, value};
    _i2c->writeData(data, 2);
 }
@@ -286,6 +286,7 @@ void BME280_I2C::write8(uint8_t reg, uint8_t value)
 
 uint8_t BME280_I2C::read8(uint8_t reg)
 {
+   _i2c->setI2CAddress(BME280_ADDRESS);
    _i2c->writeData(reg);
    uint8_t data[1];
    _i2c->readData(data, 1);
@@ -311,6 +312,7 @@ int16_t BME280_I2C::readS16_LE(uint8_t reg)
 
 uint16_t BME280_I2C::read16(uint8_t reg)
 {
+   _i2c->setI2CAddress(BME280_ADDRESS);
    _i2c->writeData(reg);
    uint8_t data[2];
    _i2c->readData(data, 2);
@@ -336,6 +338,7 @@ Reads a signed 24 bit value over the I2C bus_REG
 
 uint32_t BME280_I2C::read24(uint8_t reg)
 {
+   _i2c->setI2CAddress(BME280_ADDRESS);
    _i2c->writeData(reg);
    uint8_t data[4];
    _i2c->readData(data, 4);
