@@ -273,7 +273,7 @@ Writes an 8 bit value over I2C
 
 **************************************************************************/
 
-void BME280_I2C::write8(byte reg, byte value)
+void BME280_I2C::write8(uint8_t reg, uint8_t value)
 {
 
    Wire.beginTransmission((uint8_t)_i2caddr);
@@ -291,7 +291,7 @@ void BME280_I2C::write8(byte reg, byte value)
 
  **************************************************************************/
 
-uint8_t BME280_I2C::read8(byte reg)
+uint8_t BME280_I2C::read8(uint8_t reg)
 {
    uint8_t data[1];
    _i2c->readData(data, 1);
@@ -305,17 +305,17 @@ Reads a signed 16 bit value over the I2C bus_REG
 
 **************************************************************************/
 
-int16_t BME280_I2C::readS16(byte reg)
+int16_t BME280_I2C::readS16(uint8_t reg)
 {
    return (int16_t)read16(reg);
 }
 
-int16_t BME280_I2C::readS16_LE(byte reg)
+int16_t BME280_I2C::readS16_LE(uint8_t reg)
 {
    return (int16_t)read16_LE(reg);
 }
 
-uint16_t BME280_I2C::read16(byte reg)
+uint16_t BME280_I2C::read16(uint8_t reg)
 {
 
    uint8_t data[2];
@@ -326,7 +326,7 @@ uint16_t BME280_I2C::read16(byte reg)
    return value;
 }
 
-uint16_t BME280_I2C::read16_LE(byte reg)
+uint16_t BME280_I2C::read16_LE(uint8_t reg)
 {
 
    uint16_t temp = read16(reg);
@@ -340,7 +340,7 @@ Reads a signed 24 bit value over the I2C bus_REG
 
 **************************************************************************/
 
-uint32_t BME280_I2C::read24(byte reg)
+uint32_t BME280_I2C::read24(uint8_t reg)
 {
 
    uint8_t data[4];
