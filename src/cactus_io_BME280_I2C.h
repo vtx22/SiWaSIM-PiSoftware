@@ -15,7 +15,7 @@
 
 #define BME280_ADDRESS 0x77 // define the default I2C address
 
-#include "../I2C.hpp"
+#include "I2C.hpp"
 
 // Name of Registers used in the BME280
 

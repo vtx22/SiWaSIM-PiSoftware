@@ -3,7 +3,7 @@
 #include "I2C.hpp"
 #include "utility.hpp"
 
-#include "BME280/cactus_io_BME280_I2C.h"
+#include "cactus_io_BME280_I2C.h"
 
 #include <chrono>
 #include <thread>
@@ -90,7 +90,7 @@ public:
 
 private:
    I2C *_i2c;
-   BME280_I2C* _bme;
+   BME280_I2C *_bme;
 
    bool _digitalRead[4] = {0, 0, 0, 0};
 
