@@ -221,7 +221,6 @@ std::vector<float> Simulator::longTermTest()
    printf("Starting...\n");
    std::this_thread::sleep_for(500ms);
 
-   bool state = false;
    while (sample < numOfSamples)
    {
       printf("Temp: %f C\n", _ia->getBME280Temp());
