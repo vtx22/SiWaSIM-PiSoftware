@@ -26,17 +26,6 @@ int main()
 
    data = sim.longTermTest();
 
-   std::ofstream file;
-   file.open("data.txt", std::ios::out);
-
-   for (int i = 0; i < data.size(); i++)
-   {
-      file << data[i] << "\n";
-      x.push_back(i);
-   }
-
-   file.close();
-
    plt::figure_size(1600, 900);
 
    plt::plot(x, data, {{"color", "b"}, {"label", "Cell Voltage in mV"}});

@@ -3,6 +3,8 @@
 #include "I2C.hpp"
 #include "utility.hpp"
 
+#include "BME280/cactus_io_BME280_I2C.h"
+
 #include <chrono>
 #include <thread>
 #include <iostream>
@@ -84,8 +86,11 @@ public:
    // Turn all digital and analog outputs off
    void setAllOFF();
 
+   float getBME280Temp();
+
 private:
    I2C *_i2c;
+   BME280_I2C* _bme;
 
    bool _digitalRead[4] = {0, 0, 0, 0};
 
