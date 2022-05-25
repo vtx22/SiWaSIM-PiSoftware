@@ -22,7 +22,7 @@ int main()
    Simulator sim;
    std::vector<float> data, x;
 
-   sim.calibrateLCVoltage(true);
+   // sim.calibrateLCVoltage(true);
 
    data = sim.longTermTest();
 
