@@ -93,8 +93,6 @@ float BME280_I2C::getPressure_HP(void)
 bool BME280_I2C::begin()
 {
 
-   Wire.begin();
-
    if (read8(BME280_REGISTER_CHIPID) != 0x60)
 
       return false;
@@ -277,7 +275,7 @@ void BME280_I2C::write8(uint8_t reg, uint8_t value)
 {
 
    uint8_t data[2] = {reg, value};
-   _i2c->writeData(data);
+   _i2c->writeData(data, 2);
 }
 
 /**************************************************************************
@@ -288,8 +286,7 @@ void BME280_I2C::write8(uint8_t reg, uint8_t value)
 
 uint8_t BME280_I2C::read8(uint8_t reg)
 {
-   uint8_t val[1] = {reg};
-   _i2c->writeData(val);
+   _i2c->writeData(reg);
    uint8_t data[1];
    _i2c->readData(data, 1);
 
@@ -314,8 +311,7 @@ int16_t BME280_I2C::readS16_LE(uint8_t reg)
 
 uint16_t BME280_I2C::read16(uint8_t reg)
 {
-   uint8_t val[1] = {reg};
-   _i2c->writeData(val);
+   _i2c->writeData(reg);
    uint8_t data[2];
    _i2c->readData(data, 2);
 
@@ -340,8 +336,7 @@ Reads a signed 24 bit value over the I2C bus_REG
 
 uint32_t BME280_I2C::read24(uint8_t reg)
 {
-   uint8_t val[1] = {reg};
-   _i2c->writeData(val);
+   _i2c->writeData(reg);
    uint8_t data[4];
    _i2c->readData(data, 4);
 
