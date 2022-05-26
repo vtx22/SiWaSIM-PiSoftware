@@ -237,7 +237,7 @@ std::vector<float> Simulator::longTermTest()
       {
          setPoints.push_back(i);
          yValues.push_back(_siwarex->getLoadcellVoltage());
-         delay(200ms)
+         delay(200ms);
       }
    }
 
