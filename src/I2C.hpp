@@ -19,7 +19,6 @@ public:
    bool writeData(uint8_t *data, uint8_t length);
    bool readData(uint8_t *data, uint8_t length);
    uint8_t readData();
-   void setI2CAddress(uint8_t address);
 
 private:
    std::string _dev;

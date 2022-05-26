@@ -64,11 +64,3 @@ bool I2C::readData(uint8_t *data, uint8_t length)
 
    return true;
 }
-
-void I2C::setI2CAddress(uint8_t address)
-{
-   printf("Changing address to %02X\n", address);
-   close(i2c0);
-   _address = address;
-   begin();
-}

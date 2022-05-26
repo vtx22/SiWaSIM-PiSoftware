@@ -223,9 +223,7 @@ std::vector<float> Simulator::longTermTest()
 
    while (sample < numOfSamples)
    {
-      printf("Temp: %f C\n", _ia->getBME280Temp());
       yValues.push_back(_siwarex->getLoadcellVoltage());
-      temperatures.push_back(_ia->getBME280Temp());
       _pcb->setEXTRASW1(state);
       state = !state;
 
@@ -240,13 +238,6 @@ std::vector<float> Simulator::longTermTest()
    for (int i = 0; i < yValues.size(); i++)
    {
       file << yValues[i] << "\n";
-   }
-   file.close();
-
-   file.open("temp.txt", std::ios::out);
-   for (int i = 0; i < temperatures.size(); i++)
-   {
-      file << temperatures[i] << "\n";
    }
    file.close();
 
