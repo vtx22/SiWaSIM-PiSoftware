@@ -229,9 +229,38 @@ void Simulator::calibrateLCVoltage(bool autoCalib)
 
 std::vector<float> Simulator::longTermTest()
 {
+   std::vector<float> yValues, setPoints;
+   for (uint8_t i = 0; i < 40; i++)
+   {
+      _pcb->setLoadcellVoltage(i);
+      for (uint8_t sample = 0; sample < 5 * 5; sample++)
+      {
+         setPoints.push_back(i);
+         yValues.push_back(_siwarex->getLoadcellVoltage());
+         delay(200ms)
+      }
+   }
+
+   std::ofstream file;
+
+   file.open("data.txt", std::ios::out);
+   for (int i = 0; i < yValues.size(); i++)
+   {
+      file << yValues[i] << "\n";
+   }
+   file.close();
+
+   file.open("setpoints.txt", std::ios::out);
+   for (int i = 0; i < setPoints.size(); i++)
+   {
+      file << setPoints[i] << "\n";
+   }
+   file.close();
+
+   /*
    _pcb->setLoadcellVoltage(20);
    std::this_thread::sleep_for(5s);
-   std::vector<float> yValues, temperatures;
+
 
    const int numOfSamples = 60 * 15;
    int sample = 0;
@@ -259,6 +288,8 @@ std::vector<float> Simulator::longTermTest()
       file << yValues[i] << "\n";
    }
    file.close();
+
+   */
 
    return yValues;
 }

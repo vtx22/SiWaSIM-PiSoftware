@@ -23,7 +23,6 @@ int main()
    std::vector<float> data, x;
 
    sim.calibrateLCVoltage(true);
-   sim.testFunction();
    data = sim.longTermTest();
 
    plt::figure_size(1600, 900);
