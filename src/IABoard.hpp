@@ -3,8 +3,6 @@
 #include "I2C.hpp"
 #include "utility.hpp"
 
-#include "cactus_io_BME280_I2C.h"
-
 #include <chrono>
 #include <thread>
 #include <iostream>
