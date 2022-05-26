@@ -233,11 +233,11 @@ std::vector<float> Simulator::longTermTest()
    for (uint8_t i = 0; i < 40; i++)
    {
       _pcb->setLoadcellVoltage(i);
-      for (uint8_t sample = 0; sample < 5 * 5; sample++)
+      for (uint8_t sample = 0; sample < 5 * 20; sample++)
       {
          setPoints.push_back(i);
          yValues.push_back(_siwarex->getLoadcellVoltage());
-         delay(200ms);
+         delay(50ms);
       }
    }
 

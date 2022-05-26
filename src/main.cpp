@@ -25,6 +25,11 @@ int main()
    sim.calibrateLCVoltage(true);
    data = sim.longTermTest();
 
+   for (int i = 0; i < data.size(); i++)
+   {
+      x.push_back(i);
+   }
+
    plt::figure_size(1600, 900);
 
    plt::plot(x, data, {{"color", "b"}, {"label", "Cell Voltage in mV"}});
