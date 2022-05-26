@@ -145,7 +145,17 @@ float Simulator::runPassive(float timestep, float *weight)
 
 void Simulator::testFunction()
 {
-   printf("Imp: %f, Vol: %f\n", _siwarex->getLoadcellImpedance(), _siwarex->getLoadcellVoltage());
+   uint8_t voltage = 0;
+   while (true)
+   {
+      if (voltage > 40)
+      {
+         voltage = 0;
+      }
+      _pcb->setLoadcellVoltage(voltage);
+
+      voltage = 0;
+   }
 }
 
 void Simulator::calibrateLCVoltage(bool autoCalib)
@@ -160,14 +170,19 @@ void Simulator::calibrateLCVoltage(bool autoCalib)
    {
       std::cout << "Auto calibration starting...\n\n";
 
-      for (uint8_t i = 2; i < 11; i++)
+      for (uint8_t i = 0; i < _config->autoSamples; i++)
       {
-         printf("Sampling... (%d of 9)\n", i - 1);
-         _ia->setAnalogVolOut(ADDVOL_CHANNEL, i);
-         _ia->setAnalogVolOut(SUBVOL_CHANNEL, i);
-         std::this_thread::sleep_for(4s);
-         float voltage = 0;
+         const float voltageStep = (_config->endVoltage - _config->startVoltage) / (float)_config->autoSamples;
+         float dcVoltage = _config->startVoltage + i * voltageStep;
 
+         printf("Sampling... (%d of %d)\n", i + 1, _config->autoSamples);
+
+         _ia->setAnalogVolOut(ADDVOL_CHANNEL, dcVoltage);
+         _ia->setAnalogVolOut(SUBVOL_CHANNEL, dcVoltage);
+
+         std::this_thread::sleep_for(4s);
+
+         float voltage = 0;
          for (uint8_t sample = 0; sample < 5; sample++)
          {
             voltage += _siwarex->getLoadcellVoltage();
@@ -175,23 +190,26 @@ void Simulator::calibrateLCVoltage(bool autoCalib)
 
          voltage /= 5.f;
 
-         xValues.push_back(i);
+         xValues.push_back(dcVoltage);
          yValues.push_back(voltage / 1000.f);
       }
    }
    else
    {
-      for (uint8_t i = 2; i < 11; i++)
+      for (uint8_t i = 0; i < _config->manSamples; i++)
       {
-         _ia->setAnalogVolOut(ADDVOL_CHANNEL, i);
-         _ia->setAnalogVolOut(SUBVOL_CHANNEL, i);
+         const float voltageStep = (_config->endVoltage - _config->startVoltage) / (float)_config->autoSamples;
+         float dcVoltage = _config->startVoltage + i * voltageStep;
+
+         _ia->setAnalogVolOut(ADDVOL_CHANNEL, dcVoltage);
+         _ia->setAnalogVolOut(SUBVOL_CHANNEL, dcVoltage);
 
          std::cout << "Enter signed voltage between SIG+ and SIG- (in mV):\n";
 
          std::string input = "";
          std::getline(std::cin, input);
 
-         xValues.push_back(i);
+         xValues.push_back(dcVoltage);
          yValues.push_back(std::stof(input) / 1000.f);
       }
    }

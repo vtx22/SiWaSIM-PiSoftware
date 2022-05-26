@@ -138,11 +138,16 @@ public:
    //! Belt encoder frequency at 100% speed
    float freqAt100 = 10000;
 
-   float startVoltage = 2;
-   float endVoltage = 9;
-
-   float a, b, c, d;
+   //! Struct that stores the cubic calibration regressions parameters
    CUBIC_FUNCTION calibrationReg;
+   //! Number of samples during auto calibration
+   uint8_t autoSamples = 15;
+   //! Number of samples during manual calibration
+   uint8_t manSamples = 10;
+
+   //! Analog DC output voltage at which the calibration begins
+   float startVoltage = 2;
+   float endVoltage = 10;
 
    // Input channel assignment
    MATERIAL_FLOW inputChannel1 = MATERIAL_FLOW::EMPTY;
