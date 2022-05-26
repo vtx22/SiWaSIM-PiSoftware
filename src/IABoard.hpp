@@ -86,7 +86,6 @@ public:
 
 private:
    I2C *_i2c;
-   BME280_I2C *_bme;
 
    bool _digitalRead[4] = {0, 0, 0, 0};
 
