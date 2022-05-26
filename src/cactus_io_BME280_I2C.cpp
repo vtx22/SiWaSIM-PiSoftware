@@ -27,6 +27,7 @@ BME280_I2C::BME280_I2C(I2C *i2c) : _i2c(i2c)
 {
 
    _i2caddr = BME280_ADDRESS;
+   _i2c->setI2CAddress(_i2caddr);
 
    tempcal = 0.0;
    temperature = 0.0;
