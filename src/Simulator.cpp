@@ -155,7 +155,7 @@ void Simulator::testFunction()
       _pcb->setLoadcellVoltage(voltage);
 
       voltage = 0;
-      std::this_thread::sleep_for(1s);
+      std::this_thread::sleep_for(5s);
    }
 }
 
@@ -173,7 +173,7 @@ void Simulator::calibrateLCVoltage(bool autoCalib)
 
       for (uint8_t i = 0; i < _config->autoSamples; i++)
       {
-         const float voltageStep = (_config->endVoltage - _config->startVoltage) / (float)_config->autoSamples;
+         float voltageStep = (_config->endVoltage - _config->startVoltage) / (float)_config->autoSamples;
          float dcVoltage = _config->startVoltage + i * voltageStep;
 
          printf("Sampling... (%d of %d)\n", i + 1, _config->autoSamples);
@@ -199,7 +199,7 @@ void Simulator::calibrateLCVoltage(bool autoCalib)
    {
       for (uint8_t i = 0; i < _config->manSamples; i++)
       {
-         const float voltageStep = (_config->endVoltage - _config->startVoltage) / (float)_config->autoSamples;
+         float voltageStep = (_config->endVoltage - _config->startVoltage) / (float)_config->autoSamples;
          float dcVoltage = _config->startVoltage + i * voltageStep;
 
          _ia->setAnalogVolOut(ADDVOL_CHANNEL, dcVoltage);
