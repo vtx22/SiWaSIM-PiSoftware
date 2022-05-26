@@ -155,6 +155,7 @@ void Simulator::testFunction()
       _pcb->setLoadcellVoltage(voltage);
 
       voltage = 0;
+      std::this_thread::sleep_for(1s);
    }
 }
 
