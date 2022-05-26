@@ -84,8 +84,6 @@ public:
    // Turn all digital and analog outputs off
    void setAllOFF();
 
-   float getBME280Temp();
-
 private:
    I2C *_i2c;
    BME280_I2C *_bme;

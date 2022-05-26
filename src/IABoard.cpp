@@ -485,9 +485,3 @@ void IABoard::waitForIA()
    // Save the time the current command was executed for next calculation
    _lastCommand = std::chrono::system_clock::now();
 }
-
-float IABoard::getBME280Temp()
-{
-   printf("Reading temperature...\n");
-   return _bme->getTemperature_C();
-}
