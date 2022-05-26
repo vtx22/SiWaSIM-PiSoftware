@@ -9,7 +9,7 @@ using json = nlohmann::json;
 #define CONFIG_PATH "/home/siwasim/SiWaSIM-PiSoftware/Konfiguration/config.json"
 
 // I2C
-#define I2C_ADDRESS 0x50
+#define I2C_IABOARD 0x50
 #define I2C_DEVICE "/dev/i2c-1"
 
 // MODBUS

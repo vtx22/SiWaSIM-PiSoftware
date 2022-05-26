@@ -5,7 +5,7 @@ IABoard::IABoard()
    // Save current time to calculate time between commands
    _lastCommand = std::chrono::system_clock::now();
    // Create I2C Object where 0x50 is the I2C address of the IA-Board
-   _i2c = new I2C(I2C_DEVICE, I2C_ADDRESS);
+   _i2c = new I2C(I2C_DEVICE, I2C_IABOARD);
    _bme = new BME280_I2C(_i2c);
 }
 
@@ -489,5 +489,6 @@ void IABoard::waitForIA()
 
 float IABoard::getBME280Temp()
 {
+   printf("Reading temperature...\n");
    return _bme->getTemperature_C();
 }
