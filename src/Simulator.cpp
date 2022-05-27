@@ -231,9 +231,10 @@ void Simulator::calibrateLCVoltage(bool autoCalib)
 
 std::vector<float> Simulator::longTermTest()
 {
-   /*
+
    bool state = false;
    std::vector<float> yValues, setPoints;
+   /*
    for (uint8_t i = 0; i < 40; i++)
    {
       _pcb->setLoadcellVoltage(i);
@@ -269,7 +270,6 @@ std::vector<float> Simulator::longTermTest()
 
    const int numOfSamples = 60 * 15;
    int sample = 0;
-   bool state = false;
 
    printf("Starting...\n");
    std::this_thread::sleep_for(500ms);
