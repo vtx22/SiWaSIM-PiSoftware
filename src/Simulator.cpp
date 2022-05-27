@@ -268,7 +268,7 @@ std::vector<float> Simulator::longTermTest()
    _pcb->setLoadcellVoltage(20);
    std::this_thread::sleep_for(5s);
 
-   const int numOfSamples = 60 * 60 * 9;
+   const int numOfSamples = 60 * 60 * 6;
    int sample = 0;
 
    printf("Starting...\n");
