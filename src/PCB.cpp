@@ -80,12 +80,12 @@ void PCB::setImpedance(IMPEDANCE impedance)
 
 void PCB::setEXTRASW1(bool state)
 {
-   _gpio->writePin(PIN_EXTRASW1, state);
+   _gpio->writePin(PIN_EXTRASW1, !state);
 }
 
 void PCB::setEXTRASW2(bool state)
 {
-   _gpio->writePin(PIN_EXTRASW2, state);
+   _gpio->writePin(PIN_EXTRASW2, !state);
 }
 
 void PCB::setPOWERSW1(bool state)
