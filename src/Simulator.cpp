@@ -145,6 +145,7 @@ float Simulator::runPassive(float timestep, float *weight)
 
 void Simulator::testFunction()
 {
+   bool state = false;
    uint8_t voltage = 0;
    while (true)
    {
@@ -153,7 +154,8 @@ void Simulator::testFunction()
          voltage = 0;
       }
       _pcb->setLoadcellVoltage(voltage);
-
+      _pcb->setEXTRASW1(state);
+      state = !state;
       voltage++;
       std::this_thread::sleep_for(5s);
    }
@@ -229,6 +231,7 @@ void Simulator::calibrateLCVoltage(bool autoCalib)
 
 std::vector<float> Simulator::longTermTest()
 {
+   /*
    bool state = false;
    std::vector<float> yValues, setPoints;
    for (uint8_t i = 0; i < 40; i++)
@@ -236,7 +239,7 @@ std::vector<float> Simulator::longTermTest()
       _pcb->setLoadcellVoltage(i);
       for (uint8_t sample = 0; sample < 5 * 20 / 3.f; sample++)
       {
-         _pcb->setPOWERSW1(state);
+         _pcb->setEXTRASW1(state);
          state = !state;
          setPoints.push_back(i);
          yValues.push_back(_siwarex->getLoadcellVoltage());
@@ -260,10 +263,9 @@ std::vector<float> Simulator::longTermTest()
    }
    file.close();
 
-   /*
+   */
    _pcb->setLoadcellVoltage(20);
    std::this_thread::sleep_for(5s);
-
 
    const int numOfSamples = 60 * 15;
    int sample = 0;
@@ -291,8 +293,6 @@ std::vector<float> Simulator::longTermTest()
       file << yValues[i] << "\n";
    }
    file.close();
-
-   */
 
    return yValues;
 }
