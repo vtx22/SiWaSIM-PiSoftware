@@ -274,7 +274,7 @@ std::vector<float> Simulator::longTermTest()
    printf("Starting...\n");
    std::this_thread::sleep_for(500ms);
 
-   _pcb->setEXTRASW1(true);
+   _pcb->setEXTRASW1(false);
 
    while (sample < numOfSamples)
    {
@@ -294,7 +294,7 @@ std::vector<float> Simulator::longTermTest()
    }
    file.close();
 
-   _pcb->setEXTRASW1(false);
+   _pcb->setEXTRASW1(true);
 
    return yValues;
 }
