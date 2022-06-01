@@ -108,6 +108,27 @@ struct CUBIC_FUNCTION
    float a, b, c, d;
 } typedef CUBIC_FUNCTION;
 
+struct QUARTIC_FUNCTION
+{
+   float a, b, c, d, e;
+} typedef QUARTIC_FUNCTION;
+
+struct CURVE
+{
+   //! Delay from input high to flow increase start in seconds
+   float startDelay = 0;
+   //! Delay from input low to flow decrease start in seconds
+   float stopDelay = 0;
+   //! Time it takes the flow to reach its maximum in seconds
+   float riseTime = 1;
+   //! Time it takes the flow to reach zero in seconds
+   float fallTime = 1;
+   //! Maximal flow after rise time in kg/s
+   float maxFlow = 1;
+   //! Percentage of maximal flow reached at riseTime / 2
+   float halfRise = 0.5;
+} typedef CURVE;
+
 class Configuration
 {
 public:

@@ -210,6 +210,16 @@ float calculateCubicDeriv(float a, float b, float c, float x)
    return 3 * a * x * x + 2 * b * x + c;
 }
 
+float calculateQuartic(float a, float b, float c, float d, float e, float x)
+{
+   return a * x * x * x * x + b * x * x * x + c * x * x + d * x + e;
+}
+
+float calculateQuarticDeriv(float a, float b, float c, float d, float x)
+{
+   return 4 * a * x * x * x + 3 * b * x * x + 2 * c * x + d;
+}
+
 float bytesToFloatSWRX(uint8_t *bytes)
 {
    return bytesToFloat(bytes[2], bytes[3], bytes[0], bytes[1]);

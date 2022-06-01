@@ -70,4 +70,45 @@ void MaterialFlow::setFlowType(MATERIAL_FLOW flowType)
 void MaterialFlow::setFlowCurve(CURVE curve)
 {
    _curve = curve;
+   calculateFlowCurve();
+}
+
+void MaterialFlow::calculateFlowCurve()
+{
+   QUARTIC_FUNCTION flow;
+
+   // E and D are 0 because f(0) = 0 and f'(0) = 0
+   flow.e = flow.d = 0;
+
+   // Fill the solution vector
+   VectorXd y(3);
+   y(0) = _curve.halfRise * _curve.maxFlow;
+   y(1) = _curve.maxFlow;
+   y(2) = 0;
+
+   float tRise2 = _curve.riseTime * _curve.riseTime;
+   float tRise3 = tRise2 * _curve.riseTime;
+   float tRise4 = tRise2 * tRise2;
+
+   MatrixXd m(3, 3);
+   m(0, 0) = tRise4 / 16.f;
+   m(0, 1) = tRise3 / 8.f;
+   m(0, 2) = tRise2 / 4.f;
+   m(1, 0) = tRise4;
+   m(1, 1) = tRise3;
+   m(1, 2) = tRise2;
+   m(2, 0) = 4 * tRise3;
+   m(2, 1) = 3 * tRise2;
+   m(2, 2) = 2 * _curve.riseTime;
+
+   // Vector to store function coefficients
+   VectorXd coeff(3) = m.colPivHouseholderQr().solve(y);
+
+   flow.a = coeff(0);
+   flow.b = coeff(1);
+   flow.c = coeff(2);
+
+   printf("A: %f, B: %f, C: %f\n", flow.a, flow.b, flow.c);
+
+   _riseCurve = flow;
 }

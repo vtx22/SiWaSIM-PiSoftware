@@ -12,6 +12,8 @@ using namespace std::chrono_literals;
 using Eigen::MatrixXd;
 using Eigen::VectorXd;
 
+#include "Configuration.hpp"
+
 float constrainMinMax(float value, float min, float max);
 float constrainMin(float value, float min);
 float constrainMax(float value, float max);
@@ -26,6 +28,9 @@ float solveCubicForVoltage(float a, float b, float c, float d, float value);
 
 float calculateCubic(float a, float b, float c, float d, float x);
 float calculateCubicDeriv(float a, float b, float c, float x);
+
+float calculateQuartic(float a, float b, float c, float d, float e, float x);
+float calculateQuarticDeriv(float a, float b, float c, float d, float x);
 
 float bytesToFloat(uint8_t *bytes);
 float bytesToFloatSWRX(uint8_t *bytes);

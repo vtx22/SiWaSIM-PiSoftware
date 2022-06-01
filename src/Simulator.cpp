@@ -145,6 +145,10 @@ float Simulator::runPassive(float timestep, float *weight)
 
 void Simulator::testFunction()
 {
+   _materialFlows[0]->calculateFlowCurve();
+   while (true)
+      ;
+
    bool state = false;
    uint8_t voltage = 0;
    while (true)

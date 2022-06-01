@@ -3,19 +3,10 @@
 #include "Configuration.hpp"
 #include "IABoard.hpp"
 
-struct CURVE
-{
-   //! Delay from input high to flow increase start in seconds
-   float startDelay = 0;
-   //! Delay from input low to flow decrease start in seconds
-   float stopDelay = 0;
-   //! Time it takes the flow to reach its maximum in seconds
-   float riseTime = 1;
-   //! Time it takes the flow to reach zero in seconds
-   float fallTime = 1;
-   //! Maximal flow after rise time in kg/s
-   float maxFlow = 1;
-} typedef CURVE;
+#include "Eigen/Dense"
+
+using Eigen::MatrixXd;
+using Eigen::VectorXd;
 
 class MaterialFlow
 {
@@ -27,9 +18,10 @@ public:
    void setFlowCurve(CURVE curve);
    void setFlowType(MATERIAL_FLOW flowType);
    float update(float *currentWeight, float dt, bool pinState);
+   void calculateFlowCurve();
 
 private:
-   uint8_t _channel;
+      uint8_t _channel;
    MATERIAL_FLOW _flowType;
 
    bool _lastPinState = 0;
@@ -37,6 +29,7 @@ private:
    float _lastPinStateTime = 0;
 
    CURVE _curve;
+   QUARTIC_FUNCTION _riseCurve;
 
    IABoard *_ia;
 };
