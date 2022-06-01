@@ -102,7 +102,7 @@ void MaterialFlow::calculateFlowCurve()
    m(2, 2) = 2 * _curve.riseTime;
 
    // Vector to store function coefficients
-   VectorXd coeff(3) = m.colPivHouseholderQr().solve(y);
+   VectorXd coeff = m.colPivHouseholderQr().solve(y);
 
    flow.a = coeff(0);
    flow.b = coeff(1);
