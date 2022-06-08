@@ -147,7 +147,7 @@ void Simulator::testFunction()
 {
    //_siwarex->setMODBUSDelay(0);
    // std::this_thread::sleep_for(1s);
-   // printf("DELAY: %d\n", _siwarex->getMODBUSDelay());
+   printf("DELAY: %d\n", _siwarex->getMODBUSDelay());
    std::this_thread::sleep_for(1s);
    printf("VOL: %f\n", _siwarex->getLoadcellVoltage());
    return;
