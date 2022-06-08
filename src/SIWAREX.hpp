@@ -15,6 +15,7 @@ public:
    float getLoadcellImpedance();
 
    void setMODBUSDelay(uint16_t delay);
+   uint16_t SIWAREX::getMODBUSDelay();
 
    std::vector<uint8_t> requestRegisters(uint16_t startRegister, uint16_t length);
 

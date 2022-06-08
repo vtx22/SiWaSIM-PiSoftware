@@ -32,6 +32,13 @@ void SIWAREX::setMODBUSDelay(uint16_t delay)
    _modbus->writeRegister(MODBUS_DELAY, delay);
 }
 
+uint16_t SIWAREX::getMODBUSDelay()
+{
+   std::vector<uint8_t> msg = requestRegisters(MODBUS_DELAY, 1);
+
+   return ((msg[0] << 8) + msg[1]);
+}
+
 std::vector<uint8_t> SIWAREX::requestRegisters(uint16_t startRegister, uint16_t length)
 {
    _modbus->transmitRequest(startRegister - 1, length);

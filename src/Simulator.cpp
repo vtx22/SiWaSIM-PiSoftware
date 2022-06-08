@@ -147,7 +147,7 @@ void Simulator::testFunction()
 {
    _siwarex->setMODBUSDelay(0);
    std::this_thread::sleep_for(1s);
-   _siwarex->getLoadcellVoltage();
+   printf("DELAY: %d\n", _siwarex->getMODBUSDelay());
    return;
    _materialFlows[0]->calculateFlowCurve();
    while (true)
