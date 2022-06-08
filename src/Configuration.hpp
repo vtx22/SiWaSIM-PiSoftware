@@ -103,11 +103,13 @@ enum RUN_MODE
 
 } typedef RUN_MODE;
 
+//! Stores coefficients of a function \f$f(x)=ax^3+bx^2+cx+d\f$
 struct CUBIC_FUNCTION
 {
    float a, b, c, d;
 } typedef CUBIC_FUNCTION;
 
+//! Stores coefficients of a function \f$f(x)=ax^4+bx^3+cx^2+dx+e\f$
 struct QUARTIC_FUNCTION
 {
    float a, b, c, d, e;

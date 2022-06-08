@@ -13,10 +13,13 @@ public:
 
    float getLoadcellVoltage();
    float getLoadcellImpedance();
+
+   void setMODBUSDelay(uint16_t delay);
+
    std::vector<uint8_t> requestRegisters(uint16_t startRegister, uint16_t length);
 
 private:
    float requestFloat(uint16_t startRegister);
 
-      Modbus *_modbus;
+   Modbus *_modbus;
 };

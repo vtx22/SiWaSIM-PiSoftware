@@ -27,6 +27,11 @@ float SIWAREX::requestFloat(uint16_t startRegister)
    return bytesToFloatSWRX(&msg[0]);
 }
 
+void SIWAREX::setMODBUSDelay(uint16_t delay)
+{
+   _modbus->writeRegister(MODBUS_DELAY, delay);
+}
+
 std::vector<uint8_t> SIWAREX::requestRegisters(uint16_t startRegister, uint16_t length)
 {
    _modbus->transmitRequest(startRegister - 1, length);

@@ -11,6 +11,7 @@ public:
    Modbus();
    ~Modbus();
 
+   void writeRegister(uint16_t startRegister, uint16_t value);
    void transmitRequest(uint16_t startRegister, uint16_t length);
    std::vector<uint8_t> receiveResponse();
 

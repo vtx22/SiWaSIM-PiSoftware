@@ -33,6 +33,29 @@ void Modbus::transmitRequest(uint16_t startRegister, uint16_t length)
    _uart->transmitMSG(&msg[0], msg.size());
 }
 
+void Modbus::writeRegister(uint16_t startRegister, uint16_t value)
+{
+   std::vector<uint8_t> msg;
+
+   msg.push_back(_address);
+   // Function code "Write Holding Registers"
+   msg.push_back(0x06);
+
+   // High Byte and Low Byte of start register
+   msg.push_back((startRegister >> 8));
+   msg.push_back((startRegister & 0xFF));
+   // High Byte and Low Byte of number of registers
+   msg.push_back((value >> 8));
+   msg.push_back((value & 0xFF));
+
+   uint16_t checksum = calculateCRC(&msg[0], msg.size());
+
+   msg.push_back((checksum & 0xFF));
+   msg.push_back((checksum >> 8));
+
+   _uart->transmitMSG(&msg[0], msg.size());
+}
+
 std::vector<uint8_t> Modbus::receiveResponse()
 {
    std::vector<uint8_t> msg = _uart->receiveMSG();

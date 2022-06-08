@@ -175,7 +175,7 @@ float solveCubicForVoltage(float a, float b, float c, float d, float value)
    d -= value;
 
    float root = 5.f; // Start for approximation is the middle between 0 - 10V
-   for (uint8_t iteration = 0; iteration < 10; iteration++)
+   for (uint8_t iteration = 0; iteration < 15; iteration++)
    {
       root = root - (calculateCubic(a, b, c, d, root)) / (calculateCubicDeriv(a, b, c, root));
    }
@@ -220,16 +220,34 @@ float calculateQuarticDeriv(float a, float b, float c, float d, float x)
    return 4 * a * x * x * x + 3 * b * x * x + 2 * c * x + d;
 }
 
+/*!
+Interprets four bytes as a float in the byte order of the SIWAREX-Module
+@param bytes Byte Array
+@return Bytes interpreted as float in the byte order 2-3-0-1
+*/
 float bytesToFloatSWRX(uint8_t *bytes)
 {
    return bytesToFloat(bytes[2], bytes[3], bytes[0], bytes[1]);
 }
 
+/*!
+Interprets four bytes as a float
+@param bytes Byte Array where the 0th element is the MSB
+@return Bytes interpreted as float
+*/
 float bytesToFloat(uint8_t *bytes)
 {
    return bytesToFloat(bytes[0], bytes[1], bytes[2], bytes[3]);
 }
 
+/*!
+Interprets four bytes as a float
+@param b3 Most significant byte
+@param b2 2nd byte
+@param b1 3rd byte
+@param b0 Least significant byte
+@return Bytes interpreted as float
+*/
 float bytesToFloat(uint8_t b3, uint8_t b2, uint8_t b1, uint8_t b0)
 {
    uint32_t bytes = (b3 << 24) + (b2 << 16) + (b1 << 8) + b0;
