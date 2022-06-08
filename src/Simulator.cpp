@@ -146,6 +146,7 @@ float Simulator::runPassive(float timestep, float *weight)
 void Simulator::testFunction()
 {
    _siwarex->setMODBUSDelay(0);
+   std::this_thread::sleep_for(1s);
    _siwarex->getLoadcellVoltage();
    return;
    _materialFlows[0]->calculateFlowCurve();
