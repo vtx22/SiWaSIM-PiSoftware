@@ -145,7 +145,7 @@ float Simulator::runPassive(float timestep, float *weight)
 
 void Simulator::testFunction()
 {
-   _siwarex->setMODBUSDelay(0);
+   //_siwarex->setMODBUSDelay(0);
    std::this_thread::sleep_for(1s);
    printf("DELAY: %d\n", _siwarex->getMODBUSDelay());
    std::this_thread::sleep_for(1s);
