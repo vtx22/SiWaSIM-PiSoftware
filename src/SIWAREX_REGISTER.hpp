@@ -2,21 +2,20 @@
 #include <stdint.h>
 #include <vector>
 
-struct PARAMETER
+struct MODBUS_PARAMETER
 {
    uint16_t startRegister;
-   uint8_t length;
-   // 0 = float, 1 = uint, 2 = int
+   // 0 = float, 1 = uint, 2 = int, 3=ushort, 4=short, 5=bool
    uint8_t type;
 
-} typedef PARAMETER;
+} typedef MODBUS_PARAMETER;
 
-struct DATASET
+struct MODBUS_DATASET
 {
+   uint8_t dsName;
    uint16_t startRegister;
-   uint8_t length;
-   std::vector<PARAMETER> params;
-} typedef DATASET;
+   std::vector<MODBUS_PARAMETER> params;
+} typedef MODBUS_DATASET;
 
 #define LOADCELL_IMPEDANCE 3056
 #define LOADCELL_VOLTAGE 3058

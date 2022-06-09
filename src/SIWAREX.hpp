@@ -21,6 +21,6 @@ public:
 
 private:
    float requestFloat(uint16_t startRegister);
-
+   std::vector<MODBUS_DATASET> _datasets;
    Modbus *_modbus;
 };
