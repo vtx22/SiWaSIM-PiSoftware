@@ -3,7 +3,7 @@
 #include <vector>
 #include <string>
 
-#include "boost/variant.hpp"
+#include "boost/variant/variant.hpp"
 
 typedef boost::variant<short, unsigned short, int, unsigned int, float> modbusValue;
 
