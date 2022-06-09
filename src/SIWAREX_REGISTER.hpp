@@ -3,9 +3,9 @@
 #include <vector>
 #include <string>
 
-#include "boost/variant/variant.hpp"
+#include <variant>
 
-typedef boost::variant<short, unsigned short, int, unsigned int, float> modbusValue;
+typedef std::variant<short, unsigned short, int, unsigned int, float> modbusValue;
 
 struct MODBUS_PARAMETER
 {
