@@ -5,7 +5,7 @@
 
 #include <variant>
 
-typedef std::variant<short, unsigned short, int, unsigned int, float> modbusValue;
+// typedef std::variant<short, unsigned short, int, unsigned int, float> modbusValue;
 
 struct MODBUS_PARAMETER
 {
@@ -13,7 +13,7 @@ struct MODBUS_PARAMETER
    uint16_t startRegister;
    // 0 = float, 1 = uint, 2 = int, 3=ushort, 4=short, 5=bool
    uint8_t type;
-   modbusValue value;
+   std::variant<short, unsigned short, int, unsigned int, float> value;
 
 } typedef MODBUS_PARAMETER;
 
