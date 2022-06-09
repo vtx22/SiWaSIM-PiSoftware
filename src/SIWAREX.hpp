@@ -19,6 +19,8 @@ public:
 
    std::vector<uint8_t> requestRegisters(uint16_t startRegister, uint16_t length);
 
+   MODBUS_PARAMETER getParameter(MODBUS_PARAMETER param);
+
 private:
    float requestFloat(uint16_t startRegister);
    std::vector<MODBUS_DATASET> _datasets;
