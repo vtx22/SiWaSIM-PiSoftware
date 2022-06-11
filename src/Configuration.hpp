@@ -2,11 +2,16 @@
 #include <string>
 #include <iostream>
 #include <fstream>
+#include <variant>
+#include <vector>
+#include <utility>
+#include <stdexcept>
+#include <sstream>
 #include "nlohmann/json.hpp"
 
 using json = nlohmann::json;
 
-#define CONFIG_PATH "/home/siwasim/SiWaSIM-PiSoftware/Konfiguration/config.json"
+#define CONFIG_PATH "/home/siwasim/SiWaSIM-PiSoftware/Konfiguration"
 
 // I2C
 #define I2C_IABOARD 0x50
@@ -131,13 +136,40 @@ struct CURVE
    float halfRise = 0.1;
 } typedef CURVE;
 
+//! All possible data types of a SIWAREX parameter
+typedef std::variant<short, unsigned short, int, unsigned int, float> modbusValue;
+
+//! Defines a MODBUS parameter of the SIWAREX Module
+struct MODBUS_PARAMETER
+{
+   //! Name / function of the parameter
+   std::string name;
+   //! First register that stores the parameters
+   uint16_t startRegister;
+   //! Data type of the parameter: 0 = float, 1 = uint, 2 = int, 3=ushort, 4=short, 5=bool
+   uint8_t type;
+   modbusValue value;
+
+} typedef MODBUS_PARAMETER;
+
+//! Defines a full MODBUS parameter dataset of the SIWAREX Module
+struct MODBUS_DATASET
+{
+   //! Number of the dataset as specified in the SIWAREX documentation
+   uint8_t dsNumber;
+   //! First register of the dataset
+   uint16_t startRegister;
+   //! List of all the parameters of the datset
+   std::vector<MODBUS_PARAMETER> params;
+} typedef MODBUS_DATASET;
+
 class Configuration
 {
 public:
    Configuration(std::string path);
    ~Configuration();
 
-   void loadConfiguration();
+   bool loadConfiguration();
 
    // SETTING VARIABLES
    //! Loadcell mode to be simulated
@@ -177,6 +209,9 @@ public:
    MATERIAL_FLOW inputChannel2 = MATERIAL_FLOW::FINE;
    MATERIAL_FLOW inputChannel3 = MATERIAL_FLOW::COARSE;
    MATERIAL_FLOW inputChannel4 = MATERIAL_FLOW::XCOARSE;
+
+   std::vector<MODBUS_DATASET> modbus_datasets;
+   uint8_t numberOfDatasets = 1;
 
 private:
    void parseJSON();

@@ -10,7 +10,7 @@ Modbus::~Modbus()
    delete _uart;
 }
 
-void Modbus::transmitRequest(uint16_t startRegister, uint16_t length)
+std::vector<uint8_t> Modbus::requestRegisters(uint16_t startRegister, uint16_t length)
 {
    std::vector<uint8_t> msg;
 
@@ -31,14 +31,23 @@ void Modbus::transmitRequest(uint16_t startRegister, uint16_t length)
    msg.push_back((checksum >> 8));
 
    _uart->transmitMSG(&msg[0], msg.size());
+
+   return receiveResponse();
 }
 
-void Modbus::writeRegister(uint16_t startRegister, uint16_t value)
+uint16_t requestRegister(uint16_t startRegister)
+{
+   std::vector<uint8_t> data = requestRegisters(startRegister, 1);
+
+   return (uint16_t)((data[0] << 8) + data[1]);
+}
+
+void Modbus::writeRegister(uint16_t startRegister, uint16_t value);
 {
    std::vector<uint8_t> msg;
 
    msg.push_back(_address);
-   // Function code "Write Holding Registers"
+   // Function code "Write Holding Register"
    msg.push_back(0x06);
 
    // High Byte and Low Byte of start register
@@ -54,6 +63,15 @@ void Modbus::writeRegister(uint16_t startRegister, uint16_t value)
    msg.push_back((checksum >> 8));
 
    _uart->transmitMSG(&msg[0], msg.size());
+}
+
+void Modbus::writeRegisters(uint16_t startRegister, std::vector<uint16_t> values)
+{
+   std::vector<uint8_t> msg;
+
+   msg.push_back(_address);
+   // Function code "Write Multiple Holding Registers"
+   msg.push_back(0x10);
 }
 
 std::vector<uint8_t> Modbus::receiveResponse()

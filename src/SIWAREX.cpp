@@ -1,6 +1,6 @@
 #include "SIWAREX.hpp"
 
-SIWAREX::SIWAREX()
+SIWAREX::SIWAREX(Configuration *config) : _config(config)
 {
    _modbus = new Modbus();
 }
@@ -51,4 +51,35 @@ std::vector<uint8_t> SIWAREX::requestRegisters(uint16_t startRegister, uint16_t 
    msg.erase(msg.begin());
 
    return msg;
+}
+
+MODBUS_PARAMETER SIWAREX::getParameter(MODBUS_PARAMETER param)
+{
+   uint16_t length = 0;
+   switch (param.type)
+   {
+   case 0:
+   case 1:
+      length = 2;
+      break;
+   case 3:
+   case 4:
+   default:
+      length = 1;
+      break;
+   }
+
+   param.value = requestRegisters(param.startRegister, length);
+   return param;
+}
+
+void SIWAREX::writeRegister(uint8_t dataset, uint16_t startRegister, uint16_t value)
+{
+   _modbus->writeRegister(CMD1_CODE, 2000 + dataset);
+   _modbus->writeRegister(CMD1_TRIGGER, 1);
+
+   _modbus->writeRegister(startRegister, value);
+
+   _modbus->writeRegister(CMD1_CODE, 4000 + dataset);
+   _modbus->writeRegister(CMD1_TRIGGER, 1);
 }

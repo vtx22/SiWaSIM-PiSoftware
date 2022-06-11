@@ -12,7 +12,11 @@ public:
    ~Modbus();
 
    void writeRegister(uint16_t startRegister, uint16_t value);
-   void transmitRequest(uint16_t startRegister, uint16_t length);
+   void writeRegisters(uint16_t startRegister, std::vector<uint16_t> values);
+
+   std::vector<uint8_t> requestRegisters(uint16_t startRegister, uint16_t length);
+   uint16_t requestRegister(uint16_t startRegister);
+
    std::vector<uint8_t> receiveResponse();
 
 private:

@@ -5,7 +5,7 @@ Simulator::Simulator()
    _config = new Configuration(CONFIG_PATH);
    _pcb = new PCB(_config);
    _ia = new IABoard();
-   _siwarex = new SIWAREX();
+   _siwarex = new SIWAREX(_config);
 
    _materialFlows[0] = new MaterialFlow(1);
    _materialFlows[1] = new MaterialFlow(2);
@@ -149,7 +149,10 @@ void Simulator::testFunction()
    // std::this_thread::sleep_for(1s);
    printf("DELAY: %d\n", _siwarex->getMODBUSDelay());
    std::this_thread::sleep_for(1s);
-   printf("VOL: %f\n", _siwarex->getLoadcellVoltage());
+   _siwarex->writeRegister(13, 1483, 0);
+   std::this_thread::sleep_for(1s);
+   printf("NEW DELAY: %d\n", _siwarex->getMODBUSDelay());
+
    return;
    _materialFlows[0]->calculateFlowCurve();
    while (true)
