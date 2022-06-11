@@ -41,8 +41,7 @@ uint16_t SIWAREX::getMODBUSDelay()
 
 std::vector<uint8_t> SIWAREX::requestRegisters(uint16_t startRegister, uint16_t length)
 {
-   _modbus->transmitRequest(startRegister - 1, length);
-   std::vector<uint8_t> msg = _modbus->receiveResponse();
+   std::vector<uint8_t> msg = _modbus->requestRegisters(startRegister - 1, length);
 
    msg.pop_back();
    msg.pop_back();

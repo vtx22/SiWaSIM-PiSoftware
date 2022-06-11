@@ -1,8 +1,8 @@
 username: siwasim
 password: siwasim
 
-C++ build: g++ -Wall -w -pthread -o main *.cpp -lpigpio 
-C++ buil with matplot: g++ -Wall -w -pthread -o main *.cpp -I/usr/include/python3.9 -lpigpio -lpython3.9
+C++ build: g++ -std=c++17 -Wall -w -pthread -o main *.cpp -lpigpio 
+C++ build with matplot: g++ -std=c++17 -Wall -w -pthread -o main *.cpp -I/usr/include/python3.9 -lpigpio -lpython3.9
 
 IP WW20: 192.168.2.125
 IP LH19: 192.168.2.116
