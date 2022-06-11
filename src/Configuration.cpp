@@ -37,6 +37,7 @@ bool Configuration::loadConfiguration()
    exc_voltage = jsonCFG.at(2).at("Wert");
 
    // Load SIWAREX addresses
+   /*
    std::fstream addFile;
 
    // Open file
@@ -89,6 +90,6 @@ bool Configuration::loadConfiguration()
    ds.params.push_back(param);
 
    modbus_datasets.push_back(ds);
-
+   */
    return true;
 }
