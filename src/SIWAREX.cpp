@@ -68,7 +68,7 @@ MODBUS_PARAMETER SIWAREX::getParameter(MODBUS_PARAMETER param)
       break;
    }
 
-   param.value = requestRegisters(param.startRegister, length);
+   // param.value = requestRegisters(param.startRegister, length))[0];
    return param;
 }
 
