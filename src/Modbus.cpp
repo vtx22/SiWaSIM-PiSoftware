@@ -35,14 +35,14 @@ std::vector<uint8_t> Modbus::requestRegisters(uint16_t startRegister, uint16_t l
    return receiveResponse();
 }
 
-uint16_t requestRegister(uint16_t startRegister)
+uint16_t Modbus::requestRegister(uint16_t startRegister)
 {
    std::vector<uint8_t> data = requestRegisters(startRegister, 1);
 
    return (uint16_t)((data[0] << 8) + data[1]);
 }
 
-void Modbus::writeRegister(uint16_t startRegister, uint16_t value);
+void Modbus::writeRegister(uint16_t startRegister, uint16_t value)
 {
    std::vector<uint8_t> msg;
 

@@ -19,9 +19,10 @@ public:
    uint16_t getMODBUSDelay();
 
    std::vector<uint8_t> requestRegisters(uint16_t startRegister, uint16_t length);
-   void writeRegister(uint8_t dataset, uint16_t startRegister, uint16_t value);
 
    MODBUS_PARAMETER getParameter(MODBUS_PARAMETER param);
+
+   void writeRegister(uint8_t dataset, uint16_t startRegister, uint16_t value);
 
 private:
    float requestFloat(uint16_t startRegister);
