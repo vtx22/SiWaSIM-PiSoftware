@@ -10,6 +10,7 @@ class SIWAREX
 {
 public:
    SIWAREX();
+   SIWAREX(Configuration *config);
    ~SIWAREX();
 
    float getLoadcellVoltage();
