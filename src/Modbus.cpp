@@ -51,7 +51,7 @@ void Modbus::writeRegister(uint16_t startRegister, uint16_t value)
    msg.push_back(0x06);
 
    // High Byte and Low Byte of start register
-   startRegister -= 1;
+
    msg.push_back((startRegister >> 8));
    msg.push_back((startRegister & 0xFF));
    // High Byte and Low Byte of number of registers

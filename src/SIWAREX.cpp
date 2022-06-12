@@ -78,7 +78,7 @@ void SIWAREX::writeRegister(uint8_t dataset, uint16_t startRegister, uint16_t va
    std::this_thread::sleep_for(200ms);
    _modbus->writeRegister(CMD1_TRIGGER, 1);
    std::this_thread::sleep_for(200ms);
-   _modbus->writeRegister(startRegister, value);
+   _modbus->writeRegister(startRegister - 1, value);
    std::this_thread::sleep_for(200ms);
    _modbus->writeRegister(CMD1_CODE, 4000 + dataset);
    std::this_thread::sleep_for(200ms);
