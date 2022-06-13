@@ -147,11 +147,20 @@ void Simulator::testFunction()
 {
    //_siwarex->setMODBUSDelay(0);
    // std::this_thread::sleep_for(1s);
-   printf("DELAY: %d\n", _siwarex->getMODBUSDelay());
+   uint16_t reg = 1483, ds = 13;
+
+   std::vector<uint8_t> value;
+
+   value = _siwarex->requestRegisters(reg, 1);
+   printf("BEFORE: %d\n", (value[0] << 8) + value[1]);
+
    std::this_thread::sleep_for(1s);
-   _siwarex->writeRegister(13, 1483, 0);
+
+   _siwarex->writeRegister(3, 1007, 1);
    std::this_thread::sleep_for(1s);
-   printf("NEW DELAY: %d\n", _siwarex->getMODBUSDelay());
+
+   value = _siwarex->requestRegisters(reg, 1);
+   printf("AFTER: %d\n", (value[0] << 8) + value[1]);
 
    return;
    _materialFlows[0]->calculateFlowCurve();
