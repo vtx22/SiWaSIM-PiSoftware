@@ -147,7 +147,7 @@ void Simulator::testFunction()
 {
    //_siwarex->setMODBUSDelay(0);
    // std::this_thread::sleep_for(1s);
-   uint16_t reg = 1483, ds = 13;
+   uint16_t reg = 1007, ds = 3;
 
    std::vector<uint8_t> value;
 
@@ -156,7 +156,7 @@ void Simulator::testFunction()
 
    std::this_thread::sleep_for(1s);
 
-   _siwarex->writeRegister(3, 1007, 1);
+   _siwarex->writeRegister(ds, reg, 1);
    std::this_thread::sleep_for(1s);
 
    value = _siwarex->requestRegisters(reg, 1);
