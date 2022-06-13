@@ -84,16 +84,16 @@ void Modbus::writeRegisters(uint16_t startRegister, std::vector<uint16_t> values
 
    // Byte count (2 bytes per register)
    numOfRegs *= 2;
-   msg.push_back((uint8_t)(numOfRegs);
+   msg.push_back((uint8_t)(numOfRegs));
 
-   //All register values 
-   for(auto const& reg : values) 
+   // All register values
+   for (auto const &reg : values)
    {
       msg.push_back((reg >> 8));
       msg.push_back((reg & 0xFF));
    }
 
-   //Append Checksum
+   // Append Checksum
    uint16_t checksum = calculateCRC(&msg[0], msg.size());
    msg.push_back((checksum & 0xFF));
    msg.push_back((checksum >> 8));
