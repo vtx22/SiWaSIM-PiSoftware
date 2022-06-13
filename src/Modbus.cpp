@@ -51,7 +51,6 @@ void Modbus::writeRegister(uint16_t startRegister, uint16_t value)
    msg.push_back(0x06);
 
    // High Byte and Low Byte of start register
-
    msg.push_back((startRegister >> 8));
    msg.push_back((startRegister & 0xFF));
    // High Byte and Low Byte of number of registers
@@ -74,6 +73,32 @@ void Modbus::writeRegisters(uint16_t startRegister, std::vector<uint16_t> values
    msg.push_back(_address);
    // Function code "Write Multiple Holding Registers"
    msg.push_back(0x10);
+   // High Byte and Low Byte of start register
+   msg.push_back((startRegister >> 8));
+   msg.push_back((startRegister & 0xFF));
+
+   // Quantity of registers
+   uint16_t numOfRegs = values.size();
+   msg.push_back((numOfRegs >> 8));
+   msg.push_back((numOfRegs & 0xFF));
+
+   // Byte count (2 bytes per register)
+   numOfRegs *= 2;
+   msg.push_back((uint8_t)(numOfRegs);
+
+   //All register values 
+   for(auto const& reg : values) 
+   {
+      msg.push_back((reg >> 8));
+      msg.push_back((reg & 0xFF));
+   }
+
+   //Append Checksum
+   uint16_t checksum = calculateCRC(&msg[0], msg.size());
+   msg.push_back((checksum & 0xFF));
+   msg.push_back((checksum >> 8));
+
+   _uart->transmitMSG(&msg[0], msg.size());
 }
 
 std::vector<uint8_t> Modbus::receiveResponse()
