@@ -99,6 +99,7 @@ void Modbus::writeRegisters(uint16_t startRegister, std::vector<uint16_t> values
    msg.push_back((checksum >> 8));
 
    _uart->transmitMSG(&msg[0], msg.size());
+   receiveResponse();
 }
 
 std::vector<uint8_t> Modbus::receiveResponse()
