@@ -116,4 +116,21 @@ void modbusrd(int argc, char *argv[])
    return;
 }
 
-void testfunction(int argc, char *argv[]) {}
+void testfunction(int argc, char *argv[])
+{
+   SIWAREX swrx;
+   uint16_t reg = 1007, ds = 3;
+
+   std::vector<uint8_t> value;
+
+   value = swrx.requestRegisters(reg, 1);
+   printf("BEFORE: %d\n", (value[0] << 8) + value[1]);
+
+   std::this_thread::sleep_for(1s);
+
+   swrx.writeRegister(ds, reg, 1);
+   std::this_thread::sleep_for(1s);
+
+   value = swrx.requestRegisters(reg, 1);
+   printf("AFTER: %d\n", (value[0] << 8) + value[1]);
+}
