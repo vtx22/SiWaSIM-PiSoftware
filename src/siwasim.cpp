@@ -17,15 +17,13 @@ int main(int argc, char *argv[])
       return 0;
    }
 
-   switch (std::string(argv[1]))
+   if (std::string(argv[1]) == "modbusrd")
    {
-   case "modbusrd":
       modbusrd(argc, argv);
-      break;
-
-   default:
+   }
+   else
+   {
       printf("Unknown argument! Please refer to the documentation for all available commands.\n");
-      break;
    }
 
    printf("==========================\n\n");
