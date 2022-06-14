@@ -98,7 +98,7 @@ void modbusrd(int argc, char *argv[])
 
       std::vector<uint8_t> data = swrx.requestRegisters(reg, length);
 
-      if (data.size() != length)
+      if (data.size() != length * 2)
       {
          return;
       }
