@@ -7,9 +7,9 @@ void modbusrd(int argc, char *argv[]);
 
 int main(int argc, char *argv[])
 {
-   printf("==========================\n");
-   printf("SiWaSim  -- SIWAREX Tester\n");
-   printf("==========================\n\n");
+   printf("===========================\n");
+   printf("SiWaSim  --  SIWAREX Tester\n");
+   printf("===========================\n\n");
 
    if (argc == 1)
    {
@@ -49,8 +49,8 @@ void modbusrd(int argc, char *argv[])
 
    if (argc == 5)
    {
-      int length = std::stoi(std::string(argv[4]));
-      int reg = std::stoi(std::string(argv[3]));
+      int length = std::atoi(argv[4]);
+      int reg = std::atoi(argv[3]);
       if (length <= 0 || reg <= 0)
       {
          printf("Wrong length or register!\n");
