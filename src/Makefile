@@ -8,13 +8,22 @@ LDLIBS=-pthread -lpigpio -lpython3.9
 SRC=siwasim.cpp Configuration.cpp GPIO.cpp I2C.cpp IABoard.cpp MaterialFlow.cpp Modbus.cpp PCB.cpp Simulator.cpp SIWAREX.cpp UART.cpp utility.cpp 
 OBJ=$(SRC:.cpp=.o)
 
-all:	siwasim
+all:	siwasim clean
+
+depend: .depend
+
+.depend: $(SRCS)
+	$(RM) ./.depend
+	$(CXX) $(CPPFLAGS) -MM $^>>./.depend;
 
 siwasim:	$(OBJ)
 	$Q echo [Link]
 	$Q $(CXX) -o $@ $(OBJ) $(LDLIBS)
-	clean
 
 clean:
 	$(RM) $(OBJ)
 
+distclean: clean
+	$(RM) *~ .depend
+
+include .depend
