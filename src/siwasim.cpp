@@ -58,17 +58,23 @@ void modbusrd(int argc, char *argv[])
       switch (type)
       {
       case 0:
-         std::vector<uint8_t> data1 = swrx.requestRegisters(reg, 1);
-         printBytesRegister(reg, data1);
+      {
+         std::vector<uint8_t> data = swrx.requestRegisters(reg, 1);
+         printBytesRegister(reg, data);
          break;
+      }
       case 1:
-         std::vector<uint8_t> data2 = swrx.requestRegisters(reg, 1);
-         printf("REG %d: %d\n", reg, (data2[0] << 8) + data2[1]);
+      {
+         std::vector<uint8_t> data = swrx.requestRegisters(reg, 1);
+         printf("REG %d: %d\n", reg, (data[0] << 8) + data[1]);
          break;
+      }
       case 2:
-         std::vector<uint8_t> data3 = swrx.requestRegisters(reg, 2);
-         printf("REG %d: %d\n", reg, ((data3[0] << 24) + (data3[1] << 16) + (data3[2] << 8) + data3[3]));
+      {
+         std::vector<uint8_t> data = swrx.requestRegisters(reg, 2);
+         printf("REG %d: %d\n", reg, ((data[0] << 24) + (data[1] << 16) + (data[2] << 8) + data[3]));
          break;
+      }
       case 3:
          printf("FLOAT: %f\n", swrx.requestFloat(reg));
          break;
