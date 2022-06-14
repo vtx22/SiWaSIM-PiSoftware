@@ -49,10 +49,9 @@ void modbusrd(int argc, char *argv[])
 
    if (argc == 5)
    {
-      int length = std::atoi(argv[4]);
-      int reg = std::atoi(argv[3]);
-      printf("%s %s\n", argv[3], argv[4]);
-      printf("%d %d\n", reg, length);
+      int length = std::stoi(argv[4]);
+      int reg = std::stoi(argv[2]);
+
       if (length <= 0 || reg <= 0)
       {
          printf("Wrong length or register!\n");
