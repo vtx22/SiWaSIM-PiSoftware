@@ -109,6 +109,7 @@ std::vector<uint8_t> Modbus::receiveResponse()
 
    if ((checkSum >> 8) != msg.back() || (checkSum & 0xFF) != msg.at(msg.size() - 2))
    {
+      printf("MODBUS ERROR: Checksum failed!\n");
       return {0, 0, 0, 0};
    }
 
