@@ -13,6 +13,7 @@ all:	siwasim
 siwasim:	$(OBJ)
 	$Q echo [Link]
 	$Q $(CXX) -o $@ $(OBJ) $(LDLIBS)
+	clean
 
 clean:
 	$(RM) $(OBJ)
