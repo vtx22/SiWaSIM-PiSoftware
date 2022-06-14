@@ -26,7 +26,7 @@ int main(int argc, char *argv[])
       printf("Unknown argument! Please refer to the documentation for all available commands.\n");
    }
 
-   printf("==========================\n\n");
+   printf("===========================\n\n");
    return 0;
 }
 
