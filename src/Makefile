@@ -10,12 +10,6 @@ OBJ=$(SRC:.cpp=.o)
 
 all:	siwasim clean
 
-depend: .depend
-
-.depend: $(SRCS)
-	$(RM) ./.depend
-	$(CXX) $(CPPFLAGS) -MM $^>>./.depend;
-
 siwasim:	$(OBJ)
 	$Q echo [Link]
 	$Q $(CXX) -o $@ $(OBJ) $(LDLIBS)
@@ -23,7 +17,4 @@ siwasim:	$(OBJ)
 clean:
 	$(RM) $(OBJ)
 
-distclean: clean
-	$(RM) *~ .depend
 
-include .depend
