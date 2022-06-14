@@ -5,6 +5,7 @@
 #include "utility.hpp"
 
 void modbusrd(int argc, char *argv[]);
+void testfunction(int argc, char *argv[]);
 
 int main(int argc, char *argv[])
 {
@@ -21,11 +22,15 @@ int main(int argc, char *argv[])
    if (std::string(argv[1]) == "modbusrd")
    {
       modbusrd(argc, argv);
+      return;
    }
-   else
+   if (std::string(argv[1]) == "testfunction")
    {
-      printf("Unknown argument! Please refer to the documentation for all available commands.\n");
+      testfunction(argc, argv);
+      return;
    }
+
+   printf("Unknown argument! Please refer to the documentation for all available commands.\n");
 
    printf("===========================\n\n");
    return 0;
@@ -36,7 +41,7 @@ void modbusrd(int argc, char *argv[])
 {
    if (argc < 4 || argc > 5)
    {
-      printf("Wrong format! siwasim modbusrd <startAddress> <type> <length>\n");
+      printf("Wrong command format!\nsiwasim modbusrd <startAddress> <type> <length>\n");
       printf("Available types: 0 = bytes (hex), 1 = uint16, 2 = uint32, 3 = float\n");
       printf("Length is optional. If length is specified, type is ignored!\n");
       return;
@@ -100,6 +105,7 @@ void modbusrd(int argc, char *argv[])
 
       if (data.size() != length * 2)
       {
+         printf("MODBUS ERROR: Data is incomplete!\n");
          return;
       }
 
@@ -107,3 +113,5 @@ void modbusrd(int argc, char *argv[])
    }
    return;
 }
+
+void testfunction(int argc, char *argv[]) {}

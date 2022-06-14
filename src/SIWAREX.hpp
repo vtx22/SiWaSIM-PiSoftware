@@ -27,6 +27,6 @@ public:
    float requestFloat(uint16_t startRegister);
 
 private:
-      Modbus *_modbus;
+   Modbus *_modbus;
    Configuration *_config;
 };
