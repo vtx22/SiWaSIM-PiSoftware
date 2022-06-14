@@ -60,6 +60,11 @@ void modbusrd(int argc, char *argv[])
 
       std::vector<uint8_t> data = swrx.requestRegisters(reg, length);
 
+      if (data.size() != length)
+      {
+         return;
+      }
+
       bool toggle = 1;
       for (int i = 0; i < data.size(); i++)
       {

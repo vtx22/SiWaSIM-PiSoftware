@@ -49,11 +49,20 @@ std::vector<uint8_t> SIWAREX::requestRegisters(uint16_t startRegister, uint16_t 
 {
    std::vector<uint8_t> msg = _modbus->requestRegisters(startRegister - 1, length);
 
-   msg.pop_back();
-   msg.pop_back();
-   msg.erase(msg.begin());
-   msg.erase(msg.begin());
-   msg.erase(msg.begin());
+   if (msg[1] != 0x03)
+   {
+      // If the response is an error just return the 3 important bytes
+      msg.resize(3);
+      printf("MODBUS ERROR: Request Code: 0x03, Error Code: 0x%02X 0x%02X\n", msg[1], msg[2]);
+   }
+   else
+   {
+      msg.pop_back();
+      msg.pop_back();
+      msg.erase(msg.begin());
+      msg.erase(msg.begin());
+      msg.erase(msg.begin());
+   }
 
    return msg;
 }
