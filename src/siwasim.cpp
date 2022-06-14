@@ -86,10 +86,8 @@ void modbusrd(int argc, char *argv[])
          break;
       }
       default:
-      {
          printf("Unknown type!\n");
          break;
-      }
       }
       return;
    }
