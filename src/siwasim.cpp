@@ -22,12 +22,12 @@ int main(int argc, char *argv[])
    if (std::string(argv[1]) == "modbusrd")
    {
       modbusrd(argc, argv);
-      return;
+      return 0;
    }
    if (std::string(argv[1]) == "testfunction")
    {
       testfunction(argc, argv);
-      return;
+      return 0;
    }
 
    printf("Unknown argument! Please refer to the documentation for all available commands.\n");
