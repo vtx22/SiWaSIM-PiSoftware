@@ -70,8 +70,8 @@ void modbusrd(int argc, char *argv[])
          else
          {
             printf("%d\n", data[i]);
-            toggle = !toggle;
          }
+         toggle = !toggle;
       }
    }
    return;
