@@ -15,5 +15,5 @@ siwasim:	$(OBJ)
 	$Q $(CXX) -o $@ $(OBJ) $(LDLIBS)
 
 clean:
-   $(RM) $(OBJ)
+	$(RM) $(OBJ)
 
