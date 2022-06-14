@@ -8,7 +8,7 @@ LDLIBS=-pthread -lpigpio -lpython3.9
 SRC=siwasim.cpp Configuration.cpp GPIO.cpp I2C.cpp IABoard.cpp MaterialFlow.cpp Modbus.cpp PCB.cpp Simulator.cpp SIWAREX.cpp UART.cpp utility.cpp 
 OBJ=$(SRC:.cpp=.o)
 
-all:	siwasim clean
+all:	siwasim
 
 siwasim:	$(OBJ)
 	$Q echo [Link]
