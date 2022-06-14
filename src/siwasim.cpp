@@ -2,6 +2,7 @@
 
 #include "Simulator.hpp"
 #include "SIWAREX.hpp"
+#include "utility.hpp"
 
 void modbusrd(int argc, char *argv[]);
 
@@ -45,6 +46,37 @@ void modbusrd(int argc, char *argv[])
 
    if (argc == 4)
    {
+      int type = std::stoi(argv[3]);
+      int reg = std::stoi(argv[2]);
+
+      if (type < 0 || type > 3 || reg <= 0)
+      {
+         printf("Wrong type or register!\n");
+         return;
+      }
+
+      switch (type)
+      {
+      case 0:
+         std::vector<uint8_t> data = swrx.requestRegisters(reg, 1);
+         printBytesRegister(reg, data);
+         break;
+      case 1:
+         std::vector<uint8_t> data = swrx.requestRegisters(reg, 1);
+         printf("REG %d: %d\n", reg, (data[0] << 8) + data[1]);
+         break;
+      case 2:
+         std::vector<uint8_t> data = swrx.requestRegisters(reg, 2);
+         printf("REG %d: %d\n", reg, ((data[0] << 24) + (data[1] << 16) + (data[2] << 8) + data[3]));
+         break;
+      case 3:
+         printf("FLOAT: %f\n", swrx.requestFloat(reg));
+         break;
+      default:
+         printf("Unknown type!\n");
+         break;
+      }
+      return;
    }
 
    if (argc == 5)
@@ -65,19 +97,7 @@ void modbusrd(int argc, char *argv[])
          return;
       }
 
-      bool toggle = 1;
-      for (int i = 0; i < data.size(); i++)
-      {
-         if (toggle)
-         {
-            printf("REG %d: 0x%02X ", reg + i / 2, data[i]);
-         }
-         else
-         {
-            printf("0x%02X\n", data[i]);
-         }
-         toggle = !toggle;
-      }
+      printBytesRegister(reg, data);
    }
    return;
 }

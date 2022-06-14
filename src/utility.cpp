@@ -268,3 +268,20 @@ void delay(std::chrono::milliseconds delayMS)
    // Save the time the current command was executed for next calculation
    _lastCommand = std::chrono::system_clock::now();
 }
+
+void printBytesRegister(uint16_t startRegister, std::vector<uint8_t> bytes)
+{
+   bool toggle = 1;
+   for (int i = 0; i < bytes.size(); i++)
+   {
+      if (toggle)
+      {
+         printf("REG %d: 0x%02X ", startRegister + i / 2, bytes[i]);
+      }
+      else
+      {
+         printf("0x%02X\n", bytes[i]);
+      }
+      toggle = !toggle;
+   }
+}

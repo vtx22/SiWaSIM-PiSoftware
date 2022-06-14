@@ -24,10 +24,9 @@ public:
    MODBUS_PARAMETER getParameter(MODBUS_PARAMETER param);
 
    void writeRegister(uint8_t dataset, uint16_t startRegister, uint16_t value);
-
-private:
    float requestFloat(uint16_t startRegister);
 
-   Modbus *_modbus;
+private:
+      Modbus *_modbus;
    Configuration *_config;
 };
