@@ -81,11 +81,15 @@ void modbusrd(int argc, char *argv[])
          break;
       }
       case 3:
+      {
          printf("FLOAT: %f\n", swrx.requestFloat(reg));
          break;
+      }
       default:
+      {
          printf("Unknown type!\n");
          break;
+      }
       }
       return;
    }
