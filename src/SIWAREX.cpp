@@ -91,9 +91,9 @@ void SIWAREX::writeRegister(uint8_t dataset, uint16_t startRegister, uint16_t va
 {
    //_modbus->writeRegister(CMD1_CODE, 2000 + dataset);
    // _modbus->writeRegister(CMD1_TRIGGER, 0x01);
-   _modbus->writeRegisters(CMD1_CODE, std::vector{2000 + dataset, 0x01});
+   _modbus->writeRegisters(CMD1_CODE, std::vector<uint8_t>{2000 + dataset, 0x01});
    _modbus->writeRegister(startRegister, value);
-   _modbus->writeRegisters(CMD1_CODE, std::vector{4000 + dataset, 0x01});
+   _modbus->writeRegisters(CMD1_CODE, std::vector<uint8_t>{4000 + dataset, 0x01});
    //_modbus->writeRegister(CMD1_CODE, 4000 + dataset);
    //_modbus->writeRegister(CMD1_TRIGGER, 0x01);
 }
