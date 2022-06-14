@@ -47,11 +47,11 @@ uint16_t SIWAREX::getMODBUSDelay()
 
 std::vector<uint8_t> SIWAREX::requestRegisters(uint16_t startRegister, uint16_t length)
 {
-   std::vector<uint8_t> msg = _modbus->requestRegisters(startRegister - 1, length);
+   std::vector<uint8_t> msg = _modbus->requestRegisters(startRegister, length);
 
    if (msg[1] != 0x03)
    {
-      // If the response is an error just return the 3 important bytes
+      // If the response is an error just return the 3 important error bytes
       msg.resize(3);
       printf("MODBUS ERROR: Request Code: 0x03, Error Code: 0x%02X 0x%02X\n", msg[1], msg[2]);
    }
@@ -89,9 +89,11 @@ MODBUS_PARAMETER SIWAREX::getParameter(MODBUS_PARAMETER param)
 
 void SIWAREX::writeRegister(uint8_t dataset, uint16_t startRegister, uint16_t value)
 {
-   _modbus->writeRegister(CMD1_CODE - 1, 2000 + dataset);
-   _modbus->writeRegister(CMD1_TRIGGER - 1, 0x01);
-   _modbus->writeRegister(startRegister - 1, value);
-   _modbus->writeRegister(CMD1_CODE - 1, 4000 + dataset);
-   _modbus->writeRegister(CMD1_TRIGGER - 1, 0x01);
+   //_modbus->writeRegister(CMD1_CODE, 2000 + dataset);
+   // _modbus->writeRegister(CMD1_TRIGGER, 0x01);
+   _modbus->writeRegisters(CMD1_CODE, std::vector{2000 + dataset, 0x01});
+   _modbus->writeRegister(startRegister, value);
+   _modbus->writeRegisters(CMD1_CODE, std::vector{4000 + dataset, 0x01});
+   //_modbus->writeRegister(CMD1_CODE, 4000 + dataset);
+   //_modbus->writeRegister(CMD1_TRIGGER, 0x01);
 }
