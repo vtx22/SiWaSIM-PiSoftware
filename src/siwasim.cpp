@@ -65,11 +65,11 @@ void modbusrd(int argc, char *argv[])
       {
          if (toggle)
          {
-            printf("REG %d: %d ", reg + i / 2, data[i]);
+            printf("REG %d: 0x%02X ", reg + i / 2, data[i]);
          }
          else
          {
-            printf("%d\n", data[i]);
+            printf("0x%02X\n", data[i]);
          }
          toggle = !toggle;
       }
