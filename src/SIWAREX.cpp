@@ -5,6 +5,11 @@ SIWAREX::SIWAREX(Configuration *config) : _config(config)
    _modbus = new Modbus();
 }
 
+SIWAREX::SIWAREX()
+{
+   _modbus = new Modbus();
+}
+
 SIWAREX::~SIWAREX()
 {
    delete _modbus;
