@@ -105,14 +105,13 @@ void Modbus::writeRegisters(uint16_t startRegister, std::vector<uint16_t> values
 std::vector<uint8_t> Modbus::receiveResponse()
 {
    std::vector<uint8_t> msg = _uart->receiveMSG();
-   // uint16_t checkSum = calculateCRC(&msg[0], msg.size() - 2);
+   uint16_t checkSum = calculateCRC(&msg[0], msg.size() - 2);
 
-   /*
    if ((checkSum >> 8) != msg.back() || (checkSum & 0xFF) != msg.at(msg.size() - 2))
    {
       return {0, 0, 0, 0};
    }
-   */
+
    return msg;
 }
 
