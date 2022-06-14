@@ -128,7 +128,7 @@ void testfunction(int argc, char *argv[])
 
    std::this_thread::sleep_for(1s);
 
-   swrx.writeRegister(ds, reg, 1);
+   swrx.writeRegister(ds, reg, 2);
    std::this_thread::sleep_for(1s);
 
    value = swrx.requestRegisters(reg, 1);
