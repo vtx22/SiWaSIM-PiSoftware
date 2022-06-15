@@ -23,7 +23,7 @@ int main(int argc, char *argv[])
    if (std::string(argv[1]) == "-h")
    {
       printf("MODBUS:\n");
-      printf("modbusrd : Read MODBUS Registers\n");
+      printf("modbusrd : Read  MODBUS Registers\n");
       printf("modbuswr : Write MODBUS Registers\n");
 
       return 0;
