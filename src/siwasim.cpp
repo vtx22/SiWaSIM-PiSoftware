@@ -127,7 +127,6 @@ void testfunction(int argc, char *argv[])
    printf("BEFORE: %d\n", (value[0] << 8) + value[1]);
 
    std::this_thread::sleep_for(1s);
-
    swrx.writeRegister(ds, reg, 2);
    std::this_thread::sleep_for(1s);
 
