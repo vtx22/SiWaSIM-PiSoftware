@@ -90,11 +90,11 @@ MODBUS_PARAMETER SIWAREX::getParameter(MODBUS_PARAMETER param)
 void SIWAREX::writeRegister(uint8_t dataset, uint16_t startRegister, uint16_t value)
 {
    //_modbus->writeRegister(CMD1_CODE, 2000 + dataset);
-   _modbus->writeRegister(CMD1_TRIGGER, 0x01);
+   _modbus->writeRegister(CMD1_CODE, 0x01);
    _modbus->writeRegisters(CMD1_CODE, std::vector<uint16_t>{2000 + dataset, 0x01});
    _modbus->writeRegister(startRegister, value);
    _modbus->writeRegisters(CMD1_CODE, std::vector<uint16_t>{4000 + dataset, 0x01});
-   _modbus->writeRegister(CMD1_TRIGGER, 0x02);
+   _modbus->writeRegister(CMD1_CODE, 0x02);
    //_modbus->writeRegister(CMD1_CODE, 4000 + dataset);
    //_modbus->writeRegister(CMD1_TRIGGER, 0x01);
 }
