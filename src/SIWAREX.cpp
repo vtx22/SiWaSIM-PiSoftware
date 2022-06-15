@@ -92,6 +92,7 @@ void SIWAREX::writeRegister(uint8_t dataset, uint16_t startRegister, uint16_t va
    // Enable Service Mode
    _modbus->writeRegisters(CMD1_CODE, std::vector<uint16_t>{0x01, 0x01});
    // Load Dataset
+   return;
    _modbus->writeRegisters(CMD1_CODE, std::vector<uint16_t>{2000 + dataset, 0x01});
    // Change register
    _modbus->writeRegister(startRegister, value);

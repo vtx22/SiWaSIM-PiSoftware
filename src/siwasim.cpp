@@ -5,6 +5,7 @@
 #include "utility.hpp"
 
 void modbusrd(int argc, char *argv[]);
+void modbuswr(int argc, char *argv[]);
 void testfunction(int argc, char *argv[]);
 
 int main(int argc, char *argv[])
@@ -22,6 +23,11 @@ int main(int argc, char *argv[])
    if (std::string(argv[1]) == "modbusrd")
    {
       modbusrd(argc, argv);
+      return 0;
+   }
+   if (std::string(argv[1]) == "modbuswr")
+   {
+      modbuswr(argc, argv);
       return 0;
    }
    if (std::string(argv[1]) == "testfunction")
@@ -114,6 +120,10 @@ void modbusrd(int argc, char *argv[])
       printBytesRegister(reg, data);
    }
    return;
+}
+
+void modbuswr(int argc, char *argv[])
+{
 }
 
 void testfunction(int argc, char *argv[])
