@@ -123,7 +123,7 @@ void testfunction(int argc, char *argv[])
 
    std::vector<uint8_t> value;
 
-   value = swrx.requestRegisters(reg, 1);
+   value = swrx.requestRegisters(reg, 2);
    printf("BEFORE: %d\n", (value[0] << 8) + value[1]);
 
    std::this_thread::sleep_for(1s);
