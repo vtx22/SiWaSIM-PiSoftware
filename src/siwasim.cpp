@@ -16,10 +16,18 @@ int main(int argc, char *argv[])
 
    if (argc == 1)
    {
-      printf("No argument passed! Please refer to the documentation for all available commands.\n");
+      printf("No argument passed! Please refer to the documentation or use -h for all available commands.\n");
       return 0;
    }
 
+   if (std::string(argv[1]) == "-h")
+   {
+      printf("MODBUS:\n");
+      printf("modbusrd : Read MODBUS Registers\n");
+      printf("modbuswr : Write MODBUS Registers\n");
+
+      return 0;
+   }
    if (std::string(argv[1]) == "modbusrd")
    {
       modbusrd(argc, argv);
@@ -122,8 +130,23 @@ void modbusrd(int argc, char *argv[])
    return;
 }
 
+// siwasim modbuswr address dataset value
 void modbuswr(int argc, char *argv[])
 {
+   if (argc != 5)
+   {
+      printf("Wrong command format!\nsiwasim modbuswr <startAddress> <dataset number> <value>\n");
+      return;
+   }
+
+   int reg = std::stoi(argv[2]);
+   int ds = std::stoi(argv[3]);
+   int value = std::stoi(argv[4]);
+
+   SIWAREX swrx;
+   printf("Writing...\n");
+   swrx.writeRegister(ds, reg, value);
+   printf("Done!\n");
 }
 
 void testfunction(int argc, char *argv[])
