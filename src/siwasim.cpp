@@ -10,7 +10,7 @@ void testfunction(int argc, char *argv[]);
 
 int main(int argc, char *argv[])
 {
-   printf("===========================\n");
+   printf("\n===========================\n");
    printf("SiWaSim  --  SIWAREX Tester\n");
    printf("===========================\n\n");
 
@@ -154,7 +154,7 @@ void modbuswr(int argc, char *argv[])
       SIWAREX swrx;
       printf("Writing...\n");
       swrx.writeRegisters(ds, reg, values);
-      printf("Done!\n");
+      printf("Done!\n\n");
       return;
    }
 }
