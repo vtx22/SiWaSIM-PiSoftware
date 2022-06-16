@@ -25,7 +25,9 @@ public:
 
    void writeRegisters(uint8_t dataset, uint16_t startRegister, std::vector<uint16_t> values);
    void writeRegister(uint8_t dataset, uint16_t startRegister, uint16_t value);
+
    float requestFloat(uint16_t startRegister);
+   void writeFloat(float value);
 
    void setServiceMode(bool value);
 
