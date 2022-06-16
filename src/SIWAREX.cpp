@@ -90,7 +90,7 @@ MODBUS_PARAMETER SIWAREX::getParameter(MODBUS_PARAMETER param)
 void SIWAREX::writeRegister(uint8_t dataset, uint16_t startRegister, uint16_t value)
 {
    // Enable Service Mode
-   _modbus->writeRegisters(CMD1_CODE, std::vector<uint16_t>{0x01, 0x01});
+   setServiceMode(true);
    // Load Dataset
    _modbus->writeRegisters(CMD1_CODE, std::vector<uint16_t>{2000 + dataset, 0x01});
    // Change register
@@ -98,5 +98,28 @@ void SIWAREX::writeRegister(uint8_t dataset, uint16_t startRegister, uint16_t va
    // Save Dataset
    _modbus->writeRegisters(CMD1_CODE, std::vector<uint16_t>{4000 + dataset, 0x01});
    // Disable Service Mode
-   _modbus->writeRegisters(CMD1_CODE, std::vector<uint16_t>{0x02, 0x01});
+   setServiceMode(false);
+}
+
+void SIWAREX::writeRegisters(uint8_t dataset, uint16_t startRegister, std::vector<uint16_t> values)
+{
+   // Enable Service Mode
+   setServiceMode(true);
+   // Load Dataset
+   _modbus->writeRegisters(CMD1_CODE, std::vector<uint16_t>{2000 + dataset, 0x01});
+   // Change registers
+   _modbus->writeRegisters(startRegister, values);
+   // Save Dataset
+   _modbus->writeRegisters(CMD1_CODE, std::vector<uint16_t>{4000 + dataset, 0x01});
+   // Disable Service Mode
+   setServiceMode(false);
+}
+
+/*!
+Enables or disables the Service Mode of the SIWAREX Module
+@param value TRUE for enable, FALSE for disable
+*/
+void SIWAREX::setServiceMode(bool value)
+{
+   _modbus->writeRegisters(CMD1_CODE, std::vector<uint16_t>{value ? 0x01 : 0x02, 0x01});
 }

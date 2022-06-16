@@ -133,20 +133,30 @@ void modbusrd(int argc, char *argv[])
 // siwasim modbuswr address dataset value
 void modbuswr(int argc, char *argv[])
 {
-   if (argc != 5)
+   if (argc < 5)
    {
       printf("Wrong command format!\nsiwasim modbuswr <startAddress> <dataset number> <value>\n");
+      printf("siwasim modbuswr <startAddress> <dataset number> <value1> <value2> <value3> ...\n\n");
       return;
    }
+   if (argc >= 5)
+   {
+      int reg = std::stoi(argv[2]);
+      int ds = std::stoi(argv[3]);
 
-   int reg = std::stoi(argv[2]);
-   int ds = std::stoi(argv[3]);
-   int value = std::stoi(argv[4]);
+      std::vector<uint16_t> values;
 
-   SIWAREX swrx;
-   printf("Writing...\n");
-   swrx.writeRegister(ds, reg, value);
-   printf("Done!\n");
+      for (uint8_t i = 0; i < argc - 4)
+      {
+         values.push_back(std::stoi(argv[i + 4]));
+      }
+
+      SIWAREX swrx;
+      printf("Writing...\n");
+      swrx.writeRegisters(ds, reg, values);
+      printf("Done!\n");
+      return;
+   }
 }
 
 void testfunction(int argc, char *argv[])

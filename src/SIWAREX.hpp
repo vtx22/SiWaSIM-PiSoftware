@@ -23,8 +23,11 @@ public:
 
    MODBUS_PARAMETER getParameter(MODBUS_PARAMETER param);
 
+   void writeRegisters(uint8_t dataset, uint16_t startRegister, std::vector<uint16_t> values);
    void writeRegister(uint8_t dataset, uint16_t startRegister, uint16_t value);
    float requestFloat(uint16_t startRegister);
+
+   void setServiceMode(bool value);
 
 private:
    Modbus *_modbus;
