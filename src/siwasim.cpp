@@ -146,7 +146,7 @@ void modbuswr(int argc, char *argv[])
 
       std::vector<uint16_t> values;
 
-      for (uint8_t i = 0; i < argc - 4)
+      for (uint8_t i = 0; i < argc - 4; i++)
       {
          values.push_back(std::stoi(argv[i + 4]));
       }
