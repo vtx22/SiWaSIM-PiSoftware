@@ -25,7 +25,7 @@ int main(int argc, char *argv[])
       printf("MODBUS:\n");
       printf("modbusrd : Read  MODBUS Registers\n");
       printf("modbuswr : Write MODBUS Registers\n");
-
+      printf("\n");
       return 0;
    }
    if (std::string(argv[1]) == "modbusrd")
