@@ -32,24 +32,22 @@ float MaterialFlow::update(float *currentWeight, float dt, bool pinState)
       lastPinState = pinState;
       lastPinStateTime = 0;
    }
-   else
+
+   if (pinState == 1 && lastPinStateTime > _curve.riseTime)
    {
-      if (pinState == 1 && lastPinStateTime > _curve.riseTime)
-      {
-         flow = _curve.maxFlow;
-      }
-      if (pinState == 1 && lastPinStateTime < _curve.riseTime)
-      {
-         flow = _curve.maxFlow * lastPinStateTime / _curve.riseTime;
-      }
-      if (pinState == 0 && lastPinStateTime > _curve.fallTime)
-      {
-         flow = 0;
-      }
-      if (pinState == 0 && lastPinStateTime < _curve.fallTime)
-      {
-         flow = _curve.maxFlow * (_curve.fallTime - lastPinStateTime) / _curve.fallTime;
-      }
+      flow = _curve.maxFlow;
+   }
+   if (pinState == 1 && lastPinStateTime < _curve.riseTime)
+   {
+      flow = _curve.maxFlow * lastPinStateTime / _curve.riseTime;
+   }
+   if (pinState == 0 && lastPinStateTime > _curve.fallTime)
+   {
+      flow = 0;
+   }
+   if (pinState == 0 && lastPinStateTime < _curve.fallTime)
+   {
+      flow = _curve.maxFlow * (_curve.fallTime - lastPinStateTime) / _curve.fallTime;
    }
 
    *currentWeight += flow * dt; // Scale with time, e.g. 1 kg/s for 0.5s equals 1 * 0.5 = 0.5kg
