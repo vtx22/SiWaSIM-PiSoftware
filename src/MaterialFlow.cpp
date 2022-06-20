@@ -41,7 +41,7 @@ float MaterialFlow::update(float *currentWeight, float dt, bool pinState)
    }
    if (pinState == 1 && lastPinStateTime < _curve.riseTime)
    {
-      flow += _curve.maxFlow / _curve.riseTime;
+      flow += _curve.maxFlow / _curve.riseTime * dt;
    }
    if (pinState == 0 && lastPinStateTime > _curve.fallTime)
    {
@@ -49,7 +49,7 @@ float MaterialFlow::update(float *currentWeight, float dt, bool pinState)
    }
    if (pinState == 0 && lastPinStateTime < _curve.fallTime)
    {
-      flow -= _curve.maxFlow / _curve.fallTime;
+      flow -= _curve.maxFlow / _curve.fallTime * dt;
    }
 
    /*
