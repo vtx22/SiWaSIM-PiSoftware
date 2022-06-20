@@ -70,7 +70,7 @@ float MaterialFlow::update(float *currentWeight, float dt, bool pinState)
       flow = stateChangeFlow * (_curve.fallTime - lastPinStateTime) / _curve.fallTime;
    }
    */
-   constrainMinMax(flow, 0, _curve.maxFlow);
+   flow = constrainMinMax(flow, 0, _curve.maxFlow);
    *currentWeight += flow * dt; // Scale with time, e.g. 1 kg/s for 0.5s equals 1 * 0.5 = 0.5kg
    lastPinStateTime += dt;
    printf("FLOW: %f\n", flow);
