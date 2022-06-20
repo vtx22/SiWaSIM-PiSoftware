@@ -23,44 +23,32 @@ float MaterialFlow::update(float *currentWeight, float dt, bool pinState)
       return 0;
    }
    */
-   static bool _lastPinState = 0;
-   static float _lastPinStateTime = 0;
+   static float lastPinStateTime = _curve.riseTime * 2;
    float flow = 0;
    // If the pin state has changed reset the internal timer so that rise / fall times and delays are measured
+
    if (pinState != _lastPinState)
    {
-      _lastPinState = pinState;
-      _lastPinStateTime = 0;
-      printf("IF0\n");
+      lastPinStateTime = 0;
    }
-
-   // Check if we are still in a rise / fall time or in a delay
-   if (pinState == 1 && _lastPinStateTime < _curve.startDelay)
+   else
    {
-      printf("IF1\n");
-      flow = 0;
-   }
-   else if (pinState == 1 && _lastPinStateTime < _curve.riseTime)
-   {
-      printf("IF2\n");
-      flow = _curve.maxFlow / _curve.riseTime * _lastPinStateTime;
-   }
-   else if (pinState == 0 && _lastPinStateTime < _curve.stopDelay)
-   {
-      printf("IF3\n");
-      flow = _curve.maxFlow;
-   }
-   else if (pinState == 0 && _lastPinStateTime < _curve.fallTime)
-   {
-      printf("IF4\n");
-      flow = _curve.maxFlow / _curve.fallTime * (_curve.fallTime - _lastPinStateTime);
-   }
-   // If the pin is high and the rise time is over add the maximum flow
-   // If the pin is low and the fall time is over the flow is 0 and the weight does not change
-   else if (pinState == 1)
-   {
-      printf("IF5\n");
-      flow = _curve.maxFlow;
+      if (pinState == 1 && lastPinStateTime > _curve.riseTime)
+      {
+         flow = _curve.maxFlow;
+      }
+      if (pinState == 1 && lastPinStateTime < _curve.riseTime)
+      {
+         flow = _curve.maxFlow * lastPinStateTime / _curve.riseTime;
+      }
+      if (pinState == 0 && lastPinStateTime > _curve.fallTime)
+      {
+         flow = 0;
+      }
+      if (pinState == 0 && lastPinStateTime < _curve.fallTime)
+      {
+         flow = _curve.maxFlow * (_curve.fallTime - lastPinStateTime) / _curve.fallTime;
+      }
    }
 
    *currentWeight += flow * dt; // Scale with time, e.g. 1 kg/s for 0.5s equals 1 * 0.5 = 0.5kg
