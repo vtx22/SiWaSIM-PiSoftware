@@ -26,7 +26,7 @@ private:
 
    // bool _lastPinState = 0;
    float _currentFlow = 0;
-   float _lastPinStateTime = 0;
+   // float _lastPinStateTime = 0;
 
    CURVE _curve;
    QUARTIC_FUNCTION _riseCurve;
