@@ -189,8 +189,8 @@ void runPassive(int argc, char *argv[])
    while (true)
    {
       static float weight = 0;
-      sim.runPassive(0.01, &weight);
-      printf("%f\n", weight);
+      float flow = sim.runPassive(0.05, &weight);
+      printf("Weight: %f  -- Flow: %f\n", weight, flow);
       std::this_thread::sleep_for(50ms);
    }
 }
