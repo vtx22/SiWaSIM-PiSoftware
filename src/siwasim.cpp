@@ -202,7 +202,7 @@ void runPassive(int argc, char *argv[])
 
    for (int i = 0; i < weights.size(); i++)
    {
-      x.push_back(i);
+      x.push_back(0.05 * i);
    }
 
    plt::figure_size(1600, 900);
@@ -211,7 +211,7 @@ void runPassive(int argc, char *argv[])
    plt::plot(x, flows, {{"color", "r"}, {"label", "Flow"}});
 
    // plt::title("Load Cell Voltage with SiWaSim");
-   plt::xlabel("Time in seconds");
+   plt::xlabel("Sample");
    plt::legend();
    // plt::ylim(19.9, 20.1);
    plt::grid(true);
