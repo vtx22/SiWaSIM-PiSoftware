@@ -136,7 +136,8 @@ void Simulator::runPassive(float timestep, float *weight)
    _materialFlows[0]->update(weight, timestep, _ia->getDigitalRead(1));
    _materialFlows[1]->update(weight, timestep, _ia->getDigitalRead(2));
    _materialFlows[2]->update(weight, timestep, _ia->getDigitalRead(3));
-   _materialFlows[3]->update(weight, timestep, _ia->getDigitalRead(4));
+   float a = _materialFlows[3]->update(weight, timestep, _ia->getDigitalRead(4));
+   printf("FLOW: %f\n", a);
 }
 
 void Simulator::testFunction()
