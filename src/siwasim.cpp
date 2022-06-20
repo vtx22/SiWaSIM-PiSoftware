@@ -3,7 +3,6 @@
 #include "Simulator.hpp"
 #include "SIWAREX.hpp"
 #include "utility.hpp"
-#include <threading>
 
 void modbusrd(int argc, char *argv[]);
 void modbuswr(int argc, char *argv[]);
