@@ -3,10 +3,12 @@
 #include "Simulator.hpp"
 #include "SIWAREX.hpp"
 #include "utility.hpp"
+#include <threading>
 
 void modbusrd(int argc, char *argv[]);
 void modbuswr(int argc, char *argv[]);
 void testfunction(int argc, char *argv[]);
+void runPassive(int argc, char *argv[]);
 
 int main(int argc, char *argv[])
 {
@@ -175,4 +177,15 @@ void testfunction(int argc, char *argv[])
 
    value = swrx.requestRegisters(reg, 1);
    printf("AFTER: %d\n", (value[0] << 8) + value[1]);
+}
+
+void runPassive(int argc, char *argv[])
+{
+   Simulator sim;
+   while (true)
+   {
+      float weight = 0;
+      sim.runPassive(0.01, &weight);
+      std::this_thread::sleep_for(10ms);
+   }
 }

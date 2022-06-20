@@ -32,7 +32,7 @@ public:
    void testFunction();
 
    float run(RUN_MODE runMode, float timestep, float *weight);
-   float runPassive(float timestep, float *weight);
+   void runPassive(float timestep, float *weight);
 
    void calibrateLCVoltage(bool autoCalib);
    std::vector<float> longTermTest();

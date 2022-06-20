@@ -121,7 +121,7 @@ float Simulator::run(RUN_MODE runMode, float timestep, float *weight)
    switch (runMode)
    {
    case PASSIVE:
-      return runPassive(timestep, weight);
+      runPassive(timestep, weight);
       break;
 
    default:
@@ -129,10 +129,12 @@ float Simulator::run(RUN_MODE runMode, float timestep, float *weight)
    }
 }
 
-float Simulator::runPassive(float timestep, float *weight)
+void Simulator::runPassive(float timestep, float *weight)
 {
    // Refresh Digital Input variables
    //_ia->digitalRead();
+   printf("%d\n", _ia->getDigitalRead(4));
+   return;
    static bool dig = 1;
    static int cnt = 0;
    if (cnt > 199)
@@ -140,7 +142,11 @@ float Simulator::runPassive(float timestep, float *weight)
       dig = 0;
    }
    cnt++;
-   return _materialFlows[0]->update(weight, timestep, dig); //_ia->getDigitalRead(1));
+   // Update all flows based on digital inputs
+   _materialFlows[0]->update(weight, timestep, _ia->getDigitalRead(1));
+   _materialFlows[1]->update(weight, timestep, _ia->getDigitalRead(2));
+   _materialFlows[2]->update(weight, timestep, _ia->getDigitalRead(3));
+   _materialFlows[3]->update(weight, timestep, _ia->getDigitalRead(4));
 }
 
 void Simulator::testFunction()
