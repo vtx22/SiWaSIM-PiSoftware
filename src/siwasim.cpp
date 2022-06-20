@@ -190,7 +190,7 @@ void runPassive(int argc, char *argv[])
    {
       static float weight = 0;
       sim.runPassive(0.01, &weight);
-      // printf("%f\n", weight);
+      printf("%f\n", weight);
       std::this_thread::sleep_for(50ms);
    }
 }
