@@ -44,6 +44,11 @@ int main(int argc, char *argv[])
       testfunction(argc, argv);
       return 0;
    }
+   if (std::string(argv[1]) == "runpassive")
+   {
+      runPassive(argc, argv);
+      return 0;
+   }
 
    printf("Unknown argument! Please refer to the documentation for all available commands.\n");
 
