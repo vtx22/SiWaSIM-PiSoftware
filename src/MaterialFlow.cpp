@@ -17,6 +17,7 @@ MaterialFlow::~MaterialFlow()
 
 float MaterialFlow::update(float *currentWeight, float dt, bool pinState)
 {
+   printf("%d\n", pinState);
    /*
    if (_flowType == MATERIAL_FLOW::NONE)
    {
