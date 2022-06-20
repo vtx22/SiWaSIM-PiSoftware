@@ -25,7 +25,7 @@ float MaterialFlow::update(float *currentWeight, float dt, bool pinState)
    */
    static bool lastPinState = 0;
    static float lastPinStateTime = _curve.riseTime * 2;
-   float flow = 0;
+   static float flow = 0;
    // If the pin state has changed reset the internal timer so that rise / fall times and delays are measured
    if (pinState != lastPinState)
    {
@@ -47,7 +47,7 @@ float MaterialFlow::update(float *currentWeight, float dt, bool pinState)
    }
    if (pinState == 0 && lastPinStateTime < _curve.fallTime)
    {
-      flow = _curve.maxFlow * (_curve.fallTime - lastPinStateTime) / _curve.fallTime;
+      flow = flow * (_curve.fallTime - lastPinStateTime) / _curve.fallTime;
    }
 
    *currentWeight += flow * dt; // Scale with time, e.g. 1 kg/s for 0.5s equals 1 * 0.5 = 0.5kg
