@@ -133,6 +133,7 @@ void Simulator::runPassive(float timestep, float *weight)
 {
    // Update all flows based on digital inputs
    _ia->digitalRead();
+   printf("%d %d %d %d\n", _ia->getDigitalRead(1), _ia->getDigitalRead(2), _ia->getDigitalRead(3), _ia->getDigitalRead(4));
    _materialFlows[0]->update(weight, timestep, _ia->getDigitalRead(1));
    _materialFlows[1]->update(weight, timestep, _ia->getDigitalRead(2));
    _materialFlows[2]->update(weight, timestep, _ia->getDigitalRead(3));
