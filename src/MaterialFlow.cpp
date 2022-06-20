@@ -52,7 +52,7 @@ float MaterialFlow::update(float *currentWeight, float dt, bool pinState)
    }
 
    *currentWeight += flow * dt; // Scale with time, e.g. 1 kg/s for 0.5s equals 1 * 0.5 = 0.5kg
-   _lastPinStateTime += dt;
+   lastPinStateTime += dt;
 
    return flow;
 }
