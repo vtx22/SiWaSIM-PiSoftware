@@ -3,6 +3,8 @@
 #include "Simulator.hpp"
 #include "SIWAREX.hpp"
 #include "utility.hpp"
+#include "matplotlib/matplotlibcpp.h"
+namespace plt = matplotlibcpp;
 
 void modbusrd(int argc, char *argv[]);
 void modbuswr(int argc, char *argv[]);
@@ -186,11 +188,32 @@ void testfunction(int argc, char *argv[])
 void runPassive(int argc, char *argv[])
 {
    Simulator sim;
-   while (true)
+   std::vector<float> flows, weights, x;
+   int cnt = 0;
+   while (cnt < 10 / 0.05)
    {
       static float weight = 0;
       float flow = sim.runPassive(0.05, &weight);
-      printf("Weight: %f  -- Flow: %f\n", weight, flow);
+      flows.push_back(flow);
+      weights.push_back(weight);
       std::this_thread::sleep_for(50ms);
+      cnt++;
    }
+
+   for (int i = 0; i < weights.size(); i++)
+   {
+      x.push_back(i);
+   }
+
+   plt::figure_size(1600, 900);
+
+   plt::plot(x, weights, {{"color", "b"}, {"label", "Weight"}});
+   plt::plot(x, flows, {{"color", "r"}, {"label", "Flow"}});
+
+   // plt::title("Load Cell Voltage with SiWaSim");
+   plt::xlabel("Time in seconds");
+   plt::legend();
+   // plt::ylim(19.9, 20.1);
+   plt::grid(true);
+   plt::show();
 }
