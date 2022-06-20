@@ -207,7 +207,7 @@ void runPassive(int argc, char *argv[])
 
    plt::figure_size(1600, 900);
 
-   plt::plot(x, weights, {{"color", "b"}, {"label", "Weight"}});
+   // plt::plot(x, weights, {{"color", "b"}, {"label", "Weight"}});
    plt::plot(x, flows, {{"color", "r"}, {"label", "Flow"}});
 
    // plt::title("Load Cell Voltage with SiWaSim");
