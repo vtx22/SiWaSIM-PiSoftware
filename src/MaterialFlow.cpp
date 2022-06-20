@@ -17,7 +17,6 @@ MaterialFlow::~MaterialFlow()
 
 float MaterialFlow::update(float *currentWeight, float dt, bool pinState)
 {
-   printf("%d\n", pinState);
    /*
    if (_flowType == MATERIAL_FLOW::NONE)
    {
@@ -42,7 +41,7 @@ float MaterialFlow::update(float *currentWeight, float dt, bool pinState)
    {
       flow = _curve.maxFlow / _curve.riseTime * _lastPinStateTime;
    }
-   else if (pinState == 0 && _lastPinState < _curve.stopDelay)
+   else if (pinState == 0 && _lastPinStateTime < _curve.stopDelay)
    {
       flow = _curve.maxFlow;
    }
