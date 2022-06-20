@@ -211,7 +211,7 @@ void runPassive(int argc, char *argv[])
    plt::plot(x, flows, {{"color", "r"}, {"label", "Flow"}});
 
    // plt::title("Load Cell Voltage with SiWaSim");
-   plt::xlabel("Sample");
+   plt::xlabel("t [s]");
    plt::legend();
    // plt::ylim(19.9, 20.1);
    plt::grid(true);
