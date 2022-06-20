@@ -133,7 +133,8 @@ void Simulator::runPassive(float timestep, float *weight)
 {
    // Refresh Digital Input variables
    //_ia->digitalRead();
-   printf("%d\n", _ia->getDigitalRead(4));
+
+   printf("%d\n", _ia->digitalRead(4));
    return;
    static bool dig = 1;
    static int cnt = 0;
