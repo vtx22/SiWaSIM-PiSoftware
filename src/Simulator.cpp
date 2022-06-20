@@ -131,18 +131,6 @@ float Simulator::run(RUN_MODE runMode, float timestep, float *weight)
 
 void Simulator::runPassive(float timestep, float *weight)
 {
-   // Refresh Digital Input variables
-   //_ia->digitalRead();
-
-   printf("%d\n", _ia->digitalRead(4));
-   return;
-   static bool dig = 1;
-   static int cnt = 0;
-   if (cnt > 199)
-   {
-      dig = 0;
-   }
-   cnt++;
    // Update all flows based on digital inputs
    _ia->digitalRead();
    _materialFlows[0]->update(weight, timestep, _ia->getDigitalRead(1));

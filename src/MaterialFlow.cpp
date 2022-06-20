@@ -3,6 +3,7 @@
 MaterialFlow::MaterialFlow(uint8_t channel) : _channel(channel)
 {
    _ia = new IABoard();
+   _flowType = MATERIAL_FLOW::NONE;
 }
 
 MaterialFlow::MaterialFlow(uint8_t channel, MATERIAL_FLOW flowType) : _channel(channel), _flowType(flowType)
@@ -16,13 +17,12 @@ MaterialFlow::~MaterialFlow()
 
 float MaterialFlow::update(float *currentWeight, float dt, bool pinState)
 {
+   /*
    if (_flowType == MATERIAL_FLOW::NONE)
    {
       return 0;
    }
-
-   //_ia->digitalRead(_channel);
-
+   */
    float flow = 0;
 
    // If the pin state has changed reset the internal timer so that rise / fall times and delays are measured

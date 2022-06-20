@@ -21,7 +21,7 @@ public:
    void calculateFlowCurve();
 
 private:
-      uint8_t _channel;
+   uint8_t _channel;
    MATERIAL_FLOW _flowType;
 
    bool _lastPinState = 0;
