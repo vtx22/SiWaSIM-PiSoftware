@@ -24,6 +24,7 @@ float MaterialFlow::update(float *currentWeight, float dt, bool pinState)
       return 0;
    }
    */
+   static bool _lastPinState = 0;
    float flow = 0;
    // If the pin state has changed reset the internal timer so that rise / fall times and delays are measured
    if (pinState != _lastPinState)
