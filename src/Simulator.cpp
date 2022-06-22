@@ -138,7 +138,7 @@ float Simulator::runPassive(float timestep, float *weight)
    flow += _materialFlows[1]->update(weight, timestep, _ia->getDigitalRead(2));
    flow += _materialFlows[2]->update(weight, timestep, _ia->getDigitalRead(3));
    flow += _materialFlows[3]->update(weight, timestep, _ia->getDigitalRead(4));
-   setWeightKG(weight);
+   setWeightKG(&weight);
    return flow;
 }
 
