@@ -179,7 +179,7 @@ public:
    //! Nominal EXC voltage ouputted by the SIWAREX module
    float exc_voltage = 10.f;
    //! Nominal Load Weight of the cell in kg
-   float load_weight = 20.f;
+   float load_weight = 100.f;
    //! Initial weight (for manual / non-auto mode)
    float initial_weight = 10.f;
    //! Inverted OpAmp gain (e.g.: At 10V Aout the added / subtracted voltage is 20mV --> ratio = 10V / 20mV = 500)

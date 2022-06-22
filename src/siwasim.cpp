@@ -190,13 +190,13 @@ void runPassive(int argc, char *argv[])
    Simulator sim;
    std::vector<float> flows, weights, x;
    int cnt = 0;
-   while (cnt < 10 / 0.05)
+   while (true) // cnt < 10 / 0.05)
    {
       static float weight = 0;
       float flow = sim.runPassive(0.05, &weight);
       flows.push_back(flow);
       weights.push_back(weight);
-      std::this_thread::sleep_for(50ms);
+      delay(50ms);
       cnt++;
    }
 

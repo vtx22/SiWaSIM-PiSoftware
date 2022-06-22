@@ -33,7 +33,7 @@ bool Configuration::loadConfiguration()
 
    // Load values line by line (should be simplified in the future)
    cellCharecteristic = jsonCFG.at(0).at("Wert");
-   load_weight = jsonCFG.at(1).at("Wert");
+   // load_weight = jsonCFG.at(1).at("Wert");
    exc_voltage = jsonCFG.at(2).at("Wert");
 
    // Load SIWAREX addresses
