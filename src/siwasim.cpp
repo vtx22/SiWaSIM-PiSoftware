@@ -197,8 +197,8 @@ void runPassive(int argc, char *argv[])
       float flow = sim.runPassive(0.05, &weight);
       flows.push_back(flow);
       weights.push_back(weight);
-      std::this_thread::sleep_for(45ms);
-      // delay(50ms);
+      // std::this_thread::sleep_for(45ms);
+      delay(50ms);
       cnt++;
    }
 
