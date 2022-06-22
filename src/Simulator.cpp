@@ -188,6 +188,8 @@ void Simulator::calibrateLCVoltage(bool autoCalib)
    std::cout << "OUTPUT VOLTAGE CALIBRATION\n";
    std::cout << "======================\n";
 
+   _pcb->ledBusy(true);
+
    std::vector<float> xValues, yValues;
 
    if (autoCalib)
@@ -250,6 +252,7 @@ void Simulator::calibrateLCVoltage(bool autoCalib)
    setWeightPER(0.05);
 
    std::cout << "DONE!\n\n";
+   _pcb->ledBusy(false);
 }
 
 std::vector<float> Simulator::longTermTest()
