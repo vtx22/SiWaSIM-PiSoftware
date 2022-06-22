@@ -42,7 +42,7 @@ void Simulator::setWeightPER(float percentage)
       // Max differential voltage (e.g. 4mV/V * 10V = 40mV)
       voltage = _config->cellCharecteristic * _config->exc_voltage;
       // Do not allow overload
-      constrainMax(percentage, 1);
+      percentage = constrainMax(percentage, 1);
       break;
    case LoadCellMode::OVERLOAD:
       break;
@@ -50,7 +50,7 @@ void Simulator::setWeightPER(float percentage)
 
    voltage *= percentage;
 
-   _pcb->setLoadcellVoltage(voltage);
+   _pcb->setLoadcellVoltage(40 * percentage);
 }
 
 /*!

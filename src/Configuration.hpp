@@ -205,10 +205,10 @@ public:
    float endVoltage = 10;
 
    // Input channel assignment
-   MATERIAL_FLOW inputChannel1 = MATERIAL_FLOW::EMPTY;
-   MATERIAL_FLOW inputChannel2 = MATERIAL_FLOW::FINE;
-   MATERIAL_FLOW inputChannel3 = MATERIAL_FLOW::COARSE;
-   MATERIAL_FLOW inputChannel4 = MATERIAL_FLOW::XCOARSE;
+   MATERIAL_FLOW inputChannel1 = MATERIAL_FLOW::NONE;
+   MATERIAL_FLOW inputChannel2 = MATERIAL_FLOW::EMPTY;
+   MATERIAL_FLOW inputChannel3 = MATERIAL_FLOW::FINE;
+   MATERIAL_FLOW inputChannel4 = MATERIAL_FLOW::COARSE;
 
    std::vector<MODBUS_DATASET> modbus_datasets;
    uint8_t numberOfDatasets = 1;
