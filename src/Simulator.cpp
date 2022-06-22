@@ -247,6 +247,8 @@ void Simulator::calibrateLCVoltage(bool autoCalib)
    _config->calibrationReg.c = c;
    _config->calibrationReg.d = d;
 
+   setWeightPER(0.05);
+
    std::cout << "DONE!\n\n";
 }
 

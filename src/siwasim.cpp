@@ -188,6 +188,7 @@ void testfunction(int argc, char *argv[])
 void runPassive(int argc, char *argv[])
 {
    Simulator sim;
+   sim.calibrateLCVoltage(true);
    std::vector<float> flows, weights, x;
    int cnt = 0;
    while (true) // cnt < 10 / 0.05)
