@@ -191,7 +191,7 @@ void runPassive(int argc, char *argv[])
    sim.calibrateLCVoltage(true);
    std::vector<float> flows, weights, x;
    int cnt = 0;
-   while (cnt < 20 / 0.05)
+   while (true) // cnt < 20 / 0.05)
    {
       static float weight = 0;
       float flow = sim.runPassive(0.05, &weight);
