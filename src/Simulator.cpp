@@ -49,9 +49,8 @@ void Simulator::setWeightPER(float percentage)
    case LoadCellMode::OVERLOAD:
       break;
    }
-
+   percentage = constrainMinMax(percentage, 0, 1);
    voltage *= percentage;
-
    _pcb->setLoadcellVoltage(40 * percentage);
 }
 
