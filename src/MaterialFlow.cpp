@@ -17,12 +17,16 @@ MaterialFlow::~MaterialFlow()
 
 float MaterialFlow::update(float *currentWeight, float dt, bool pinState)
 {
-   /*
+
    if (_flowType == MATERIAL_FLOW::NONE)
    {
       return 0;
    }
-   */
+   if (_flowType == MATERIAL_FLOW::EMPTY)
+   {
+      return 0;
+   }
+
    static bool lastPinState = 0;
    static float lastPinStateTime = _curve.riseTime * 2;
    static float flow = 0;
