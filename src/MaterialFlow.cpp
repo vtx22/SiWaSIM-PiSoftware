@@ -17,7 +17,7 @@ MaterialFlow::~MaterialFlow()
 
 float MaterialFlow::update(float *currentWeight, float dt, bool pinState)
 {
-   if (_flowType == MATERIAL_FLOW::EMPTY)
+   if (_flowType == MATERIAL_FLOW::EMPTY && pinState)
    {
       float flow = -2;
       *currentWeight += flow * dt;
