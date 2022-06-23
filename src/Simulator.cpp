@@ -134,9 +134,9 @@ float Simulator::runPassive(float timestep, float *weight)
    // Update all flows based on digital inputs
    _ia->digitalRead();
    float flow = 0;
-   // flow += _materialFlows[0]->update(weight, timestep, _ia->getDigitalRead(1));
-   // flow += _materialFlows[1]->update(weight, timestep, _ia->getDigitalRead(2));
-   // flow += _materialFlows[2]->update(weight, timestep, _ia->getDigitalRead(3));
+   flow += _materialFlows[0]->update(weight, timestep, _ia->getDigitalRead(1));
+   flow += _materialFlows[1]->update(weight, timestep, _ia->getDigitalRead(2));
+   flow += _materialFlows[2]->update(weight, timestep, _ia->getDigitalRead(3));
    flow += _materialFlows[3]->update(weight, timestep, _ia->getDigitalRead(4));
    setWeightKG(*weight);
    return flow;
@@ -189,6 +189,7 @@ void Simulator::calibrateLCVoltage(bool autoCalib)
    std::cout << "======================\n";
 
    _pcb->ledBusy(true);
+   _pcb->ledReady(false);
 
    std::vector<float> xValues, yValues;
 
@@ -252,7 +253,9 @@ void Simulator::calibrateLCVoltage(bool autoCalib)
    setWeightPER(0.05);
 
    std::cout << "DONE!\n\n";
+
    _pcb->ledBusy(false);
+   _pcb->ledReady(true);
 }
 
 std::vector<float> Simulator::longTermTest()
