@@ -12,6 +12,8 @@ Simulator::Simulator()
    _materialFlows[2] = new MaterialFlow(3);
    _materialFlows[3] = new MaterialFlow(4);
 
+   _materialFlows[1]->setFlowType(MATERIAL_FLOW::EMPTY);
+
    reloadConfig();
 }
 
